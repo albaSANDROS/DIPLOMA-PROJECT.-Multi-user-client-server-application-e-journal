@@ -138,3 +138,4 @@ ALTER TABLE timetable
 ALTER TABLE timetable
     ADD CONSTRAINT timetable_studying_group_fk FOREIGN KEY ( studying_group_id )
         REFERENCES studying_group ( id );
+
