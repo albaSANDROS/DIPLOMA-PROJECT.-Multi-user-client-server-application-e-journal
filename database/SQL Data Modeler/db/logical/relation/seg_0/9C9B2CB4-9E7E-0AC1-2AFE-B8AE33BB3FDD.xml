@@ -1,0 +1,18 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="timetable" directorySegmentName="seg_0" id="9C9B2CB4-9E7E-0AC1-2AFE-B8AE33BB3FDD">
+<createdBy>user</createdBy>
+<createdTime>2022-02-01 16:09:18 UTC</createdTime>
+<ownerDesignName>db</ownerDesignName>
+<engineerTo>
+<item key="A290E81F-9A6C-6DDD-0BFF-2D5E19FA4192" value="true"/>
+</engineerTo>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>*</sourceCardinality>
+<sourceEntity>D3DE2701-1FF9-633B-1BE5-F72AE4EDDD2E</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>7226E6C1-5300-07B9-A83D-E9C3EF7EBD47</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

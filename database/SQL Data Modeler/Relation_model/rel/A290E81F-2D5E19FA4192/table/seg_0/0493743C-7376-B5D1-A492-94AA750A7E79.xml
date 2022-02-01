@@ -1,0 +1,61 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="0493743C-7376-B5D1-A492-94AA750A7E79" name="studying_group">
+<createdBy>user</createdBy>
+<createdTime>2022-02-01 16:33:03 UTC</createdTime>
+<generatorID>D3DE2701-1FF9-633B-1BE5-F72AE4EDDD2E</generatorID>
+<ownerDesignName>Relation_model</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="num" id="533F1CD8-94EC-2106-9249-4D4DD17D2BD7">
+<createdBy>user</createdBy>
+<createdTime>2022-02-01 16:33:03 UTC</createdTime>
+<generatorID>ABF3F255-FF1E-7CBF-F246-4A22B33753DD</generatorID>
+<ownerDesignName>Relation_model</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="profile" id="22C7F36A-B5F0-78BF-164C-7930120311BD">
+<createdBy>user</createdBy>
+<createdTime>2022-02-01 16:33:03 UTC</createdTime>
+<generatorID>6F48DB15-8D1A-8173-72B4-4139FEAC17F3</generatorID>
+<ownerDesignName>Relation_model</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="id" id="F10195EE-53F4-1816-60A9-FC3E52392FE3">
+<createdBy>user</createdBy>
+<createdTime>2022-02-01 16:33:03 UTC</createdTime>
+<generatorID>CFC79F36-C160-4581-68AF-E35C8AE68FC3</generatorID>
+<ownerDesignName>Relation_model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="089D3DAB-CD3F-02BB-3172-503F40096BD9" name="studying_group_PK">
+<createdBy>user</createdBy>
+<createdTime>2022-02-01 16:33:03 UTC</createdTime>
+<generatorID>B18A68E2-5829-D4DD-DB86-0B27C486BFDD</generatorID>
+<ownerDesignName>Relation_model</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="F10195EE-53F4-1816-60A9-FC3E52392FE3"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

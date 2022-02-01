@@ -1,0 +1,61 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="33D9EE81-5ABC-8915-BC00-A45C35AF4968" name="lesson">
+<createdBy>user</createdBy>
+<createdTime>2022-02-01 16:33:03 UTC</createdTime>
+<generatorID>7226E6C1-5300-07B9-A83D-E9C3EF7EBD47</generatorID>
+<ownerDesignName>Relation_model</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="type" id="ABFEFDC2-0AE5-F0F5-A981-09E734700862">
+<createdBy>user</createdBy>
+<createdTime>2022-02-01 16:33:03 UTC</createdTime>
+<generatorID>B5212F59-2513-D0DA-257C-2EB6ED495C5B</generatorID>
+<ownerDesignName>Relation_model</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="lesson_date" id="B5BA28FF-1E2F-05A0-C761-C941880700C5">
+<createdBy>user</createdBy>
+<createdTime>2022-02-01 16:33:03 UTC</createdTime>
+<generatorID>5905D669-C5A0-6323-D4A2-C80D40ECD199</generatorID>
+<ownerDesignName>Relation_model</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="id" id="EED64D58-FA27-4D7B-6056-42EA0BF22493">
+<createdBy>user</createdBy>
+<createdTime>2022-02-01 16:33:03 UTC</createdTime>
+<generatorID>12D38EF8-C8FA-0167-4FD4-0DB1DEA535D1</generatorID>
+<ownerDesignName>Relation_model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="8AFDCC29-FFE1-56DC-4F97-4DCFEF4CC86B" name="lesson_PK">
+<createdBy>user</createdBy>
+<createdTime>2022-02-01 16:33:03 UTC</createdTime>
+<generatorID>DB057026-6CAB-9955-403E-6668A1655E32</generatorID>
+<ownerDesignName>Relation_model</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="EED64D58-FA27-4D7B-6056-42EA0BF22493"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

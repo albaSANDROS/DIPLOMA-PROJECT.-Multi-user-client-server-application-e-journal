@@ -1,0 +1,75 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="D4AF4503-0BE1-3DEC-9526-72D5DF575A1E" name="teacher_note">
+<createdBy>user</createdBy>
+<createdTime>2022-02-01 16:33:03 UTC</createdTime>
+<ownerDesignName>Relation_model</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="teacher_id" id="61557C02-462D-AF7C-59B5-B1A8DDAE469F">
+<createdBy>user</createdBy>
+<createdTime>2022-02-01 16:33:03 UTC</createdTime>
+<ownerDesignName>Relation_model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="5F5DD62D-D218-4B6E-7BF2-0C7657FE8D06" referredColumn="4971E115-4A20-A76C-D773-627336488C0A"/>
+</associations>
+</Column>
+<Column name="notes_id" id="95B4BD20-0819-72B5-FA3A-FC31C89FB96E">
+<createdBy>user</createdBy>
+<createdTime>2022-02-01 16:33:03 UTC</createdTime>
+<ownerDesignName>Relation_model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="FC9A7A3F-57EC-E357-0659-6C41E6C71A87" referredColumn="27B4FA5C-4A3A-E00E-2E33-A04E46D04C63"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="F0A13C9B-6F79-7805-60EE-F27F59C4280C" name="teacher_note_PK">
+<createdBy>user</createdBy>
+<createdTime>2022-02-01 16:33:03 UTC</createdTime>
+<ownerDesignName>Relation_model</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="61557C02-462D-AF7C-59B5-B1A8DDAE469F"/>
+<colUsage columnID="95B4BD20-0819-72B5-FA3A-FC31C89FB96E"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="79F00254-910F-E9E3-E293-B17648884425" name="teacher_note_teacher_FK">
+<createdBy>user</createdBy>
+<createdTime>2022-02-01 16:33:03 UTC</createdTime>
+<generatorID>8ACDC8A8-60C8-3089-9D97-12A7C1AC8C1B</generatorID>
+<ownerDesignName>Relation_model</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="61557C02-462D-AF7C-59B5-B1A8DDAE469F"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="144B93D6-9C39-D4F1-701A-69C6EBEE32EF" name="teacher_note_notes_FK">
+<createdBy>user</createdBy>
+<createdTime>2022-02-01 16:33:03 UTC</createdTime>
+<generatorID>8ACDC8A8-60C8-3089-9D97-12A7C1AC8C1B</generatorID>
+<ownerDesignName>Relation_model</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="95B4BD20-0819-72B5-FA3A-FC31C89FB96E"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

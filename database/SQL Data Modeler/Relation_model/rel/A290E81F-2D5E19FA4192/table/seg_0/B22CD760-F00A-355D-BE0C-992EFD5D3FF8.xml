@@ -1,0 +1,75 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="B22CD760-F00A-355D-BE0C-992EFD5D3FF8" name="studying">
+<createdBy>user</createdBy>
+<createdTime>2022-02-01 16:33:03 UTC</createdTime>
+<ownerDesignName>Relation_model</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="student_id" id="26C1367D-52BF-F63A-BD69-506C9D469613">
+<createdBy>user</createdBy>
+<createdTime>2022-02-01 16:33:03 UTC</createdTime>
+<ownerDesignName>Relation_model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="3648488B-78F2-9A15-84CB-BB3E1DCD43FE" referredColumn="0453DAE1-69BA-70AE-E67F-854E7D15F331"/>
+</associations>
+</Column>
+<Column name="subject_id" id="51FCAA14-B187-2507-E0A0-F8569C8216C5">
+<createdBy>user</createdBy>
+<createdTime>2022-02-01 16:33:03 UTC</createdTime>
+<ownerDesignName>Relation_model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="B45F1029-28BE-59B8-1E44-354D1AF9B754" referredColumn="DC22C997-9C14-5D42-B99B-E18CB072DEB6"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="35FE4519-C381-5FE9-A92C-5FF8DA3F8A0C" name="studying_PK">
+<createdBy>user</createdBy>
+<createdTime>2022-02-01 16:33:03 UTC</createdTime>
+<ownerDesignName>Relation_model</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="26C1367D-52BF-F63A-BD69-506C9D469613"/>
+<colUsage columnID="51FCAA14-B187-2507-E0A0-F8569C8216C5"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="5A7CD314-8EB1-205C-B6F9-F8CA23CF4AD5" name="studying_student_FK">
+<createdBy>user</createdBy>
+<createdTime>2022-02-01 16:33:03 UTC</createdTime>
+<generatorID>2C4908C7-E0F6-2C11-BFFF-A46E3F00AAF3</generatorID>
+<ownerDesignName>Relation_model</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="26C1367D-52BF-F63A-BD69-506C9D469613"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="DD3EF4A9-E0C5-6FC7-D696-79154AB94C24" name="studying_subject_FK">
+<createdBy>user</createdBy>
+<createdTime>2022-02-01 16:33:03 UTC</createdTime>
+<generatorID>2C4908C7-E0F6-2C11-BFFF-A46E3F00AAF3</generatorID>
+<ownerDesignName>Relation_model</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="51FCAA14-B187-2507-E0A0-F8569C8216C5"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

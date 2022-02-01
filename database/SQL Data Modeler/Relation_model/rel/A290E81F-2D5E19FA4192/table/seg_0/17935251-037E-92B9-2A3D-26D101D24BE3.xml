@@ -1,0 +1,75 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="17935251-037E-92B9-2A3D-26D101D24BE3" name="lesson_note">
+<createdBy>user</createdBy>
+<createdTime>2022-02-01 16:33:03 UTC</createdTime>
+<ownerDesignName>Relation_model</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="lesson_id" id="BB48810C-7EFD-4787-2666-98E2A8CF9274">
+<createdBy>user</createdBy>
+<createdTime>2022-02-01 16:33:03 UTC</createdTime>
+<ownerDesignName>Relation_model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="0BC33DE5-538B-1D3F-DC08-8CF263118D9C" referredColumn="EED64D58-FA27-4D7B-6056-42EA0BF22493"/>
+</associations>
+</Column>
+<Column name="notes_id" id="07B165EE-A7E1-B050-51A1-8471F003B5F8">
+<createdBy>user</createdBy>
+<createdTime>2022-02-01 16:33:03 UTC</createdTime>
+<ownerDesignName>Relation_model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="7CA8F617-CEA7-7340-E8DD-17009E0ADD0B" referredColumn="27B4FA5C-4A3A-E00E-2E33-A04E46D04C63"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="36202685-E8E5-4A13-7D8B-F74470E6D387" name="lesson_note_PK">
+<createdBy>user</createdBy>
+<createdTime>2022-02-01 16:33:03 UTC</createdTime>
+<ownerDesignName>Relation_model</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="BB48810C-7EFD-4787-2666-98E2A8CF9274"/>
+<colUsage columnID="07B165EE-A7E1-B050-51A1-8471F003B5F8"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="1F4E21CE-C436-7FDE-0DBE-C409666554A9" name="lesson_note_lesson_FK">
+<createdBy>user</createdBy>
+<createdTime>2022-02-01 16:33:03 UTC</createdTime>
+<generatorID>D9712E3B-4366-E990-E817-EE37656DAEBD</generatorID>
+<ownerDesignName>Relation_model</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="BB48810C-7EFD-4787-2666-98E2A8CF9274"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="EF5DD78F-2C3B-C47A-24ED-F5F58C45B670" name="lesson_note_notes_FK">
+<createdBy>user</createdBy>
+<createdTime>2022-02-01 16:33:03 UTC</createdTime>
+<generatorID>D9712E3B-4366-E990-E817-EE37656DAEBD</generatorID>
+<ownerDesignName>Relation_model</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="07B165EE-A7E1-B050-51A1-8471F003B5F8"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>
