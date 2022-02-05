@@ -1,3 +1,11 @@
+CREATE TABLE condition (
+    lesson_status_id INTEGER NOT NULL,
+    subject_id       INTEGER NOT NULL
+);
+
+ALTER TABLE condition ADD CONSTRAINT condition_pk PRIMARY KEY ( lesson_status_id,
+                                                                subject_id );
+
 CREATE TABLE lesson (
     type        VARCHAR,
     lesson_date DATE,
@@ -13,6 +21,16 @@ CREATE TABLE lesson_note (
 
 ALTER TABLE lesson_note ADD CONSTRAINT lesson_note_pk PRIMARY KEY ( lesson_id,
                                                                     notes_id );
+
+CREATE TABLE lesson_status (
+    mark    INTEGER,
+    id      INTEGER NOT NULL,
+    visited VARCHAR
+--  ERROR: VARCHAR2 size not specified
+
+);
+
+ALTER TABLE lesson_status ADD CONSTRAINT lesson_status_pk PRIMARY KEY ( id );
 
 CREATE TABLE notes (
     note VARCHAR,
