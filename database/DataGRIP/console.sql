@@ -77,7 +77,7 @@ ALTER TABLE studying_group ADD CONSTRAINT studying_group_pk PRIMARY KEY ( id );
 CREATE TABLE subject (
     sub_name VARCHAR,
     id       INTEGER NOT NULL
-);
+);a
 
 ALTER TABLE subject ADD CONSTRAINT subject_pk PRIMARY KEY ( id );
 

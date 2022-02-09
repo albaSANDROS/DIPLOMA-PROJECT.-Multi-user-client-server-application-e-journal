@@ -1,0 +1,6 @@
+MySQL Root Password: diary
+MySQL User Account: DBadmin 
+pass: diary
+Windows Service Name: MySQL
+TCP/IP Port: 3306 
+X Protocol Port: 33060
