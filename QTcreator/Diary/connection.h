@@ -1,6 +1,8 @@
 #ifndef CONNECTION_H
 #define CONNECTION_H
 
+#include <iostream>
+#include <QSqlQuery>
 #include <QMessageBox>
 #include <QtSql/QSqlDatabase>
 
@@ -17,6 +19,9 @@ inline bool createConnection(){
         QMessageBox::information(0, "Успешно", "Соединение с БД установлено!");
         return true;
     }
+
+
+
 }
 
 #endif // CONNECTION_H
