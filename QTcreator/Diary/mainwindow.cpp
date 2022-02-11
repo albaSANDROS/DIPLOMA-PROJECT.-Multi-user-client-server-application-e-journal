@@ -21,16 +21,16 @@ void MainWindow::on_auth_confirm_clicked()
     QString auth_login = ui -> auth_login -> text();
     QString auth_pass  = ui -> auth_pass  -> text();
 
-    if(auth_login == "" && auth_pass == ""){
+
+    if(!(auth_login == "" && auth_pass == "")){
+        QMessageBox::warning(this, "Authorization", "Access denied");
+
+    }else{
         QMessageBox::information(this, "Authorization", "Authorization confirmed");
-    }else
-        QMessageBox::warning(this, "Authorization", "Authorization denied");
-
-
-    hide();
-    diary_menu menu_window;
-    menu_window.setModal(true);
-    menu_window.exec();
-
+        hide();
+        diary_menu menu_window;
+        menu_window.setModal(true);
+        menu_window.exec();
+    }
 }
 
