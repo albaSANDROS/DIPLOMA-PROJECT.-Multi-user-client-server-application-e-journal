@@ -29,7 +29,7 @@ class Ui_MainWindow
 public:
     QWidget *centralwidget;
     QGroupBox *groupBox;
-    QWidget *widget;
+    QWidget *layoutWidget;
     QVBoxLayout *verticalLayout_3;
     QHBoxLayout *horizontalLayout;
     QVBoxLayout *verticalLayout;
@@ -46,28 +46,28 @@ public:
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName(QString::fromUtf8("MainWindow"));
-        MainWindow->resize(386, 198);
+        MainWindow->resize(373, 198);
         centralwidget = new QWidget(MainWindow);
         centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
         groupBox = new QGroupBox(centralwidget);
         groupBox->setObjectName(QString::fromUtf8("groupBox"));
-        groupBox->setGeometry(QRect(50, 10, 311, 151));
-        widget = new QWidget(groupBox);
-        widget->setObjectName(QString::fromUtf8("widget"));
-        widget->setGeometry(QRect(30, 30, 271, 101));
-        verticalLayout_3 = new QVBoxLayout(widget);
+        groupBox->setGeometry(QRect(30, 10, 311, 151));
+        layoutWidget = new QWidget(groupBox);
+        layoutWidget->setObjectName(QString::fromUtf8("layoutWidget"));
+        layoutWidget->setGeometry(QRect(30, 30, 271, 101));
+        verticalLayout_3 = new QVBoxLayout(layoutWidget);
         verticalLayout_3->setObjectName(QString::fromUtf8("verticalLayout_3"));
         verticalLayout_3->setContentsMargins(0, 0, 0, 0);
         horizontalLayout = new QHBoxLayout();
         horizontalLayout->setObjectName(QString::fromUtf8("horizontalLayout"));
         verticalLayout = new QVBoxLayout();
         verticalLayout->setObjectName(QString::fromUtf8("verticalLayout"));
-        label = new QLabel(widget);
+        label = new QLabel(layoutWidget);
         label->setObjectName(QString::fromUtf8("label"));
 
         verticalLayout->addWidget(label);
 
-        label_2 = new QLabel(widget);
+        label_2 = new QLabel(layoutWidget);
         label_2->setObjectName(QString::fromUtf8("label_2"));
 
         verticalLayout->addWidget(label_2);
@@ -77,12 +77,12 @@ public:
 
         verticalLayout_2 = new QVBoxLayout();
         verticalLayout_2->setObjectName(QString::fromUtf8("verticalLayout_2"));
-        auth_login = new QLineEdit(widget);
+        auth_login = new QLineEdit(layoutWidget);
         auth_login->setObjectName(QString::fromUtf8("auth_login"));
 
         verticalLayout_2->addWidget(auth_login);
 
-        auth_pass = new QLineEdit(widget);
+        auth_pass = new QLineEdit(layoutWidget);
         auth_pass->setObjectName(QString::fromUtf8("auth_pass"));
 
         verticalLayout_2->addWidget(auth_pass);
@@ -93,7 +93,7 @@ public:
 
         verticalLayout_3->addLayout(horizontalLayout);
 
-        auth_confirm = new QPushButton(widget);
+        auth_confirm = new QPushButton(layoutWidget);
         auth_confirm->setObjectName(QString::fromUtf8("auth_confirm"));
 
         verticalLayout_3->addWidget(auth_confirm);
@@ -101,7 +101,7 @@ public:
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName(QString::fromUtf8("menubar"));
-        menubar->setGeometry(QRect(0, 0, 386, 22));
+        menubar->setGeometry(QRect(0, 0, 373, 22));
         MainWindow->setMenuBar(menubar);
         statusbar = new QStatusBar(MainWindow);
         statusbar->setObjectName(QString::fromUtf8("statusbar"));

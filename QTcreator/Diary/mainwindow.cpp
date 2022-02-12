@@ -2,6 +2,7 @@
 #include "ui_mainwindow.h"
 #include <QMessageBox>
 #include <diary_menu.h>
+#include <QTimer>
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -26,11 +27,13 @@ void MainWindow::on_auth_confirm_clicked()
         QMessageBox::warning(this, "Authorization", "Access denied");
 
     }else{
-        QMessageBox::information(this, "Authorization", "Authorization confirmed");
+        QMessageBox m;
+        m.setText("Authorization confirmed");
+        QTimer::singleShot(950, &m, SLOT(close()));
+        m.exec();
         hide();
         diary_menu menu_window;
         menu_window.setModal(true);
         menu_window.exec();
     }
 }
-

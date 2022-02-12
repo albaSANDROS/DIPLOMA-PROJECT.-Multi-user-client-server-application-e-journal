@@ -5,6 +5,8 @@
 #include <QSqlQuery>
 #include <QMessageBox>
 #include <QtSql/QSqlDatabase>
+#include <QTimer>
+
 
 inline bool createConnection(){
     QSqlDatabase db = QSqlDatabase::addDatabase("QPSQL");
@@ -16,7 +18,10 @@ inline bool createConnection(){
         return false;
     }
     else{
-        QMessageBox::information(0, "Успешно", "Соединение с БД установлено!");
+        QMessageBox m;
+        m.setText("DataBase connected!");
+        QTimer::singleShot(950, &m, SLOT(close()));
+        m.exec();
         return true;
     }
 
