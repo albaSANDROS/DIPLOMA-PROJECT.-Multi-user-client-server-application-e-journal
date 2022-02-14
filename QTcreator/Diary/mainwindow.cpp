@@ -4,6 +4,7 @@
 #include <diary_menu.h>
 #include <QTimer>
 
+
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
@@ -19,9 +20,9 @@ MainWindow::~MainWindow()
 
 void MainWindow::on_auth_confirm_clicked()
 {
-    QString auth_login = ui -> auth_login -> text();
-    QString auth_pass  = ui -> auth_pass  -> text();
 
+    auth_login = ui -> auth_login -> text();
+    auth_pass  = ui -> auth_pass  -> text();
 
     if(!(auth_login == "" && auth_pass == "")){
         QMessageBox::warning(this, "Authorization", "Access denied");

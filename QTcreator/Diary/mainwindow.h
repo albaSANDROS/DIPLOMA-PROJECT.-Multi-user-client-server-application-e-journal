@@ -14,7 +14,8 @@ class MainWindow : public QMainWindow
 public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
-
+    QString auth_login;
+    QString auth_pass;
 private slots:
     void on_auth_confirm_clicked();
 
