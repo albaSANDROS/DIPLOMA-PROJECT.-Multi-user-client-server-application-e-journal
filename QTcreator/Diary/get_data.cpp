@@ -28,16 +28,6 @@ void get_data::setLogin(const QString &newLogin)
     login = newLogin;
 }
 
-const QString &get_data::getPassword() const
-{
-    return password;
-}
-
-void get_data::setPassword(const QString &newPassword)
-{
-    password = newPassword;
-}
-
 void get_data::on_get_back_button_clicked()
 {
     hide();
@@ -59,7 +49,7 @@ void get_data::on_students_info_button_clicked()
 void get_data::on_classes_info_button_clicked()
 {
     hide();
-    check_class class_window;
+    check_class class_window(this, getLogin());
     class_window.setModal(true);
     class_window.exec();
 }

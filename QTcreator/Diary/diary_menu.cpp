@@ -20,13 +20,9 @@ diary_menu::diary_menu(QWidget *parent, QString auth_login) :
     QDialog(parent),
     ui(new Ui::diary_menu)
 {
-
     ui->setupUi(this);
     setLogin(auth_login);
-    qDebug() << auth_login;
-    qDebug() << getLogin();
     ui->label->setText(auth_login);
-
 }
 
 diary_menu::~diary_menu()
