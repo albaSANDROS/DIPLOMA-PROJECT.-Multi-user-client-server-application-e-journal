@@ -26,6 +26,8 @@ private slots:
 
     void on_about_button_clicked();
 
+    void on_about_button_destroyed();
+
 private:
     Ui::diary_menu *ui;
     QString login;

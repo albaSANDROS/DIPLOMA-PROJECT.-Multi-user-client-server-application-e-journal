@@ -47,9 +47,15 @@ void diary_menu::on_exit_button_clicked()
 
 void diary_menu::on_about_button_clicked()
 {
-     QMessageBox m;
-     m.setText("This code created by Aliaksandr Basko");
-     QTimer::singleShot(10000, &m, SLOT(close()));
-     m.exec();
+    hide();
+    QMessageBox m;
+    m.setText("<a href=\"https://www.linkedin.com/in/albasandros\">You can contact with me (creator) "
+              "by pressing this hyper-text</a>");
+    QTimer::singleShot(10000, &m, SLOT(close()));
+    m.exec();
+    hide();
+    diary_menu menu_window(this , getLogin());
+    menu_window.setModal(true);
+    menu_window.exec();
 }
 

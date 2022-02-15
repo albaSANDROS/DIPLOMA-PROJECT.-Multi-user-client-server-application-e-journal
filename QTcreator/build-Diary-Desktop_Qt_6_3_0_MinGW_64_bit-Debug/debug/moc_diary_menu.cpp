@@ -26,7 +26,7 @@ struct qt_meta_stringdata_diary_menu_t {
     char stringdata0[86];
 };
 #define QT_MOC_LITERAL(ofs, len) \
-    uint(offsetof(qt_meta_stringdata_diary_menu_t, stringdata0) + ofs), len 
+    uint(offsetof(qt_meta_stringdata_diary_menu_t, stringdata0) + ofs), len
 static const qt_meta_stringdata_diary_menu_t qt_meta_stringdata_diary_menu = {
     {
 QT_MOC_LITERAL(0, 10), // "diary_menu"

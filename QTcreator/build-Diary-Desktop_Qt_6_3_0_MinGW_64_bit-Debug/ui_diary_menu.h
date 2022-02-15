@@ -42,7 +42,7 @@ public:
         get_data_button->setGeometry(QRect(50, 210, 441, 131));
         about_button = new QPushButton(diary_menu);
         about_button->setObjectName(QString::fromUtf8("about_button"));
-        about_button->setGeometry(QRect(300, 350, 81, 31));
+        about_button->setGeometry(QRect(300, 350, 71, 31));
         exit_button = new QPushButton(diary_menu);
         exit_button->setObjectName(QString::fromUtf8("exit_button"));
         exit_button->setGeometry(QRect(394, 350, 91, 31));
