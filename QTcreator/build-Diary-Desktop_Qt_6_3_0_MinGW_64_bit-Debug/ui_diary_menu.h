@@ -59,7 +59,7 @@ public:
         start_lesson_button->setText(QCoreApplication::translate("diary_menu", "Start lesson", nullptr));
         get_data_button->setText(QCoreApplication::translate("diary_menu", "Get data about student", nullptr));
         about_button->setText(QCoreApplication::translate("diary_menu", "about", nullptr));
-        exit_button->setText(QCoreApplication::translate("diary_menu", "exit", nullptr));
+        exit_button->setText(QCoreApplication::translate("diary_menu", "EXIT", nullptr));
     } // retranslateUi
 
 };

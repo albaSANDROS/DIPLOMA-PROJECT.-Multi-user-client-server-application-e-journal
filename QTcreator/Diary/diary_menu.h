@@ -3,7 +3,6 @@
 
 #include <QDialog>
 #include "mainwindow.h"
-
 namespace Ui {
 class diary_menu;
 }
@@ -13,7 +12,9 @@ class diary_menu : public QDialog
     Q_OBJECT
 
 public:
-    explicit diary_menu(QWidget *parent = nullptr);
+    MainWindow mw;
+    QString auth_login = mw.getAuth_login();
+    explicit diary_menu(QWidget *parent = nullptr, QString auth_login = "null");
     ~diary_menu();
 private slots:
     void on_get_data_button_clicked();

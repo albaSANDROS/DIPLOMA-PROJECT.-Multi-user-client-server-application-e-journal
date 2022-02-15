@@ -5,14 +5,17 @@
 #include <get_data.h>
 #include <QMessageBox>
 #include <QTimer>
-diary_menu::diary_menu(QWidget *parent) :
+
+diary_menu::diary_menu(QWidget *parent, QString auth_login) :
     QDialog(parent),
     ui(new Ui::diary_menu)
 {
 
     ui->setupUi(this);
 
-    //ui->label->setText(auth_login);
+    //MainWindow m;
+    qDebug() << auth_login;
+    ui->label->setText(auth_login);
 
 }
 
