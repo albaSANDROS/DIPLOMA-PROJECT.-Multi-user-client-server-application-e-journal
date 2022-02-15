@@ -5,9 +5,11 @@ release/diary_menu.o
 release/get_data.o
 release/main.o
 release/mainwindow.o
+release/student_info.o
 release/moc_check_class.o
 release/moc_check_student.o
 release/moc_class_info.o
 release/moc_diary_menu.o
 release/moc_get_data.o
 release/moc_mainwindow.o
+release/moc_student_info.o

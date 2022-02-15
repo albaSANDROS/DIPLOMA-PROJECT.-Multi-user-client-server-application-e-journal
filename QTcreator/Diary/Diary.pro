@@ -16,7 +16,8 @@ SOURCES += \
     diary_menu.cpp \
     get_data.cpp \
     main.cpp \
-    mainwindow.cpp
+    mainwindow.cpp \
+    student_info.cpp
 
 HEADERS += \
     check_class.h \
@@ -25,7 +26,8 @@ HEADERS += \
     connection.h \
     diary_menu.h \
     get_data.h \
-    mainwindow.h
+    mainwindow.h \
+    student_info.h
 
 FORMS += \
     check_class.ui \
@@ -33,7 +35,8 @@ FORMS += \
     class_info.ui \
     diary_menu.ui \
     get_data.ui \
-    mainwindow.ui
+    mainwindow.ui \
+    student_info.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
