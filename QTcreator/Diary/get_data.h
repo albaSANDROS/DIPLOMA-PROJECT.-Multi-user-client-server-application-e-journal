@@ -15,6 +15,11 @@ public:
     explicit get_data(QWidget *parent = nullptr, QString login = "this_is_login");
     ~get_data();
 
+    const QString &getLogin() const;
+    void setLogin(const QString &newLogin);
+    const QString &getPassword() const;
+    void setPassword(const QString &newPassword);
+
 private slots:
     void on_get_back_button_clicked();
 
@@ -24,6 +29,8 @@ private slots:
 
 private:
     Ui::get_data *ui;
+    QString login = "login";
+    QString password = "pass";
 };
 
 #endif // GET_DATA_H
