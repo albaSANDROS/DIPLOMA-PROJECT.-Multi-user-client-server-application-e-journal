@@ -45,12 +45,12 @@ void diary_menu::on_exit_button_clicked()
 }
 
 
-void diary_menu::on_about_button_clicked()
+void diary_menu::on_contact_info_clicked()
 {
     hide();
     QMessageBox m;
-    m.setText("<a href=\"https://www.linkedin.com/in/albasandros\">You can contact with me (creator) "
-              "by pressing this hyper-text</a>");
+    m.setText("<a href=\"https://www.linkedin.com/in/albasandros\">To get support or contact with creator "
+              "you may press this hyperlink</a>");
     QTimer::singleShot(10000, &m, SLOT(close()));
     m.exec();
     hide();

@@ -24,9 +24,7 @@ private slots:
 
     void on_exit_button_clicked();
 
-    void on_about_button_clicked();
-
-    void on_about_button_destroyed();
+    void on_contact_info_clicked();
 
 private:
     Ui::diary_menu *ui;

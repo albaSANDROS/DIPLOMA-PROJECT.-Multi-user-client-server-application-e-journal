@@ -26,18 +26,18 @@ struct qt_meta_stringdata_diary_menu_t {
     char stringdata0[86];
 };
 #define QT_MOC_LITERAL(ofs, len) \
-    uint(offsetof(qt_meta_stringdata_diary_menu_t, stringdata0) + ofs), len
+    uint(offsetof(qt_meta_stringdata_diary_menu_t, stringdata0) + ofs), len 
 static const qt_meta_stringdata_diary_menu_t qt_meta_stringdata_diary_menu = {
     {
 QT_MOC_LITERAL(0, 10), // "diary_menu"
 QT_MOC_LITERAL(11, 26), // "on_get_data_button_clicked"
 QT_MOC_LITERAL(38, 0), // ""
 QT_MOC_LITERAL(39, 22), // "on_exit_button_clicked"
-QT_MOC_LITERAL(62, 23) // "on_about_button_clicked"
+QT_MOC_LITERAL(62, 23) // "on_contact_info_clicked"
 
     },
     "diary_menu\0on_get_data_button_clicked\0"
-    "\0on_exit_button_clicked\0on_about_button_clicked"
+    "\0on_exit_button_clicked\0on_contact_info_clicked"
 };
 #undef QT_MOC_LITERAL
 
@@ -75,7 +75,7 @@ void diary_menu::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, 
         switch (_id) {
         case 0: _t->on_get_data_button_clicked(); break;
         case 1: _t->on_exit_button_clicked(); break;
-        case 2: _t->on_about_button_clicked(); break;
+        case 2: _t->on_contact_info_clicked(); break;
         default: ;
         }
     }

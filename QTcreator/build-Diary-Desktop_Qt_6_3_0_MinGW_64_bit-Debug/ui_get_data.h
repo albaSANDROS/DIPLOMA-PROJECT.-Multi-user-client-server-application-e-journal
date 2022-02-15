@@ -32,7 +32,7 @@ public:
         get_data->resize(400, 300);
         label = new QLabel(get_data);
         label->setObjectName(QString::fromUtf8("label"));
-        label->setGeometry(QRect(230, 0, 141, 41));
+        label->setGeometry(QRect(210, 0, 171, 41));
         get_back_button = new QPushButton(get_data);
         get_back_button->setObjectName(QString::fromUtf8("get_back_button"));
         get_back_button->setGeometry(QRect(20, 230, 361, 51));
@@ -51,7 +51,7 @@ public:
     void retranslateUi(QDialog *get_data)
     {
         get_data->setWindowTitle(QCoreApplication::translate("get_data", "Dialog", nullptr));
-        label->setText(QCoreApplication::translate("get_data", "Getting data", nullptr));
+        label->setText(QCoreApplication::translate("get_data", "login", nullptr));
         get_back_button->setText(QCoreApplication::translate("get_data", "Go to menu", nullptr));
         classes_info_button->setText(QCoreApplication::translate("get_data", "Data about class", nullptr));
         students_info_button->setText(QCoreApplication::translate("get_data", "Data about student", nullptr));

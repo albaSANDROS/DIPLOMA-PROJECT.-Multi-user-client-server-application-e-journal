@@ -16,14 +16,14 @@
   <widget class="QLabel" name="label">
    <property name="geometry">
     <rect>
-     <x>230</x>
+     <x>210</x>
      <y>0</y>
-     <width>141</width>
+     <width>171</width>
      <height>41</height>
     </rect>
    </property>
    <property name="text">
-    <string>Getting data</string>
+    <string>login</string>
    </property>
   </widget>
   <widget class="QPushButton" name="get_back_button">
