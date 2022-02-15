@@ -18,9 +18,6 @@ MainWindow::~MainWindow()
     delete ui;
 }
 
-MainWindow::MainWindow(const QString &auth_login, const QString &auth_pass) : auth_login(auth_login),
-    auth_pass(auth_pass)
-{}
 
 const QString &MainWindow::getAuth_login() const
 {

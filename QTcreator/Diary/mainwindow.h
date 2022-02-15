@@ -12,7 +12,7 @@ class MainWindow : public QMainWindow
     Q_OBJECT
 public:
     MainWindow(QWidget *parent = nullptr);
-    MainWindow(const QString &auth_login, const QString &auth_pass);
+    //MainWindow(const QString &auth_login, const QString &auth_pass);
     ~MainWindow();
 
 
