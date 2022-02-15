@@ -40,7 +40,7 @@ void get_data::on_get_back_button_clicked()
 void get_data::on_students_info_button_clicked()
 {
     hide();
-    check_student student_window;
+    check_student student_window(this, getLogin());
     student_window.setModal(true);
     student_window.exec();
 }

@@ -12,14 +12,18 @@ class check_student : public QDialog
     Q_OBJECT
 
 public:
-    explicit check_student(QWidget *parent = nullptr);
+    explicit check_student(QWidget *parent = nullptr, QString login = "login");
     ~check_student();
+
+    const QString &getLogin() const;
+    void setLogin(const QString &newLogin);
 
 private slots:
     void on_cancel_button_clicked();
 
 private:
     Ui::check_student *ui;
+    QString login = "login";
 };
 
 #endif // CHECK_STUDENT_H

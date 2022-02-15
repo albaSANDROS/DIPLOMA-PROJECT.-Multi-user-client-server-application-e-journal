@@ -38,7 +38,7 @@ void check_class::on_cancel_button_clicked()
 void check_class::on_find_button_clicked()
 {
     hide();
-    class_info class_window;
+    class_info class_window(this, getLogin());
     class_window.setModal(true);
     class_window.exec();
 }
