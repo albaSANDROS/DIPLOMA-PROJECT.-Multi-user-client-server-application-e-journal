@@ -46,7 +46,6 @@ void MainWindow::on_auth_confirm_clicked()
 {
     MainWindow mw;
     mw.setAuth_login(ui -> auth_login -> text());
-    //mw.auth_login = ui -> auth_login -> text();
     mw.auth_pass  = ui -> auth_pass  -> text();
 
     if(!(mw.getAuth_login() == "a" && mw.auth_pass == "")){

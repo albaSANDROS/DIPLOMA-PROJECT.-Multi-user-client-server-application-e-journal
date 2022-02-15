@@ -12,7 +12,7 @@ class get_data : public QDialog
     Q_OBJECT
 
 public:
-    explicit get_data(QWidget *parent = nullptr);
+    explicit get_data(QWidget *parent = nullptr, QString login = "this_is_login");
     ~get_data();
 
 private slots:

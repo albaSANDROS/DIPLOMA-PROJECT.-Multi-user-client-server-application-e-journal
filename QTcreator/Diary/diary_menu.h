@@ -16,6 +16,9 @@ public:
     QString auth_login = mw.getAuth_login();
     explicit diary_menu(QWidget *parent = nullptr, QString auth_login = "null");
     ~diary_menu();
+    const QString &getLogin() const;
+    void setLogin(const QString &newLogin);
+
 private slots:
     void on_get_data_button_clicked();
 
@@ -25,6 +28,7 @@ private slots:
 
 private:
     Ui::diary_menu *ui;
+    QString login;
 };
 
 #endif // DIARY_MENU_H

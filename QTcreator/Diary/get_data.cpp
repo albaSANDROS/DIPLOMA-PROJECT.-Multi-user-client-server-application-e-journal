@@ -4,11 +4,12 @@
 #include <check_class.h>
 #include <check_student.h>
 
-get_data::get_data(QWidget *parent) :
+get_data::get_data(QWidget *parent, QString login) :
     QDialog(parent),
     ui(new Ui::get_data)
 {
     ui->setupUi(this);
+    ui->label->setText(login);
 }
 
 get_data::~get_data()

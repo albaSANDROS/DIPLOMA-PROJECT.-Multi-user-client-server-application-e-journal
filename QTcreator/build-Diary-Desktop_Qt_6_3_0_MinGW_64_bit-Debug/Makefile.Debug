@@ -1490,6 +1490,51 @@ debug/class_info.o: ../Diary/class_info.cpp ../Diary/class_info.h \
 		../../../../QTcreator/6.3.0/mingw_64/include/QtGui/QTransform \
 		../../../../QTcreator/6.3.0/mingw_64/include/QtCore/qnativeinterface.h \
 		ui_class_info.h \
+		../../../../QTcreator/6.3.0/mingw_64/include/QtCore/QVariant \
+		../../../../QTcreator/6.3.0/mingw_64/include/QtWidgets/QApplication \
+		../../../../QTcreator/6.3.0/mingw_64/include/QtWidgets/qapplication.h \
+		../../../../QTcreator/6.3.0/mingw_64/include/QtCore/qcoreapplication.h \
+		../../../../QTcreator/6.3.0/mingw_64/include/QtCore/qeventloop.h \
+		../../../../QTcreator/6.3.0/mingw_64/include/QtCore/qcoreapplication_platform.h \
+		../../../../QTcreator/6.3.0/mingw_64/include/QtCore/qfuture.h \
+		../../../../QTcreator/6.3.0/mingw_64/include/QtCore/qfutureinterface.h \
+		../../../../QTcreator/6.3.0/mingw_64/include/QtCore/qmutex.h \
+		../../../../QTcreator/6.3.0/mingw_64/include/QtCore/qresultstore.h \
+		../../../../QTcreator/6.3.0/mingw_64/include/QtCore/qfuture_impl.h \
+		../../../../QTcreator/6.3.0/mingw_64/include/QtCore/qthreadpool.h \
+		../../../../QTcreator/6.3.0/mingw_64/include/QtCore/qthread.h \
+		../../../../QTcreator/6.3.0/mingw_64/include/QtCore/qdeadlinetimer.h \
+		../../../../QTcreator/6.3.0/mingw_64/include/QtCore/qelapsedtimer.h \
+		../../../../QTcreator/6.3.0/mingw_64/include/QtCore/qrunnable.h \
+		../../../../QTcreator/6.3.0/mingw_64/include/QtCore/qexception.h \
+		../../../../QTcreator/6.3.0/mingw_64/include/QtCore/qpromise.h \
+		../../../../QTcreator/6.3.0/mingw_64/include/QtGui/qguiapplication.h \
+		../../../../QTcreator/6.3.0/mingw_64/include/QtGui/qinputmethod.h \
+		../../../../QTcreator/6.3.0/mingw_64/include/QtCore/qlocale.h \
+		../../../../QTcreator/6.3.0/mingw_64/include/QtGui/qguiapplication_platform.h \
+		../../../../QTcreator/6.3.0/mingw_64/include/QtWidgets/QHeaderView \
+		../../../../QTcreator/6.3.0/mingw_64/include/QtWidgets/qheaderview.h \
+		../../../../QTcreator/6.3.0/mingw_64/include/QtWidgets/qabstractitemview.h \
+		../../../../QTcreator/6.3.0/mingw_64/include/QtWidgets/qabstractscrollarea.h \
+		../../../../QTcreator/6.3.0/mingw_64/include/QtWidgets/qframe.h \
+		../../../../QTcreator/6.3.0/mingw_64/include/QtCore/qabstractitemmodel.h \
+		../../../../QTcreator/6.3.0/mingw_64/include/QtCore/qitemselectionmodel.h \
+		../../../../QTcreator/6.3.0/mingw_64/include/QtWidgets/qabstractitemdelegate.h \
+		../../../../QTcreator/6.3.0/mingw_64/include/QtWidgets/qstyleoption.h \
+		../../../../QTcreator/6.3.0/mingw_64/include/QtWidgets/qabstractspinbox.h \
+		../../../../QTcreator/6.3.0/mingw_64/include/QtGui/qvalidator.h \
+		../../../../QTcreator/6.3.0/mingw_64/include/QtCore/qregularexpression.h \
+		../../../../QTcreator/6.3.0/mingw_64/include/QtWidgets/qslider.h \
+		../../../../QTcreator/6.3.0/mingw_64/include/QtWidgets/qabstractslider.h \
+		../../../../QTcreator/6.3.0/mingw_64/include/QtWidgets/qstyle.h \
+		../../../../QTcreator/6.3.0/mingw_64/include/QtWidgets/qtabbar.h \
+		../../../../QTcreator/6.3.0/mingw_64/include/QtWidgets/qtabwidget.h \
+		../../../../QTcreator/6.3.0/mingw_64/include/QtWidgets/qrubberband.h \
+		../../../../QTcreator/6.3.0/mingw_64/include/QtWidgets/QPushButton \
+		../../../../QTcreator/6.3.0/mingw_64/include/QtWidgets/qpushbutton.h \
+		../../../../QTcreator/6.3.0/mingw_64/include/QtWidgets/qabstractbutton.h \
+		../../../../QTcreator/6.3.0/mingw_64/include/QtWidgets/QTableView \
+		../../../../QTcreator/6.3.0/mingw_64/include/QtWidgets/qtableview.h \
 		../Diary/check_class.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\class_info.o ..\Diary\class_info.cpp
 
@@ -1664,7 +1709,12 @@ debug/diary_menu.o: ../Diary/diary_menu.cpp ../Diary/diary_menu.h \
 		../../../../QTcreator/6.3.0/mingw_64/include/QtCore/QDateTime \
 		../../../../QTcreator/6.3.0/mingw_64/include/QtCore/qdatetime.h \
 		../../../../QTcreator/6.3.0/mingw_64/include/QtCore/qcalendar.h \
-		../Diary/get_data.h
+		../Diary/get_data.h \
+		../../../../QTcreator/6.3.0/mingw_64/include/QtWidgets/QMessageBox \
+		../../../../QTcreator/6.3.0/mingw_64/include/QtWidgets/qmessagebox.h \
+		../../../../QTcreator/6.3.0/mingw_64/include/QtCore/QTimer \
+		../../../../QTcreator/6.3.0/mingw_64/include/QtCore/qtimer.h \
+		../../../../QTcreator/6.3.0/mingw_64/include/QtCore/qbasictimer.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\diary_menu.o ..\Diary\diary_menu.cpp
 
 debug/get_data.o: ../Diary/get_data.cpp ../Diary/get_data.h \
@@ -2203,7 +2253,8 @@ debug/mainwindow.o: ../Diary/mainwindow.cpp ../Diary/mainwindow.h \
 		../../../../QTcreator/6.3.0/mingw_64/include/QtWidgets/QDialog \
 		../../../../QTcreator/6.3.0/mingw_64/include/QtCore/QTimer \
 		../../../../QTcreator/6.3.0/mingw_64/include/QtCore/qtimer.h \
-		../../../../QTcreator/6.3.0/mingw_64/include/QtCore/qbasictimer.h
+		../../../../QTcreator/6.3.0/mingw_64/include/QtCore/qbasictimer.h \
+		../../../../QTcreator/6.3.0/mingw_64/include/QtCore/QDebug
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\mainwindow.o ..\Diary\mainwindow.cpp
 
 debug/moc_check_class.o: debug/moc_check_class.cpp 
