@@ -1,11 +1,25 @@
 #include "class_info.h"
 #include "ui_class_info.h"
 #include <check_class.h>
+#include <QSqlTableModel >
+#include <connection.h>
+
 class_info::class_info(QWidget *parent, QString login) :
     QDialog(parent),
     ui(new Ui::class_info)
 {
     ui->setupUi(this);
+
+    QSqlQuery query;
+    query.exec("SELECT * FROM teacher");
+    while (query.next()) {
+      QString full_name = query.value(0).toString();
+      QString gender = query.value(1).toString();
+      QString phon_num = query.value(4).toString();
+      qDebug() << full_name << gender << phon_num;
+    }
+
+
     setLogin(login);
 }
 

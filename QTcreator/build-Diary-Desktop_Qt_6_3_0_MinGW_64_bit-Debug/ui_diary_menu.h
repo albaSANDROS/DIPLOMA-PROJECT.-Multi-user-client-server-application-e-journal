@@ -30,7 +30,7 @@ public:
     {
         if (diary_menu->objectName().isEmpty())
             diary_menu->setObjectName(QString::fromUtf8("diary_menu"));
-        diary_menu->resize(536, 392);
+        diary_menu->resize(536, 405);
         label = new QLabel(diary_menu);
         label->setObjectName(QString::fromUtf8("label"));
         label->setGeometry(QRect(380, 10, 251, 31));
@@ -42,10 +42,10 @@ public:
         get_data_button->setGeometry(QRect(50, 210, 441, 131));
         contact_info = new QPushButton(diary_menu);
         contact_info->setObjectName(QString::fromUtf8("contact_info"));
-        contact_info->setGeometry(QRect(50, 350, 111, 31));
+        contact_info->setGeometry(QRect(50, 360, 111, 31));
         exit_button = new QPushButton(diary_menu);
         exit_button->setObjectName(QString::fromUtf8("exit_button"));
-        exit_button->setGeometry(QRect(380, 350, 111, 31));
+        exit_button->setGeometry(QRect(380, 360, 111, 31));
 
         retranslateUi(diary_menu);
 
@@ -56,7 +56,7 @@ public:
     {
         diary_menu->setWindowTitle(QCoreApplication::translate("diary_menu", "Dialog", nullptr));
         label->setText(QCoreApplication::translate("diary_menu", "login", nullptr));
-        start_lesson_button->setText(QCoreApplication::translate("diary_menu", "Start lesson", nullptr));
+        start_lesson_button->setText(QCoreApplication::translate("diary_menu", "Add marks", nullptr));
         get_data_button->setText(QCoreApplication::translate("diary_menu", "Get data about student", nullptr));
         contact_info->setText(QCoreApplication::translate("diary_menu", "Support", nullptr));
         exit_button->setText(QCoreApplication::translate("diary_menu", "Exit", nullptr));

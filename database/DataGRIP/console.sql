@@ -6,6 +6,14 @@ CREATE TABLE condition (
 ALTER TABLE condition ADD CONSTRAINT condition_pk PRIMARY KEY ( lesson_status_id,
                                                                 subject_id );
 
+CREATE TABLE ids (
+    student_id INTEGER NOT NULL,
+    teacher_id INTEGER NOT NULL
+);
+
+ALTER TABLE ids ADD CONSTRAINT ids_pk PRIMARY KEY ( student_id,
+                                                    teacher_id );
+
 CREATE TABLE lesson (
     type        VARCHAR,
     lesson_date DATE,
@@ -26,8 +34,6 @@ CREATE TABLE lesson_status (
     mark    INTEGER,
     id      INTEGER NOT NULL,
     visited VARCHAR
---  ERROR: VARCHAR2 size not specified
-
 );
 
 ALTER TABLE lesson_status ADD CONSTRAINT lesson_status_pk PRIMARY KEY ( id );
@@ -39,14 +45,27 @@ CREATE TABLE notes (
 
 ALTER TABLE notes ADD CONSTRAINT notes_pk PRIMARY KEY ( id );
 
+CREATE TABLE stud_parent (
+    full_name_parent  VARCHAR(4000),
+    id                INTEGER NOT NULL,
+    phone_numb_parent VARCHAR
+);
+
+ALTER TABLE stud_parent ADD CONSTRAINT stud_parent_pk PRIMARY KEY ( id );
+
 CREATE TABLE student (
     full_name_st      VARCHAR,
     gender            VARCHAR,
     id                INTEGER NOT NULL,
     studying_group_id INTEGER NOT NULL,
-    gr_num            INTEGER,
-    birth_date_st     DATE
+    birth_date_st     DATE,
+    stud_parent_id    INTEGER NOT NULL
 );
+
+CREATE UNIQUE INDEX student__idx ON
+    student (
+        stud_parent_id
+    ASC );
 
 ALTER TABLE student ADD CONSTRAINT student_pk PRIMARY KEY ( id );
 
@@ -77,7 +96,7 @@ ALTER TABLE studying_group ADD CONSTRAINT studying_group_pk PRIMARY KEY ( id );
 CREATE TABLE subject (
     sub_name VARCHAR,
     id       INTEGER NOT NULL
-);a
+);
 
 ALTER TABLE subject ADD CONSTRAINT subject_pk PRIMARY KEY ( id );
 
@@ -109,6 +128,22 @@ CREATE TABLE timetable (
 ALTER TABLE timetable ADD CONSTRAINT timetable_pk PRIMARY KEY ( studying_group_id,
                                                                 lesson_id );
 
+ALTER TABLE condition
+    ADD CONSTRAINT condition_lesson_status_fk FOREIGN KEY ( lesson_status_id )
+        REFERENCES lesson_status ( id );
+
+ALTER TABLE condition
+    ADD CONSTRAINT condition_subject_fk FOREIGN KEY ( subject_id )
+        REFERENCES subject ( id );
+
+ALTER TABLE ids
+    ADD CONSTRAINT ids_student_fk FOREIGN KEY ( student_id )
+        REFERENCES student ( id );
+
+ALTER TABLE ids
+    ADD CONSTRAINT ids_teacher_fk FOREIGN KEY ( teacher_id )
+        REFERENCES teacher ( id );
+
 ALTER TABLE lesson_note
     ADD CONSTRAINT lesson_note_lesson_fk FOREIGN KEY ( lesson_id )
         REFERENCES lesson ( id );
@@ -124,6 +159,10 @@ ALTER TABLE student_note
 ALTER TABLE student_note
     ADD CONSTRAINT student_note_student_fk FOREIGN KEY ( student_id )
         REFERENCES student ( id );
+
+ALTER TABLE student
+    ADD CONSTRAINT student_stud_parent_fk FOREIGN KEY ( stud_parent_id )
+        REFERENCES stud_parent ( id );
 
 ALTER TABLE student
     ADD CONSTRAINT student_studying_group_fk FOREIGN KEY ( studying_group_id )
@@ -156,4 +195,38 @@ ALTER TABLE timetable
 ALTER TABLE timetable
     ADD CONSTRAINT timetable_studying_group_fk FOREIGN KEY ( studying_group_id )
         REFERENCES studying_group ( id );
+
+
+INSERT INTO subject ("sub_name", id)
+VALUES ('Information Technologies', '1');
+
+INSERT INTO subject ("sub_name", id)
+VALUES ('Math', '2');
+
+INSERT INTO teacher ("full_name_t", gender, id, rank, phone_number, subject_id, birth_date_t)
+VALUES ('Basko Aliaksandr', 'M', '1', 'Teacher', '375336648472', '1', '30.09.2000');
+
+INSERT INTO teacher ("full_name_t", gender, id, rank, phone_number, subject_id, birth_date_t)
+VALUES ('Osetnik Dmitry', 'M', '2', 'Teacher', '375445810873', '2', '16.06.2001');
+
+INSERT INTO stud_parent ("full_name_parent", id, phone_numb_parent)
+VALUES ('Grebnev Mikhail', '1', '375333925101');
+
+INSERT INTO stud_parent ("full_name_parent", id, phone_numb_parent)
+VALUES ('Denisevich Oleg', '2', '375291609780');
+
+INSERT INTO studying_group (num, profile, id)
+VALUES ('110001', 'IT', '1');
+
+INSERT INTO student ("full_name_st", gender, id, studying_group_id, birth_date_st, stud_parent_id)
+VALUES ('Grebnev Roman', 'M', '1', '1', '06.02.2001', '1');
+
+INSERT INTO student ("full_name_st", gender, id, studying_group_id, birth_date_st, stud_parent_id)
+VALUES ('Denisevich Mary', 'F', '2', '1', '12.06.2001', '2');
+
+select * FROM subject;
+select * FROM teacher;
+select * FROM student;
+select * FROM stud_parent;
+select * FROM studying_group;
 

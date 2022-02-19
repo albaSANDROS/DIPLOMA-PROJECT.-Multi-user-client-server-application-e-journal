@@ -12,16 +12,13 @@
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QDialog>
-#include <QtWidgets/QHeaderView>
 #include <QtWidgets/QPushButton>
-#include <QtWidgets/QTableView>
 
 QT_BEGIN_NAMESPACE
 
 class Ui_student_info
 {
 public:
-    QTableView *tableView;
     QPushButton *cancel_buttom;
 
     void setupUi(QDialog *student_info)
@@ -29,9 +26,6 @@ public:
         if (student_info->objectName().isEmpty())
             student_info->setObjectName(QString::fromUtf8("student_info"));
         student_info->resize(400, 300);
-        tableView = new QTableView(student_info);
-        tableView->setObjectName(QString::fromUtf8("tableView"));
-        tableView->setGeometry(QRect(30, 20, 341, 192));
         cancel_buttom = new QPushButton(student_info);
         cancel_buttom->setObjectName(QString::fromUtf8("cancel_buttom"));
         cancel_buttom->setGeometry(QRect(150, 240, 101, 31));
