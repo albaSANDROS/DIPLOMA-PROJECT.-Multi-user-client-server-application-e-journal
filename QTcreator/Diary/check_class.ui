@@ -84,6 +84,9 @@
      <layout class="QVBoxLayout" name="verticalLayout">
       <item>
        <widget class="QLineEdit" name="class_num_label">
+        <property name="maxLength">
+         <number>2</number>
+        </property>
         <property name="placeholderText">
          <string>For example - 10</string>
         </property>
@@ -93,6 +96,9 @@
        <widget class="QLineEdit" name="class_letter_label">
         <property name="text">
          <string/>
+        </property>
+        <property name="maxLength">
+         <number>1</number>
         </property>
         <property name="placeholderText">
          <string>For example - A</string>

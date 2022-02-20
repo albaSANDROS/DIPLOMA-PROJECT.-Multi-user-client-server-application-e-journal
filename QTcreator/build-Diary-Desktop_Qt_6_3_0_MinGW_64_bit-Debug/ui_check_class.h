@@ -75,11 +75,13 @@ public:
         verticalLayout->setObjectName(QString::fromUtf8("verticalLayout"));
         class_num_label = new QLineEdit(widget);
         class_num_label->setObjectName(QString::fromUtf8("class_num_label"));
+        class_num_label->setMaxLength(2);
 
         verticalLayout->addWidget(class_num_label);
 
         class_letter_label = new QLineEdit(widget);
         class_letter_label->setObjectName(QString::fromUtf8("class_letter_label"));
+        class_letter_label->setMaxLength(1);
 
         verticalLayout->addWidget(class_letter_label);
 

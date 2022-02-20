@@ -2,6 +2,7 @@
 #include "ui_check_class.h"
 #include <get_data.h>
 #include <class_info.h>
+#include <QMessageBox>
 
 check_class::check_class(QWidget *parent, QString login) :
     QDialog(parent),
@@ -57,16 +58,32 @@ void check_class::on_cancel_button_clicked()
 
 void check_class::on_find_button_clicked()
 {
-    setClass_letter(ui->class_letter_label->text());
+    setClass_letter(ui->class_letter_label->text().toUpper());
 
     int INT_NUM ;
     QString STRING_NUM = ui->class_num_label->text();
     INT_NUM = STRING_NUM.toInt();
     setClass_num(INT_NUM);
 
-    hide();
-    class_info class_window(this, getLogin(), getClass_letter(), getClass_num());
-    class_window.setModal(true);
-    class_window.exec();
+
+
+
+
+    if (((getClass_letter() == "" && getClass_num() == 0) || (getClass_letter() != "" && getClass_num() > 0 && getClass_num() < 12)) ){
+        hide();
+        class_info class_window(this, getLogin(), getClass_letter(), getClass_num());
+        class_window.setModal(true);
+        class_window.exec();
+    }
+
+    else if(getClass_letter() == ""){
+        QMessageBox::warning(this, "Checking class info", "You need to input class letter");
+    }
+    else if(getClass_num() == 0){
+        QMessageBox::warning(this, "Checking class info", "You need to input class number");
+    }
+    else if (getClass_num() < 0 || getClass_num() > 11){
+        QMessageBox::warning(this, "Checking class info", "Check class number. It must be in range 0..11");
+    }
 }
 

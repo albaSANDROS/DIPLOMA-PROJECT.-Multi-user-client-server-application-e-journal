@@ -9,27 +9,29 @@ class_info::class_info(QWidget *parent, QString login, QString class_letter, int
     ui(new Ui::class_info)
 {
     ui->setupUi(this);
+
     setClass_letter(class_letter);
     setClass_num(class_num);
-    qDebug() << "Class letter  "<< getClass_letter();
-    qDebug() <<  "Class numbe  "<< getClass_num();
-    QString question_to_db;
 
-        QString get_gr_id;
+    QString infoText = "All info about " + QString::number(getClass_num()) + " '" + getClass_letter() + "'" + "class\n";
+    ui->textBrowser->append(infoText);
+
+    QString question_to_db;
+    if (getClass_num() == 0 && getClass_letter() == ""){
+        question_to_db="SELECT * FROM student";
+    }
+    else{
+        QString get_gr_id_request;
         QString numb = QString::number(getClass_num());
-        get_gr_id = "SELECT id from studying_group WHERE num = '" + numb + "' and profile = '" + getClass_letter() +"'";
-        qDebug() << get_gr_id;
-         QString gr_id = "null";
+        get_gr_id_request = "SELECT id from studying_group WHERE num = '" + numb + "' and profile = '" + getClass_letter() +"'";
+        QString gr_id = "null";
         QSqlQuery query_getid;
-        query_getid.exec(get_gr_id);
+        query_getid.exec(get_gr_id_request);
         while (query_getid.next()) {
           gr_id = query_getid.value(0).toString();
         }
-
-
         question_to_db="SELECT * FROM student WHERE studying_group_id = '" + gr_id + "'";
-
-    qDebug() << question_to_db;
+    }
     QSqlQuery query;
     query.exec(question_to_db);
     while (query.next()) {
@@ -37,11 +39,7 @@ class_info::class_info(QWidget *parent, QString login, QString class_letter, int
       QString gender = query.value(1).toString();
       QString birth_date = query.value(4).toString();
       ui->textBrowser->append(full_name);
-      qDebug() << full_name << gender << birth_date;
     }
-
-
-
     setLogin(login);
 }
 
