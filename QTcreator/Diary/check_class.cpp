@@ -8,13 +8,6 @@ check_class::check_class(QWidget *parent, QString login) :
     ui(new Ui::check_class)
 {
     ui->setupUi(this);
-    setClass_letter(ui->class_letter_label->text());
-
-    int INT_NUM ;
-    QString STRING_NUM = ui->class_num_label->text();
-    INT_NUM = STRING_NUM.toInt();
-    setClass_num(INT_NUM);
-
     setLogin(login);
 }
 
@@ -64,8 +57,15 @@ void check_class::on_cancel_button_clicked()
 
 void check_class::on_find_button_clicked()
 {
+    setClass_letter(ui->class_letter_label->text());
+
+    int INT_NUM ;
+    QString STRING_NUM = ui->class_num_label->text();
+    INT_NUM = STRING_NUM.toInt();
+    setClass_num(INT_NUM);
+
     hide();
-    class_info class_window(this, getLogin());
+    class_info class_window(this, getLogin(), getClass_letter(), getClass_num());
     class_window.setModal(true);
     class_window.exec();
 }
