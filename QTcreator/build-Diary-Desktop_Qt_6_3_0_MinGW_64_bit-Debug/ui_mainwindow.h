@@ -118,6 +118,8 @@ public:
         groupBox->setTitle(QCoreApplication::translate("MainWindow", "Authorization", nullptr));
         label->setText(QCoreApplication::translate("MainWindow", "Login", nullptr));
         label_2->setText(QCoreApplication::translate("MainWindow", "Password", nullptr));
+        auth_login->setPlaceholderText(QCoreApplication::translate("MainWindow", "login", nullptr));
+        auth_pass->setPlaceholderText(QCoreApplication::translate("MainWindow", "password", nullptr));
         auth_confirm->setText(QCoreApplication::translate("MainWindow", "Confirm", nullptr));
     } // retranslateUi
 

@@ -16,8 +16,10 @@ class_info::class_info(QWidget *parent, QString login) :
       QString full_name = query.value(0).toString();
       QString gender = query.value(1).toString();
       QString phon_num = query.value(4).toString();
+      ui->textBrowser->append(full_name);
       qDebug() << full_name << gender << phon_num;
     }
+
 
 
     setLogin(login);

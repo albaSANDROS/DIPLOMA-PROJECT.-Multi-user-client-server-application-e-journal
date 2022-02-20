@@ -17,7 +17,7 @@
    <property name="geometry">
     <rect>
      <x>90</x>
-     <y>100</y>
+     <y>130</y>
      <width>121</width>
      <height>61</height>
     </rect>
@@ -30,7 +30,7 @@
    <property name="geometry">
     <rect>
      <x>90</x>
-     <y>180</y>
+     <y>200</y>
      <width>121</width>
      <height>24</height>
     </rect>
@@ -42,25 +42,66 @@
   <widget class="QLabel" name="label">
    <property name="geometry">
     <rect>
-     <x>70</x>
+     <x>80</x>
      <y>10</y>
-     <width>161</width>
+     <width>131</width>
      <height>41</height>
     </rect>
    </property>
    <property name="text">
-    <string>Please, input class number</string>
+    <string>Please, input class info</string>
    </property>
   </widget>
-  <widget class="QLineEdit" name="lineEdit">
+  <widget class="QWidget" name="">
    <property name="geometry">
     <rect>
-     <x>20</x>
-     <y>60</y>
-     <width>251</width>
-     <height>31</height>
+     <x>30</x>
+     <y>50</y>
+     <width>241</width>
+     <height>71</height>
     </rect>
    </property>
+   <layout class="QHBoxLayout" name="horizontalLayout">
+    <item>
+     <layout class="QVBoxLayout" name="verticalLayout_2">
+      <item>
+       <widget class="QLabel" name="label_2">
+        <property name="text">
+         <string>Class number</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="label_3">
+        <property name="text">
+         <string>Class letter</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <layout class="QVBoxLayout" name="verticalLayout">
+      <item>
+       <widget class="QLineEdit" name="class_num_label">
+        <property name="placeholderText">
+         <string>For example - 10</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLineEdit" name="class_letter_label">
+        <property name="text">
+         <string/>
+        </property>
+        <property name="placeholderText">
+         <string>For example - A</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+   </layout>
   </widget>
  </widget>
  <resources/>

@@ -18,6 +18,11 @@ public:
     const QString &getLogin() const;
     void setLogin(const QString &newLogin);
 
+    const QString &getClass_letter() const;
+    void setClass_letter(const QString &newClass_letter);
+    int getClass_num() const;
+    void setClass_num(int newClass_num);
+
 private slots:
     void on_cancel_button_clicked();
 
@@ -26,6 +31,8 @@ private slots:
 private:
     Ui::check_class *ui;
     QString login = "login";
+    QString class_letter = "none";
+    int class_num = 0;
 };
 
 #endif // CHECK_CLASS_H

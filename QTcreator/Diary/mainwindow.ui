@@ -59,10 +59,18 @@
         <item>
          <layout class="QVBoxLayout" name="verticalLayout_2">
           <item>
-           <widget class="QLineEdit" name="auth_login"/>
+           <widget class="QLineEdit" name="auth_login">
+            <property name="placeholderText">
+             <string>login</string>
+            </property>
+           </widget>
           </item>
           <item>
-           <widget class="QLineEdit" name="auth_pass"/>
+           <widget class="QLineEdit" name="auth_pass">
+            <property name="placeholderText">
+             <string>password</string>
+            </property>
+           </widget>
           </item>
          </layout>
         </item>

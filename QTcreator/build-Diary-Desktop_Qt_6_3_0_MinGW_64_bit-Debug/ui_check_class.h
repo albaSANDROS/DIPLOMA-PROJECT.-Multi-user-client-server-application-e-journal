@@ -12,9 +12,12 @@
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QDialog>
+#include <QtWidgets/QHBoxLayout>
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QLineEdit>
 #include <QtWidgets/QPushButton>
+#include <QtWidgets/QVBoxLayout>
+#include <QtWidgets/QWidget>
 
 QT_BEGIN_NAMESPACE
 
@@ -24,7 +27,14 @@ public:
     QPushButton *find_button;
     QPushButton *cancel_button;
     QLabel *label;
-    QLineEdit *lineEdit;
+    QWidget *widget;
+    QHBoxLayout *horizontalLayout;
+    QVBoxLayout *verticalLayout_2;
+    QLabel *label_2;
+    QLabel *label_3;
+    QVBoxLayout *verticalLayout;
+    QLineEdit *class_num_label;
+    QLineEdit *class_letter_label;
 
     void setupUi(QDialog *check_class)
     {
@@ -33,16 +43,49 @@ public:
         check_class->resize(300, 230);
         find_button = new QPushButton(check_class);
         find_button->setObjectName(QString::fromUtf8("find_button"));
-        find_button->setGeometry(QRect(90, 100, 121, 61));
+        find_button->setGeometry(QRect(90, 130, 121, 61));
         cancel_button = new QPushButton(check_class);
         cancel_button->setObjectName(QString::fromUtf8("cancel_button"));
-        cancel_button->setGeometry(QRect(90, 180, 121, 24));
+        cancel_button->setGeometry(QRect(90, 200, 121, 24));
         label = new QLabel(check_class);
         label->setObjectName(QString::fromUtf8("label"));
-        label->setGeometry(QRect(70, 10, 161, 41));
-        lineEdit = new QLineEdit(check_class);
-        lineEdit->setObjectName(QString::fromUtf8("lineEdit"));
-        lineEdit->setGeometry(QRect(20, 60, 251, 31));
+        label->setGeometry(QRect(80, 10, 131, 41));
+        widget = new QWidget(check_class);
+        widget->setObjectName(QString::fromUtf8("widget"));
+        widget->setGeometry(QRect(30, 50, 241, 71));
+        horizontalLayout = new QHBoxLayout(widget);
+        horizontalLayout->setObjectName(QString::fromUtf8("horizontalLayout"));
+        horizontalLayout->setContentsMargins(0, 0, 0, 0);
+        verticalLayout_2 = new QVBoxLayout();
+        verticalLayout_2->setObjectName(QString::fromUtf8("verticalLayout_2"));
+        label_2 = new QLabel(widget);
+        label_2->setObjectName(QString::fromUtf8("label_2"));
+
+        verticalLayout_2->addWidget(label_2);
+
+        label_3 = new QLabel(widget);
+        label_3->setObjectName(QString::fromUtf8("label_3"));
+
+        verticalLayout_2->addWidget(label_3);
+
+
+        horizontalLayout->addLayout(verticalLayout_2);
+
+        verticalLayout = new QVBoxLayout();
+        verticalLayout->setObjectName(QString::fromUtf8("verticalLayout"));
+        class_num_label = new QLineEdit(widget);
+        class_num_label->setObjectName(QString::fromUtf8("class_num_label"));
+
+        verticalLayout->addWidget(class_num_label);
+
+        class_letter_label = new QLineEdit(widget);
+        class_letter_label->setObjectName(QString::fromUtf8("class_letter_label"));
+
+        verticalLayout->addWidget(class_letter_label);
+
+
+        horizontalLayout->addLayout(verticalLayout);
+
 
         retranslateUi(check_class);
 
@@ -54,7 +97,12 @@ public:
         check_class->setWindowTitle(QCoreApplication::translate("check_class", "Dialog", nullptr));
         find_button->setText(QCoreApplication::translate("check_class", "Find", nullptr));
         cancel_button->setText(QCoreApplication::translate("check_class", "Cancel", nullptr));
-        label->setText(QCoreApplication::translate("check_class", "Please, input class number", nullptr));
+        label->setText(QCoreApplication::translate("check_class", "Please, input class info", nullptr));
+        label_2->setText(QCoreApplication::translate("check_class", "Class number", nullptr));
+        label_3->setText(QCoreApplication::translate("check_class", "Class letter", nullptr));
+        class_num_label->setPlaceholderText(QCoreApplication::translate("check_class", "For example - 10", nullptr));
+        class_letter_label->setText(QString());
+        class_letter_label->setPlaceholderText(QCoreApplication::translate("check_class", "For example - A", nullptr));
     } // retranslateUi
 
 };
