@@ -13,7 +13,7 @@ class_info::class_info(QWidget *parent, QString login, QString class_letter, int
     setClass_letter(class_letter);
     setClass_num(class_num);
 
-    QString infoText = "All info about " + QString::number(getClass_num()) + " '" + getClass_letter() + "'" + "class\n";
+    QString infoText = "All info about " + QString::number(getClass_num()) + " ' " + getClass_letter() + "'" + "class\n";
     ui->textBrowser->append(infoText);
 
     QString question_to_db;

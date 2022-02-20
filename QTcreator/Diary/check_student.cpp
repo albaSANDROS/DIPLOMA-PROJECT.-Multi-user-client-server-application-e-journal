@@ -2,7 +2,7 @@
 #include "ui_check_student.h"
 #include <get_data.h>
 #include "student_info.h"
-
+#include <QMessageBox>
 check_student::check_student(QWidget *parent, QString login) :
     QDialog(parent),
     ui(new Ui::check_student)
@@ -26,6 +26,17 @@ void check_student::setLogin(const QString &newLogin)
     login = newLogin;
 }
 
+const QString &check_student::getFull_name_st() const
+{
+    return full_name_st;
+}
+
+void check_student::setFull_name_st(const QString &newFull_name_st)
+{
+    full_name_st = newFull_name_st;
+}
+
+
 void check_student::on_cancel_button_clicked()
 {
     hide();
@@ -37,9 +48,16 @@ void check_student::on_cancel_button_clicked()
 
 void check_student::on_find_button_clicked()
 {
+
+    setFull_name_st(ui->student_full_name->text());
+    if (getFull_name_st() != ""){
     hide();
-    student_info student_window(this, getLogin());
+    student_info student_window(this, getLogin(), getFull_name_st());
     student_window.setModal(true);
     student_window.exec();
+    }
+    else{
+        QMessageBox::warning(this, "Checking student info", "You need to input full name of student!");
+    }
 }
 

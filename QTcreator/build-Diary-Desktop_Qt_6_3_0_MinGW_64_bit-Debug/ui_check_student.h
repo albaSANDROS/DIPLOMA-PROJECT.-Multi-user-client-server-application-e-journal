@@ -12,9 +12,11 @@
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QDialog>
+#include <QtWidgets/QHBoxLayout>
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QLineEdit>
 #include <QtWidgets/QPushButton>
+#include <QtWidgets/QWidget>
 
 QT_BEGIN_NAMESPACE
 
@@ -24,7 +26,10 @@ public:
     QPushButton *find_button;
     QPushButton *cancel_button;
     QLabel *label;
-    QLineEdit *lineEdit;
+    QWidget *widget;
+    QHBoxLayout *horizontalLayout;
+    QLabel *label_2;
+    QLineEdit *student_full_name;
 
     void setupUi(QDialog *check_student)
     {
@@ -40,9 +45,22 @@ public:
         label = new QLabel(check_student);
         label->setObjectName(QString::fromUtf8("label"));
         label->setGeometry(QRect(80, 10, 161, 41));
-        lineEdit = new QLineEdit(check_student);
-        lineEdit->setObjectName(QString::fromUtf8("lineEdit"));
-        lineEdit->setGeometry(QRect(30, 60, 251, 31));
+        widget = new QWidget(check_student);
+        widget->setObjectName(QString::fromUtf8("widget"));
+        widget->setGeometry(QRect(40, 50, 241, 24));
+        horizontalLayout = new QHBoxLayout(widget);
+        horizontalLayout->setObjectName(QString::fromUtf8("horizontalLayout"));
+        horizontalLayout->setContentsMargins(0, 0, 0, 0);
+        label_2 = new QLabel(widget);
+        label_2->setObjectName(QString::fromUtf8("label_2"));
+
+        horizontalLayout->addWidget(label_2);
+
+        student_full_name = new QLineEdit(widget);
+        student_full_name->setObjectName(QString::fromUtf8("student_full_name"));
+
+        horizontalLayout->addWidget(student_full_name);
+
 
         retranslateUi(check_student);
 
@@ -55,6 +73,7 @@ public:
         find_button->setText(QCoreApplication::translate("check_student", "Find", nullptr));
         cancel_button->setText(QCoreApplication::translate("check_student", "cancel", nullptr));
         label->setText(QCoreApplication::translate("check_student", "Please, input student`s name", nullptr));
+        label_2->setText(QCoreApplication::translate("check_student", "Full name", nullptr));
     } // retranslateUi
 
 };

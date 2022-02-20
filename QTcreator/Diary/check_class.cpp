@@ -65,10 +65,6 @@ void check_class::on_find_button_clicked()
     INT_NUM = STRING_NUM.toInt();
     setClass_num(INT_NUM);
 
-
-
-
-
     if (((getClass_letter() == "" && getClass_num() == 0) || (getClass_letter() != "" && getClass_num() > 0 && getClass_num() < 12)) ){
         hide();
         class_info class_window(this, getLogin(), getClass_letter(), getClass_num());
