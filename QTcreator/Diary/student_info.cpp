@@ -22,24 +22,24 @@ student_info::student_info(QWidget *parent, QString login, QString full_name_st)
     }
 
     //converting id into num (id=1 -> 10A)
-    get_class_num = "select num, profile from studying_group where id = '" + studying_group_id + "'";
-    query_getnum.exec(get_class_num);
-    while (query_getnum.next()) {
-      gr_num = query_getnum.value(0).toString();    //10
-      gr_prof= query_getnum.value(1).toString();    //A
+    question_to_db = "select num, profile from studying_group where id = '" + studying_group_id + "'";
+    query.exec(question_to_db);
+    while (query.next()) {
+      gr_num = query.value(0).toString();    //10
+      gr_prof= query.value(1).toString();    //A
     }
 
     //getting info about parents
-    get_parents_info = "select full_name_parent, phone_numb_parent from  stud_parent where id = '" + stud_parent_id + "'";
-    query_getparents.exec(get_parents_info);
-    while (query_getparents.next()) {
-      full_name_parent = query_getparents.value(0).toString();    //name
-      phone_numb_parent= query_getparents.value(1).toString();    //ph_num
+    question_to_db = "select full_name_parent, phone_numb_parent from  stud_parent where id = '" + stud_parent_id + "'";
+    query.exec(question_to_db);
+    while (query.next()) {
+      full_name_parent = query.value(0).toString();    //name
+      phone_numb_parent= query.value(1).toString();    //ph_num
     }
 
     //getting mark
     QString quest_to_db;
-    quest_to_db = "select string_agg(distinct mark::text, ',' order by mark::text asc) as mark , sub_name from subject "
+    question_to_db = "select string_agg(distinct mark::text, ',' order by mark::text asc) as mark , sub_name from subject "
                         "join condition c on subject.id = c.subject_id "
                         "join lesson_status ls on c.lesson_status_id = ls.id "
                         "join mark_id mi on ls.id = mi.lesson_status_id "
@@ -48,26 +48,24 @@ student_info::student_info(QWidget *parent, QString login, QString full_name_st)
                         "where mi.student_id = '" + student_id + "' "
                         "group by sub_name ";
     qDebug() << "quest_to_db" << quest_to_db;
-    QSqlQuery query_mark;
-    query_mark.exec(quest_to_db);
+    query.exec(question_to_db);
     QString marks;
     QString subject;
-    while (query_mark.next()) {
+    while (query.next()) {
 
-      marks = query_mark.value(0).toString();
-      subject = query_mark.value(1).toString();
+      marks = query.value(0).toString();
+      subject = query.value(1).toString();
       qDebug() << "sub: " << subject;
       ui->textEdit_marks->append(subject + ": " + marks);
     }
 
 
     //getting notes
-    QString notesQuestion;
-    notesQuestion = "select notes_id from student_note where student_id = '" + student_id + "'";
-    query_getnotes.exec(notesQuestion);
+    question_to_db = "select notes_id from student_note where student_id = '" + student_id + "'";
+    query.exec(question_to_db);
     QString note_id;
-    while (query_getnotes.next()) {
-      note_id = query_getnotes.value(0).toString();
+    while (query.next()) {
+      note_id = query.value(0).toString();
       //select note from notes where id = '2'
             QString notesQuestionFinal;
             notesQuestionFinal = "select note from notes where id = '" + note_id + "'";

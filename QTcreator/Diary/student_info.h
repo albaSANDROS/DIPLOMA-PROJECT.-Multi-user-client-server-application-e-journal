@@ -30,15 +30,10 @@ public:
     QString question_to_db = "null";
     QString gr_num = "null";
     QString gr_prof= "null";
-    QString get_parents_info = "null";
     QString full_name_parent = "null";
     QString phone_numb_parent= "null";
-    QString get_class_num= "null";
     QSqlQuery query_getnotes_full;
-    QSqlQuery query_getparents;
-    QSqlQuery query_getnum;
     QSqlQuery query;
-    QSqlQuery query_getnotes;
 
 private slots:
     void on_cancel_buttom_clicked();
