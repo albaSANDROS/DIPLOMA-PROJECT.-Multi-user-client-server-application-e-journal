@@ -2,6 +2,7 @@
 #define STUDENT_INFO_H
 
 #include <QDialog>
+#include <QSqlQuery>
 
 namespace Ui {
 class student_info;
@@ -20,6 +21,21 @@ public:
 
     const QString &getFull_name_st() const;
     void setFull_name_st(const QString &newFull_name_st);
+    QString full_name = "null";
+    QString gender = "null";
+    QString studying_group_id = "null";
+    QString birth_date = "null";
+    QString stud_parent_id = "null";
+    QString question_to_db = "null";
+    QString gr_num = "null";
+    QString gr_prof= "null";
+    QString get_parents_info = "null";
+    QString full_name_parent = "null";
+    QString phone_numb_parent= "null";
+    QString get_class_num= "null";
+    QSqlQuery query_getparents;
+    QSqlQuery query_getnum;
+    QSqlQuery query;
 
 private slots:
     void on_cancel_buttom_clicked();

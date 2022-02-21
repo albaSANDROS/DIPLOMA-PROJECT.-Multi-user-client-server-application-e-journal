@@ -1,7 +1,7 @@
 #include "class_info.h"
 #include "ui_class_info.h"
 #include <check_class.h>
-#include <QSqlTableModel >
+#include <QSqlTableModel>
 #include <connection.h>
 
 class_info::class_info(QWidget *parent, QString login, QString class_letter, int class_num) :

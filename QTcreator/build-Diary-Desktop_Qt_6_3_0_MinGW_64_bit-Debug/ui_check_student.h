@@ -47,7 +47,7 @@ public:
         label->setGeometry(QRect(80, 10, 161, 41));
         widget = new QWidget(check_student);
         widget->setObjectName(QString::fromUtf8("widget"));
-        widget->setGeometry(QRect(40, 50, 241, 24));
+        widget->setGeometry(QRect(30, 50, 241, 24));
         horizontalLayout = new QHBoxLayout(widget);
         horizontalLayout->setObjectName(QString::fromUtf8("horizontalLayout"));
         horizontalLayout->setContentsMargins(0, 0, 0, 0);

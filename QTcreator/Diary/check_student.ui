@@ -55,7 +55,7 @@
   <widget class="QWidget" name="">
    <property name="geometry">
     <rect>
-     <x>40</x>
+     <x>30</x>
      <y>50</y>
      <width>241</width>
      <height>24</height>
