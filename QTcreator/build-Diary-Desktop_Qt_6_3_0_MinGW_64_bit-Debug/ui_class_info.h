@@ -13,7 +13,7 @@
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QDialog>
 #include <QtWidgets/QPushButton>
-#include <QtWidgets/QTextBrowser>
+#include <QtWidgets/QTextEdit>
 
 QT_BEGIN_NAMESPACE
 
@@ -21,7 +21,7 @@ class Ui_class_info
 {
 public:
     QPushButton *cancel_buttom;
-    QTextBrowser *textBrowser;
+    QTextEdit *textEdit;
 
     void setupUi(QDialog *class_info)
     {
@@ -30,10 +30,11 @@ public:
         class_info->resize(400, 300);
         cancel_buttom = new QPushButton(class_info);
         cancel_buttom->setObjectName(QString::fromUtf8("cancel_buttom"));
-        cancel_buttom->setGeometry(QRect(150, 240, 101, 31));
-        textBrowser = new QTextBrowser(class_info);
-        textBrowser->setObjectName(QString::fromUtf8("textBrowser"));
-        textBrowser->setGeometry(QRect(10, 10, 371, 211));
+        cancel_buttom->setGeometry(QRect(150, 250, 101, 31));
+        textEdit = new QTextEdit(class_info);
+        textEdit->setObjectName(QString::fromUtf8("textEdit"));
+        textEdit->setGeometry(QRect(10, 10, 371, 221));
+        textEdit->setReadOnly(true);
 
         retranslateUi(class_info);
 

@@ -45,13 +45,12 @@ void MainWindow::on_auth_confirm_clicked()
     mw.setAuth_login(ui -> auth_login -> text());
     mw.auth_pass  = ui -> auth_pass  -> text();
 
-    if(!(mw.getAuth_login() == "a" && mw.auth_pass == "")){
+    if(!(mw.getAuth_login() == "" && mw.auth_pass == "")){
         QMessageBox::warning(this, "Authorization", "Access denied");
 
     }else{
         QString named;
         named=mw.getAuth_login();
-        qDebug() << mw.getAuth_login();
         QMessageBox m;
         m.setText("Authorization confirmed");
         QTimer::singleShot(950, &m, SLOT(close()));

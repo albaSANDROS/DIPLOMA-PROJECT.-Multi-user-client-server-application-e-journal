@@ -2,6 +2,7 @@
 #define CLASS_INFO_H
 
 #include <QDialog>
+#include <QSqlQuery>
 
 namespace Ui {
 class class_info;
@@ -22,6 +23,23 @@ public:
     void setClass_letter(const QString &newClass_letter);
     int getClass_num() const;
     void setClass_num(int newClass_num);
+QString infoText;QString question_to_db;
+QString get_gr_id_request;
+QString gr_id = "null";
+QSqlQuery query_getid;
+QSqlQuery query;
+QSqlQuery query_parents;
+QString question_to_db_par;
+QString full_name_parent;
+QString phone_numb_parent;
+QString full_name;
+QString birth_date;
+QString stud_parent_id;
+QString studying_group_id;
+QString gr_num = "null";
+QString gr_prof= "null";
+    QString class_question;
+        QSqlQuery query_class_num;
 
 private slots:
     void on_cancel_buttom_clicked();

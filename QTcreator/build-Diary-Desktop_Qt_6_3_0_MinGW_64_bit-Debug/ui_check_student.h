@@ -26,7 +26,7 @@ public:
     QPushButton *find_button;
     QPushButton *cancel_button;
     QLabel *label;
-    QWidget *widget;
+    QWidget *layoutWidget;
     QHBoxLayout *horizontalLayout;
     QLabel *label_2;
     QLineEdit *student_full_name;
@@ -45,18 +45,18 @@ public:
         label = new QLabel(check_student);
         label->setObjectName(QString::fromUtf8("label"));
         label->setGeometry(QRect(80, 10, 161, 41));
-        widget = new QWidget(check_student);
-        widget->setObjectName(QString::fromUtf8("widget"));
-        widget->setGeometry(QRect(30, 50, 241, 24));
-        horizontalLayout = new QHBoxLayout(widget);
+        layoutWidget = new QWidget(check_student);
+        layoutWidget->setObjectName(QString::fromUtf8("layoutWidget"));
+        layoutWidget->setGeometry(QRect(30, 50, 241, 24));
+        horizontalLayout = new QHBoxLayout(layoutWidget);
         horizontalLayout->setObjectName(QString::fromUtf8("horizontalLayout"));
         horizontalLayout->setContentsMargins(0, 0, 0, 0);
-        label_2 = new QLabel(widget);
+        label_2 = new QLabel(layoutWidget);
         label_2->setObjectName(QString::fromUtf8("label_2"));
 
         horizontalLayout->addWidget(label_2);
 
-        student_full_name = new QLineEdit(widget);
+        student_full_name = new QLineEdit(layoutWidget);
         student_full_name->setObjectName(QString::fromUtf8("student_full_name"));
 
         horizontalLayout->addWidget(student_full_name);
@@ -74,6 +74,7 @@ public:
         cancel_button->setText(QCoreApplication::translate("check_student", "cancel", nullptr));
         label->setText(QCoreApplication::translate("check_student", "Please, input student`s name", nullptr));
         label_2->setText(QCoreApplication::translate("check_student", "Full name", nullptr));
+        student_full_name->setPlaceholderText(QCoreApplication::translate("check_student", "For example: Basko Aliaksandr", nullptr));
     } // retranslateUi
 
 };

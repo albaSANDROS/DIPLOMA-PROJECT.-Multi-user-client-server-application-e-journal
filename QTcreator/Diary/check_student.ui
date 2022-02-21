@@ -52,7 +52,7 @@
     <string>Please, input student`s name</string>
    </property>
   </widget>
-  <widget class="QWidget" name="">
+  <widget class="QWidget" name="layoutWidget">
    <property name="geometry">
     <rect>
      <x>30</x>
@@ -70,7 +70,11 @@
      </widget>
     </item>
     <item>
-     <widget class="QLineEdit" name="student_full_name"/>
+     <widget class="QLineEdit" name="student_full_name">
+      <property name="placeholderText">
+       <string>For example: Basko Aliaksandr</string>
+      </property>
+     </widget>
     </item>
    </layout>
   </widget>

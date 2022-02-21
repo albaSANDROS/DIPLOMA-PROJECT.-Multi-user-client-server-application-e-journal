@@ -13,32 +13,70 @@ class_info::class_info(QWidget *parent, QString login, QString class_letter, int
     setClass_letter(class_letter);
     setClass_num(class_num);
 
-    QString infoText = "All info about " + QString::number(getClass_num()) + " ' " + getClass_letter() + "'" + "class\n";
-    ui->textBrowser->append(infoText);
+    //configuring info message
+    if (getClass_num() == 0 && getClass_letter() == ""){
+        infoText = "Info about all students";
+    }else{
+        infoText = "All info about " + QString::number(getClass_num()) + " '" + getClass_letter() + "'" + "class";
+    }
+    ui->textEdit->append(infoText);
 
-    QString question_to_db;
+    //get info about all classes or not
     if (getClass_num() == 0 && getClass_letter() == ""){
         question_to_db="SELECT * FROM student";
     }
     else{
-        QString get_gr_id_request;
+
         QString numb = QString::number(getClass_num());
         get_gr_id_request = "SELECT id from studying_group WHERE num = '" + numb + "' and profile = '" + getClass_letter() +"'";
-        QString gr_id = "null";
-        QSqlQuery query_getid;
         query_getid.exec(get_gr_id_request);
         while (query_getid.next()) {
           gr_id = query_getid.value(0).toString();
         }
         question_to_db="SELECT * FROM student WHERE studying_group_id = '" + gr_id + "'";
     }
-    QSqlQuery query;
+
     query.exec(question_to_db);
     while (query.next()) {
-      QString full_name = query.value(0).toString();
-      QString gender = query.value(1).toString();
-      QString birth_date = query.value(4).toString();
-      ui->textBrowser->append(full_name);
+
+    //getting data from db
+    full_name = query.value(0).toString();
+    studying_group_id = query.value(3).toString();
+    birth_date = query.value(4).toString();
+    stud_parent_id = query.value(5).toString();
+
+    //getting data about parents from db
+    question_to_db_par = "select full_name_parent, phone_numb_parent from  stud_parent where id = '" + stud_parent_id + "'";
+    query_parents.exec(question_to_db_par);
+    while (query_parents.next()) {
+      full_name_parent = query_parents.value(0).toString();
+      phone_numb_parent= query_parents.value(1).toString();
+    }
+
+    //info about class numb
+    if(getClass_num() == 0 && getClass_letter() == ""){
+        class_question = "select num, profile from studying_group where id = '" + studying_group_id + "'";
+        query_class_num.exec(class_question);
+        while (query_class_num.next()) {
+          gr_num = query_class_num.value(0).toString();
+          gr_prof= query_class_num.value(1).toString();
+        }
+        infoText = "\n=================================\n"
+               "\nFull name: " + full_name +
+               "\nBirth data: " + birth_date +
+               "\nGroup number: " + gr_num + " '" + gr_prof + "' " +
+               "\nParent full name: " + full_name_parent +
+               "\nParent phone number: " + phone_numb_parent;
+    }else{
+    //info output
+         infoText = "\n=================================\n"
+                "\nFull name: " + full_name +
+                "\nBirth data: " + birth_date +
+                "\nParent full name: " + full_name_parent +
+                "\nParent phone number: " + phone_numb_parent;
+
+         }
+    ui->textEdit->append(infoText);
     }
     setLogin(login);
 }

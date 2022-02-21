@@ -38,7 +38,6 @@ student_info::student_info(QWidget *parent, QString login, QString full_name_st)
     }
 
     //getting mark
-    QString quest_to_db;
     question_to_db = "select string_agg(distinct mark::text, ',' order by mark::text asc) as mark , sub_name from subject "
                         "join condition c on subject.id = c.subject_id "
                         "join lesson_status ls on c.lesson_status_id = ls.id "
@@ -47,7 +46,6 @@ student_info::student_info(QWidget *parent, QString login, QString full_name_st)
                         "join studying s2 on s.id = s2.student_id "
                         "where mi.student_id = '" + student_id + "' "
                         "group by sub_name ";
-    qDebug() << "quest_to_db" << quest_to_db;
     query.exec(question_to_db);
     QString marks;
     QString subject;
@@ -55,7 +53,6 @@ student_info::student_info(QWidget *parent, QString login, QString full_name_st)
 
       marks = query.value(0).toString();
       subject = query.value(1).toString();
-      qDebug() << "sub: " << subject;
       ui->textEdit_marks->append(subject + ": " + marks);
     }
 
