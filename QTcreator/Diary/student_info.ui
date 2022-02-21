@@ -65,7 +65,7 @@
     </item>
    </layout>
   </widget>
-  <widget class="QWidget" name="">
+  <widget class="QWidget" name="layoutWidget">
    <property name="geometry">
     <rect>
      <x>30</x>
@@ -124,7 +124,7 @@
     </item>
    </layout>
   </widget>
-  <widget class="QWidget" name="">
+  <widget class="QWidget" name="layoutWidget">
    <property name="geometry">
     <rect>
      <x>30</x>
@@ -197,7 +197,7 @@
     </item>
    </layout>
   </widget>
-  <widget class="QWidget" name="">
+  <widget class="QWidget" name="layoutWidget">
    <property name="geometry">
     <rect>
      <x>30</x>
@@ -224,6 +224,16 @@
    </layout>
   </widget>
  </widget>
+ <tabstops>
+  <tabstop>lineEdit_full_name</tabstop>
+  <tabstop>lineEdit_dateOfBirth</tabstop>
+  <tabstop>lineEdit_class_num</tabstop>
+  <tabstop>textEdit_comments</tabstop>
+  <tabstop>lineEdit_parents_fullname</tabstop>
+  <tabstop>cancel_buttom</tabstop>
+  <tabstop>textEdit_marks</tabstop>
+  <tabstop>lineEdit_parents_phonenum</tabstop>
+ </tabstops>
  <resources/>
  <connections/>
 </ui>

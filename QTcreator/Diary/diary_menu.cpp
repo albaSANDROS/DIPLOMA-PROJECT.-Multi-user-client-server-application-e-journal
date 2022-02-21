@@ -5,6 +5,7 @@
 #include <get_data.h>
 #include <QMessageBox>
 #include <QTimer>
+#include "add_mark.h"
 
 const QString &diary_menu::getLogin() const
 {
@@ -57,5 +58,14 @@ void diary_menu::on_contact_info_clicked()
     diary_menu menu_window(this , getLogin());
     menu_window.setModal(true);
     menu_window.exec();
+}
+
+
+void diary_menu::on_start_lesson_button_clicked()
+{
+    hide();
+    add_mark mark_window(this, getLogin());
+    mark_window.setModal(true);
+    mark_window.exec();
 }
 

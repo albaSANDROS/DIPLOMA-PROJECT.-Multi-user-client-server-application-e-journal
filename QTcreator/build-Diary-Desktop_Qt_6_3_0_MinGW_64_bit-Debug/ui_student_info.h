@@ -31,7 +31,7 @@ public:
     QVBoxLayout *verticalLayout_8;
     QLabel *comments_label;
     QTextEdit *textEdit_comments;
-    QWidget *widget;
+    QWidget *layoutWidget1;
     QVBoxLayout *verticalLayout_5;
     QLabel *parents_info_label;
     QHBoxLayout *horizontalLayout_2;
@@ -41,7 +41,7 @@ public:
     QVBoxLayout *verticalLayout_2;
     QLineEdit *lineEdit_parents_fullname;
     QLineEdit *lineEdit_parents_phonenum;
-    QWidget *widget1;
+    QWidget *layoutWidget2;
     QVBoxLayout *verticalLayout_6;
     QLabel *stud_info_label;
     QHBoxLayout *horizontalLayout;
@@ -53,7 +53,7 @@ public:
     QLineEdit *lineEdit_full_name;
     QLineEdit *lineEdit_dateOfBirth;
     QLineEdit *lineEdit_class_num;
-    QWidget *widget2;
+    QWidget *layoutWidget3;
     QVBoxLayout *verticalLayout_7;
     QLabel *marks_label;
     QTextEdit *textEdit_marks;
@@ -86,13 +86,13 @@ public:
 
         verticalLayout_8->addWidget(textEdit_comments);
 
-        widget = new QWidget(student_info);
-        widget->setObjectName(QString::fromUtf8("widget"));
-        widget->setGeometry(QRect(30, 150, 351, 78));
-        verticalLayout_5 = new QVBoxLayout(widget);
+        layoutWidget1 = new QWidget(student_info);
+        layoutWidget1->setObjectName(QString::fromUtf8("layoutWidget1"));
+        layoutWidget1->setGeometry(QRect(30, 150, 351, 78));
+        verticalLayout_5 = new QVBoxLayout(layoutWidget1);
         verticalLayout_5->setObjectName(QString::fromUtf8("verticalLayout_5"));
         verticalLayout_5->setContentsMargins(0, 0, 0, 0);
-        parents_info_label = new QLabel(widget);
+        parents_info_label = new QLabel(layoutWidget1);
         parents_info_label->setObjectName(QString::fromUtf8("parents_info_label"));
 
         verticalLayout_5->addWidget(parents_info_label);
@@ -101,12 +101,12 @@ public:
         horizontalLayout_2->setObjectName(QString::fromUtf8("horizontalLayout_2"));
         verticalLayout_4 = new QVBoxLayout();
         verticalLayout_4->setObjectName(QString::fromUtf8("verticalLayout_4"));
-        parents_fullname_label = new QLabel(widget);
+        parents_fullname_label = new QLabel(layoutWidget1);
         parents_fullname_label->setObjectName(QString::fromUtf8("parents_fullname_label"));
 
         verticalLayout_4->addWidget(parents_fullname_label);
 
-        label_6 = new QLabel(widget);
+        label_6 = new QLabel(layoutWidget1);
         label_6->setObjectName(QString::fromUtf8("label_6"));
 
         verticalLayout_4->addWidget(label_6);
@@ -116,13 +116,13 @@ public:
 
         verticalLayout_2 = new QVBoxLayout();
         verticalLayout_2->setObjectName(QString::fromUtf8("verticalLayout_2"));
-        lineEdit_parents_fullname = new QLineEdit(widget);
+        lineEdit_parents_fullname = new QLineEdit(layoutWidget1);
         lineEdit_parents_fullname->setObjectName(QString::fromUtf8("lineEdit_parents_fullname"));
         lineEdit_parents_fullname->setReadOnly(true);
 
         verticalLayout_2->addWidget(lineEdit_parents_fullname);
 
-        lineEdit_parents_phonenum = new QLineEdit(widget);
+        lineEdit_parents_phonenum = new QLineEdit(layoutWidget1);
         lineEdit_parents_phonenum->setObjectName(QString::fromUtf8("lineEdit_parents_phonenum"));
         lineEdit_parents_phonenum->setReadOnly(true);
 
@@ -134,13 +134,13 @@ public:
 
         verticalLayout_5->addLayout(horizontalLayout_2);
 
-        widget1 = new QWidget(student_info);
-        widget1->setObjectName(QString::fromUtf8("widget1"));
-        widget1->setGeometry(QRect(30, 20, 351, 106));
-        verticalLayout_6 = new QVBoxLayout(widget1);
+        layoutWidget2 = new QWidget(student_info);
+        layoutWidget2->setObjectName(QString::fromUtf8("layoutWidget2"));
+        layoutWidget2->setGeometry(QRect(30, 20, 351, 106));
+        verticalLayout_6 = new QVBoxLayout(layoutWidget2);
         verticalLayout_6->setObjectName(QString::fromUtf8("verticalLayout_6"));
         verticalLayout_6->setContentsMargins(0, 0, 0, 0);
-        stud_info_label = new QLabel(widget1);
+        stud_info_label = new QLabel(layoutWidget2);
         stud_info_label->setObjectName(QString::fromUtf8("stud_info_label"));
 
         verticalLayout_6->addWidget(stud_info_label);
@@ -149,17 +149,17 @@ public:
         horizontalLayout->setObjectName(QString::fromUtf8("horizontalLayout"));
         verticalLayout_3 = new QVBoxLayout();
         verticalLayout_3->setObjectName(QString::fromUtf8("verticalLayout_3"));
-        fullNameSt_label = new QLabel(widget1);
+        fullNameSt_label = new QLabel(layoutWidget2);
         fullNameSt_label->setObjectName(QString::fromUtf8("fullNameSt_label"));
 
         verticalLayout_3->addWidget(fullNameSt_label);
 
-        date_of_birth_label = new QLabel(widget1);
+        date_of_birth_label = new QLabel(layoutWidget2);
         date_of_birth_label->setObjectName(QString::fromUtf8("date_of_birth_label"));
 
         verticalLayout_3->addWidget(date_of_birth_label);
 
-        class_label = new QLabel(widget1);
+        class_label = new QLabel(layoutWidget2);
         class_label->setObjectName(QString::fromUtf8("class_label"));
 
         verticalLayout_3->addWidget(class_label);
@@ -169,19 +169,19 @@ public:
 
         verticalLayout = new QVBoxLayout();
         verticalLayout->setObjectName(QString::fromUtf8("verticalLayout"));
-        lineEdit_full_name = new QLineEdit(widget1);
+        lineEdit_full_name = new QLineEdit(layoutWidget2);
         lineEdit_full_name->setObjectName(QString::fromUtf8("lineEdit_full_name"));
         lineEdit_full_name->setReadOnly(true);
 
         verticalLayout->addWidget(lineEdit_full_name);
 
-        lineEdit_dateOfBirth = new QLineEdit(widget1);
+        lineEdit_dateOfBirth = new QLineEdit(layoutWidget2);
         lineEdit_dateOfBirth->setObjectName(QString::fromUtf8("lineEdit_dateOfBirth"));
         lineEdit_dateOfBirth->setReadOnly(true);
 
         verticalLayout->addWidget(lineEdit_dateOfBirth);
 
-        lineEdit_class_num = new QLineEdit(widget1);
+        lineEdit_class_num = new QLineEdit(layoutWidget2);
         lineEdit_class_num->setObjectName(QString::fromUtf8("lineEdit_class_num"));
         lineEdit_class_num->setReadOnly(true);
 
@@ -193,23 +193,30 @@ public:
 
         verticalLayout_6->addLayout(horizontalLayout);
 
-        widget2 = new QWidget(student_info);
-        widget2->setObjectName(QString::fromUtf8("widget2"));
-        widget2->setGeometry(QRect(30, 240, 351, 121));
-        verticalLayout_7 = new QVBoxLayout(widget2);
+        layoutWidget3 = new QWidget(student_info);
+        layoutWidget3->setObjectName(QString::fromUtf8("layoutWidget3"));
+        layoutWidget3->setGeometry(QRect(30, 240, 351, 121));
+        verticalLayout_7 = new QVBoxLayout(layoutWidget3);
         verticalLayout_7->setObjectName(QString::fromUtf8("verticalLayout_7"));
         verticalLayout_7->setContentsMargins(0, 0, 0, 0);
-        marks_label = new QLabel(widget2);
+        marks_label = new QLabel(layoutWidget3);
         marks_label->setObjectName(QString::fromUtf8("marks_label"));
 
         verticalLayout_7->addWidget(marks_label);
 
-        textEdit_marks = new QTextEdit(widget2);
+        textEdit_marks = new QTextEdit(layoutWidget3);
         textEdit_marks->setObjectName(QString::fromUtf8("textEdit_marks"));
         textEdit_marks->setReadOnly(true);
 
         verticalLayout_7->addWidget(textEdit_marks);
 
+        QWidget::setTabOrder(lineEdit_full_name, lineEdit_dateOfBirth);
+        QWidget::setTabOrder(lineEdit_dateOfBirth, lineEdit_class_num);
+        QWidget::setTabOrder(lineEdit_class_num, textEdit_comments);
+        QWidget::setTabOrder(textEdit_comments, lineEdit_parents_fullname);
+        QWidget::setTabOrder(lineEdit_parents_fullname, cancel_buttom);
+        QWidget::setTabOrder(cancel_buttom, textEdit_marks);
+        QWidget::setTabOrder(textEdit_marks, lineEdit_parents_phonenum);
 
         retranslateUi(student_info);
 

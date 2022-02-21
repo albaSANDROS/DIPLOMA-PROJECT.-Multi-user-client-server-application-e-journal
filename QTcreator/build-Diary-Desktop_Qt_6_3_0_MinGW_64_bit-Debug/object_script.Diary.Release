@@ -1,3 +1,5 @@
+release/add_mark.o
+release/add_mark_2.o
 release/check_class.o
 release/check_student.o
 release/class_info.o
@@ -6,6 +8,8 @@ release/get_data.o
 release/main.o
 release/mainwindow.o
 release/student_info.o
+release/moc_add_mark.o
+release/moc_add_mark_2.o
 release/moc_check_class.o
 release/moc_check_student.o
 release/moc_class_info.o

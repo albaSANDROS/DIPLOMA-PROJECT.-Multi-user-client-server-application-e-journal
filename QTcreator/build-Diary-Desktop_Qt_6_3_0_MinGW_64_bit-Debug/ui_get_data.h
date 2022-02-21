@@ -42,6 +42,8 @@ public:
         students_info_button = new QPushButton(get_data);
         students_info_button->setObjectName(QString::fromUtf8("students_info_button"));
         students_info_button->setGeometry(QRect(20, 40, 171, 161));
+        QWidget::setTabOrder(students_info_button, classes_info_button);
+        QWidget::setTabOrder(classes_info_button, get_back_button);
 
         retranslateUi(get_data);
 

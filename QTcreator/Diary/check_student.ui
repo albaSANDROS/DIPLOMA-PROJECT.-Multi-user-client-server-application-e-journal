@@ -79,6 +79,11 @@
    </layout>
   </widget>
  </widget>
+ <tabstops>
+  <tabstop>student_full_name</tabstop>
+  <tabstop>find_button</tabstop>
+  <tabstop>cancel_button</tabstop>
+ </tabstops>
  <resources/>
  <connections/>
 </ui>

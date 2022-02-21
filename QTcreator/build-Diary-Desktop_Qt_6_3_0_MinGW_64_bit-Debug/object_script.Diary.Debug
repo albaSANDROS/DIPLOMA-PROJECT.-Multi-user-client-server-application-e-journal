@@ -1,3 +1,5 @@
+debug/add_mark.o
+debug/add_mark_2.o
 debug/check_class.o
 debug/check_student.o
 debug/class_info.o
@@ -6,6 +8,8 @@ debug/get_data.o
 debug/main.o
 debug/mainwindow.o
 debug/student_info.o
+debug/moc_add_mark.o
+debug/moc_add_mark_2.o
 debug/moc_check_class.o
 debug/moc_check_student.o
 debug/moc_class_info.o

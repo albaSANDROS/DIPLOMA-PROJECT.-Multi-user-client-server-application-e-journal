@@ -9,7 +9,6 @@ class_info::class_info(QWidget *parent, QString login, QString class_letter, int
     ui(new Ui::class_info)
 {
     ui->setupUi(this);
-
     setClass_letter(class_letter);
     setClass_num(class_num);
 
@@ -68,7 +67,6 @@ class_info::class_info(QWidget *parent, QString login, QString class_letter, int
                "\nParent full name: " + full_name_parent +
                "\nParent phone number: " + phone_numb_parent;
     }else{
-    //info output
          infoText = "\n=================================\n"
                 "\nFull name: " + full_name +
                 "\nBirth data: " + birth_date +

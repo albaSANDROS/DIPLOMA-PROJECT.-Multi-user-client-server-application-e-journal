@@ -14,7 +14,7 @@ inline bool createConnection(){
     db.setUserName("postgres");
     db.setPassword("1");
     if (!db.open()){
-        QMessageBox::warning(0,"Ошибка БД", "Something Wrong");
+        QMessageBox::warning(0,"Ошибка БД", "Something with DB Wrong");
         return false;
     }
     else{

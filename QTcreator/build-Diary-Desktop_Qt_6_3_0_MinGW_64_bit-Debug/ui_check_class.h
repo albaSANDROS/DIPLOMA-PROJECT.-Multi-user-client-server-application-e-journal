@@ -27,7 +27,7 @@ public:
     QPushButton *find_button;
     QPushButton *cancel_button;
     QLabel *label;
-    QWidget *widget;
+    QWidget *layoutWidget;
     QHBoxLayout *horizontalLayout;
     QVBoxLayout *verticalLayout_2;
     QLabel *label_2;
@@ -50,20 +50,20 @@ public:
         label = new QLabel(check_class);
         label->setObjectName(QString::fromUtf8("label"));
         label->setGeometry(QRect(80, 10, 131, 41));
-        widget = new QWidget(check_class);
-        widget->setObjectName(QString::fromUtf8("widget"));
-        widget->setGeometry(QRect(30, 50, 241, 71));
-        horizontalLayout = new QHBoxLayout(widget);
+        layoutWidget = new QWidget(check_class);
+        layoutWidget->setObjectName(QString::fromUtf8("layoutWidget"));
+        layoutWidget->setGeometry(QRect(30, 50, 241, 71));
+        horizontalLayout = new QHBoxLayout(layoutWidget);
         horizontalLayout->setObjectName(QString::fromUtf8("horizontalLayout"));
         horizontalLayout->setContentsMargins(0, 0, 0, 0);
         verticalLayout_2 = new QVBoxLayout();
         verticalLayout_2->setObjectName(QString::fromUtf8("verticalLayout_2"));
-        label_2 = new QLabel(widget);
+        label_2 = new QLabel(layoutWidget);
         label_2->setObjectName(QString::fromUtf8("label_2"));
 
         verticalLayout_2->addWidget(label_2);
 
-        label_3 = new QLabel(widget);
+        label_3 = new QLabel(layoutWidget);
         label_3->setObjectName(QString::fromUtf8("label_3"));
 
         verticalLayout_2->addWidget(label_3);
@@ -73,13 +73,13 @@ public:
 
         verticalLayout = new QVBoxLayout();
         verticalLayout->setObjectName(QString::fromUtf8("verticalLayout"));
-        class_num_label = new QLineEdit(widget);
+        class_num_label = new QLineEdit(layoutWidget);
         class_num_label->setObjectName(QString::fromUtf8("class_num_label"));
         class_num_label->setMaxLength(2);
 
         verticalLayout->addWidget(class_num_label);
 
-        class_letter_label = new QLineEdit(widget);
+        class_letter_label = new QLineEdit(layoutWidget);
         class_letter_label->setObjectName(QString::fromUtf8("class_letter_label"));
         class_letter_label->setMaxLength(1);
 
@@ -88,6 +88,9 @@ public:
 
         horizontalLayout->addLayout(verticalLayout);
 
+        QWidget::setTabOrder(class_num_label, class_letter_label);
+        QWidget::setTabOrder(class_letter_label, find_button);
+        QWidget::setTabOrder(find_button, cancel_button);
 
         retranslateUi(check_class);
 

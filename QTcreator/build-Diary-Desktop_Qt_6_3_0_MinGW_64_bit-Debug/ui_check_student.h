@@ -61,6 +61,8 @@ public:
 
         horizontalLayout->addWidget(student_full_name);
 
+        QWidget::setTabOrder(student_full_name, find_button);
+        QWidget::setTabOrder(find_button, cancel_button);
 
         retranslateUi(check_student);
 

@@ -26,6 +26,8 @@ private slots:
 
     void on_contact_info_clicked();
 
+    void on_start_lesson_button_clicked();
+
 private:
     Ui::diary_menu *ui;
     QString login;

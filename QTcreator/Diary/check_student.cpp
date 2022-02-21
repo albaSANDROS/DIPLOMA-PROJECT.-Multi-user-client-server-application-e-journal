@@ -48,7 +48,6 @@ void check_student::on_cancel_button_clicked()
 
 void check_student::on_find_button_clicked()
 {
-
     setFull_name_st(ui->student_full_name->text());
     if (getFull_name_st() != ""){
     hide();

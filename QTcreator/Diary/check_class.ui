@@ -52,7 +52,7 @@
     <string>Please, input class info</string>
    </property>
   </widget>
-  <widget class="QWidget" name="">
+  <widget class="QWidget" name="layoutWidget">
    <property name="geometry">
     <rect>
      <x>30</x>
@@ -110,6 +110,12 @@
    </layout>
   </widget>
  </widget>
+ <tabstops>
+  <tabstop>class_num_label</tabstop>
+  <tabstop>class_letter_label</tabstop>
+  <tabstop>find_button</tabstop>
+  <tabstop>cancel_button</tabstop>
+ </tabstops>
  <resources/>
  <connections/>
 </ui>
