@@ -15,6 +15,7 @@ student_info::student_info(QWidget *parent, QString login, QString full_name_st)
     while (query.next()) {
       full_name = query.value(0).toString();
       gender = query.value(1).toString();
+      student_id = query.value(2).toString();
       studying_group_id = query.value(3).toString();
       birth_date =  query.value(4).toString();
       stud_parent_id = query.value(5).toString();
@@ -38,6 +39,27 @@ student_info::student_info(QWidget *parent, QString login, QString full_name_st)
     }
 
     //output info
+
+    //getting notes
+    //select notes_id from student_note where student_id = '1';
+    QString notesQuestion;
+    notesQuestion = "select notes_id from student_note where student_id = '" + student_id + "'";
+    query_getnotes.exec(notesQuestion);
+    QString note_id;
+    while (query_getnotes.next()) {
+      note_id = query_getnotes.value(0).toString();
+      //select note from notes where id = '2'
+            QString notesQuestionFinal;
+            notesQuestionFinal = "select note from notes where id = '" + note_id + "'";
+            query_getnotes_full.exec(notesQuestionFinal);
+            QString note;
+            while (query_getnotes_full.next()){
+                note = query_getnotes_full.value(0).toString();
+                ui->textEdit_comments->append(note);
+            }
+      //ui->textEdit_comments->append(note_id);
+    }
+
     ui->lineEdit_full_name->insert(full_name);
     ui->lineEdit_dateOfBirth->insert(birth_date);
     ui->lineEdit_class_num->insert(gr_num + " " + gr_prof);
