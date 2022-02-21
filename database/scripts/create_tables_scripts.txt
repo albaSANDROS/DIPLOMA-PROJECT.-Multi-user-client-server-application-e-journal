@@ -6,6 +6,14 @@ CREATE TABLE condition (
 ALTER TABLE condition ADD CONSTRAINT condition_pk PRIMARY KEY ( lesson_status_id,
                                                                 subject_id );
 
+CREATE TABLE ids (
+    student_id INTEGER NOT NULL,
+    teacher_id INTEGER NOT NULL
+);
+
+ALTER TABLE ids ADD CONSTRAINT ids_pk PRIMARY KEY ( student_id,
+                                                    teacher_id );
+
 CREATE TABLE lesson (
     type        VARCHAR,
     lesson_date DATE,
@@ -26,7 +34,6 @@ CREATE TABLE lesson_status (
     mark    INTEGER,
     id      INTEGER NOT NULL,
     visited VARCHAR
-
 );
 
 ALTER TABLE lesson_status ADD CONSTRAINT lesson_status_pk PRIMARY KEY ( id );
@@ -38,14 +45,44 @@ CREATE TABLE notes (
 
 ALTER TABLE notes ADD CONSTRAINT notes_pk PRIMARY KEY ( id );
 
+CREATE TABLE mark_id (
+    student_id       INTEGER NOT NULL,
+    lesson_status_id INTEGER NOT NULL
+);
+
+ALTER TABLE mark_id ADD CONSTRAINT mark_id_pk PRIMARY KEY ( student_id,
+                                                            lesson_status_id );
+
+ALTER TABLE mark_id
+    ADD CONSTRAINT mark_id_lesson_status_fk FOREIGN KEY ( lesson_status_id )
+        REFERENCES lesson_status ( id );
+
+ALTER TABLE mark_id
+    ADD CONSTRAINT mark_id_student_fk FOREIGN KEY ( student_id )
+        REFERENCES student ( id );
+
+
+CREATE TABLE stud_parent (
+    full_name_parent  VARCHAR(4000),
+    id                INTEGER NOT NULL,
+    phone_numb_parent VARCHAR
+);
+
+ALTER TABLE stud_parent ADD CONSTRAINT stud_parent_pk PRIMARY KEY ( id );
+
 CREATE TABLE student (
     full_name_st      VARCHAR,
     gender            VARCHAR,
     id                INTEGER NOT NULL,
     studying_group_id INTEGER NOT NULL,
-    gr_num            INTEGER,
-    birth_date_st     DATE
+    birth_date_st     DATE,
+    stud_parent_id    INTEGER NOT NULL
 );
+
+CREATE UNIQUE INDEX student__idx ON
+    student (
+        stud_parent_id
+    ASC );
 
 ALTER TABLE student ADD CONSTRAINT student_pk PRIMARY KEY ( id );
 
@@ -108,6 +145,22 @@ CREATE TABLE timetable (
 ALTER TABLE timetable ADD CONSTRAINT timetable_pk PRIMARY KEY ( studying_group_id,
                                                                 lesson_id );
 
+ALTER TABLE condition
+    ADD CONSTRAINT condition_lesson_status_fk FOREIGN KEY ( lesson_status_id )
+        REFERENCES lesson_status ( id );
+
+ALTER TABLE condition
+    ADD CONSTRAINT condition_subject_fk FOREIGN KEY ( subject_id )
+        REFERENCES subject ( id );
+
+ALTER TABLE ids
+    ADD CONSTRAINT ids_student_fk FOREIGN KEY ( student_id )
+        REFERENCES student ( id );
+
+ALTER TABLE ids
+    ADD CONSTRAINT ids_teacher_fk FOREIGN KEY ( teacher_id )
+        REFERENCES teacher ( id );
+
 ALTER TABLE lesson_note
     ADD CONSTRAINT lesson_note_lesson_fk FOREIGN KEY ( lesson_id )
         REFERENCES lesson ( id );
@@ -123,6 +176,10 @@ ALTER TABLE student_note
 ALTER TABLE student_note
     ADD CONSTRAINT student_note_student_fk FOREIGN KEY ( student_id )
         REFERENCES student ( id );
+
+ALTER TABLE student
+    ADD CONSTRAINT student_stud_parent_fk FOREIGN KEY ( stud_parent_id )
+        REFERENCES stud_parent ( id );
 
 ALTER TABLE student
     ADD CONSTRAINT student_studying_group_fk FOREIGN KEY ( studying_group_id )
@@ -156,18 +213,3 @@ ALTER TABLE timetable
     ADD CONSTRAINT timetable_studying_group_fk FOREIGN KEY ( studying_group_id )
         REFERENCES studying_group ( id );
 
-CREATE TABLE ids (
-    student_id INTEGER NOT NULL,
-    teacher_id INTEGER NOT NULL
-);
-
-ALTER TABLE ids ADD CONSTRAINT ids_pk PRIMARY KEY ( student_id,
-                                                    teacher_id );
-
-ALTER TABLE ids
-    ADD CONSTRAINT ids_student_fk FOREIGN KEY ( student_id )
-        REFERENCES student ( id );
-
-ALTER TABLE ids
-    ADD CONSTRAINT ids_teacher_fk FOREIGN KEY ( teacher_id )
-        REFERENCES teacher ( id );

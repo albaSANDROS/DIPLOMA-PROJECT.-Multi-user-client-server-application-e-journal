@@ -30,7 +30,6 @@ student_info::student_info(QWidget *parent, QString login, QString full_name_st)
     }
 
     //getting info about parents
-
     get_parents_info = "select full_name_parent, phone_numb_parent from  stud_parent where id = '" + stud_parent_id + "'";
     query_getparents.exec(get_parents_info);
     while (query_getparents.next()) {
@@ -38,10 +37,31 @@ student_info::student_info(QWidget *parent, QString login, QString full_name_st)
       phone_numb_parent= query_getparents.value(1).toString();    //ph_num
     }
 
-    //output info
+    //getting mark
+    QString quest_to_db;
+    quest_to_db = "select string_agg(distinct mark::text, ',' order by mark::text asc) as mark , sub_name from subject "
+                        "join condition c on subject.id = c.subject_id "
+                        "join lesson_status ls on c.lesson_status_id = ls.id "
+                        "join mark_id mi on ls.id = mi.lesson_status_id "
+                        "join student s on mi.student_id = s.id "
+                        "join studying s2 on s.id = s2.student_id "
+                        "where mi.student_id = '" + student_id + "' "
+                        "group by sub_name ";
+    qDebug() << "quest_to_db" << quest_to_db;
+    QSqlQuery query_mark;
+    query_mark.exec(quest_to_db);
+    QString marks;
+    QString subject;
+    while (query_mark.next()) {
+
+      marks = query_mark.value(0).toString();
+      subject = query_mark.value(1).toString();
+      qDebug() << "sub: " << subject;
+      ui->textEdit_marks->append(subject + ": " + marks);
+    }
+
 
     //getting notes
-    //select notes_id from student_note where student_id = '1';
     QString notesQuestion;
     notesQuestion = "select notes_id from student_note where student_id = '" + student_id + "'";
     query_getnotes.exec(notesQuestion);
@@ -59,7 +79,7 @@ student_info::student_info(QWidget *parent, QString login, QString full_name_st)
             }
       //ui->textEdit_comments->append(note_id);
     }
-
+    //output info
     ui->lineEdit_full_name->insert(full_name);
     ui->lineEdit_dateOfBirth->insert(birth_date);
     ui->lineEdit_class_num->insert(gr_num + " " + gr_prof);
