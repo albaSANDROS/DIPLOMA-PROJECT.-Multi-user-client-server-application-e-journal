@@ -22,19 +22,21 @@ QT_BEGIN_MOC_NAMESPACE
 QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 struct qt_meta_stringdata_add_mark_2_t {
-    const uint offsetsAndSize[6];
-    char stringdata0[36];
+    const uint offsetsAndSize[8];
+    char stringdata0[72];
 };
 #define QT_MOC_LITERAL(ofs, len) \
     uint(offsetof(qt_meta_stringdata_add_mark_2_t, stringdata0) + ofs), len 
 static const qt_meta_stringdata_add_mark_2_t qt_meta_stringdata_add_mark_2 = {
     {
 QT_MOC_LITERAL(0, 10), // "add_mark_2"
-QT_MOC_LITERAL(11, 23), // "on_pushButton_2_clicked"
-QT_MOC_LITERAL(35, 0) // ""
+QT_MOC_LITERAL(11, 28), // "on_pushButton_cancel_clicked"
+QT_MOC_LITERAL(40, 0), // ""
+QT_MOC_LITERAL(41, 30) // "on_pushButton_evaluate_clicked"
 
     },
-    "add_mark_2\0on_pushButton_2_clicked\0"
+    "add_mark_2\0on_pushButton_cancel_clicked\0"
+    "\0on_pushButton_evaluate_clicked"
 };
 #undef QT_MOC_LITERAL
 
@@ -44,7 +46,7 @@ static const uint qt_meta_data_add_mark_2[] = {
       10,       // revision
        0,       // classname
        0,    0, // classinfo
-       1,   14, // methods
+       2,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -52,9 +54,11 @@ static const uint qt_meta_data_add_mark_2[] = {
        0,       // signalCount
 
  // slots: name, argc, parameters, tag, flags, initial metatype offsets
-       1,    0,   20,    2, 0x08,    1 /* Private */,
+       1,    0,   26,    2, 0x08,    1 /* Private */,
+       3,    0,   27,    2, 0x08,    2 /* Private */,
 
  // slots: parameters
+    QMetaType::Void,
     QMetaType::Void,
 
        0        // eod
@@ -66,7 +70,8 @@ void add_mark_2::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, 
         auto *_t = static_cast<add_mark_2 *>(_o);
         (void)_t;
         switch (_id) {
-        case 0: _t->on_pushButton_2_clicked(); break;
+        case 0: _t->on_pushButton_cancel_clicked(); break;
+        case 1: _t->on_pushButton_evaluate_clicked(); break;
         default: ;
         }
     }
@@ -81,7 +86,7 @@ const QMetaObject add_mark_2::staticMetaObject = { {
     nullptr,
 qt_incomplete_metaTypeArray<qt_meta_stringdata_add_mark_2_t
 , QtPrivate::TypeAndForceComplete<add_mark_2, std::true_type>
-, QtPrivate::TypeAndForceComplete<void, std::false_type>
+, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>
 
 
 >,
@@ -108,13 +113,13 @@ int add_mark_2::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 1)
+        if (_id < 2)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 1;
+        _id -= 2;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 1)
+        if (_id < 2)
             *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType();
-        _id -= 1;
+        _id -= 2;
     }
     return _id;
 }

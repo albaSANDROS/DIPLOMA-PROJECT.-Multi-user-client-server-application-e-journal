@@ -2,6 +2,7 @@
 #define ADD_MARK_2_H
 
 #include <QDialog>
+#include <QSqlQuery>
 
 namespace Ui {
 class add_mark_2;
@@ -18,17 +19,21 @@ public:
     const QString &getLogin() const;
     void setLogin(const QString &newLogin);
 
-    const QString &getName() const;
-    void setName(const QString &newName);
+    QString question_to_db = "null";
+    QSqlQuery query;
+    const QString &getStudent_name() const;
+    void setStudent_name(const QString &newStudent_name);
 
 private slots:
 
-    void on_pushButton_2_clicked();
+    void on_pushButton_cancel_clicked();
+
+    void on_pushButton_evaluate_clicked();
 
 private:
     Ui::add_mark_2 *ui;
     QString login = "login";
-    QString name = "none";
+    QString student_name = "none";
 };
 
 #endif // ADD_MARK_2_H
