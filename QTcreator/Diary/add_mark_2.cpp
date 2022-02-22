@@ -2,6 +2,7 @@
 #include "ui_add_mark_2.h"
 #include "add_mark.h"
 #include <QMessageBox>
+#include "diary_menu.h"
 
 add_mark_2::add_mark_2(QWidget *parent, QString login, QString student_name) :
     QDialog(parent),
@@ -62,8 +63,6 @@ void add_mark_2::on_pushButton_evaluate_clicked()
     QString lessonStatus = "yes";
     QString comment;
 
-    qDebug() << "Choosed mark is: " << mark;
-
     if(subject == "<none>"){
             QMessageBox::warning(this, "Mark Error", "Please, choose one of presented subjects");
     }
@@ -74,7 +73,7 @@ void add_mark_2::on_pushButton_evaluate_clicked()
     QMessageBox::StandardButton reply;
     reply = QMessageBox::question(this, "Are you sure?", "Are you sure, that you wanna do this?",
                                     QMessageBox::Yes|QMessageBox::No);
-      if (reply == QMessageBox::Yes) {
+    if (reply == QMessageBox::Yes) {
 
     //getting id of subject
     question_to_db = "select id from subject where sub_name = '" + subject + "'";
@@ -95,6 +94,7 @@ void add_mark_2::on_pushButton_evaluate_clicked()
     question_to_db = "select * from studying where student_id = '" + student_id + "' and subject_id = '" + sub_id + "'";
     query.exec(question_to_db);
 
+    //checking for exercise problems (did we can continue)
     if (!query.next()){
         QMessageBox::warning(this, "Subject Error", "This student don`t study this subject");
     }
@@ -111,14 +111,12 @@ void add_mark_2::on_pushButton_evaluate_clicked()
         lessonID = QString::number(lessonID_int);
 
         question_to_db = "INSERT INTO lesson_status VALUES ('" + mark + "', '" + lessonID + "', '" + lessonStatus + "')";
-        //query.exec(question_to_db);
-        qDebug() << question_to_db;
+        query.exec(question_to_db);
         question_to_db = "INSERT INTO mark_id VALUES ('" + student_id + "', '" + lessonID + "')";
-        //query.exec(question_to_db);
-        qDebug() << question_to_db;
+        query.exec(question_to_db);
         question_to_db = "INSERT INTO condition VALUES ('" + lessonID + "', '" + sub_id + "')";
-        //query.exec(question_to_db);
-        qDebug() << question_to_db;
+        query.exec(question_to_db);
+
 
         //inserting comments
         comment=ui->lineEdit_comment->text();
@@ -134,18 +132,32 @@ void add_mark_2::on_pushButton_evaluate_clicked()
             commentID = QString::number(commentID_int);
 
             question_to_db = "INSERT INTO notes VALUES ('" + comment + "', '" + commentID + "')";
-            //query.exec(question_to_db);
-            qDebug() << question_to_db;
+            query.exec(question_to_db);
+
 
             question_to_db = "INSERT INTO student_note VALUES ('" + student_id + "', '" + commentID + "')";
-            //query.exec(question_to_db);
-            qDebug() << question_to_db;
+            query.exec(question_to_db);
+
+        }
+
+        QMessageBox::StandardButton reply;
+        reply = QMessageBox::question(this, "Are you sure?", "Data saved. Do you want to add more marks?",
+                                        QMessageBox::Yes|QMessageBox::No);
+        if (reply == QMessageBox::Yes) {
+            hide();
+            add_mark mark_window(this, getLogin());
+            mark_window.setModal(true);
+            mark_window.exec();
+        } else {
+            hide();
+            diary_menu menu_window(this, getLogin());
+            menu_window.setModal(true);
+            menu_window.exec();
         }
     }
 
 
     } else {}
-    //select * from studying where student_id = '1' and subject_id = '1';
 
     }
 
