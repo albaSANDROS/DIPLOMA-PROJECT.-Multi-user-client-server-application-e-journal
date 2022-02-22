@@ -40,7 +40,7 @@ void add_mark::setStudent_fullname(const QString &newStudent_fullname)
 
 void add_mark::on_back_pushButton_clicked()
 {
-    hide();
+    close();
     diary_menu menu_window(this, getLogin());
     menu_window.setModal(true);
     menu_window.exec();
@@ -56,7 +56,7 @@ void add_mark::on_next_pushButton_clicked()
         QMessageBox::warning(this, "Student Full Name", "This student is not presented in DataBases");
     }
     else{
-        hide();
+        close();
         add_mark_2 mark2_window(this, getLogin(), getStudent_fullname());
         mark2_window.setModal(true);
         mark2_window.exec();

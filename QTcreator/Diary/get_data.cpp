@@ -30,7 +30,7 @@ void get_data::setLogin(const QString &newLogin)
 
 void get_data::on_get_back_button_clicked()
 {
-    hide();
+    close();
     diary_menu menu_window(this, getLogin());
     menu_window.setModal(true);
     menu_window.exec();
@@ -39,7 +39,7 @@ void get_data::on_get_back_button_clicked()
 
 void get_data::on_students_info_button_clicked()
 {
-    hide();
+    close();
     check_student student_window(this, getLogin());
     student_window.setModal(true);
     student_window.exec();
@@ -48,7 +48,7 @@ void get_data::on_students_info_button_clicked()
 
 void get_data::on_classes_info_button_clicked()
 {
-    hide();
+    close();
     check_class class_window(this, getLogin());
     class_window.setModal(true);
     class_window.exec();

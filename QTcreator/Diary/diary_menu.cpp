@@ -33,7 +33,7 @@ diary_menu::~diary_menu()
 
 void diary_menu::on_get_data_button_clicked()
 {
-    hide();
+    close();
     get_data data_window(this, getLogin());
     data_window.setModal(true);
     data_window.exec();
@@ -48,13 +48,13 @@ void diary_menu::on_exit_button_clicked()
 
 void diary_menu::on_contact_info_clicked()
 {
-    hide();
+    close();
     QMessageBox m;
     m.setText("<a href=\"https://www.linkedin.com/in/albasandros\">To get support or contact with creator "
               "you may press this hyperlink</a>");
     QTimer::singleShot(10000, &m, SLOT(close()));
     m.exec();
-    hide();
+    close();
     diary_menu menu_window(this , getLogin());
     menu_window.setModal(true);
     menu_window.exec();
@@ -63,7 +63,7 @@ void diary_menu::on_contact_info_clicked()
 
 void diary_menu::on_start_lesson_button_clicked()
 {
-    hide();
+    close();
     add_mark mark_window(this, getLogin());
     mark_window.setModal(true);
     mark_window.exec();

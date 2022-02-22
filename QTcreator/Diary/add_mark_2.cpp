@@ -43,7 +43,7 @@ void add_mark_2::setStudent_name(const QString &newStudent_name)
 
 void add_mark_2::on_pushButton_cancel_clicked()
 {
-    hide();
+    close();
     add_mark mark_window(this, getLogin());
     mark_window.setModal(true);
     mark_window.exec();
@@ -144,12 +144,12 @@ void add_mark_2::on_pushButton_evaluate_clicked()
         reply = QMessageBox::question(this, "Are you sure?", "Data saved. Do you want to add more marks?",
                                         QMessageBox::Yes|QMessageBox::No);
         if (reply == QMessageBox::Yes) {
-            hide();
+            close();
             add_mark mark_window(this, getLogin());
             mark_window.setModal(true);
             mark_window.exec();
         } else {
-            hide();
+            close();
             diary_menu menu_window(this, getLogin());
             menu_window.setModal(true);
             menu_window.exec();

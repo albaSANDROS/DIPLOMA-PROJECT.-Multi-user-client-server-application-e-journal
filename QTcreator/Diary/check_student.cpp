@@ -39,7 +39,7 @@ void check_student::setFull_name_st(const QString &newFull_name_st)
 
 void check_student::on_cancel_button_clicked()
 {
-    hide();
+    close();
     get_data menu_window(this, getLogin());
     menu_window.setModal(true);
     menu_window.exec();
@@ -50,7 +50,7 @@ void check_student::on_find_button_clicked()
 {
     setFull_name_st(ui->student_full_name->text());
     if (getFull_name_st() != ""){
-    hide();
+    close();
     student_info student_window(this, getLogin(), getFull_name_st());
     student_window.setModal(true);
     student_window.exec();

@@ -115,7 +115,7 @@ void class_info::setClass_num(int newClass_num)
 
 void class_info::on_cancel_buttom_clicked()
 {
-    hide();
+    close();
     check_class class_window(this, getLogin());
     class_window.setModal(true);
     class_window.exec();

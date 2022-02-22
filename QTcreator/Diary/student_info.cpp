@@ -111,7 +111,7 @@ void student_info::setFull_name_st(const QString &newFull_name_st)
 
 void student_info::on_cancel_buttom_clicked()
 {
-    hide();
+    close();
     check_student student_window(this, getLogin());
     student_window.setModal(true);
     student_window.exec();

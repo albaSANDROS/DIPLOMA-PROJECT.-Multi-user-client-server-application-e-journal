@@ -55,7 +55,7 @@ void MainWindow::on_auth_confirm_clicked()
         m.setText("Authorization confirmed");
         QTimer::singleShot(950, &m, SLOT(close()));
         m.exec();
-        hide();
+        close();
         diary_menu menu_window(this ,named);
         menu_window.setModal(true);
         menu_window.exec();

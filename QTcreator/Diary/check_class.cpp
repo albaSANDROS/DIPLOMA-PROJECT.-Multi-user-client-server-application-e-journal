@@ -49,7 +49,7 @@ void check_class::setClass_num(int newClass_num)
 
 void check_class::on_cancel_button_clicked()
 {
-    hide();
+    close();
     get_data menu_window(this, getLogin());
     menu_window.setModal(true);
     menu_window.exec();
@@ -66,7 +66,7 @@ void check_class::on_find_button_clicked()
     setClass_num(INT_NUM);
 
     if (((getClass_letter() == "" && getClass_num() == 0) || (getClass_letter() != "" && getClass_num() > 0 && getClass_num() < 12)) ){
-        hide();
+        close();
         class_info class_window(this, getLogin(), getClass_letter(), getClass_num());
         class_window.setModal(true);
         class_window.exec();
