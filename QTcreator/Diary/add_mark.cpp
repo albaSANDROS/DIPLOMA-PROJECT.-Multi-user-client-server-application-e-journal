@@ -11,7 +11,7 @@ add_mark::add_mark(QWidget *parent, QString login) :
     setLogin(login);
     ui->setupUi(this);
 
-    ui->label->setText(getLogin());
+    ui->label->setText("Welcome back, "+getLogin());
 }
 
 const QString &add_mark::getLogin() const

@@ -2,6 +2,7 @@
 #define CHECK_STUDENT_H
 
 #include <QDialog>
+#include <QSqlQuery>
 
 namespace Ui {
 class check_student;
@@ -20,7 +21,8 @@ public:
 
     const QString &getFull_name_st() const;
     void setFull_name_st(const QString &newFull_name_st);
-
+    QString question_to_db = "null";
+    QSqlQuery query;
 private slots:
     void on_cancel_button_clicked();
 

@@ -3,7 +3,6 @@
 #include <QMessageBox>
 #include <diary_menu.h>
 #include <QTimer>
-#include <QDebug>
 #include "parent_window.h"
 #include "student_window.h"
 
@@ -50,15 +49,12 @@ void MainWindow::on_auth_confirm_clicked()
     QString role = ui->comboBox_role ->currentText();
     if (role == "Teacher"){
         question_to_db = "select password from teacher where full_name_t = '" + mw.getAuth_login() + "'";
-        qDebug() << question_to_db;
     }
     else if (role == "Parent"){
         question_to_db = "select password from stud_parent where full_name_parent = '" + mw.getAuth_login() + "'";
-        qDebug() << question_to_db;
     }
     else if (role == "Student"){
         question_to_db = "select password from student where full_name_st = '" + mw.getAuth_login() + "'";
-        qDebug() << question_to_db;
     }
 
     mw.query.exec(question_to_db);

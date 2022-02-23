@@ -20,6 +20,14 @@ public:
     const QString &getFull_name_parent() const;
     void setFull_name_parent(const QString &newFull_name_parent);
 
+    QString question_to_db;
+    QSqlQuery query;
+    QString parent_id;
+    QString full_name_st;
+    QString studying_group_id;
+    QString student_id;
+    QString gr_num;
+    QString gr_prof;
 private slots:
     void on_pushButton_cancel_clicked();
 

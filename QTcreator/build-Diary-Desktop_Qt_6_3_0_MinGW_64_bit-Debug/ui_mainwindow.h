@@ -92,6 +92,7 @@ public:
 
         auth_pass = new QLineEdit(layoutWidget);
         auth_pass->setObjectName(QString::fromUtf8("auth_pass"));
+        auth_pass->setEchoMode(QLineEdit::Password);
 
         verticalLayout_2->addWidget(auth_pass);
 

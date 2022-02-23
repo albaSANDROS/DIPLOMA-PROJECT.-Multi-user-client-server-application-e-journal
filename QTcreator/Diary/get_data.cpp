@@ -10,7 +10,7 @@ get_data::get_data(QWidget *parent, QString login) :
 {
     setLogin(login);
     ui->setupUi(this);
-    ui->label->setText(login);
+    ui->label->setText("Welcome back, "+login);
 }
 
 get_data::~get_data()

@@ -33,6 +33,7 @@ public:
     int commentID_int;
     QString lessonStatus = "yes";
     QString comment;
+    QString teacher_sub_id = "none";
 private slots:
 
     void on_pushButton_cancel_clicked();

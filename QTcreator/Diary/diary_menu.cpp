@@ -23,7 +23,7 @@ diary_menu::diary_menu(QWidget *parent, QString auth_login) :
 {
     ui->setupUi(this);
     setLogin(auth_login);
-    ui->label->setText(auth_login);
+    ui->label->setText("Welcome back, "+auth_login);
 }
 
 diary_menu::~diary_menu()

@@ -13,6 +13,7 @@
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QDialog>
 #include <QtWidgets/QLabel>
+#include <QtWidgets/QPushButton>
 #include <QtWidgets/QTextEdit>
 #include <QtWidgets/QVBoxLayout>
 #include <QtWidgets/QWidget>
@@ -22,6 +23,7 @@ QT_BEGIN_NAMESPACE
 class Ui_student_window
 {
 public:
+    QPushButton *pushButton;
     QWidget *widget;
     QVBoxLayout *verticalLayout;
     QLabel *label_marks;
@@ -31,7 +33,10 @@ public:
     {
         if (student_window->objectName().isEmpty())
             student_window->setObjectName(QString::fromUtf8("student_window"));
-        student_window->resize(374, 243);
+        student_window->resize(374, 296);
+        pushButton = new QPushButton(student_window);
+        pushButton->setObjectName(QString::fromUtf8("pushButton"));
+        pushButton->setGeometry(QRect(10, 240, 351, 41));
         widget = new QWidget(student_window);
         widget->setObjectName(QString::fromUtf8("widget"));
         widget->setGeometry(QRect(10, 10, 351, 216));
@@ -58,6 +63,7 @@ public:
     void retranslateUi(QDialog *student_window)
     {
         student_window->setWindowTitle(QCoreApplication::translate("student_window", "Dialog", nullptr));
+        pushButton->setText(QCoreApplication::translate("student_window", "Exit", nullptr));
         label_marks->setText(QCoreApplication::translate("student_window", "Marks", nullptr));
     } // retranslateUi
 

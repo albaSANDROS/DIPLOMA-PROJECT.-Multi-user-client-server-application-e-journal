@@ -11,14 +11,7 @@ parent_window::parent_window(QWidget *parent, QString login) :
 {
     setFull_name_parent(login);
     ui->setupUi(this);
-    QString question_to_db;
-    QSqlQuery query;
-    QString parent_id;
-    QString full_name_st;
-    QString studying_group_id;
-    QString student_id;
-    QString gr_num;
-    QString gr_prof;
+
 
     question_to_db = "select id from stud_parent WHERE full_name_parent = '" + getFull_name_parent() + "'";
     query.exec(question_to_db);
