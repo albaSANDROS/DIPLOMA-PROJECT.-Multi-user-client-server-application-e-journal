@@ -33,7 +33,7 @@ public:
         diary_menu->resize(536, 405);
         label = new QLabel(diary_menu);
         label->setObjectName(QString::fromUtf8("label"));
-        label->setGeometry(QRect(380, 10, 251, 31));
+        label->setGeometry(QRect(240, 10, 251, 21));
         start_lesson_button = new QPushButton(diary_menu);
         start_lesson_button->setObjectName(QString::fromUtf8("start_lesson_button"));
         start_lesson_button->setGeometry(QRect(50, 50, 441, 131));

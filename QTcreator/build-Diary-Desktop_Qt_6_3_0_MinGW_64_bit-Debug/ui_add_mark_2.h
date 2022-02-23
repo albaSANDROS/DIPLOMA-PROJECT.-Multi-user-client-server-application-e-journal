@@ -54,7 +54,7 @@ public:
         pushButton_cancel->setGeometry(QRect(240, 210, 131, 71));
         label = new QLabel(add_mark_2);
         label->setObjectName(QString::fromUtf8("label"));
-        label->setGeometry(QRect(280, 10, 101, 16));
+        label->setGeometry(QRect(230, 10, 151, 16));
         layoutWidget = new QWidget(add_mark_2);
         layoutWidget->setObjectName(QString::fromUtf8("layoutWidget"));
         layoutWidget->setGeometry(QRect(20, 30, 351, 141));

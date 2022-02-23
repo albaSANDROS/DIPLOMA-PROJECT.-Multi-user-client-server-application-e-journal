@@ -27,7 +27,7 @@ public:
     QPushButton *back_pushButton;
     QLabel *label_inp_name;
     QLabel *label;
-    QWidget *widget;
+    QWidget *layoutWidget;
     QHBoxLayout *horizontalLayout;
     QLabel *label_fullName;
     QLineEdit *student_fullname;
@@ -48,19 +48,19 @@ public:
         label_inp_name->setGeometry(QRect(90, 30, 141, 21));
         label = new QLabel(add_mark);
         label->setObjectName(QString::fromUtf8("label"));
-        label->setGeometry(QRect(220, 10, 91, 16));
-        widget = new QWidget(add_mark);
-        widget->setObjectName(QString::fromUtf8("widget"));
-        widget->setGeometry(QRect(20, 60, 281, 24));
-        horizontalLayout = new QHBoxLayout(widget);
+        label->setGeometry(QRect(170, 10, 141, 16));
+        layoutWidget = new QWidget(add_mark);
+        layoutWidget->setObjectName(QString::fromUtf8("layoutWidget"));
+        layoutWidget->setGeometry(QRect(20, 60, 281, 24));
+        horizontalLayout = new QHBoxLayout(layoutWidget);
         horizontalLayout->setObjectName(QString::fromUtf8("horizontalLayout"));
         horizontalLayout->setContentsMargins(0, 0, 0, 0);
-        label_fullName = new QLabel(widget);
+        label_fullName = new QLabel(layoutWidget);
         label_fullName->setObjectName(QString::fromUtf8("label_fullName"));
 
         horizontalLayout->addWidget(label_fullName);
 
-        student_fullname = new QLineEdit(widget);
+        student_fullname = new QLineEdit(layoutWidget);
         student_fullname->setObjectName(QString::fromUtf8("student_fullname"));
 
         horizontalLayout->addWidget(student_fullname);

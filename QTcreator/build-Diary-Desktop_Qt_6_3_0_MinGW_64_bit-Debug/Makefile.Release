@@ -725,6 +725,12 @@ release/moc_check_student.cpp: ../Diary/check_student.h \
 		../../../../QTcreator/6.3.0/mingw_64/include/QtCore/QSizeF \
 		../../../../QTcreator/6.3.0/mingw_64/include/QtGui/QTransform \
 		../../../../QTcreator/6.3.0/mingw_64/include/QtCore/qnativeinterface.h \
+		../../../../QTcreator/6.3.0/mingw_64/include/QtSql/QSqlQuery \
+		../../../../QTcreator/6.3.0/mingw_64/include/QtSql/qsqlquery.h \
+		../../../../QTcreator/6.3.0/mingw_64/include/QtSql/qtsqlglobal.h \
+		../../../../QTcreator/6.3.0/mingw_64/include/QtSql/qtsql-config.h \
+		../../../../QTcreator/6.3.0/mingw_64/include/QtSql/qtsqlexports.h \
+		../../../../QTcreator/6.3.0/mingw_64/include/QtSql/qsqldatabase.h \
 		release/moc_predefs.h \
 		../../../../QTcreator/6.3.0/mingw_64/bin/moc.exe
 	E:\QTcreator\6.3.0\mingw_64\bin\moc.exe $(DEFINES) --include E:/DIPLOM_git/DIPLOM/QTcreator/build-Diary-Desktop_Qt_6_3_0_MinGW_64_bit-Debug/release/moc_predefs.h -IE:/QTcreator/6.3.0/mingw_64/mkspecs/win32-g++ -IE:/DIPLOM_git/DIPLOM/QTcreator/Diary -IE:/QTcreator/6.3.0/mingw_64/include -IE:/QTcreator/6.3.0/mingw_64/include/QtWidgets -IE:/QTcreator/6.3.0/mingw_64/include/QtGui -IE:/QTcreator/6.3.0/mingw_64/include/QtSql -IE:/QTcreator/6.3.0/mingw_64/include/QtCore -I. -IE:/QTcreator/Tools/mingw900_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++ -IE:/QTcreator/Tools/mingw900_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/x86_64-w64-mingw32 -IE:/QTcreator/Tools/mingw900_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/backward -IE:/QTcreator/Tools/mingw900_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include -IE:/QTcreator/Tools/mingw900_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed -IE:/QTcreator/Tools/mingw900_64/x86_64-w64-mingw32/include ..\Diary\check_student.h -o release\moc_check_student.cpp
@@ -2512,6 +2518,12 @@ release/check_student.o: ../Diary/check_student.cpp ../Diary/check_student.h \
 		../../../../QTcreator/6.3.0/mingw_64/include/QtCore/QSizeF \
 		../../../../QTcreator/6.3.0/mingw_64/include/QtGui/QTransform \
 		../../../../QTcreator/6.3.0/mingw_64/include/QtCore/qnativeinterface.h \
+		../../../../QTcreator/6.3.0/mingw_64/include/QtSql/QSqlQuery \
+		../../../../QTcreator/6.3.0/mingw_64/include/QtSql/qsqlquery.h \
+		../../../../QTcreator/6.3.0/mingw_64/include/QtSql/qtsqlglobal.h \
+		../../../../QTcreator/6.3.0/mingw_64/include/QtSql/qtsql-config.h \
+		../../../../QTcreator/6.3.0/mingw_64/include/QtSql/qtsqlexports.h \
+		../../../../QTcreator/6.3.0/mingw_64/include/QtSql/qsqldatabase.h \
 		ui_check_student.h \
 		../../../../QTcreator/6.3.0/mingw_64/include/QtCore/QVariant \
 		../../../../QTcreator/6.3.0/mingw_64/include/QtWidgets/QApplication \
@@ -2557,12 +2569,6 @@ release/check_student.o: ../Diary/check_student.cpp ../Diary/check_student.h \
 		../../../../QTcreator/6.3.0/mingw_64/include/QtWidgets/QWidget \
 		../Diary/get_data.h \
 		../Diary/student_info.h \
-		../../../../QTcreator/6.3.0/mingw_64/include/QtSql/QSqlQuery \
-		../../../../QTcreator/6.3.0/mingw_64/include/QtSql/qsqlquery.h \
-		../../../../QTcreator/6.3.0/mingw_64/include/QtSql/qtsqlglobal.h \
-		../../../../QTcreator/6.3.0/mingw_64/include/QtSql/qtsql-config.h \
-		../../../../QTcreator/6.3.0/mingw_64/include/QtSql/qtsqlexports.h \
-		../../../../QTcreator/6.3.0/mingw_64/include/QtSql/qsqldatabase.h \
 		../../../../QTcreator/6.3.0/mingw_64/include/QtWidgets/QMessageBox \
 		../../../../QTcreator/6.3.0/mingw_64/include/QtWidgets/qmessagebox.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\check_student.o ..\Diary\check_student.cpp
@@ -3503,7 +3509,6 @@ release/mainwindow.o: ../Diary/mainwindow.cpp ../Diary/mainwindow.h \
 		../../../../QTcreator/6.3.0/mingw_64/include/QtCore/QTimer \
 		../../../../QTcreator/6.3.0/mingw_64/include/QtCore/qtimer.h \
 		../../../../QTcreator/6.3.0/mingw_64/include/QtCore/qbasictimer.h \
-		../../../../QTcreator/6.3.0/mingw_64/include/QtCore/QDebug \
 		../Diary/parent_window.h \
 		../Diary/student_window.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\mainwindow.o ..\Diary\mainwindow.cpp
@@ -4033,7 +4038,50 @@ release/student_window.o: ../Diary/student_window.cpp ../Diary/student_window.h 
 		../../../../QTcreator/6.3.0/mingw_64/include/QtSql/qtsql-config.h \
 		../../../../QTcreator/6.3.0/mingw_64/include/QtSql/qtsqlexports.h \
 		../../../../QTcreator/6.3.0/mingw_64/include/QtSql/qsqldatabase.h \
-		ui_student_window.h
+		ui_student_window.h \
+		../../../../QTcreator/6.3.0/mingw_64/include/QtCore/QVariant \
+		../../../../QTcreator/6.3.0/mingw_64/include/QtWidgets/QApplication \
+		../../../../QTcreator/6.3.0/mingw_64/include/QtWidgets/qapplication.h \
+		../../../../QTcreator/6.3.0/mingw_64/include/QtCore/qcoreapplication.h \
+		../../../../QTcreator/6.3.0/mingw_64/include/QtCore/qeventloop.h \
+		../../../../QTcreator/6.3.0/mingw_64/include/QtCore/qcoreapplication_platform.h \
+		../../../../QTcreator/6.3.0/mingw_64/include/QtCore/qfuture.h \
+		../../../../QTcreator/6.3.0/mingw_64/include/QtCore/qfutureinterface.h \
+		../../../../QTcreator/6.3.0/mingw_64/include/QtCore/qmutex.h \
+		../../../../QTcreator/6.3.0/mingw_64/include/QtCore/qresultstore.h \
+		../../../../QTcreator/6.3.0/mingw_64/include/QtCore/qfuture_impl.h \
+		../../../../QTcreator/6.3.0/mingw_64/include/QtCore/qthreadpool.h \
+		../../../../QTcreator/6.3.0/mingw_64/include/QtCore/qthread.h \
+		../../../../QTcreator/6.3.0/mingw_64/include/QtCore/qdeadlinetimer.h \
+		../../../../QTcreator/6.3.0/mingw_64/include/QtCore/qelapsedtimer.h \
+		../../../../QTcreator/6.3.0/mingw_64/include/QtCore/qrunnable.h \
+		../../../../QTcreator/6.3.0/mingw_64/include/QtCore/qexception.h \
+		../../../../QTcreator/6.3.0/mingw_64/include/QtCore/qpromise.h \
+		../../../../QTcreator/6.3.0/mingw_64/include/QtGui/qguiapplication.h \
+		../../../../QTcreator/6.3.0/mingw_64/include/QtGui/qinputmethod.h \
+		../../../../QTcreator/6.3.0/mingw_64/include/QtCore/qlocale.h \
+		../../../../QTcreator/6.3.0/mingw_64/include/QtGui/qguiapplication_platform.h \
+		../../../../QTcreator/6.3.0/mingw_64/include/QtWidgets/QLabel \
+		../../../../QTcreator/6.3.0/mingw_64/include/QtWidgets/qlabel.h \
+		../../../../QTcreator/6.3.0/mingw_64/include/QtWidgets/qframe.h \
+		../../../../QTcreator/6.3.0/mingw_64/include/QtGui/qpicture.h \
+		../../../../QTcreator/6.3.0/mingw_64/include/QtGui/qtextdocument.h \
+		../../../../QTcreator/6.3.0/mingw_64/include/QtWidgets/QPushButton \
+		../../../../QTcreator/6.3.0/mingw_64/include/QtWidgets/qpushbutton.h \
+		../../../../QTcreator/6.3.0/mingw_64/include/QtWidgets/qabstractbutton.h \
+		../../../../QTcreator/6.3.0/mingw_64/include/QtWidgets/QTextEdit \
+		../../../../QTcreator/6.3.0/mingw_64/include/QtWidgets/qtextedit.h \
+		../../../../QTcreator/6.3.0/mingw_64/include/QtWidgets/qabstractscrollarea.h \
+		../../../../QTcreator/6.3.0/mingw_64/include/QtGui/qtextoption.h \
+		../../../../QTcreator/6.3.0/mingw_64/include/QtGui/qtextcursor.h \
+		../../../../QTcreator/6.3.0/mingw_64/include/QtGui/qtextformat.h \
+		../../../../QTcreator/6.3.0/mingw_64/include/QtGui/qpen.h \
+		../../../../QTcreator/6.3.0/mingw_64/include/QtWidgets/QVBoxLayout \
+		../../../../QTcreator/6.3.0/mingw_64/include/QtWidgets/qboxlayout.h \
+		../../../../QTcreator/6.3.0/mingw_64/include/QtWidgets/qlayout.h \
+		../../../../QTcreator/6.3.0/mingw_64/include/QtWidgets/qlayoutitem.h \
+		../../../../QTcreator/6.3.0/mingw_64/include/QtWidgets/qgridlayout.h \
+		../../../../QTcreator/6.3.0/mingw_64/include/QtWidgets/QWidget
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\student_window.o ..\Diary\student_window.cpp
 
 release/moc_add_mark.o: release/moc_add_mark.cpp 
