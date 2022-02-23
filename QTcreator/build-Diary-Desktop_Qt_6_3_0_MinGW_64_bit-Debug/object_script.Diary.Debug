@@ -7,7 +7,9 @@ debug/diary_menu.o
 debug/get_data.o
 debug/main.o
 debug/mainwindow.o
+debug/parent_window.o
 debug/student_info.o
+debug/student_window.o
 debug/moc_add_mark.o
 debug/moc_add_mark_2.o
 debug/moc_check_class.o
@@ -16,4 +18,6 @@ debug/moc_class_info.o
 debug/moc_diary_menu.o
 debug/moc_get_data.o
 debug/moc_mainwindow.o
+debug/moc_parent_window.o
 debug/moc_student_info.o
+debug/moc_student_window.o

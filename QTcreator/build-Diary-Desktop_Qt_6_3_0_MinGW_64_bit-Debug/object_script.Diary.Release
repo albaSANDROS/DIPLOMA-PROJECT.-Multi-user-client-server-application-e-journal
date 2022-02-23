@@ -7,7 +7,9 @@ release/diary_menu.o
 release/get_data.o
 release/main.o
 release/mainwindow.o
+release/parent_window.o
 release/student_info.o
+release/student_window.o
 release/moc_add_mark.o
 release/moc_add_mark_2.o
 release/moc_check_class.o
@@ -16,4 +18,6 @@ release/moc_class_info.o
 release/moc_diary_menu.o
 release/moc_get_data.o
 release/moc_mainwindow.o
+release/moc_parent_window.o
 release/moc_student_info.o
+release/moc_student_window.o

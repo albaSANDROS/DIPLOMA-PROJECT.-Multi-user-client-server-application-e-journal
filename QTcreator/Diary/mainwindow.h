@@ -2,6 +2,7 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include <QSqlQuery>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -20,6 +21,9 @@ public:
     void setAuth_login(const QString &newAuth_login);
     const QString &getAuth_pass() const;
     void setAuth_pass(const QString &newAuth_pass);
+    QSqlQuery query;
+    QString question_to_db = "null";
+    QString password = "null";
 
 private slots:
     void on_auth_confirm_clicked();

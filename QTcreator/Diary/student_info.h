@@ -30,6 +30,9 @@ public:
     QString question_to_db = "null";
     QString gr_num = "null";
     QString gr_prof= "null";
+    QString note_id = "null";
+    QString marks = "null";
+    QString subject = "null";
     QString full_name_parent = "null";
     QString phone_numb_parent= "null";
     QSqlQuery query_getnotes_full;

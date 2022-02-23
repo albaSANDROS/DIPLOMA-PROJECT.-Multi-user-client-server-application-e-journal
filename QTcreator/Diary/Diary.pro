@@ -19,7 +19,9 @@ SOURCES += \
     get_data.cpp \
     main.cpp \
     mainwindow.cpp \
-    student_info.cpp
+    parent_window.cpp \
+    student_info.cpp \
+    student_window.cpp
 
 HEADERS += \
     add_mark.h \
@@ -31,7 +33,9 @@ HEADERS += \
     diary_menu.h \
     get_data.h \
     mainwindow.h \
-    student_info.h
+    parent_window.h \
+    student_info.h \
+    student_window.h
 
 FORMS += \
     add_mark.ui \
@@ -42,7 +46,9 @@ FORMS += \
     diary_menu.ui \
     get_data.ui \
     mainwindow.ui \
-    student_info.ui
+    parent_window.ui \
+    student_info.ui \
+    student_window.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

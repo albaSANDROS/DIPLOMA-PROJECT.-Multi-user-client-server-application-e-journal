@@ -3,6 +3,7 @@
 #include "diary_menu.h"
 #include "add_mark_2.h"
 #include "QMessageBox"
+
 add_mark::add_mark(QWidget *parent, QString login) :
     QDialog(parent),
     ui(new Ui::add_mark)

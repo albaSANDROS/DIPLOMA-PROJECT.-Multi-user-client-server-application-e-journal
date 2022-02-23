@@ -23,7 +23,16 @@ public:
     QSqlQuery query;
     const QString &getStudent_name() const;
     void setStudent_name(const QString &newStudent_name);
-
+    QString subject;
+    QString sub_id;
+    QString student_id;
+    QString mark;
+    QString lessonID;
+    int lessonID_int;
+    QString commentID;
+    int commentID_int;
+    QString lessonStatus = "yes";
+    QString comment;
 private slots:
 
     void on_pushButton_cancel_clicked();

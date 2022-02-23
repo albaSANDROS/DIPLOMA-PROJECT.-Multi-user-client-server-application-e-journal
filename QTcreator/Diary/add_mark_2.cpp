@@ -52,16 +52,8 @@ void add_mark_2::on_pushButton_cancel_clicked()
 
 void add_mark_2::on_pushButton_evaluate_clicked()
 {
-    QString subject = ui->comboBox_subject ->currentText();
-    QString sub_id;
-    QString student_id;
-    QString mark = ui->comboBox_mark ->currentText();;
-    QString lessonID;
-    int lessonID_int;
-    QString commentID;
-    int commentID_int;
-    QString lessonStatus = "yes";
-    QString comment;
+    mark = ui->comboBox_mark ->currentText();
+    subject = ui->comboBox_subject ->currentText();
 
     if(subject == "<none>"){
             QMessageBox::warning(this, "Mark Error", "Please, choose one of presented subjects");
@@ -155,7 +147,6 @@ void add_mark_2::on_pushButton_evaluate_clicked()
             menu_window.exec();
         }
     }
-
 
     } else {}
 

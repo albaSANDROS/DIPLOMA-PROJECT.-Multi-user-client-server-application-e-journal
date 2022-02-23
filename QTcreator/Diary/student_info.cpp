@@ -46,10 +46,7 @@ student_info::student_info(QWidget *parent, QString login, QString full_name_st)
                         "where mi.student_id = '" + student_id + "' "
                         "group by sub_name ";
     query.exec(question_to_db);
-    QString marks;
-    QString subject;
     while (query.next()) {
-
       marks = query.value(0).toString();
       subject = query.value(1).toString();
       ui->textEdit_marks->append(subject + ": " + marks);
@@ -58,8 +55,7 @@ student_info::student_info(QWidget *parent, QString login, QString full_name_st)
 
     //getting notes
     question_to_db = "select notes_id from student_note where student_id = '" + student_id + "'";
-    query.exec(question_to_db);
-    QString note_id;
+    query.exec(question_to_db);    
     while (query.next()) {
       note_id = query.value(0).toString();
       //select note from notes where id = '2'

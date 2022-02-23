@@ -11,6 +11,7 @@
 
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
+#include <QtWidgets/QComboBox>
 #include <QtWidgets/QGroupBox>
 #include <QtWidgets/QHBoxLayout>
 #include <QtWidgets/QLabel>
@@ -35,9 +36,11 @@ public:
     QVBoxLayout *verticalLayout;
     QLabel *label;
     QLabel *label_2;
+    QLabel *label_3;
     QVBoxLayout *verticalLayout_2;
     QLineEdit *auth_login;
     QLineEdit *auth_pass;
+    QComboBox *comboBox_role;
     QPushButton *auth_confirm;
     QMenuBar *menubar;
     QStatusBar *statusbar;
@@ -46,15 +49,15 @@ public:
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName(QString::fromUtf8("MainWindow"));
-        MainWindow->resize(373, 198);
+        MainWindow->resize(370, 210);
         centralwidget = new QWidget(MainWindow);
         centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
         groupBox = new QGroupBox(centralwidget);
         groupBox->setObjectName(QString::fromUtf8("groupBox"));
-        groupBox->setGeometry(QRect(30, 10, 311, 151));
+        groupBox->setGeometry(QRect(20, 10, 321, 161));
         layoutWidget = new QWidget(groupBox);
         layoutWidget->setObjectName(QString::fromUtf8("layoutWidget"));
-        layoutWidget->setGeometry(QRect(30, 30, 271, 101));
+        layoutWidget->setGeometry(QRect(30, 30, 271, 114));
         verticalLayout_3 = new QVBoxLayout(layoutWidget);
         verticalLayout_3->setObjectName(QString::fromUtf8("verticalLayout_3"));
         verticalLayout_3->setContentsMargins(0, 0, 0, 0);
@@ -72,6 +75,11 @@ public:
 
         verticalLayout->addWidget(label_2);
 
+        label_3 = new QLabel(layoutWidget);
+        label_3->setObjectName(QString::fromUtf8("label_3"));
+
+        verticalLayout->addWidget(label_3);
+
 
         horizontalLayout->addLayout(verticalLayout);
 
@@ -87,6 +95,16 @@ public:
 
         verticalLayout_2->addWidget(auth_pass);
 
+        comboBox_role = new QComboBox(layoutWidget);
+        comboBox_role->addItem(QString());
+        comboBox_role->addItem(QString());
+        comboBox_role->addItem(QString());
+        comboBox_role->addItem(QString());
+        comboBox_role->setObjectName(QString::fromUtf8("comboBox_role"));
+        comboBox_role->setEditable(false);
+
+        verticalLayout_2->addWidget(comboBox_role);
+
 
         horizontalLayout->addLayout(verticalLayout_2);
 
@@ -101,7 +119,7 @@ public:
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName(QString::fromUtf8("menubar"));
-        menubar->setGeometry(QRect(0, 0, 373, 22));
+        menubar->setGeometry(QRect(0, 0, 370, 22));
         MainWindow->setMenuBar(menubar);
         statusbar = new QStatusBar(MainWindow);
         statusbar->setObjectName(QString::fromUtf8("statusbar"));
@@ -118,8 +136,14 @@ public:
         groupBox->setTitle(QCoreApplication::translate("MainWindow", "Authorization", nullptr));
         label->setText(QCoreApplication::translate("MainWindow", "Login", nullptr));
         label_2->setText(QCoreApplication::translate("MainWindow", "Password", nullptr));
+        label_3->setText(QCoreApplication::translate("MainWindow", "Your role", nullptr));
         auth_login->setPlaceholderText(QCoreApplication::translate("MainWindow", "login", nullptr));
         auth_pass->setPlaceholderText(QCoreApplication::translate("MainWindow", "password", nullptr));
+        comboBox_role->setItemText(0, QCoreApplication::translate("MainWindow", "<none>", nullptr));
+        comboBox_role->setItemText(1, QCoreApplication::translate("MainWindow", "Teacher", nullptr));
+        comboBox_role->setItemText(2, QCoreApplication::translate("MainWindow", "Parent", nullptr));
+        comboBox_role->setItemText(3, QCoreApplication::translate("MainWindow", "Student", nullptr));
+
         auth_confirm->setText(QCoreApplication::translate("MainWindow", "Confirm", nullptr));
     } // retranslateUi
 

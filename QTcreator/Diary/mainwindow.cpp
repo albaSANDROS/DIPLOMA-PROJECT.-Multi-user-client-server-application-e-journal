@@ -4,6 +4,8 @@
 #include <diary_menu.h>
 #include <QTimer>
 #include <QDebug>
+#include "parent_window.h"
+#include "student_window.h"
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -45,7 +47,31 @@ void MainWindow::on_auth_confirm_clicked()
     mw.setAuth_login(ui -> auth_login -> text());
     mw.auth_pass  = ui -> auth_pass  -> text();
 
-    if(!(mw.getAuth_login() == "a" && mw.auth_pass == "")){
+    QString role = ui->comboBox_role ->currentText();
+    if (role == "Teacher"){
+        question_to_db = "select password from teacher where full_name_t = '" + mw.getAuth_login() + "'";
+        qDebug() << question_to_db;
+    }
+    else if (role == "Parent"){
+        question_to_db = "select password from stud_parent where full_name_parent = '" + mw.getAuth_login() + "'";
+        qDebug() << question_to_db;
+    }
+    else if (role == "Student"){
+        question_to_db = "select password from student where full_name_st = '" + mw.getAuth_login() + "'";
+        qDebug() << question_to_db;
+    }
+
+    mw.query.exec(question_to_db);
+    while (mw.query.next()) {
+      password = mw.query.value(0).toString();
+    }
+    if (role == "<none>"){
+        QMessageBox::warning(this, "Authorization", "You need to choose role");
+    }
+    if (mw.auth_pass == ""){
+        QMessageBox::warning(this, "Authorization", "Access denied");
+    }
+    else if((mw.auth_pass != password)){
         QMessageBox::warning(this, "Authorization", "Access denied");
 
     }else{
@@ -55,10 +81,27 @@ void MainWindow::on_auth_confirm_clicked()
         m.setText("Authorization confirmed");
         QTimer::singleShot(950, &m, SLOT(close()));
         m.exec();
+        mw.auth_pass = "null";
+        password = "null";
         close();
-        diary_menu menu_window(this ,named);
-        menu_window.setModal(true);
-        menu_window.exec();
+
+
+        //get role to choose window
+        if (role == "Teacher"){
+            diary_menu menu_window(this, named);
+            menu_window.setModal(true);
+            menu_window.exec();
+        }
+        else if (role == "Parent"){
+            parent_window parent_window(this, named);
+            parent_window.setModal(true);
+            parent_window.exec();
+        }
+        else if (role == "Student"){
+            student_window student_window(this, named);
+            student_window.setModal(true);
+            student_window.exec();
+        }
     }
 }
 
