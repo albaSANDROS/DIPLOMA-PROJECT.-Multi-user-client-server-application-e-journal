@@ -114,6 +114,8 @@ Makefile: ../Diary/Diary.pro ../../../../QTcreator/6.3.0/mingw_64/mkspecs/win32-
 		../../../../QTcreator/6.3.0/mingw_64/mkspecs/modules/qt_lib_linguist_private.pri \
 		../../../../QTcreator/6.3.0/mingw_64/mkspecs/modules/qt_lib_network.pri \
 		../../../../QTcreator/6.3.0/mingw_64/mkspecs/modules/qt_lib_network_private.pri \
+		../../../../QTcreator/6.3.0/mingw_64/mkspecs/modules/qt_lib_networkauth.pri \
+		../../../../QTcreator/6.3.0/mingw_64/mkspecs/modules/qt_lib_networkauth_private.pri \
 		../../../../QTcreator/6.3.0/mingw_64/mkspecs/modules/qt_lib_opengl.pri \
 		../../../../QTcreator/6.3.0/mingw_64/mkspecs/modules/qt_lib_opengl_private.pri \
 		../../../../QTcreator/6.3.0/mingw_64/mkspecs/modules/qt_lib_openglwidgets.pri \
@@ -175,6 +177,10 @@ Makefile: ../Diary/Diary.pro ../../../../QTcreator/6.3.0/mingw_64/mkspecs/win32-
 		../../../../QTcreator/6.3.0/mingw_64/mkspecs/modules/qt_lib_uiplugin.pri \
 		../../../../QTcreator/6.3.0/mingw_64/mkspecs/modules/qt_lib_uitools.pri \
 		../../../../QTcreator/6.3.0/mingw_64/mkspecs/modules/qt_lib_uitools_private.pri \
+		../../../../QTcreator/6.3.0/mingw_64/mkspecs/modules/qt_lib_webview.pri \
+		../../../../QTcreator/6.3.0/mingw_64/mkspecs/modules/qt_lib_webview_private.pri \
+		../../../../QTcreator/6.3.0/mingw_64/mkspecs/modules/qt_lib_webviewquick.pri \
+		../../../../QTcreator/6.3.0/mingw_64/mkspecs/modules/qt_lib_webviewquick_private.pri \
 		../../../../QTcreator/6.3.0/mingw_64/mkspecs/modules/qt_lib_widgets.pri \
 		../../../../QTcreator/6.3.0/mingw_64/mkspecs/modules/qt_lib_widgets_private.pri \
 		../../../../QTcreator/6.3.0/mingw_64/mkspecs/modules/qt_lib_xml.pri \
@@ -213,6 +219,8 @@ Makefile: ../Diary/Diary.pro ../../../../QTcreator/6.3.0/mingw_64/mkspecs/win32-
 		../../../../QTcreator/6.3.0/mingw_64/lib/Qt6Widgets.prl \
 		../../../../QTcreator/6.3.0/mingw_64/lib/Qt6Gui.prl \
 		../../../../QTcreator/6.3.0/mingw_64/lib/Qt6Sql.prl \
+		../../../../QTcreator/6.3.0/mingw_64/lib/Qt6NetworkAuth.prl \
+		../../../../QTcreator/6.3.0/mingw_64/lib/Qt6Network.prl \
 		../../../../QTcreator/6.3.0/mingw_64/lib/Qt6Core.prl \
 		../../../../QTcreator/6.3.0/mingw_64/mkspecs/features/build_pass.prf
 	$(QMAKE) -o Makefile ..\Diary\Diary.pro -spec win32-g++ "CONFIG+=debug" "CONFIG+=qml_debug"
@@ -260,6 +268,8 @@ Makefile: ../Diary/Diary.pro ../../../../QTcreator/6.3.0/mingw_64/mkspecs/win32-
 ../../../../QTcreator/6.3.0/mingw_64/mkspecs/modules/qt_lib_linguist_private.pri:
 ../../../../QTcreator/6.3.0/mingw_64/mkspecs/modules/qt_lib_network.pri:
 ../../../../QTcreator/6.3.0/mingw_64/mkspecs/modules/qt_lib_network_private.pri:
+../../../../QTcreator/6.3.0/mingw_64/mkspecs/modules/qt_lib_networkauth.pri:
+../../../../QTcreator/6.3.0/mingw_64/mkspecs/modules/qt_lib_networkauth_private.pri:
 ../../../../QTcreator/6.3.0/mingw_64/mkspecs/modules/qt_lib_opengl.pri:
 ../../../../QTcreator/6.3.0/mingw_64/mkspecs/modules/qt_lib_opengl_private.pri:
 ../../../../QTcreator/6.3.0/mingw_64/mkspecs/modules/qt_lib_openglwidgets.pri:
@@ -321,6 +331,10 @@ Makefile: ../Diary/Diary.pro ../../../../QTcreator/6.3.0/mingw_64/mkspecs/win32-
 ../../../../QTcreator/6.3.0/mingw_64/mkspecs/modules/qt_lib_uiplugin.pri:
 ../../../../QTcreator/6.3.0/mingw_64/mkspecs/modules/qt_lib_uitools.pri:
 ../../../../QTcreator/6.3.0/mingw_64/mkspecs/modules/qt_lib_uitools_private.pri:
+../../../../QTcreator/6.3.0/mingw_64/mkspecs/modules/qt_lib_webview.pri:
+../../../../QTcreator/6.3.0/mingw_64/mkspecs/modules/qt_lib_webview_private.pri:
+../../../../QTcreator/6.3.0/mingw_64/mkspecs/modules/qt_lib_webviewquick.pri:
+../../../../QTcreator/6.3.0/mingw_64/mkspecs/modules/qt_lib_webviewquick_private.pri:
 ../../../../QTcreator/6.3.0/mingw_64/mkspecs/modules/qt_lib_widgets.pri:
 ../../../../QTcreator/6.3.0/mingw_64/mkspecs/modules/qt_lib_widgets_private.pri:
 ../../../../QTcreator/6.3.0/mingw_64/mkspecs/modules/qt_lib_xml.pri:
@@ -359,6 +373,8 @@ Makefile: ../Diary/Diary.pro ../../../../QTcreator/6.3.0/mingw_64/mkspecs/win32-
 ../../../../QTcreator/6.3.0/mingw_64/lib/Qt6Widgets.prl:
 ../../../../QTcreator/6.3.0/mingw_64/lib/Qt6Gui.prl:
 ../../../../QTcreator/6.3.0/mingw_64/lib/Qt6Sql.prl:
+../../../../QTcreator/6.3.0/mingw_64/lib/Qt6NetworkAuth.prl:
+../../../../QTcreator/6.3.0/mingw_64/lib/Qt6Network.prl:
 ../../../../QTcreator/6.3.0/mingw_64/lib/Qt6Core.prl:
 ../../../../QTcreator/6.3.0/mingw_64/mkspecs/features/build_pass.prf:
 qmake: FORCE

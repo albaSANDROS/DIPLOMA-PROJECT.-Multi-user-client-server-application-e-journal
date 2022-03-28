@@ -18,10 +18,10 @@ inline bool createConnection(){
         return false;
     }
     else{
-        QMessageBox m;
-        m.setText("DataBase connected!");
-        QTimer::singleShot(950, &m, SLOT(close()));
-        m.exec();
+        //QMessageBox m;
+        //m.setText("DataBase connected!");
+        //QTimer::singleShot(950, &m, SLOT(close()));
+        //m.exec();
         return true;
     }
 

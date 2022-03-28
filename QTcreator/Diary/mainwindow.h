@@ -26,7 +26,9 @@ public:
     QString password = "null";
 
 private slots:
-    void on_auth_confirm_clicked();
+    //void on_auth_confirm_clicked();
+
+    void on_authorize_button_clicked();
 
 private:
     Ui::MainWindow *ui;

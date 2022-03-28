@@ -1,5 +1,6 @@
 release/add_mark.o
 release/add_mark_2.o
+release/authorization.o
 release/check_class.o
 release/check_student.o
 release/class_info.o
@@ -12,6 +13,7 @@ release/student_info.o
 release/student_window.o
 release/moc_add_mark.o
 release/moc_add_mark_2.o
+release/moc_authorization.o
 release/moc_check_class.o
 release/moc_check_student.o
 release/moc_class_info.o

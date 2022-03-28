@@ -12,39 +12,39 @@ INSERT INTO teacher ("full_name_t", gender, id, rank, phone_number, subject_id, 
 VALUES ('Osetnik Dmitry', 'M', '2', 'Teacher', '375445810873', '2', '16.06.2001');
 
 INSERT INTO stud_parent ("full_name_parent", id, phone_numb_parent)
-VALUES ('Grebnev Mikhail', '1', '375333925101');
+VALUES ('Grebnev Mikhail', '1001', '375333925101');
 
 INSERT INTO stud_parent ("full_name_parent", id, phone_numb_parent)
-VALUES ('Denisevich Oleg', '2', '375291609780');
+VALUES ('Denisevich Oleg', '1002', '375291609780');
 
 INSERT INTO studying_group (num, profile, id)
 VALUES ('10', 'A', '1');
 
 INSERT INTO student ("full_name_st", gender, id, studying_group_id, birth_date_st, stud_parent_id)
-VALUES ('Grebnev Roman', 'M', '1', '1', '06.02.2001', '1');
+VALUES ('Grebnev Roman', 'M', '10001', '1', '06.02.2001', '1001');
 
 INSERT INTO student ("full_name_st", gender, id, studying_group_id, birth_date_st, stud_parent_id)
-VALUES ('Denisevich Mary', 'F', '2', '1', '12.06.2001', '2');
+VALUES ('Denisevich Mary', 'F', '10002', '1', '12.06.2001', '1002');
 
 INSERT INTO notes ("note", id)
 VALUES ('Semifinalist "Best English Grammar - 2016"', '1');
 INSERT INTO student_note ("student_id", notes_id)
-VALUES ('1', '1');
+VALUES ('10001', '1');
 
 INSERT INTO notes ("note", id)
 VALUES ('Winner "Best English Grammar - 2018"', '2');
 INSERT INTO student_note ("student_id", notes_id)
-VALUES ('1', '2');
+VALUES ('10001', '2');
 
 INSERT INTO studying ("student_id", "subject_id")
-VALUES ('1', '1');
+VALUES ('10001', '1');
 INSERT INTO studying ("student_id", "subject_id")
-VALUES ('1', '2');
+VALUES ('10001', '2');
 
 INSERT INTO studying ("student_id", "subject_id")
-VALUES ('2', '1');
+VALUES ('10002', '1');
 INSERT INTO studying ("student_id", "subject_id")
-VALUES ('2', '2');
+VALUES ('10002', '2');
 
 INSERT INTO lesson_status ("mark", "id", "visited")
 VALUES ('8', '1', 'yes');
@@ -55,12 +55,20 @@ INSERT INTO lesson_status ("mark", "id", "visited")
 VALUES ('8', '3', 'yes');
 
 INSERT INTO mark_id ("student_id", "lesson_status_id")
-VALUES ('1', '1');
+VALUES ('10001', '1');
 INSERT INTO mark_id ("student_id", "lesson_status_id")
-VALUES ('1', '2');
+VALUES ('10001', '2');
 INSERT INTO mark_id ("student_id", "lesson_status_id")
-VALUES ('2', '3');
+VALUES ('10001', '3');
 
+INSERT INTO ids ("student_id", "teacher_id")
+VALUES ('10001', '1');
+INSERT INTO ids ("student_id", "teacher_id")
+VALUES ('10001', '2');
+INSERT INTO ids ("student_id", "teacher_id")
+VALUES ('10002', '1');
+INSERT INTO ids ("student_id", "teacher_id")
+VALUES ('10002', '2');
 
 INSERT INTO condition ("lesson_status_id", "subject_id")
 VALUES ('1', '1');
@@ -68,11 +76,3 @@ INSERT INTO condition ("lesson_status_id", "subject_id")
 VALUES ('2', '1');
 INSERT INTO condition ("lesson_status_id", "subject_id")
 VALUES ('3', '1');
-
-select string_agg(mark::varchar, ',' order by mark::varchar asc) as mark , sub_name from subject
-    join condition c on subject.id = c.subject_id
-    join lesson_status ls on c.lesson_status_id = ls.id
-    join mark_id mi on ls.id = mi.lesson_status_id
-    join student s on mi.student_id = s.id
-    where mi.student_id = '1'
-    group by  sub_name;

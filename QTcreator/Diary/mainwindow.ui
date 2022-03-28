@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>370</width>
-    <height>210</height>
+    <width>372</width>
+    <height>318</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -20,107 +20,37 @@
       <x>20</x>
       <y>10</y>
       <width>321</width>
-      <height>161</height>
+      <height>251</height>
      </rect>
     </property>
     <property name="title">
      <string>Authorization</string>
     </property>
-    <widget class="QWidget" name="layoutWidget">
+    <widget class="QPushButton" name="authorize_button">
      <property name="geometry">
       <rect>
-       <x>30</x>
-       <y>30</y>
-       <width>271</width>
-       <height>114</height>
+       <x>0</x>
+       <y>60</y>
+       <width>321</width>
+       <height>71</height>
       </rect>
      </property>
-     <layout class="QVBoxLayout" name="verticalLayout_3">
-      <item>
-       <layout class="QHBoxLayout" name="horizontalLayout">
-        <item>
-         <layout class="QVBoxLayout" name="verticalLayout">
-          <item>
-           <widget class="QLabel" name="label">
-            <property name="text">
-             <string>Login</string>
-            </property>
-           </widget>
-          </item>
-          <item>
-           <widget class="QLabel" name="label_2">
-            <property name="text">
-             <string>Password</string>
-            </property>
-           </widget>
-          </item>
-          <item>
-           <widget class="QLabel" name="label_3">
-            <property name="text">
-             <string>Your role</string>
-            </property>
-           </widget>
-          </item>
-         </layout>
-        </item>
-        <item>
-         <layout class="QVBoxLayout" name="verticalLayout_2">
-          <item>
-           <widget class="QLineEdit" name="auth_login">
-            <property name="placeholderText">
-             <string>login</string>
-            </property>
-           </widget>
-          </item>
-          <item>
-           <widget class="QLineEdit" name="auth_pass">
-            <property name="echoMode">
-             <enum>QLineEdit::Password</enum>
-            </property>
-            <property name="placeholderText">
-             <string>password</string>
-            </property>
-           </widget>
-          </item>
-          <item>
-           <widget class="QComboBox" name="comboBox_role">
-            <property name="editable">
-             <bool>false</bool>
-            </property>
-            <item>
-             <property name="text">
-              <string>&lt;none&gt;</string>
-             </property>
-            </item>
-            <item>
-             <property name="text">
-              <string>Teacher</string>
-             </property>
-            </item>
-            <item>
-             <property name="text">
-              <string>Parent</string>
-             </property>
-            </item>
-            <item>
-             <property name="text">
-              <string>Student</string>
-             </property>
-            </item>
-           </widget>
-          </item>
-         </layout>
-        </item>
-       </layout>
-      </item>
-      <item>
-       <widget class="QPushButton" name="auth_confirm">
-        <property name="text">
-         <string>Confirm</string>
-        </property>
-       </widget>
-      </item>
-     </layout>
+     <property name="text">
+      <string>Authorize</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="register_button">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>140</y>
+       <width>321</width>
+       <height>71</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Register</string>
+     </property>
     </widget>
    </widget>
   </widget>
@@ -129,8 +59,8 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>370</width>
-     <height>22</height>
+     <width>372</width>
+     <height>34</height>
     </rect>
    </property>
   </widget>

@@ -11,16 +11,11 @@
 
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
-#include <QtWidgets/QComboBox>
 #include <QtWidgets/QGroupBox>
-#include <QtWidgets/QHBoxLayout>
-#include <QtWidgets/QLabel>
-#include <QtWidgets/QLineEdit>
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QMenuBar>
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QStatusBar>
-#include <QtWidgets/QVBoxLayout>
 #include <QtWidgets/QWidget>
 
 QT_BEGIN_NAMESPACE
@@ -30,18 +25,8 @@ class Ui_MainWindow
 public:
     QWidget *centralwidget;
     QGroupBox *groupBox;
-    QWidget *layoutWidget;
-    QVBoxLayout *verticalLayout_3;
-    QHBoxLayout *horizontalLayout;
-    QVBoxLayout *verticalLayout;
-    QLabel *label;
-    QLabel *label_2;
-    QLabel *label_3;
-    QVBoxLayout *verticalLayout_2;
-    QLineEdit *auth_login;
-    QLineEdit *auth_pass;
-    QComboBox *comboBox_role;
-    QPushButton *auth_confirm;
+    QPushButton *authorize_button;
+    QPushButton *register_button;
     QMenuBar *menubar;
     QStatusBar *statusbar;
 
@@ -49,78 +34,22 @@ public:
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName(QString::fromUtf8("MainWindow"));
-        MainWindow->resize(370, 210);
+        MainWindow->resize(372, 318);
         centralwidget = new QWidget(MainWindow);
         centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
         groupBox = new QGroupBox(centralwidget);
         groupBox->setObjectName(QString::fromUtf8("groupBox"));
-        groupBox->setGeometry(QRect(20, 10, 321, 161));
-        layoutWidget = new QWidget(groupBox);
-        layoutWidget->setObjectName(QString::fromUtf8("layoutWidget"));
-        layoutWidget->setGeometry(QRect(30, 30, 271, 114));
-        verticalLayout_3 = new QVBoxLayout(layoutWidget);
-        verticalLayout_3->setObjectName(QString::fromUtf8("verticalLayout_3"));
-        verticalLayout_3->setContentsMargins(0, 0, 0, 0);
-        horizontalLayout = new QHBoxLayout();
-        horizontalLayout->setObjectName(QString::fromUtf8("horizontalLayout"));
-        verticalLayout = new QVBoxLayout();
-        verticalLayout->setObjectName(QString::fromUtf8("verticalLayout"));
-        label = new QLabel(layoutWidget);
-        label->setObjectName(QString::fromUtf8("label"));
-
-        verticalLayout->addWidget(label);
-
-        label_2 = new QLabel(layoutWidget);
-        label_2->setObjectName(QString::fromUtf8("label_2"));
-
-        verticalLayout->addWidget(label_2);
-
-        label_3 = new QLabel(layoutWidget);
-        label_3->setObjectName(QString::fromUtf8("label_3"));
-
-        verticalLayout->addWidget(label_3);
-
-
-        horizontalLayout->addLayout(verticalLayout);
-
-        verticalLayout_2 = new QVBoxLayout();
-        verticalLayout_2->setObjectName(QString::fromUtf8("verticalLayout_2"));
-        auth_login = new QLineEdit(layoutWidget);
-        auth_login->setObjectName(QString::fromUtf8("auth_login"));
-
-        verticalLayout_2->addWidget(auth_login);
-
-        auth_pass = new QLineEdit(layoutWidget);
-        auth_pass->setObjectName(QString::fromUtf8("auth_pass"));
-        auth_pass->setEchoMode(QLineEdit::Password);
-
-        verticalLayout_2->addWidget(auth_pass);
-
-        comboBox_role = new QComboBox(layoutWidget);
-        comboBox_role->addItem(QString());
-        comboBox_role->addItem(QString());
-        comboBox_role->addItem(QString());
-        comboBox_role->addItem(QString());
-        comboBox_role->setObjectName(QString::fromUtf8("comboBox_role"));
-        comboBox_role->setEditable(false);
-
-        verticalLayout_2->addWidget(comboBox_role);
-
-
-        horizontalLayout->addLayout(verticalLayout_2);
-
-
-        verticalLayout_3->addLayout(horizontalLayout);
-
-        auth_confirm = new QPushButton(layoutWidget);
-        auth_confirm->setObjectName(QString::fromUtf8("auth_confirm"));
-
-        verticalLayout_3->addWidget(auth_confirm);
-
+        groupBox->setGeometry(QRect(20, 10, 321, 251));
+        authorize_button = new QPushButton(groupBox);
+        authorize_button->setObjectName(QString::fromUtf8("authorize_button"));
+        authorize_button->setGeometry(QRect(0, 60, 321, 71));
+        register_button = new QPushButton(groupBox);
+        register_button->setObjectName(QString::fromUtf8("register_button"));
+        register_button->setGeometry(QRect(0, 140, 321, 71));
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName(QString::fromUtf8("menubar"));
-        menubar->setGeometry(QRect(0, 0, 370, 22));
+        menubar->setGeometry(QRect(0, 0, 372, 34));
         MainWindow->setMenuBar(menubar);
         statusbar = new QStatusBar(MainWindow);
         statusbar->setObjectName(QString::fromUtf8("statusbar"));
@@ -135,17 +64,8 @@ public:
     {
         MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "MainWindow", nullptr));
         groupBox->setTitle(QCoreApplication::translate("MainWindow", "Authorization", nullptr));
-        label->setText(QCoreApplication::translate("MainWindow", "Login", nullptr));
-        label_2->setText(QCoreApplication::translate("MainWindow", "Password", nullptr));
-        label_3->setText(QCoreApplication::translate("MainWindow", "Your role", nullptr));
-        auth_login->setPlaceholderText(QCoreApplication::translate("MainWindow", "login", nullptr));
-        auth_pass->setPlaceholderText(QCoreApplication::translate("MainWindow", "password", nullptr));
-        comboBox_role->setItemText(0, QCoreApplication::translate("MainWindow", "<none>", nullptr));
-        comboBox_role->setItemText(1, QCoreApplication::translate("MainWindow", "Teacher", nullptr));
-        comboBox_role->setItemText(2, QCoreApplication::translate("MainWindow", "Parent", nullptr));
-        comboBox_role->setItemText(3, QCoreApplication::translate("MainWindow", "Student", nullptr));
-
-        auth_confirm->setText(QCoreApplication::translate("MainWindow", "Confirm", nullptr));
+        authorize_button->setText(QCoreApplication::translate("MainWindow", "Authorize", nullptr));
+        register_button->setText(QCoreApplication::translate("MainWindow", "Register", nullptr));
     } // retranslateUi
 
 };

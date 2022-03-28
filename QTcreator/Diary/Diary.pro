@@ -1,4 +1,6 @@
 QT       += core gui sql
+QT       += networkauth
+
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -12,6 +14,7 @@ CONFIG += console
 SOURCES += \
     add_mark.cpp \
     add_mark_2.cpp \
+    authorization.cpp \
     check_class.cpp \
     check_student.cpp \
     class_info.cpp \
@@ -26,6 +29,7 @@ SOURCES += \
 HEADERS += \
     add_mark.h \
     add_mark_2.h \
+    authorization.h \
     check_class.h \
     check_student.h \
     class_info.h \
@@ -40,6 +44,7 @@ HEADERS += \
 FORMS += \
     add_mark.ui \
     add_mark_2.ui \
+    authorization.ui \
     check_class.ui \
     check_student.ui \
     class_info.ui \
@@ -54,3 +59,5 @@ FORMS += \
 qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
+
+DISTFILES +=

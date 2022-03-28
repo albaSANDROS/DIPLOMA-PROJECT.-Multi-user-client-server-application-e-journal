@@ -2,16 +2,19 @@
 #include <QApplication>
 #include "connection.h"
 
+
 int main(int argc, char *argv[])
 {
 
     QApplication a(argc, argv);
     MainWindow w;
 
-    if(!createConnection())
-        return 1;
-
     w.show();
+    //окно верификации. Туда вставить токен. И работать далее
+
+
+
+    //
 
 
     return a.exec();

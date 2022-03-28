@@ -45,25 +45,8 @@ CREATE TABLE notes (
 
 ALTER TABLE notes ADD CONSTRAINT notes_pk PRIMARY KEY ( id );
 
-CREATE TABLE mark_id (
-    student_id       INTEGER NOT NULL,
-    lesson_status_id INTEGER NOT NULL
-);
-
-ALTER TABLE mark_id ADD CONSTRAINT mark_id_pk PRIMARY KEY ( student_id,
-                                                            lesson_status_id );
-
-ALTER TABLE mark_id
-    ADD CONSTRAINT mark_id_lesson_status_fk FOREIGN KEY ( lesson_status_id )
-        REFERENCES lesson_status ( id );
-
-ALTER TABLE mark_id
-    ADD CONSTRAINT mark_id_student_fk FOREIGN KEY ( student_id )
-        REFERENCES student ( id );
-
-
 CREATE TABLE stud_parent (
-    full_name_parent  VARCHAR(4000),
+    full_name_parent  VARCHAR,
     id                INTEGER NOT NULL,
     phone_numb_parent VARCHAR
 );
@@ -145,6 +128,14 @@ CREATE TABLE timetable (
 ALTER TABLE timetable ADD CONSTRAINT timetable_pk PRIMARY KEY ( studying_group_id,
                                                                 lesson_id );
 
+CREATE TABLE users (
+    id      INTEGER NOT NULL,
+    role_id INTEGER NOT NULL,
+    token   VARCHAR NOT NULL
+);
+
+ALTER TABLE users ADD CONSTRAINT users_pk PRIMARY KEY ( id );
+
 ALTER TABLE condition
     ADD CONSTRAINT condition_lesson_status_fk FOREIGN KEY ( lesson_status_id )
         REFERENCES lesson_status ( id );
@@ -212,4 +203,20 @@ ALTER TABLE timetable
 ALTER TABLE timetable
     ADD CONSTRAINT timetable_studying_group_fk FOREIGN KEY ( studying_group_id )
         REFERENCES studying_group ( id );
+
+CREATE TABLE mark_id (
+    student_id       INTEGER NOT NULL,
+    lesson_status_id INTEGER NOT NULL
+);
+
+ALTER TABLE mark_id ADD CONSTRAINT mark_id_pk PRIMARY KEY ( student_id,
+                                                            lesson_status_id );
+
+ALTER TABLE mark_id
+    ADD CONSTRAINT mark_id_lesson_status_fk FOREIGN KEY ( lesson_status_id )
+        REFERENCES lesson_status ( id );
+
+ALTER TABLE mark_id
+    ADD CONSTRAINT mark_id_student_fk FOREIGN KEY ( student_id )
+        REFERENCES student ( id );
 
