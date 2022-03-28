@@ -1,0 +1,75 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="24DF6011-E79D-0D63-B589-028425B926E8" name="timetable">
+<createdBy>user</createdBy>
+<createdTime>2022-02-05 11:37:43 UTC</createdTime>
+<ownerDesignName>28_03</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="studying_group_id" id="33EAB7FD-D2C3-9FF2-D26D-DCA3EBD69758">
+<createdBy>user</createdBy>
+<createdTime>2022-02-05 11:37:43 UTC</createdTime>
+<ownerDesignName>28_03</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="98E69BDB-820D-FE5F-31E0-36E3779752C9" referredColumn="CC917AF6-D353-09DC-9DE6-DA1823761723"/>
+</associations>
+</Column>
+<Column name="lesson_id" id="F665D237-2E6F-FB12-94E2-6194E4E53034">
+<createdBy>user</createdBy>
+<createdTime>2022-02-05 11:37:43 UTC</createdTime>
+<ownerDesignName>28_03</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="74E778A4-8934-9E17-CB49-24697774A45E" referredColumn="F3332467-8A84-BC5D-932D-ADB0F473B7E0"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="BB3F453B-757F-9ABD-DE0F-B3A11B4865D1" name="timetable_PK">
+<createdBy>user</createdBy>
+<createdTime>2022-02-05 11:37:43 UTC</createdTime>
+<ownerDesignName>28_03</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="33EAB7FD-D2C3-9FF2-D26D-DCA3EBD69758"/>
+<colUsage columnID="F665D237-2E6F-FB12-94E2-6194E4E53034"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="D8155DC1-3934-8A1D-1AFB-D4E832EA6EA0" name="timetable_studying_group_FK">
+<createdBy>user</createdBy>
+<createdTime>2022-02-05 11:37:43 UTC</createdTime>
+<generatorID>9C9B2CB4-9E7E-0AC1-2AFE-B8AE33BB3FDD</generatorID>
+<ownerDesignName>28_03</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="33EAB7FD-D2C3-9FF2-D26D-DCA3EBD69758"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="C48283EB-A26E-B007-5B03-7A4F5AB14AAF" name="timetable_lesson_FK">
+<createdBy>user</createdBy>
+<createdTime>2022-02-05 11:37:43 UTC</createdTime>
+<generatorID>9C9B2CB4-9E7E-0AC1-2AFE-B8AE33BB3FDD</generatorID>
+<ownerDesignName>28_03</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="F665D237-2E6F-FB12-94E2-6194E4E53034"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>
