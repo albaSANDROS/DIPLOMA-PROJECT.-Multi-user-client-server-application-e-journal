@@ -11,6 +11,9 @@ add_mark::add_mark(QWidget *parent, QString login) :
     setLogin(login);
     ui->setupUi(this);
 
+    setWindowFlags(Qt::Dialog);
+    setFixedSize(498, 332);
+
     ui->label->setText("Welcome back, "+getLogin());
 }
 

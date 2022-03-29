@@ -6,21 +6,28 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>400</width>
-    <height>300</height>
+    <width>540</width>
+    <height>428</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Dialog</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(67, 136, 189);
+selection-color: rgb(22, 34, 49);</string>
+  </property>
   <widget class="QLabel" name="label">
    <property name="geometry">
     <rect>
-     <x>210</x>
-     <y>0</y>
-     <width>171</width>
+     <x>40</x>
+     <y>20</y>
+     <width>471</width>
      <height>41</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(255, 255, 255);</string>
    </property>
    <property name="text">
     <string>login</string>
@@ -29,11 +36,14 @@
   <widget class="QPushButton" name="get_back_button">
    <property name="geometry">
     <rect>
-     <x>20</x>
-     <y>230</y>
-     <width>361</width>
-     <height>51</height>
+     <x>40</x>
+     <y>340</y>
+     <width>471</width>
+     <height>61</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(255, 255, 255);</string>
    </property>
    <property name="text">
     <string>Go to menu</string>
@@ -42,11 +52,14 @@
   <widget class="QPushButton" name="classes_info_button">
    <property name="geometry">
     <rect>
-     <x>210</x>
-     <y>40</y>
-     <width>171</width>
-     <height>161</height>
+     <x>290</x>
+     <y>80</y>
+     <width>221</width>
+     <height>221</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(255, 255, 255);</string>
    </property>
    <property name="text">
     <string>Data about class</string>
@@ -55,11 +68,14 @@
   <widget class="QPushButton" name="students_info_button">
    <property name="geometry">
     <rect>
-     <x>20</x>
-     <y>40</y>
-     <width>171</width>
-     <height>161</height>
+     <x>40</x>
+     <y>80</y>
+     <width>221</width>
+     <height>221</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(255, 255, 255);</string>
    </property>
    <property name="text">
     <string>Data about student</string>

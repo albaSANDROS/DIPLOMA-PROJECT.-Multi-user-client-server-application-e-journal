@@ -55,6 +55,8 @@ FORMS += \
     student_info.ui \
     student_window.ui
 
+win32:RC_FILE = logoFile.rc
+
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin

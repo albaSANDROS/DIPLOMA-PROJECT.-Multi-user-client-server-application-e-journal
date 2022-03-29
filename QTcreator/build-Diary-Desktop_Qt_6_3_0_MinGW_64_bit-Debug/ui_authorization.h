@@ -12,6 +12,7 @@
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QDialog>
+#include <QtWidgets/QLabel>
 #include <QtWidgets/QLineEdit>
 #include <QtWidgets/QPushButton>
 
@@ -22,19 +23,28 @@ class Ui_authorization
 public:
     QPushButton *accept_button;
     QLineEdit *token_lineEdit;
+    QLabel *label;
 
     void setupUi(QDialog *authorization)
     {
         if (authorization->objectName().isEmpty())
             authorization->setObjectName(QString::fromUtf8("authorization"));
-        authorization->resize(555, 424);
+        authorization->resize(443, 273);
+        authorization->setStyleSheet(QString::fromUtf8("background-color: rgb(67, 136, 189);\n"
+"selection-color: rgb(22, 34, 49);"));
         accept_button = new QPushButton(authorization);
         accept_button->setObjectName(QString::fromUtf8("accept_button"));
-        accept_button->setGeometry(QRect(210, 170, 131, 40));
+        accept_button->setGeometry(QRect(30, 160, 381, 81));
+        accept_button->setStyleSheet(QString::fromUtf8("color: rgb(255, 255, 255);"));
         token_lineEdit = new QLineEdit(authorization);
         token_lineEdit->setObjectName(QString::fromUtf8("token_lineEdit"));
-        token_lineEdit->setGeometry(QRect(60, 90, 431, 41));
+        token_lineEdit->setGeometry(QRect(30, 90, 381, 31));
+        token_lineEdit->setStyleSheet(QString::fromUtf8("color: rgb(255, 255, 255);"));
         token_lineEdit->setEchoMode(QLineEdit::Password);
+        label = new QLabel(authorization);
+        label->setObjectName(QString::fromUtf8("label"));
+        label->setGeometry(QRect(130, 30, 171, 28));
+        label->setStyleSheet(QString::fromUtf8("color: rgb(255, 255, 255);"));
 
         retranslateUi(authorization);
 
@@ -47,6 +57,7 @@ public:
         accept_button->setText(QCoreApplication::translate("authorization", "Accept", nullptr));
         token_lineEdit->setInputMask(QString());
         token_lineEdit->setText(QString());
+        label->setText(QCoreApplication::translate("authorization", "Put your validation code there", nullptr));
     } // retranslateUi
 
 };

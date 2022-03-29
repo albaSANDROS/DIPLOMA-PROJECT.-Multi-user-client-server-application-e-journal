@@ -6,21 +6,28 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>413</width>
-    <height>417</height>
+    <width>494</width>
+    <height>573</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Dialog</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(67, 136, 189);
+selection-color: rgb(22, 34, 49);</string>
+  </property>
   <widget class="QPushButton" name="pushButton_info">
    <property name="geometry">
     <rect>
-     <x>10</x>
-     <y>373</y>
-     <width>151</width>
-     <height>31</height>
+     <x>50</x>
+     <y>490</y>
+     <width>221</width>
+     <height>61</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(255, 255, 255);</string>
    </property>
    <property name="text">
     <string>Contact informaiton</string>
@@ -29,23 +36,26 @@
   <widget class="QPushButton" name="pushButton_cancel">
    <property name="geometry">
     <rect>
-     <x>284</x>
-     <y>373</y>
-     <width>111</width>
-     <height>31</height>
+     <x>310</x>
+     <y>490</y>
+     <width>121</width>
+     <height>61</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(255, 255, 255);</string>
    </property>
    <property name="text">
     <string>Exit</string>
    </property>
   </widget>
-  <widget class="QWidget" name="">
+  <widget class="QWidget" name="layoutWidget">
    <property name="geometry">
     <rect>
-     <x>10</x>
-     <y>20</y>
+     <x>50</x>
+     <y>30</y>
      <width>391</width>
-     <height>331</height>
+     <height>432</height>
     </rect>
    </property>
    <layout class="QVBoxLayout" name="verticalLayout_4">
@@ -53,6 +63,9 @@
      <layout class="QHBoxLayout" name="horizontalLayout">
       <item>
        <widget class="QLabel" name="label_studname">
+        <property name="styleSheet">
+         <string notr="true">color: rgb(255, 255, 255);</string>
+        </property>
         <property name="text">
          <string>Student name</string>
         </property>
@@ -60,6 +73,9 @@
       </item>
       <item>
        <widget class="QLineEdit" name="lineEdit_studname">
+        <property name="styleSheet">
+         <string notr="true">color: rgb(255, 255, 255);</string>
+        </property>
         <property name="readOnly">
          <bool>true</bool>
         </property>
@@ -71,6 +87,9 @@
      <layout class="QHBoxLayout" name="horizontalLayout_2">
       <item>
        <widget class="QLabel" name="label_studclass">
+        <property name="styleSheet">
+         <string notr="true">color: rgb(255, 255, 255);</string>
+        </property>
         <property name="text">
          <string>Student class  </string>
         </property>
@@ -78,6 +97,9 @@
       </item>
       <item>
        <widget class="QLineEdit" name="lineEdit_studclass">
+        <property name="styleSheet">
+         <string notr="true">color: rgb(255, 255, 255);</string>
+        </property>
         <property name="readOnly">
          <bool>true</bool>
         </property>
@@ -91,6 +113,9 @@
        <layout class="QVBoxLayout" name="verticalLayout_2">
         <item>
          <widget class="QLabel" name="label_marks">
+          <property name="styleSheet">
+           <string notr="true">color: rgb(255, 255, 255);</string>
+          </property>
           <property name="text">
            <string>Marks</string>
           </property>
@@ -98,6 +123,9 @@
         </item>
         <item>
          <widget class="QTextEdit" name="textEdit_marks">
+          <property name="styleSheet">
+           <string notr="true">color: rgb(255, 255, 255);</string>
+          </property>
           <property name="readOnly">
            <bool>true</bool>
           </property>
@@ -109,6 +137,9 @@
        <layout class="QVBoxLayout" name="verticalLayout">
         <item>
          <widget class="QLabel" name="label_comments">
+          <property name="styleSheet">
+           <string notr="true">color: rgb(255, 255, 255);</string>
+          </property>
           <property name="text">
            <string>Comments</string>
           </property>
@@ -116,6 +147,9 @@
         </item>
         <item>
          <widget class="QTextEdit" name="textEdit_comments">
+          <property name="styleSheet">
+           <string notr="true">color: rgb(255, 255, 255);</string>
+          </property>
           <property name="readOnly">
            <bool>true</bool>
           </property>

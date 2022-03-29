@@ -35,29 +35,36 @@ public:
     {
         if (check_student->objectName().isEmpty())
             check_student->setObjectName(QString::fromUtf8("check_student"));
-        check_student->resize(307, 231);
+        check_student->resize(428, 312);
+        check_student->setStyleSheet(QString::fromUtf8("background-color: rgb(67, 136, 189);\n"
+"selection-color: rgb(22, 34, 49);"));
         find_button = new QPushButton(check_student);
         find_button->setObjectName(QString::fromUtf8("find_button"));
-        find_button->setGeometry(QRect(100, 100, 121, 61));
+        find_button->setGeometry(QRect(30, 140, 371, 81));
+        find_button->setStyleSheet(QString::fromUtf8("color: rgb(255, 255, 255);"));
         cancel_button = new QPushButton(check_student);
         cancel_button->setObjectName(QString::fromUtf8("cancel_button"));
-        cancel_button->setGeometry(QRect(100, 180, 121, 24));
+        cancel_button->setGeometry(QRect(30, 243, 171, 41));
+        cancel_button->setStyleSheet(QString::fromUtf8("color: rgb(255, 255, 255);"));
         label = new QLabel(check_student);
         label->setObjectName(QString::fromUtf8("label"));
-        label->setGeometry(QRect(80, 10, 161, 41));
+        label->setGeometry(QRect(130, 20, 181, 41));
+        label->setStyleSheet(QString::fromUtf8("color: rgb(255, 255, 255);"));
         layoutWidget = new QWidget(check_student);
         layoutWidget->setObjectName(QString::fromUtf8("layoutWidget"));
-        layoutWidget->setGeometry(QRect(30, 50, 241, 24));
+        layoutWidget->setGeometry(QRect(30, 70, 381, 36));
         horizontalLayout = new QHBoxLayout(layoutWidget);
         horizontalLayout->setObjectName(QString::fromUtf8("horizontalLayout"));
         horizontalLayout->setContentsMargins(0, 0, 0, 0);
         label_2 = new QLabel(layoutWidget);
         label_2->setObjectName(QString::fromUtf8("label_2"));
+        label_2->setStyleSheet(QString::fromUtf8("color: rgb(255, 255, 255);"));
 
         horizontalLayout->addWidget(label_2);
 
         student_full_name = new QLineEdit(layoutWidget);
         student_full_name->setObjectName(QString::fromUtf8("student_full_name"));
+        student_full_name->setStyleSheet(QString::fromUtf8("color: rgb(255, 255, 255);"));
 
         horizontalLayout->addWidget(student_full_name);
 

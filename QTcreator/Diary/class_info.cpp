@@ -9,6 +9,10 @@ class_info::class_info(QWidget *parent, QString login, QString class_letter, int
     ui(new Ui::class_info)
 {
     ui->setupUi(this);
+
+    setWindowFlags(Qt::Dialog);
+    setFixedSize(426, 366);
+
     setClass_letter(class_letter);
     setClass_num(class_num);
 

@@ -12,6 +12,8 @@ parent_window::parent_window(QWidget *parent, QString login) :
     setFull_name_parent(login);
     ui->setupUi(this);
 
+    setWindowFlags(Qt::Dialog);
+    setFixedSize(494, 573);
 
     question_to_db = "select id from stud_parent WHERE full_name_parent = '" + getFull_name_parent() + "'";
     query.exec(question_to_db);

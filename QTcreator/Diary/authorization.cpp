@@ -4,6 +4,7 @@
 #include <parent_window.h>
 #include <student_window.h>
 #include <QMessageBox>
+#include <connection.h>
 
 authorization::authorization(QWidget *parent) :
     QDialog(parent),
@@ -11,6 +12,8 @@ authorization::authorization(QWidget *parent) :
 {
     ui->setupUi(this);
 
+    setWindowFlags(Qt::Dialog);
+    setFixedSize(443, 273);
 
 }
 
@@ -31,6 +34,7 @@ authorization::~authorization()
 
 void authorization::on_accept_button_clicked()
 {
+
     setToken(ui -> token_lineEdit -> text());
     question_to_db = "select user_id, role_id from users where token = '" + getToken() +"'";
     query.exec(question_to_db);

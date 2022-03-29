@@ -10,6 +10,10 @@ add_mark_2::add_mark_2(QWidget *parent, QString login, QString student_name) :
 {
     setLogin(login);
     ui->setupUi(this);
+
+    setWindowFlags(Qt::Dialog);
+    setFixedSize(663, 442);
+
     ui->label->setText("Welcome back, "+getLogin());
     setStudent_name(student_name);
     ui->lineEdit_full_name->setText(student_name);

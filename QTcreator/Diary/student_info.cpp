@@ -10,6 +10,9 @@ student_info::student_info(QWidget *parent, QString login, QString full_name_st)
     ui->setupUi(this);
     setFull_name_st(full_name_st);
 
+    setWindowFlags(Qt::Dialog);
+    setFixedSize(459, 834);
+
     question_to_db = "select * from student WHERE full_name_st = '" + getFull_name_st() + "'";
     query.exec(question_to_db);
     while (query.next()) {

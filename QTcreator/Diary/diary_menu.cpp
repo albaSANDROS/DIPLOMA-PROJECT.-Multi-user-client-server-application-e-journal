@@ -22,6 +22,10 @@ diary_menu::diary_menu(QWidget *parent, QString auth_login) :
     ui(new Ui::diary_menu)
 {
     ui->setupUi(this);
+
+    setWindowFlags(Qt::Dialog);
+    setFixedSize(545, 445);
+
     setLogin(auth_login);
     ui->label->setText("Welcome back, "+auth_login);
 }

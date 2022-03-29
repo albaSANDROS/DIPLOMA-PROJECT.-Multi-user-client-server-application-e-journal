@@ -8,6 +8,9 @@ student_window::student_window(QWidget *parent, QString full_name_st) :
     setFull_name_st(full_name_st);
     ui->setupUi(this);
 
+    setWindowFlags(Qt::Dialog);
+    setFixedSize(374, 296);
+
     //getting student_id
     question_to_db = "select id from student where full_name_st='" + getFull_name_st() + "'";
     query.exec(question_to_db);

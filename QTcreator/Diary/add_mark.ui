@@ -6,21 +6,29 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>325</width>
-    <height>205</height>
+    <width>498</width>
+    <height>332</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Dialog</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(67, 136, 189);
+selection-color: rgb(22, 34, 49);</string>
+  </property>
   <widget class="QPushButton" name="next_pushButton">
    <property name="geometry">
     <rect>
-     <x>20</x>
-     <y>100</y>
-     <width>281</width>
-     <height>51</height>
+     <x>30</x>
+     <y>160</y>
+     <width>441</width>
+     <height>81</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(90, 184, 255);
+color: rgb(255, 255, 255);</string>
    </property>
    <property name="text">
     <string>Accept</string>
@@ -29,11 +37,15 @@
   <widget class="QPushButton" name="back_pushButton">
    <property name="geometry">
     <rect>
-     <x>20</x>
-     <y>160</y>
-     <width>281</width>
-     <height>31</height>
+     <x>30</x>
+     <y>260</y>
+     <width>441</width>
+     <height>51</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(90, 184, 255);
+color: rgb(255, 255, 255);</string>
    </property>
    <property name="text">
     <string>Back</string>
@@ -42,24 +54,30 @@
   <widget class="QLabel" name="label_inp_name">
    <property name="geometry">
     <rect>
-     <x>90</x>
-     <y>30</y>
-     <width>141</width>
+     <x>140</x>
+     <y>60</y>
+     <width>231</width>
      <height>21</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(255, 255, 255);</string>
+   </property>
    <property name="text">
-    <string>Input student`s full name</string>
+    <string>Please, input student`s full name</string>
    </property>
   </widget>
   <widget class="QLabel" name="label">
    <property name="geometry">
     <rect>
-     <x>170</x>
+     <x>30</x>
      <y>10</y>
-     <width>141</width>
-     <height>16</height>
+     <width>431</width>
+     <height>21</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(255, 255, 255);</string>
    </property>
    <property name="text">
     <string>login</string>
@@ -68,22 +86,35 @@
   <widget class="QWidget" name="layoutWidget">
    <property name="geometry">
     <rect>
-     <x>20</x>
-     <y>60</y>
-     <width>281</width>
-     <height>24</height>
+     <x>30</x>
+     <y>100</y>
+     <width>441</width>
+     <height>36</height>
     </rect>
    </property>
    <layout class="QHBoxLayout" name="horizontalLayout">
     <item>
      <widget class="QLabel" name="label_fullName">
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 255, 255);</string>
+      </property>
       <property name="text">
-       <string>Full name</string>
+       <string>Full name is:</string>
       </property>
      </widget>
     </item>
     <item>
      <widget class="QLineEdit" name="student_fullname">
+      <property name="styleSheet">
+       <string notr="true">border-color: rgb(90, 184, 255);
+color: rgb(255, 255, 255);
+gridline-color: rgb(90, 184, 255);
+selection-background-color: rgb(90, 184, 255);
+alternate-background-color: rgb(90, 184, 255);</string>
+      </property>
+      <property name="frame">
+       <bool>true</bool>
+      </property>
       <property name="placeholderText">
        <string>For example: Basko Aliaksandr</string>
       </property>

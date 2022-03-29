@@ -6,21 +6,28 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>307</width>
-    <height>231</height>
+    <width>428</width>
+    <height>312</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Dialog</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(67, 136, 189);
+selection-color: rgb(22, 34, 49);</string>
+  </property>
   <widget class="QPushButton" name="find_button">
    <property name="geometry">
     <rect>
-     <x>100</x>
-     <y>100</y>
-     <width>121</width>
-     <height>61</height>
+     <x>30</x>
+     <y>140</y>
+     <width>371</width>
+     <height>81</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(255, 255, 255);</string>
    </property>
    <property name="text">
     <string>Find</string>
@@ -29,11 +36,14 @@
   <widget class="QPushButton" name="cancel_button">
    <property name="geometry">
     <rect>
-     <x>100</x>
-     <y>180</y>
-     <width>121</width>
-     <height>24</height>
+     <x>30</x>
+     <y>243</y>
+     <width>171</width>
+     <height>41</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(255, 255, 255);</string>
    </property>
    <property name="text">
     <string>cancel</string>
@@ -42,11 +52,14 @@
   <widget class="QLabel" name="label">
    <property name="geometry">
     <rect>
-     <x>80</x>
-     <y>10</y>
-     <width>161</width>
+     <x>130</x>
+     <y>20</y>
+     <width>181</width>
      <height>41</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(255, 255, 255);</string>
    </property>
    <property name="text">
     <string>Please, input student`s name</string>
@@ -56,14 +69,17 @@
    <property name="geometry">
     <rect>
      <x>30</x>
-     <y>50</y>
-     <width>241</width>
-     <height>24</height>
+     <y>70</y>
+     <width>381</width>
+     <height>36</height>
     </rect>
    </property>
    <layout class="QHBoxLayout" name="horizontalLayout">
     <item>
      <widget class="QLabel" name="label_2">
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 255, 255);</string>
+      </property>
       <property name="text">
        <string>Full name</string>
       </property>
@@ -71,6 +87,9 @@
     </item>
     <item>
      <widget class="QLineEdit" name="student_full_name">
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 255, 255);</string>
+      </property>
       <property name="placeholderText">
        <string>For example: Basko Aliaksandr</string>
       </property>

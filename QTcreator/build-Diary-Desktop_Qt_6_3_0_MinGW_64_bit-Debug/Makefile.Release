@@ -19,7 +19,7 @@ CXXFLAGS      = -fno-keep-inline-dllexport -O2 -Wall -Wextra -Wextra -fexception
 INCPATH       = -I../Diary -I. -I../../../../QTcreator/6.3.0/mingw_64/include -I../../../../QTcreator/6.3.0/mingw_64/include/QtWidgets -I../../../../QTcreator/6.3.0/mingw_64/include/QtGui -I../../../../QTcreator/6.3.0/mingw_64/include/QtSql -I../../../../QTcreator/6.3.0/mingw_64/include/QtNetworkAuth -I../../../../QTcreator/6.3.0/mingw_64/include/QtNetwork -I../../../../QTcreator/6.3.0/mingw_64/include/QtCore -Irelease -I. -I/include -I../../../../QTcreator/6.3.0/mingw_64/mkspecs/win32-g++ 
 LINKER      =        g++
 LFLAGS        =        -Wl,-s -Wl,-subsystem,console -mthreads
-LIBS        =        E:\QTcreator\6.3.0\mingw_64\lib\libQt6Widgets.a E:\QTcreator\6.3.0\mingw_64\lib\libQt6Gui.a E:\QTcreator\6.3.0\mingw_64\lib\libQt6Sql.a E:\QTcreator\6.3.0\mingw_64\lib\libQt6NetworkAuth.a E:\QTcreator\6.3.0\mingw_64\lib\libQt6Network.a E:\QTcreator\6.3.0\mingw_64\lib\libQt6Core.a   
+LIBS        =        E:\QTcreator\6.3.0\mingw_64\lib\libQt6Widgets.a E:\QTcreator\6.3.0\mingw_64\lib\libQt6Gui.a E:\QTcreator\6.3.0\mingw_64\lib\libQt6Sql.a E:\QTcreator\6.3.0\mingw_64\lib\libQt6NetworkAuth.a E:\QTcreator\6.3.0\mingw_64\lib\libQt6Network.a E:\QTcreator\6.3.0\mingw_64\lib\libQt6Core.a release\logoFile_res.o   
 QMAKE         = E:\QTcreator\6.3.0\mingw_64\bin\qmake.exe
 DEL_FILE      = del
 CHK_DIR_EXISTS= if not exist
@@ -40,7 +40,7 @@ IDC           = idc
 IDL           = midl
 ZIP           = zip -r -9
 DEF_FILE      = 
-RES_FILE      = 
+RES_FILE      = release\logoFile_res.o
 SED           = $(QMAKE) -install sed
 MOVE          = move
 
@@ -135,8 +135,11 @@ DESTDIR_TARGET = release\Diary.exe
 first: all
 all: Makefile.Release  release/Diary.exe
 
-release/Diary.exe: E:/QTcreator/6.3.0/mingw_64/lib/libQt6Widgets.a E:/QTcreator/6.3.0/mingw_64/lib/libQt6Gui.a E:/QTcreator/6.3.0/mingw_64/lib/libQt6Sql.a E:/QTcreator/6.3.0/mingw_64/lib/libQt6NetworkAuth.a E:/QTcreator/6.3.0/mingw_64/lib/libQt6Network.a E:/QTcreator/6.3.0/mingw_64/lib/libQt6Core.a ui_add_mark.h ui_add_mark_2.h ui_authorization.h ui_check_class.h ui_check_student.h ui_class_info.h ui_diary_menu.h ui_get_data.h ui_mainwindow.h ui_parent_window.h ui_student_info.h ui_student_window.h $(OBJECTS) 
+release/Diary.exe: E:/QTcreator/6.3.0/mingw_64/lib/libQt6Widgets.a E:/QTcreator/6.3.0/mingw_64/lib/libQt6Gui.a E:/QTcreator/6.3.0/mingw_64/lib/libQt6Sql.a E:/QTcreator/6.3.0/mingw_64/lib/libQt6NetworkAuth.a E:/QTcreator/6.3.0/mingw_64/lib/libQt6Network.a E:/QTcreator/6.3.0/mingw_64/lib/libQt6Core.a ui_add_mark.h ui_add_mark_2.h ui_authorization.h ui_check_class.h ui_check_student.h ui_class_info.h ui_diary_menu.h ui_get_data.h ui_mainwindow.h ui_parent_window.h ui_student_info.h ui_student_window.h $(OBJECTS) release/logoFile_res.o
 	$(LINKER) $(LFLAGS) -o $(DESTDIR_TARGET) @object_script.Diary.Release  $(LIBS)
+
+release/logoFile_res.o: ../Diary/logoFile.rc
+	windres -i ..\Diary\logoFile.rc -o release\logoFile_res.o --include-dir=./../Diary $(DEFINES)
 
 qmake: FORCE
 	@$(QMAKE) -o Makefile.Release ..\Diary\Diary.pro -spec win32-g++ "CONFIG+=debug" "CONFIG+=qml_debug"
@@ -148,6 +151,7 @@ dist:
 
 clean: compiler_clean 
 	-$(DEL_FILE) release\add_mark.o release\add_mark_2.o release\authorization.o release\check_class.o release\check_student.o release\class_info.o release\diary_menu.o release\get_data.o release\main.o release\mainwindow.o release\parent_window.o release\student_info.o release\student_window.o release\moc_add_mark.o release\moc_add_mark_2.o release\moc_authorization.o release\moc_check_class.o release\moc_check_student.o release\moc_class_info.o release\moc_diary_menu.o release\moc_get_data.o release\moc_mainwindow.o release\moc_parent_window.o release\moc_student_info.o release\moc_student_window.o
+	-$(DEL_FILE) release\logoFile_res.o
 
 distclean: clean 
 	-$(DEL_FILE) .qmake.stash
@@ -594,6 +598,12 @@ release/moc_authorization.cpp: ../Diary/authorization.h \
 		../../../../QTcreator/6.3.0/mingw_64/include/QtCore/QSizeF \
 		../../../../QTcreator/6.3.0/mingw_64/include/QtGui/QTransform \
 		../../../../QTcreator/6.3.0/mingw_64/include/QtCore/qnativeinterface.h \
+		../../../../QTcreator/6.3.0/mingw_64/include/QtSql/QSqlQuery \
+		../../../../QTcreator/6.3.0/mingw_64/include/QtSql/qsqlquery.h \
+		../../../../QTcreator/6.3.0/mingw_64/include/QtSql/qtsqlglobal.h \
+		../../../../QTcreator/6.3.0/mingw_64/include/QtSql/qtsql-config.h \
+		../../../../QTcreator/6.3.0/mingw_64/include/QtSql/qtsqlexports.h \
+		../../../../QTcreator/6.3.0/mingw_64/include/QtSql/qsqldatabase.h \
 		release/moc_predefs.h \
 		../../../../QTcreator/6.3.0/mingw_64/bin/moc.exe
 	E:\QTcreator\6.3.0\mingw_64\bin\moc.exe $(DEFINES) --include E:/DIPLOM_git/DIPLOM/QTcreator/build-Diary-Desktop_Qt_6_3_0_MinGW_64_bit-Debug/release/moc_predefs.h -IE:/QTcreator/6.3.0/mingw_64/mkspecs/win32-g++ -IE:/DIPLOM_git/DIPLOM/QTcreator/Diary -IE:/QTcreator/6.3.0/mingw_64/include -IE:/QTcreator/6.3.0/mingw_64/include/QtWidgets -IE:/QTcreator/6.3.0/mingw_64/include/QtGui -IE:/QTcreator/6.3.0/mingw_64/include/QtSql -IE:/QTcreator/6.3.0/mingw_64/include/QtNetworkAuth -IE:/QTcreator/6.3.0/mingw_64/include/QtNetwork -IE:/QTcreator/6.3.0/mingw_64/include/QtCore -I. -IE:/QTcreator/Tools/mingw900_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++ -IE:/QTcreator/Tools/mingw900_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/x86_64-w64-mingw32 -IE:/QTcreator/Tools/mingw900_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/backward -IE:/QTcreator/Tools/mingw900_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include -IE:/QTcreator/Tools/mingw900_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed -IE:/QTcreator/Tools/mingw900_64/x86_64-w64-mingw32/include ..\Diary\authorization.h -o release\moc_authorization.cpp
@@ -2476,7 +2486,54 @@ release/authorization.o: ../Diary/authorization.cpp ../Diary/authorization.h \
 		../../../../QTcreator/6.3.0/mingw_64/include/QtCore/QSizeF \
 		../../../../QTcreator/6.3.0/mingw_64/include/QtGui/QTransform \
 		../../../../QTcreator/6.3.0/mingw_64/include/QtCore/qnativeinterface.h \
-		ui_authorization.h
+		../../../../QTcreator/6.3.0/mingw_64/include/QtSql/QSqlQuery \
+		../../../../QTcreator/6.3.0/mingw_64/include/QtSql/qsqlquery.h \
+		../../../../QTcreator/6.3.0/mingw_64/include/QtSql/qtsqlglobal.h \
+		../../../../QTcreator/6.3.0/mingw_64/include/QtSql/qtsql-config.h \
+		../../../../QTcreator/6.3.0/mingw_64/include/QtSql/qtsqlexports.h \
+		../../../../QTcreator/6.3.0/mingw_64/include/QtSql/qsqldatabase.h \
+		ui_authorization.h \
+		../../../../QTcreator/6.3.0/mingw_64/include/QtCore/QVariant \
+		../../../../QTcreator/6.3.0/mingw_64/include/QtWidgets/QApplication \
+		../../../../QTcreator/6.3.0/mingw_64/include/QtWidgets/qapplication.h \
+		../../../../QTcreator/6.3.0/mingw_64/include/QtCore/qcoreapplication.h \
+		../../../../QTcreator/6.3.0/mingw_64/include/QtCore/qeventloop.h \
+		../../../../QTcreator/6.3.0/mingw_64/include/QtCore/qcoreapplication_platform.h \
+		../../../../QTcreator/6.3.0/mingw_64/include/QtCore/qfuture.h \
+		../../../../QTcreator/6.3.0/mingw_64/include/QtCore/qfutureinterface.h \
+		../../../../QTcreator/6.3.0/mingw_64/include/QtCore/qmutex.h \
+		../../../../QTcreator/6.3.0/mingw_64/include/QtCore/qresultstore.h \
+		../../../../QTcreator/6.3.0/mingw_64/include/QtCore/qfuture_impl.h \
+		../../../../QTcreator/6.3.0/mingw_64/include/QtCore/qthreadpool.h \
+		../../../../QTcreator/6.3.0/mingw_64/include/QtCore/qthread.h \
+		../../../../QTcreator/6.3.0/mingw_64/include/QtCore/qdeadlinetimer.h \
+		../../../../QTcreator/6.3.0/mingw_64/include/QtCore/qelapsedtimer.h \
+		../../../../QTcreator/6.3.0/mingw_64/include/QtCore/qrunnable.h \
+		../../../../QTcreator/6.3.0/mingw_64/include/QtCore/qexception.h \
+		../../../../QTcreator/6.3.0/mingw_64/include/QtCore/qpromise.h \
+		../../../../QTcreator/6.3.0/mingw_64/include/QtGui/qguiapplication.h \
+		../../../../QTcreator/6.3.0/mingw_64/include/QtGui/qinputmethod.h \
+		../../../../QTcreator/6.3.0/mingw_64/include/QtCore/qlocale.h \
+		../../../../QTcreator/6.3.0/mingw_64/include/QtGui/qguiapplication_platform.h \
+		../../../../QTcreator/6.3.0/mingw_64/include/QtWidgets/QLineEdit \
+		../../../../QTcreator/6.3.0/mingw_64/include/QtWidgets/qlineedit.h \
+		../../../../QTcreator/6.3.0/mingw_64/include/QtWidgets/qframe.h \
+		../../../../QTcreator/6.3.0/mingw_64/include/QtGui/qtextcursor.h \
+		../../../../QTcreator/6.3.0/mingw_64/include/QtGui/qtextformat.h \
+		../../../../QTcreator/6.3.0/mingw_64/include/QtGui/qpen.h \
+		../../../../QTcreator/6.3.0/mingw_64/include/QtGui/qtextoption.h \
+		../../../../QTcreator/6.3.0/mingw_64/include/QtWidgets/QPushButton \
+		../../../../QTcreator/6.3.0/mingw_64/include/QtWidgets/qpushbutton.h \
+		../../../../QTcreator/6.3.0/mingw_64/include/QtWidgets/qabstractbutton.h \
+		../Diary/diary_menu.h \
+		../Diary/mainwindow.h \
+		../../../../QTcreator/6.3.0/mingw_64/include/QtWidgets/QMainWindow \
+		../../../../QTcreator/6.3.0/mingw_64/include/QtWidgets/qmainwindow.h \
+		../../../../QTcreator/6.3.0/mingw_64/include/QtWidgets/qtabwidget.h \
+		../Diary/parent_window.h \
+		../Diary/student_window.h \
+		../../../../QTcreator/6.3.0/mingw_64/include/QtWidgets/QMessageBox \
+		../../../../QTcreator/6.3.0/mingw_64/include/QtWidgets/qmessagebox.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\authorization.o ..\Diary\authorization.cpp
 
 release/check_class.o: ../Diary/check_class.cpp ../Diary/check_class.h \

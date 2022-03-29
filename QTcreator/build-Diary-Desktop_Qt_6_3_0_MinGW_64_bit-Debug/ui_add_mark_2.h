@@ -45,19 +45,24 @@ public:
     {
         if (add_mark_2->objectName().isEmpty())
             add_mark_2->setObjectName(QString::fromUtf8("add_mark_2"));
-        add_mark_2->resize(400, 300);
+        add_mark_2->resize(663, 442);
+        add_mark_2->setStyleSheet(QString::fromUtf8("background-color: rgb(67, 136, 189);\n"
+"selection-color: rgb(22, 34, 49);"));
         pushButton_evaluate = new QPushButton(add_mark_2);
         pushButton_evaluate->setObjectName(QString::fromUtf8("pushButton_evaluate"));
-        pushButton_evaluate->setGeometry(QRect(20, 210, 131, 71));
+        pushButton_evaluate->setGeometry(QRect(30, 320, 251, 101));
+        pushButton_evaluate->setStyleSheet(QString::fromUtf8("color: rgb(255, 255, 255);"));
         pushButton_cancel = new QPushButton(add_mark_2);
         pushButton_cancel->setObjectName(QString::fromUtf8("pushButton_cancel"));
-        pushButton_cancel->setGeometry(QRect(240, 210, 131, 71));
+        pushButton_cancel->setGeometry(QRect(440, 330, 181, 91));
+        pushButton_cancel->setStyleSheet(QString::fromUtf8("color: rgb(255, 255, 255);"));
         label = new QLabel(add_mark_2);
         label->setObjectName(QString::fromUtf8("label"));
-        label->setGeometry(QRect(230, 10, 151, 16));
+        label->setGeometry(QRect(30, 10, 581, 31));
+        label->setStyleSheet(QString::fromUtf8("color: rgb(255, 255, 255);"));
         layoutWidget = new QWidget(add_mark_2);
         layoutWidget->setObjectName(QString::fromUtf8("layoutWidget"));
-        layoutWidget->setGeometry(QRect(20, 30, 351, 141));
+        layoutWidget->setGeometry(QRect(30, 50, 581, 251));
         horizontalLayout = new QHBoxLayout(layoutWidget);
         horizontalLayout->setObjectName(QString::fromUtf8("horizontalLayout"));
         horizontalLayout->setContentsMargins(0, 0, 0, 0);
@@ -65,21 +70,25 @@ public:
         verticalLayout_2->setObjectName(QString::fromUtf8("verticalLayout_2"));
         label_students_fullname = new QLabel(layoutWidget);
         label_students_fullname->setObjectName(QString::fromUtf8("label_students_fullname"));
+        label_students_fullname->setStyleSheet(QString::fromUtf8("color: rgb(255, 255, 255);"));
 
         verticalLayout_2->addWidget(label_students_fullname);
 
         label_subject = new QLabel(layoutWidget);
         label_subject->setObjectName(QString::fromUtf8("label_subject"));
+        label_subject->setStyleSheet(QString::fromUtf8("color: rgb(255, 255, 255);"));
 
         verticalLayout_2->addWidget(label_subject);
 
         label_mark = new QLabel(layoutWidget);
         label_mark->setObjectName(QString::fromUtf8("label_mark"));
+        label_mark->setStyleSheet(QString::fromUtf8("color: rgb(255, 255, 255);"));
 
         verticalLayout_2->addWidget(label_mark);
 
         label_comments = new QLabel(layoutWidget);
         label_comments->setObjectName(QString::fromUtf8("label_comments"));
+        label_comments->setStyleSheet(QString::fromUtf8("color: rgb(255, 255, 255);"));
 
         verticalLayout_2->addWidget(label_comments);
 
@@ -99,6 +108,7 @@ public:
         comboBox_subject->addItem(QString());
         comboBox_subject->addItem(QString());
         comboBox_subject->setObjectName(QString::fromUtf8("comboBox_subject"));
+        comboBox_subject->setStyleSheet(QString::fromUtf8("color: rgb(255, 255, 255);"));
 
         verticalLayout->addWidget(comboBox_subject);
 
@@ -115,11 +125,13 @@ public:
         comboBox_mark->addItem(QString());
         comboBox_mark->addItem(QString());
         comboBox_mark->setObjectName(QString::fromUtf8("comboBox_mark"));
+        comboBox_mark->setStyleSheet(QString::fromUtf8("color: rgb(255, 255, 255);"));
 
         verticalLayout->addWidget(comboBox_mark);
 
         lineEdit_comment = new QLineEdit(layoutWidget);
         lineEdit_comment->setObjectName(QString::fromUtf8("lineEdit_comment"));
+        lineEdit_comment->setStyleSheet(QString::fromUtf8("color: rgb(255, 255, 255);"));
 
         verticalLayout->addWidget(lineEdit_comment);
 

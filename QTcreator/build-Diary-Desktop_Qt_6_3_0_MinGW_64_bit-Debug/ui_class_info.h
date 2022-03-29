@@ -27,13 +27,17 @@ public:
     {
         if (class_info->objectName().isEmpty())
             class_info->setObjectName(QString::fromUtf8("class_info"));
-        class_info->resize(400, 300);
+        class_info->resize(426, 366);
+        class_info->setStyleSheet(QString::fromUtf8("background-color: rgb(67, 136, 189);\n"
+"selection-color: rgb(22, 34, 49);"));
         cancel_buttom = new QPushButton(class_info);
         cancel_buttom->setObjectName(QString::fromUtf8("cancel_buttom"));
-        cancel_buttom->setGeometry(QRect(150, 250, 101, 31));
+        cancel_buttom->setGeometry(QRect(130, 310, 161, 31));
+        cancel_buttom->setStyleSheet(QString::fromUtf8("color: rgb(255, 255, 255);"));
         textEdit = new QTextEdit(class_info);
         textEdit->setObjectName(QString::fromUtf8("textEdit"));
-        textEdit->setGeometry(QRect(10, 10, 371, 221));
+        textEdit->setGeometry(QRect(10, 10, 401, 271));
+        textEdit->setStyleSheet(QString::fromUtf8("color: rgb(255, 255, 255);"));
         textEdit->setReadOnly(true);
 
         retranslateUi(class_info);

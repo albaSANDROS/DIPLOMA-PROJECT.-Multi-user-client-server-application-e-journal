@@ -30,22 +30,29 @@ public:
     {
         if (diary_menu->objectName().isEmpty())
             diary_menu->setObjectName(QString::fromUtf8("diary_menu"));
-        diary_menu->resize(536, 405);
+        diary_menu->resize(545, 445);
+        diary_menu->setStyleSheet(QString::fromUtf8("background-color: rgb(67, 136, 189);\n"
+"selection-color: rgb(22, 34, 49);"));
         label = new QLabel(diary_menu);
         label->setObjectName(QString::fromUtf8("label"));
-        label->setGeometry(QRect(240, 10, 251, 21));
+        label->setGeometry(QRect(60, 10, 431, 31));
+        label->setStyleSheet(QString::fromUtf8("color: rgb(255, 255, 255);"));
         start_lesson_button = new QPushButton(diary_menu);
         start_lesson_button->setObjectName(QString::fromUtf8("start_lesson_button"));
-        start_lesson_button->setGeometry(QRect(50, 50, 441, 131));
+        start_lesson_button->setGeometry(QRect(50, 60, 441, 131));
+        start_lesson_button->setStyleSheet(QString::fromUtf8("color: rgb(255, 255, 255);"));
         get_data_button = new QPushButton(diary_menu);
         get_data_button->setObjectName(QString::fromUtf8("get_data_button"));
         get_data_button->setGeometry(QRect(50, 210, 441, 131));
+        get_data_button->setStyleSheet(QString::fromUtf8("color: rgb(255, 255, 255);"));
         contact_info = new QPushButton(diary_menu);
         contact_info->setObjectName(QString::fromUtf8("contact_info"));
-        contact_info->setGeometry(QRect(50, 360, 111, 31));
+        contact_info->setGeometry(QRect(50, 370, 121, 51));
+        contact_info->setStyleSheet(QString::fromUtf8("color: rgb(255, 255, 255);"));
         exit_button = new QPushButton(diary_menu);
         exit_button->setObjectName(QString::fromUtf8("exit_button"));
-        exit_button->setGeometry(QRect(380, 360, 111, 31));
+        exit_button->setGeometry(QRect(370, 370, 121, 51));
+        exit_button->setStyleSheet(QString::fromUtf8("color: rgb(255, 255, 255);"));
 
         retranslateUi(diary_menu);
 

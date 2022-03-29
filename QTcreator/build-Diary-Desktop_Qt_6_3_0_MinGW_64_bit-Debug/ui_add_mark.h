@@ -36,32 +36,47 @@ public:
     {
         if (add_mark->objectName().isEmpty())
             add_mark->setObjectName(QString::fromUtf8("add_mark"));
-        add_mark->resize(325, 205);
+        add_mark->resize(498, 332);
+        add_mark->setStyleSheet(QString::fromUtf8("background-color: rgb(67, 136, 189);\n"
+"selection-color: rgb(22, 34, 49);"));
         next_pushButton = new QPushButton(add_mark);
         next_pushButton->setObjectName(QString::fromUtf8("next_pushButton"));
-        next_pushButton->setGeometry(QRect(20, 100, 281, 51));
+        next_pushButton->setGeometry(QRect(30, 160, 441, 81));
+        next_pushButton->setStyleSheet(QString::fromUtf8("background-color: rgb(90, 184, 255);\n"
+"color: rgb(255, 255, 255);"));
         back_pushButton = new QPushButton(add_mark);
         back_pushButton->setObjectName(QString::fromUtf8("back_pushButton"));
-        back_pushButton->setGeometry(QRect(20, 160, 281, 31));
+        back_pushButton->setGeometry(QRect(30, 260, 441, 51));
+        back_pushButton->setStyleSheet(QString::fromUtf8("background-color: rgb(90, 184, 255);\n"
+"color: rgb(255, 255, 255);"));
         label_inp_name = new QLabel(add_mark);
         label_inp_name->setObjectName(QString::fromUtf8("label_inp_name"));
-        label_inp_name->setGeometry(QRect(90, 30, 141, 21));
+        label_inp_name->setGeometry(QRect(140, 60, 231, 21));
+        label_inp_name->setStyleSheet(QString::fromUtf8("color: rgb(255, 255, 255);"));
         label = new QLabel(add_mark);
         label->setObjectName(QString::fromUtf8("label"));
-        label->setGeometry(QRect(170, 10, 141, 16));
+        label->setGeometry(QRect(30, 10, 431, 21));
+        label->setStyleSheet(QString::fromUtf8("color: rgb(255, 255, 255);"));
         layoutWidget = new QWidget(add_mark);
         layoutWidget->setObjectName(QString::fromUtf8("layoutWidget"));
-        layoutWidget->setGeometry(QRect(20, 60, 281, 24));
+        layoutWidget->setGeometry(QRect(30, 100, 441, 36));
         horizontalLayout = new QHBoxLayout(layoutWidget);
         horizontalLayout->setObjectName(QString::fromUtf8("horizontalLayout"));
         horizontalLayout->setContentsMargins(0, 0, 0, 0);
         label_fullName = new QLabel(layoutWidget);
         label_fullName->setObjectName(QString::fromUtf8("label_fullName"));
+        label_fullName->setStyleSheet(QString::fromUtf8("color: rgb(255, 255, 255);"));
 
         horizontalLayout->addWidget(label_fullName);
 
         student_fullname = new QLineEdit(layoutWidget);
         student_fullname->setObjectName(QString::fromUtf8("student_fullname"));
+        student_fullname->setStyleSheet(QString::fromUtf8("border-color: rgb(90, 184, 255);\n"
+"color: rgb(255, 255, 255);\n"
+"gridline-color: rgb(90, 184, 255);\n"
+"selection-background-color: rgb(90, 184, 255);\n"
+"alternate-background-color: rgb(90, 184, 255);"));
+        student_fullname->setFrame(true);
 
         horizontalLayout->addWidget(student_fullname);
 
@@ -78,9 +93,9 @@ public:
         add_mark->setWindowTitle(QCoreApplication::translate("add_mark", "Dialog", nullptr));
         next_pushButton->setText(QCoreApplication::translate("add_mark", "Accept", nullptr));
         back_pushButton->setText(QCoreApplication::translate("add_mark", "Back", nullptr));
-        label_inp_name->setText(QCoreApplication::translate("add_mark", "Input student`s full name", nullptr));
+        label_inp_name->setText(QCoreApplication::translate("add_mark", "Please, input student`s full name", nullptr));
         label->setText(QCoreApplication::translate("add_mark", "login", nullptr));
-        label_fullName->setText(QCoreApplication::translate("add_mark", "Full name", nullptr));
+        label_fullName->setText(QCoreApplication::translate("add_mark", "Full name is:", nullptr));
         student_fullname->setPlaceholderText(QCoreApplication::translate("add_mark", "For example: Basko Aliaksandr", nullptr));
     } // retranslateUi
 

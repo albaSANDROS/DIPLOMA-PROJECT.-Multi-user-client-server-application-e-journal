@@ -40,19 +40,24 @@ public:
     {
         if (check_class->objectName().isEmpty())
             check_class->setObjectName(QString::fromUtf8("check_class"));
-        check_class->resize(300, 230);
+        check_class->resize(482, 350);
+        check_class->setStyleSheet(QString::fromUtf8("background-color: rgb(67, 136, 189);\n"
+"selection-color: rgb(22, 34, 49);"));
         find_button = new QPushButton(check_class);
         find_button->setObjectName(QString::fromUtf8("find_button"));
-        find_button->setGeometry(QRect(90, 130, 121, 61));
+        find_button->setGeometry(QRect(40, 190, 411, 71));
+        find_button->setStyleSheet(QString::fromUtf8("color: rgb(255, 255, 255);"));
         cancel_button = new QPushButton(check_class);
         cancel_button->setObjectName(QString::fromUtf8("cancel_button"));
-        cancel_button->setGeometry(QRect(90, 200, 121, 24));
+        cancel_button->setGeometry(QRect(40, 280, 411, 41));
+        cancel_button->setStyleSheet(QString::fromUtf8("color: rgb(255, 255, 255);"));
         label = new QLabel(check_class);
         label->setObjectName(QString::fromUtf8("label"));
-        label->setGeometry(QRect(80, 10, 131, 41));
+        label->setGeometry(QRect(190, 10, 131, 41));
+        label->setStyleSheet(QString::fromUtf8("color: rgb(255, 255, 255);"));
         layoutWidget = new QWidget(check_class);
         layoutWidget->setObjectName(QString::fromUtf8("layoutWidget"));
-        layoutWidget->setGeometry(QRect(30, 50, 241, 71));
+        layoutWidget->setGeometry(QRect(40, 60, 411, 101));
         horizontalLayout = new QHBoxLayout(layoutWidget);
         horizontalLayout->setObjectName(QString::fromUtf8("horizontalLayout"));
         horizontalLayout->setContentsMargins(0, 0, 0, 0);
@@ -60,11 +65,13 @@ public:
         verticalLayout_2->setObjectName(QString::fromUtf8("verticalLayout_2"));
         label_2 = new QLabel(layoutWidget);
         label_2->setObjectName(QString::fromUtf8("label_2"));
+        label_2->setStyleSheet(QString::fromUtf8("color: rgb(255, 255, 255);"));
 
         verticalLayout_2->addWidget(label_2);
 
         label_3 = new QLabel(layoutWidget);
         label_3->setObjectName(QString::fromUtf8("label_3"));
+        label_3->setStyleSheet(QString::fromUtf8("color: rgb(255, 255, 255);"));
 
         verticalLayout_2->addWidget(label_3);
 
@@ -75,12 +82,14 @@ public:
         verticalLayout->setObjectName(QString::fromUtf8("verticalLayout"));
         class_num_label = new QLineEdit(layoutWidget);
         class_num_label->setObjectName(QString::fromUtf8("class_num_label"));
+        class_num_label->setStyleSheet(QString::fromUtf8("color: rgb(255, 255, 255);"));
         class_num_label->setMaxLength(2);
 
         verticalLayout->addWidget(class_num_label);
 
         class_letter_label = new QLineEdit(layoutWidget);
         class_letter_label->setObjectName(QString::fromUtf8("class_letter_label"));
+        class_letter_label->setStyleSheet(QString::fromUtf8("color: rgb(255, 255, 255);"));
         class_letter_label->setMaxLength(1);
 
         verticalLayout->addWidget(class_letter_label);

@@ -9,6 +9,10 @@ check_student::check_student(QWidget *parent, QString login) :
 {
     ui->setupUi(this);
     setLogin(login);
+
+    setWindowFlags(Qt::Dialog);
+    setFixedSize(428, 312);
+
 }
 
 check_student::~check_student()

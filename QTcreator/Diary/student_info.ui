@@ -6,21 +6,28 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>400</width>
-    <height>553</height>
+    <width>459</width>
+    <height>834</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Dialog</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(67, 136, 189);
+selection-color: rgb(22, 34, 49);</string>
+  </property>
   <widget class="QPushButton" name="cancel_buttom">
    <property name="geometry">
     <rect>
-     <x>150</x>
-     <y>510</y>
-     <width>101</width>
-     <height>31</height>
+     <x>60</x>
+     <y>770</y>
+     <width>351</width>
+     <height>51</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(255, 255, 255);</string>
    </property>
    <property name="text">
     <string>Cancel</string>
@@ -29,8 +36,8 @@
   <widget class="QLabel" name="label_5">
    <property name="geometry">
     <rect>
-     <x>90</x>
-     <y>120</y>
+     <x>120</x>
+     <y>160</y>
      <width>349</width>
      <height>16</height>
     </rect>
@@ -42,15 +49,18 @@
   <widget class="QWidget" name="layoutWidget">
    <property name="geometry">
     <rect>
-     <x>30</x>
-     <y>370</y>
+     <x>60</x>
+     <y>570</y>
      <width>351</width>
-     <height>121</height>
+     <height>163</height>
     </rect>
    </property>
    <layout class="QVBoxLayout" name="verticalLayout_8">
     <item>
      <widget class="QLabel" name="comments_label">
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 255, 255);</string>
+      </property>
       <property name="text">
        <string>Comments</string>
       </property>
@@ -58,6 +68,9 @@
     </item>
     <item>
      <widget class="QTextEdit" name="textEdit_comments">
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 255, 255);</string>
+      </property>
       <property name="readOnly">
        <bool>true</bool>
       </property>
@@ -68,15 +81,18 @@
   <widget class="QWidget" name="layoutWidget">
    <property name="geometry">
     <rect>
-     <x>30</x>
-     <y>150</y>
+     <x>60</x>
+     <y>230</y>
      <width>351</width>
-     <height>78</height>
+     <height>122</height>
     </rect>
    </property>
    <layout class="QVBoxLayout" name="verticalLayout_5">
     <item>
      <widget class="QLabel" name="parents_info_label">
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 255, 255);</string>
+      </property>
       <property name="text">
        <string>Parents info</string>
       </property>
@@ -88,6 +104,9 @@
        <layout class="QVBoxLayout" name="verticalLayout_4">
         <item>
          <widget class="QLabel" name="parents_fullname_label">
+          <property name="styleSheet">
+           <string notr="true">color: rgb(255, 255, 255);</string>
+          </property>
           <property name="text">
            <string>Full name</string>
           </property>
@@ -95,6 +114,9 @@
         </item>
         <item>
          <widget class="QLabel" name="label_6">
+          <property name="styleSheet">
+           <string notr="true">color: rgb(255, 255, 255);</string>
+          </property>
           <property name="text">
            <string>Phone number     </string>
           </property>
@@ -106,6 +128,9 @@
        <layout class="QVBoxLayout" name="verticalLayout_2">
         <item>
          <widget class="QLineEdit" name="lineEdit_parents_fullname">
+          <property name="styleSheet">
+           <string notr="true">color: rgb(255, 255, 255);</string>
+          </property>
           <property name="readOnly">
            <bool>true</bool>
           </property>
@@ -113,6 +138,9 @@
         </item>
         <item>
          <widget class="QLineEdit" name="lineEdit_parents_phonenum">
+          <property name="styleSheet">
+           <string notr="true">color: rgb(255, 255, 255);</string>
+          </property>
           <property name="readOnly">
            <bool>true</bool>
           </property>
@@ -127,15 +155,18 @@
   <widget class="QWidget" name="layoutWidget">
    <property name="geometry">
     <rect>
-     <x>30</x>
-     <y>20</y>
+     <x>60</x>
+     <y>30</y>
      <width>351</width>
-     <height>106</height>
+     <height>166</height>
     </rect>
    </property>
    <layout class="QVBoxLayout" name="verticalLayout_6">
     <item>
      <widget class="QLabel" name="stud_info_label">
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 255, 255);</string>
+      </property>
       <property name="text">
        <string>Student info</string>
       </property>
@@ -147,6 +178,9 @@
        <layout class="QVBoxLayout" name="verticalLayout_3">
         <item>
          <widget class="QLabel" name="fullNameSt_label">
+          <property name="styleSheet">
+           <string notr="true">color: rgb(255, 255, 255);</string>
+          </property>
           <property name="text">
            <string>Student full name</string>
           </property>
@@ -154,6 +188,9 @@
         </item>
         <item>
          <widget class="QLabel" name="date_of_birth_label">
+          <property name="styleSheet">
+           <string notr="true">color: rgb(255, 255, 255);</string>
+          </property>
           <property name="text">
            <string>Date of birth</string>
           </property>
@@ -161,6 +198,9 @@
         </item>
         <item>
          <widget class="QLabel" name="class_label">
+          <property name="styleSheet">
+           <string notr="true">color: rgb(255, 255, 255);</string>
+          </property>
           <property name="text">
            <string>Class</string>
           </property>
@@ -172,6 +212,9 @@
        <layout class="QVBoxLayout" name="verticalLayout">
         <item>
          <widget class="QLineEdit" name="lineEdit_full_name">
+          <property name="styleSheet">
+           <string notr="true">color: rgb(255, 255, 255);</string>
+          </property>
           <property name="readOnly">
            <bool>true</bool>
           </property>
@@ -179,6 +222,9 @@
         </item>
         <item>
          <widget class="QLineEdit" name="lineEdit_dateOfBirth">
+          <property name="styleSheet">
+           <string notr="true">color: rgb(255, 255, 255);</string>
+          </property>
           <property name="readOnly">
            <bool>true</bool>
           </property>
@@ -186,6 +232,9 @@
         </item>
         <item>
          <widget class="QLineEdit" name="lineEdit_class_num">
+          <property name="styleSheet">
+           <string notr="true">color: rgb(255, 255, 255);</string>
+          </property>
           <property name="readOnly">
            <bool>true</bool>
           </property>
@@ -200,15 +249,18 @@
   <widget class="QWidget" name="layoutWidget">
    <property name="geometry">
     <rect>
-     <x>30</x>
-     <y>240</y>
+     <x>60</x>
+     <y>380</y>
      <width>351</width>
-     <height>121</height>
+     <height>163</height>
     </rect>
    </property>
    <layout class="QVBoxLayout" name="verticalLayout_7">
     <item>
      <widget class="QLabel" name="marks_label">
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 255, 255);</string>
+      </property>
       <property name="text">
        <string>Marks</string>
       </property>
@@ -216,6 +268,9 @@
     </item>
     <item>
      <widget class="QTextEdit" name="textEdit_marks">
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 255, 255);</string>
+      </property>
       <property name="readOnly">
        <bool>true</bool>
       </property>

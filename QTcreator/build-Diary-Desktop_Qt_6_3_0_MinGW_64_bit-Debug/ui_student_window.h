@@ -24,7 +24,7 @@ class Ui_student_window
 {
 public:
     QPushButton *pushButton;
-    QWidget *widget;
+    QWidget *layoutWidget;
     QVBoxLayout *verticalLayout;
     QLabel *label_marks;
     QTextEdit *textEdit_marks;
@@ -34,22 +34,27 @@ public:
         if (student_window->objectName().isEmpty())
             student_window->setObjectName(QString::fromUtf8("student_window"));
         student_window->resize(374, 296);
+        student_window->setStyleSheet(QString::fromUtf8("background-color: rgb(67, 136, 189);\n"
+"selection-color: rgb(22, 34, 49);"));
         pushButton = new QPushButton(student_window);
         pushButton->setObjectName(QString::fromUtf8("pushButton"));
         pushButton->setGeometry(QRect(10, 240, 351, 41));
-        widget = new QWidget(student_window);
-        widget->setObjectName(QString::fromUtf8("widget"));
-        widget->setGeometry(QRect(10, 10, 351, 216));
-        verticalLayout = new QVBoxLayout(widget);
+        pushButton->setStyleSheet(QString::fromUtf8("color: rgb(255, 255, 255);"));
+        layoutWidget = new QWidget(student_window);
+        layoutWidget->setObjectName(QString::fromUtf8("layoutWidget"));
+        layoutWidget->setGeometry(QRect(10, 10, 351, 216));
+        verticalLayout = new QVBoxLayout(layoutWidget);
         verticalLayout->setObjectName(QString::fromUtf8("verticalLayout"));
         verticalLayout->setContentsMargins(0, 0, 0, 0);
-        label_marks = new QLabel(widget);
+        label_marks = new QLabel(layoutWidget);
         label_marks->setObjectName(QString::fromUtf8("label_marks"));
+        label_marks->setStyleSheet(QString::fromUtf8("color: rgb(255, 255, 255);"));
 
         verticalLayout->addWidget(label_marks);
 
-        textEdit_marks = new QTextEdit(widget);
+        textEdit_marks = new QTextEdit(layoutWidget);
         textEdit_marks->setObjectName(QString::fromUtf8("textEdit_marks"));
+        textEdit_marks->setStyleSheet(QString::fromUtf8("color: rgb(255, 255, 255);"));
         textEdit_marks->setReadOnly(true);
 
         verticalLayout->addWidget(textEdit_marks);

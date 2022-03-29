@@ -26,7 +26,6 @@ public:
     QWidget *centralwidget;
     QGroupBox *groupBox;
     QPushButton *authorize_button;
-    QPushButton *register_button;
     QMenuBar *menubar;
     QStatusBar *statusbar;
 
@@ -34,22 +33,23 @@ public:
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName(QString::fromUtf8("MainWindow"));
-        MainWindow->resize(372, 318);
+        MainWindow->resize(778, 422);
+        MainWindow->setStyleSheet(QString::fromUtf8("background-color: rgb(67, 136, 189);\n"
+"selection-color: rgb(22, 34, 49);"));
         centralwidget = new QWidget(MainWindow);
         centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
         groupBox = new QGroupBox(centralwidget);
         groupBox->setObjectName(QString::fromUtf8("groupBox"));
-        groupBox->setGeometry(QRect(20, 10, 321, 251));
+        groupBox->setGeometry(QRect(20, 10, 731, 331));
+        groupBox->setStyleSheet(QString::fromUtf8("color: rgb(255, 255, 255);"));
         authorize_button = new QPushButton(groupBox);
         authorize_button->setObjectName(QString::fromUtf8("authorize_button"));
-        authorize_button->setGeometry(QRect(0, 60, 321, 71));
-        register_button = new QPushButton(groupBox);
-        register_button->setObjectName(QString::fromUtf8("register_button"));
-        register_button->setGeometry(QRect(0, 140, 321, 71));
+        authorize_button->setGeometry(QRect(20, 250, 681, 71));
+        authorize_button->setStyleSheet(QString::fromUtf8("color: rgb(255, 255, 255);"));
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName(QString::fromUtf8("menubar"));
-        menubar->setGeometry(QRect(0, 0, 372, 34));
+        menubar->setGeometry(QRect(0, 0, 778, 22));
         MainWindow->setMenuBar(menubar);
         statusbar = new QStatusBar(MainWindow);
         statusbar->setObjectName(QString::fromUtf8("statusbar"));
@@ -65,7 +65,6 @@ public:
         MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "MainWindow", nullptr));
         groupBox->setTitle(QCoreApplication::translate("MainWindow", "Authorization", nullptr));
         authorize_button->setText(QCoreApplication::translate("MainWindow", "Authorize", nullptr));
-        register_button->setText(QCoreApplication::translate("MainWindow", "Register", nullptr));
     } // retranslateUi
 
 };

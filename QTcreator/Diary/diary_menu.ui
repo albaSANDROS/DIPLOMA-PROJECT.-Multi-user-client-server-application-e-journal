@@ -6,21 +6,28 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>536</width>
-    <height>405</height>
+    <width>545</width>
+    <height>445</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Dialog</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(67, 136, 189);
+selection-color: rgb(22, 34, 49);</string>
+  </property>
   <widget class="QLabel" name="label">
    <property name="geometry">
     <rect>
-     <x>240</x>
+     <x>60</x>
      <y>10</y>
-     <width>251</width>
-     <height>21</height>
+     <width>431</width>
+     <height>31</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(255, 255, 255);</string>
    </property>
    <property name="text">
     <string>login</string>
@@ -30,10 +37,13 @@
    <property name="geometry">
     <rect>
      <x>50</x>
-     <y>50</y>
+     <y>60</y>
      <width>441</width>
      <height>131</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(255, 255, 255);</string>
    </property>
    <property name="text">
     <string>Add marks</string>
@@ -48,6 +58,9 @@
      <height>131</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(255, 255, 255);</string>
+   </property>
    <property name="text">
     <string>Get data about student</string>
    </property>
@@ -56,10 +69,13 @@
    <property name="geometry">
     <rect>
      <x>50</x>
-     <y>360</y>
-     <width>111</width>
-     <height>31</height>
+     <y>370</y>
+     <width>121</width>
+     <height>51</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(255, 255, 255);</string>
    </property>
    <property name="text">
     <string>Support</string>
@@ -68,11 +84,14 @@
   <widget class="QPushButton" name="exit_button">
    <property name="geometry">
     <rect>
-     <x>380</x>
-     <y>360</y>
-     <width>111</width>
-     <height>31</height>
+     <x>370</x>
+     <y>370</y>
+     <width>121</width>
+     <height>51</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(255, 255, 255);</string>
    </property>
    <property name="text">
     <string>Exit</string>

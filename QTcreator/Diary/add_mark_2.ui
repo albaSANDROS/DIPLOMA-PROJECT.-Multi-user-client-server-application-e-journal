@@ -6,21 +6,28 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>400</width>
-    <height>300</height>
+    <width>663</width>
+    <height>442</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Dialog</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(67, 136, 189);
+selection-color: rgb(22, 34, 49);</string>
+  </property>
   <widget class="QPushButton" name="pushButton_evaluate">
    <property name="geometry">
     <rect>
-     <x>20</x>
-     <y>210</y>
-     <width>131</width>
-     <height>71</height>
+     <x>30</x>
+     <y>320</y>
+     <width>251</width>
+     <height>101</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(255, 255, 255);</string>
    </property>
    <property name="text">
     <string>Evaluate a student</string>
@@ -29,11 +36,14 @@
   <widget class="QPushButton" name="pushButton_cancel">
    <property name="geometry">
     <rect>
-     <x>240</x>
-     <y>210</y>
-     <width>131</width>
-     <height>71</height>
+     <x>440</x>
+     <y>330</y>
+     <width>181</width>
+     <height>91</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(255, 255, 255);</string>
    </property>
    <property name="text">
     <string>Cancel</string>
@@ -42,11 +52,14 @@
   <widget class="QLabel" name="label">
    <property name="geometry">
     <rect>
-     <x>230</x>
+     <x>30</x>
      <y>10</y>
-     <width>151</width>
-     <height>16</height>
+     <width>581</width>
+     <height>31</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(255, 255, 255);</string>
    </property>
    <property name="text">
     <string>login</string>
@@ -55,10 +68,10 @@
   <widget class="QWidget" name="layoutWidget">
    <property name="geometry">
     <rect>
-     <x>20</x>
-     <y>30</y>
-     <width>351</width>
-     <height>141</height>
+     <x>30</x>
+     <y>50</y>
+     <width>581</width>
+     <height>251</height>
     </rect>
    </property>
    <layout class="QHBoxLayout" name="horizontalLayout">
@@ -66,6 +79,9 @@
      <layout class="QVBoxLayout" name="verticalLayout_2">
       <item>
        <widget class="QLabel" name="label_students_fullname">
+        <property name="styleSheet">
+         <string notr="true">color: rgb(255, 255, 255);</string>
+        </property>
         <property name="text">
          <string>Student`s full name</string>
         </property>
@@ -73,6 +89,9 @@
       </item>
       <item>
        <widget class="QLabel" name="label_subject">
+        <property name="styleSheet">
+         <string notr="true">color: rgb(255, 255, 255);</string>
+        </property>
         <property name="text">
          <string>Subject</string>
         </property>
@@ -80,6 +99,9 @@
       </item>
       <item>
        <widget class="QLabel" name="label_mark">
+        <property name="styleSheet">
+         <string notr="true">color: rgb(255, 255, 255);</string>
+        </property>
         <property name="text">
          <string>Mark</string>
         </property>
@@ -87,6 +109,9 @@
       </item>
       <item>
        <widget class="QLabel" name="label_comments">
+        <property name="styleSheet">
+         <string notr="true">color: rgb(255, 255, 255);</string>
+        </property>
         <property name="text">
          <string>Comments</string>
         </property>
@@ -105,6 +130,9 @@
       </item>
       <item>
        <widget class="QComboBox" name="comboBox_subject">
+        <property name="styleSheet">
+         <string notr="true">color: rgb(255, 255, 255);</string>
+        </property>
         <property name="placeholderText">
          <string>Choose subject</string>
         </property>
@@ -127,6 +155,9 @@
       </item>
       <item>
        <widget class="QComboBox" name="comboBox_mark">
+        <property name="styleSheet">
+         <string notr="true">color: rgb(255, 255, 255);</string>
+        </property>
         <property name="placeholderText">
          <string>Choose mark</string>
         </property>
@@ -189,6 +220,9 @@
       </item>
       <item>
        <widget class="QLineEdit" name="lineEdit_comment">
+        <property name="styleSheet">
+         <string notr="true">color: rgb(255, 255, 255);</string>
+        </property>
         <property name="placeholderText">
          <string>comments (optional)</string>
         </property>

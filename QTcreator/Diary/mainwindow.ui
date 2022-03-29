@@ -6,12 +6,16 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>372</width>
-    <height>318</height>
+    <width>778</width>
+    <height>422</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(67, 136, 189);
+selection-color: rgb(22, 34, 49);</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QGroupBox" name="groupBox">
@@ -19,9 +23,12 @@
      <rect>
       <x>20</x>
       <y>10</y>
-      <width>321</width>
-      <height>251</height>
+      <width>731</width>
+      <height>331</height>
      </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255, 255, 255);</string>
     </property>
     <property name="title">
      <string>Authorization</string>
@@ -29,27 +36,17 @@
     <widget class="QPushButton" name="authorize_button">
      <property name="geometry">
       <rect>
-       <x>0</x>
-       <y>60</y>
-       <width>321</width>
+       <x>20</x>
+       <y>250</y>
+       <width>681</width>
        <height>71</height>
       </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: rgb(255, 255, 255);</string>
      </property>
      <property name="text">
       <string>Authorize</string>
-     </property>
-    </widget>
-    <widget class="QPushButton" name="register_button">
-     <property name="geometry">
-      <rect>
-       <x>0</x>
-       <y>140</y>
-       <width>321</width>
-       <height>71</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>Register</string>
      </property>
     </widget>
    </widget>
@@ -59,8 +56,8 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>372</width>
-     <height>34</height>
+     <width>778</width>
+     <height>22</height>
     </rect>
    </property>
   </widget>

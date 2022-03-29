@@ -10,6 +10,10 @@ get_data::get_data(QWidget *parent, QString login) :
 {
     setLogin(login);
     ui->setupUi(this);
+
+    setWindowFlags(Qt::Dialog);
+    setFixedSize(540, 428);
+
     ui->label->setText("Welcome back, "+login);
 }
 

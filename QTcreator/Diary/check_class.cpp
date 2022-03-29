@@ -10,6 +10,10 @@ check_class::check_class(QWidget *parent, QString login) :
 {
     ui->setupUi(this);
     setLogin(login);
+
+    setWindowFlags(Qt::Dialog);
+    setFixedSize(482, 350);
+
 }
 
 check_class::~check_class()
