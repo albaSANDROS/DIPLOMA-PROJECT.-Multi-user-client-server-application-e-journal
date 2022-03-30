@@ -34,8 +34,10 @@ public:
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName(QString::fromUtf8("MainWindow"));
         MainWindow->resize(778, 422);
-        MainWindow->setStyleSheet(QString::fromUtf8("background-color: rgb(67, 136, 189);\n"
-"selection-color: rgb(22, 34, 49);"));
+        MainWindow->setStyleSheet(QString::fromUtf8("color: rgb(16, 149, 148);\n"
+"background-color: rgb(16, 149, 148);\n"
+"\n"
+""));
         centralwidget = new QWidget(MainWindow);
         centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
         groupBox = new QGroupBox(centralwidget);
@@ -45,11 +47,12 @@ public:
         authorize_button = new QPushButton(groupBox);
         authorize_button->setObjectName(QString::fromUtf8("authorize_button"));
         authorize_button->setGeometry(QRect(20, 250, 681, 71));
-        authorize_button->setStyleSheet(QString::fromUtf8("color: rgb(255, 255, 255);"));
+        authorize_button->setStyleSheet(QString::fromUtf8("background-color: rgb(29, 35, 35);\n"
+"background-color: rgb(9, 83, 82);"));
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName(QString::fromUtf8("menubar"));
-        menubar->setGeometry(QRect(0, 0, 778, 22));
+        menubar->setGeometry(QRect(0, 0, 778, 34));
         MainWindow->setMenuBar(menubar);
         statusbar = new QStatusBar(MainWindow);
         statusbar->setObjectName(QString::fromUtf8("statusbar"));

@@ -48,16 +48,21 @@ public:
         if (parent_window->objectName().isEmpty())
             parent_window->setObjectName(QString::fromUtf8("parent_window"));
         parent_window->resize(494, 573);
-        parent_window->setStyleSheet(QString::fromUtf8("background-color: rgb(67, 136, 189);\n"
-"selection-color: rgb(22, 34, 49);"));
+        parent_window->setStyleSheet(QString::fromUtf8("color: rgb(16, 149, 148);\n"
+"background-color: rgb(16, 149, 148);\n"
+""));
         pushButton_info = new QPushButton(parent_window);
         pushButton_info->setObjectName(QString::fromUtf8("pushButton_info"));
         pushButton_info->setGeometry(QRect(50, 490, 221, 61));
-        pushButton_info->setStyleSheet(QString::fromUtf8("color: rgb(255, 255, 255);"));
+        pushButton_info->setStyleSheet(QString::fromUtf8("background-color: rgb(29, 35, 35);\n"
+"background-color: rgb(9, 83, 82);\n"
+"color: rgb(255, 255, 255);"));
         pushButton_cancel = new QPushButton(parent_window);
         pushButton_cancel->setObjectName(QString::fromUtf8("pushButton_cancel"));
         pushButton_cancel->setGeometry(QRect(310, 490, 121, 61));
-        pushButton_cancel->setStyleSheet(QString::fromUtf8("color: rgb(255, 255, 255);"));
+        pushButton_cancel->setStyleSheet(QString::fromUtf8("background-color: rgb(29, 35, 35);\n"
+"background-color: rgb(9, 83, 82);\n"
+"color: rgb(255, 255, 255);"));
         layoutWidget = new QWidget(parent_window);
         layoutWidget->setObjectName(QString::fromUtf8("layoutWidget"));
         layoutWidget->setGeometry(QRect(50, 30, 391, 432));

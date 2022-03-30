@@ -14,8 +14,10 @@
    <string>MainWindow</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">background-color: rgb(67, 136, 189);
-selection-color: rgb(22, 34, 49);</string>
+   <string notr="true">color: rgb(16, 149, 148);
+background-color: rgb(16, 149, 148);
+
+</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QGroupBox" name="groupBox">
@@ -43,7 +45,8 @@ selection-color: rgb(22, 34, 49);</string>
       </rect>
      </property>
      <property name="styleSheet">
-      <string notr="true">color: rgb(255, 255, 255);</string>
+      <string notr="true">background-color: rgb(29, 35, 35);
+background-color: rgb(9, 83, 82);</string>
      </property>
      <property name="text">
       <string>Authorize</string>
@@ -57,7 +60,7 @@ selection-color: rgb(22, 34, 49);</string>
      <x>0</x>
      <y>0</y>
      <width>778</width>
-     <height>22</height>
+     <height>34</height>
     </rect>
    </property>
   </widget>

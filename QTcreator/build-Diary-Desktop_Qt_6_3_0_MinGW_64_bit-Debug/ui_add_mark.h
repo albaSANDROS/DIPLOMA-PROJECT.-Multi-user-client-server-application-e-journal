@@ -37,21 +37,24 @@ public:
         if (add_mark->objectName().isEmpty())
             add_mark->setObjectName(QString::fromUtf8("add_mark"));
         add_mark->resize(498, 332);
-        add_mark->setStyleSheet(QString::fromUtf8("background-color: rgb(67, 136, 189);\n"
-"selection-color: rgb(22, 34, 49);"));
+        add_mark->setStyleSheet(QString::fromUtf8("color: rgb(16, 149, 148);\n"
+"background-color: rgb(16, 149, 148);\n"
+"color: rgb(255, 255, 255);"));
         next_pushButton = new QPushButton(add_mark);
         next_pushButton->setObjectName(QString::fromUtf8("next_pushButton"));
         next_pushButton->setGeometry(QRect(30, 160, 441, 81));
-        next_pushButton->setStyleSheet(QString::fromUtf8("background-color: rgb(90, 184, 255);\n"
+        next_pushButton->setStyleSheet(QString::fromUtf8("background-color: rgb(29, 35, 35);\n"
+"background-color: rgb(9, 83, 82);\n"
 "color: rgb(255, 255, 255);"));
         back_pushButton = new QPushButton(add_mark);
         back_pushButton->setObjectName(QString::fromUtf8("back_pushButton"));
         back_pushButton->setGeometry(QRect(30, 260, 441, 51));
-        back_pushButton->setStyleSheet(QString::fromUtf8("background-color: rgb(90, 184, 255);\n"
+        back_pushButton->setStyleSheet(QString::fromUtf8("background-color: rgb(29, 35, 35);\n"
+"background-color: rgb(9, 83, 82);\n"
 "color: rgb(255, 255, 255);"));
         label_inp_name = new QLabel(add_mark);
         label_inp_name->setObjectName(QString::fromUtf8("label_inp_name"));
-        label_inp_name->setGeometry(QRect(140, 60, 231, 21));
+        label_inp_name->setGeometry(QRect(140, 60, 311, 21));
         label_inp_name->setStyleSheet(QString::fromUtf8("color: rgb(255, 255, 255);"));
         label = new QLabel(add_mark);
         label->setObjectName(QString::fromUtf8("label"));

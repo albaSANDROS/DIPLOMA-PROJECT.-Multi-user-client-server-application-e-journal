@@ -63,12 +63,15 @@ public:
         if (student_info->objectName().isEmpty())
             student_info->setObjectName(QString::fromUtf8("student_info"));
         student_info->resize(459, 834);
-        student_info->setStyleSheet(QString::fromUtf8("background-color: rgb(67, 136, 189);\n"
-"selection-color: rgb(22, 34, 49);"));
+        student_info->setStyleSheet(QString::fromUtf8("color: rgb(16, 149, 148);\n"
+"background-color: rgb(16, 149, 148);\n"
+""));
         cancel_buttom = new QPushButton(student_info);
         cancel_buttom->setObjectName(QString::fromUtf8("cancel_buttom"));
         cancel_buttom->setGeometry(QRect(60, 770, 351, 51));
-        cancel_buttom->setStyleSheet(QString::fromUtf8("color: rgb(255, 255, 255);"));
+        cancel_buttom->setStyleSheet(QString::fromUtf8("background-color: rgb(29, 35, 35);\n"
+"background-color: rgb(9, 83, 82);\n"
+"color: rgb(255, 255, 255);"));
         label_5 = new QLabel(student_info);
         label_5->setObjectName(QString::fromUtf8("label_5"));
         label_5->setGeometry(QRect(120, 160, 349, 16));
@@ -185,18 +188,21 @@ public:
         verticalLayout->setObjectName(QString::fromUtf8("verticalLayout"));
         lineEdit_full_name = new QLineEdit(layoutWidget2);
         lineEdit_full_name->setObjectName(QString::fromUtf8("lineEdit_full_name"));
+        lineEdit_full_name->setStyleSheet(QString::fromUtf8("color: rgb(255, 255, 255);"));
         lineEdit_full_name->setReadOnly(true);
 
         verticalLayout->addWidget(lineEdit_full_name);
 
         lineEdit_dateOfBirth = new QLineEdit(layoutWidget2);
         lineEdit_dateOfBirth->setObjectName(QString::fromUtf8("lineEdit_dateOfBirth"));
+        lineEdit_dateOfBirth->setStyleSheet(QString::fromUtf8("color: rgb(255, 255, 255);"));
         lineEdit_dateOfBirth->setReadOnly(true);
 
         verticalLayout->addWidget(lineEdit_dateOfBirth);
 
         lineEdit_class_num = new QLineEdit(layoutWidget2);
         lineEdit_class_num->setObjectName(QString::fromUtf8("lineEdit_class_num"));
+        lineEdit_class_num->setStyleSheet(QString::fromUtf8("color: rgb(255, 255, 255);"));
         lineEdit_class_num->setReadOnly(true);
 
         verticalLayout->addWidget(lineEdit_class_num);

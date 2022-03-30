@@ -36,16 +36,22 @@ public:
         if (check_student->objectName().isEmpty())
             check_student->setObjectName(QString::fromUtf8("check_student"));
         check_student->resize(428, 312);
-        check_student->setStyleSheet(QString::fromUtf8("background-color: rgb(67, 136, 189);\n"
-"selection-color: rgb(22, 34, 49);"));
+        check_student->setStyleSheet(QString::fromUtf8("color: rgb(16, 149, 148);\n"
+"background-color: rgb(16, 149, 148);\n"
+"\n"
+""));
         find_button = new QPushButton(check_student);
         find_button->setObjectName(QString::fromUtf8("find_button"));
         find_button->setGeometry(QRect(30, 140, 371, 81));
-        find_button->setStyleSheet(QString::fromUtf8("color: rgb(255, 255, 255);"));
+        find_button->setStyleSheet(QString::fromUtf8("background-color: rgb(29, 35, 35);\n"
+"background-color: rgb(9, 83, 82);\n"
+"color: rgb(255, 255, 255);"));
         cancel_button = new QPushButton(check_student);
         cancel_button->setObjectName(QString::fromUtf8("cancel_button"));
         cancel_button->setGeometry(QRect(30, 243, 171, 41));
-        cancel_button->setStyleSheet(QString::fromUtf8("color: rgb(255, 255, 255);"));
+        cancel_button->setStyleSheet(QString::fromUtf8("background-color: rgb(29, 35, 35);\n"
+"background-color: rgb(9, 83, 82);\n"
+"color: rgb(255, 255, 255);"));
         label = new QLabel(check_student);
         label->setObjectName(QString::fromUtf8("label"));
         label->setGeometry(QRect(130, 20, 181, 41));

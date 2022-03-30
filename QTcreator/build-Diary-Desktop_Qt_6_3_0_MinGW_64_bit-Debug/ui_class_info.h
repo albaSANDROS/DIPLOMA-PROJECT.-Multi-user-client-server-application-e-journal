@@ -28,12 +28,16 @@ public:
         if (class_info->objectName().isEmpty())
             class_info->setObjectName(QString::fromUtf8("class_info"));
         class_info->resize(426, 366);
-        class_info->setStyleSheet(QString::fromUtf8("background-color: rgb(67, 136, 189);\n"
-"selection-color: rgb(22, 34, 49);"));
+        class_info->setStyleSheet(QString::fromUtf8("color: rgb(16, 149, 148);\n"
+"background-color: rgb(16, 149, 148);\n"
+"\n"
+""));
         cancel_buttom = new QPushButton(class_info);
         cancel_buttom->setObjectName(QString::fromUtf8("cancel_buttom"));
         cancel_buttom->setGeometry(QRect(130, 310, 161, 31));
-        cancel_buttom->setStyleSheet(QString::fromUtf8("color: rgb(255, 255, 255);"));
+        cancel_buttom->setStyleSheet(QString::fromUtf8("background-color: rgb(29, 35, 35);\n"
+"background-color: rgb(9, 83, 82);\n"
+"color: rgb(255, 255, 255);"));
         textEdit = new QTextEdit(class_info);
         textEdit->setObjectName(QString::fromUtf8("textEdit"));
         textEdit->setGeometry(QRect(10, 10, 401, 271));

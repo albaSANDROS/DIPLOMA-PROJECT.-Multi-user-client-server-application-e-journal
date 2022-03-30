@@ -34,12 +34,15 @@ public:
         if (student_window->objectName().isEmpty())
             student_window->setObjectName(QString::fromUtf8("student_window"));
         student_window->resize(374, 296);
-        student_window->setStyleSheet(QString::fromUtf8("background-color: rgb(67, 136, 189);\n"
-"selection-color: rgb(22, 34, 49);"));
+        student_window->setStyleSheet(QString::fromUtf8("color: rgb(16, 149, 148);\n"
+"background-color: rgb(16, 149, 148);\n"
+""));
         pushButton = new QPushButton(student_window);
         pushButton->setObjectName(QString::fromUtf8("pushButton"));
         pushButton->setGeometry(QRect(10, 240, 351, 41));
-        pushButton->setStyleSheet(QString::fromUtf8("color: rgb(255, 255, 255);"));
+        pushButton->setStyleSheet(QString::fromUtf8("background-color: rgb(29, 35, 35);\n"
+"background-color: rgb(9, 83, 82);\n"
+"color: rgb(255, 255, 255);"));
         layoutWidget = new QWidget(student_window);
         layoutWidget->setObjectName(QString::fromUtf8("layoutWidget"));
         layoutWidget->setGeometry(QRect(10, 10, 351, 216));

@@ -37,25 +37,33 @@ public:
     QLabel *label_comments;
     QVBoxLayout *verticalLayout;
     QLineEdit *lineEdit_full_name;
+    QLineEdit *lineEdit_subjectName;
+    QLineEdit *lineEdit_mark;
+    QLineEdit *lineEdit_comment;
     QComboBox *comboBox_subject;
     QComboBox *comboBox_mark;
-    QLineEdit *lineEdit_comment;
 
     void setupUi(QDialog *add_mark_2)
     {
         if (add_mark_2->objectName().isEmpty())
             add_mark_2->setObjectName(QString::fromUtf8("add_mark_2"));
         add_mark_2->resize(663, 442);
-        add_mark_2->setStyleSheet(QString::fromUtf8("background-color: rgb(67, 136, 189);\n"
-"selection-color: rgb(22, 34, 49);"));
+        add_mark_2->setStyleSheet(QString::fromUtf8("\n"
+"background-color: rgb(16, 149, 148);\n"
+"\n"
+"color: rgb(255, 255, 255);"));
         pushButton_evaluate = new QPushButton(add_mark_2);
         pushButton_evaluate->setObjectName(QString::fromUtf8("pushButton_evaluate"));
         pushButton_evaluate->setGeometry(QRect(30, 320, 251, 101));
-        pushButton_evaluate->setStyleSheet(QString::fromUtf8("color: rgb(255, 255, 255);"));
+        pushButton_evaluate->setStyleSheet(QString::fromUtf8("background-color: rgb(29, 35, 35);\n"
+"background-color: rgb(9, 83, 82);\n"
+"color: rgb(255, 255, 255);"));
         pushButton_cancel = new QPushButton(add_mark_2);
         pushButton_cancel->setObjectName(QString::fromUtf8("pushButton_cancel"));
         pushButton_cancel->setGeometry(QRect(440, 330, 181, 91));
-        pushButton_cancel->setStyleSheet(QString::fromUtf8("color: rgb(255, 255, 255);"));
+        pushButton_cancel->setStyleSheet(QString::fromUtf8("background-color: rgb(29, 35, 35);\n"
+"background-color: rgb(9, 83, 82);\n"
+"color: rgb(255, 255, 255);"));
         label = new QLabel(add_mark_2);
         label->setObjectName(QString::fromUtf8("label"));
         label->setGeometry(QRect(30, 10, 581, 31));
@@ -99,20 +107,41 @@ public:
         verticalLayout->setObjectName(QString::fromUtf8("verticalLayout"));
         lineEdit_full_name = new QLineEdit(layoutWidget);
         lineEdit_full_name->setObjectName(QString::fromUtf8("lineEdit_full_name"));
+        lineEdit_full_name->setStyleSheet(QString::fromUtf8("color: rgb(255, 255, 255);"));
         lineEdit_full_name->setReadOnly(true);
 
         verticalLayout->addWidget(lineEdit_full_name);
 
-        comboBox_subject = new QComboBox(layoutWidget);
+        lineEdit_subjectName = new QLineEdit(layoutWidget);
+        lineEdit_subjectName->setObjectName(QString::fromUtf8("lineEdit_subjectName"));
+        lineEdit_subjectName->setStyleSheet(QString::fromUtf8("color: rgb(255, 255, 255);"));
+        lineEdit_subjectName->setReadOnly(true);
+
+        verticalLayout->addWidget(lineEdit_subjectName);
+
+        lineEdit_mark = new QLineEdit(layoutWidget);
+        lineEdit_mark->setObjectName(QString::fromUtf8("lineEdit_mark"));
+        lineEdit_mark->setStyleSheet(QString::fromUtf8("color: rgb(255, 255, 255);"));
+
+        verticalLayout->addWidget(lineEdit_mark);
+
+        lineEdit_comment = new QLineEdit(layoutWidget);
+        lineEdit_comment->setObjectName(QString::fromUtf8("lineEdit_comment"));
+        lineEdit_comment->setStyleSheet(QString::fromUtf8("color: rgb(255, 255, 255);"));
+
+        verticalLayout->addWidget(lineEdit_comment);
+
+
+        horizontalLayout->addLayout(verticalLayout);
+
+        comboBox_subject = new QComboBox(add_mark_2);
         comboBox_subject->addItem(QString());
         comboBox_subject->addItem(QString());
         comboBox_subject->addItem(QString());
         comboBox_subject->setObjectName(QString::fromUtf8("comboBox_subject"));
+        comboBox_subject->setGeometry(QRect(330, 370, 51, 34));
         comboBox_subject->setStyleSheet(QString::fromUtf8("color: rgb(255, 255, 255);"));
-
-        verticalLayout->addWidget(comboBox_subject);
-
-        comboBox_mark = new QComboBox(layoutWidget);
+        comboBox_mark = new QComboBox(add_mark_2);
         comboBox_mark->addItem(QString());
         comboBox_mark->addItem(QString());
         comboBox_mark->addItem(QString());
@@ -125,19 +154,8 @@ public:
         comboBox_mark->addItem(QString());
         comboBox_mark->addItem(QString());
         comboBox_mark->setObjectName(QString::fromUtf8("comboBox_mark"));
+        comboBox_mark->setGeometry(QRect(320, 320, 71, 34));
         comboBox_mark->setStyleSheet(QString::fromUtf8("color: rgb(255, 255, 255);"));
-
-        verticalLayout->addWidget(comboBox_mark);
-
-        lineEdit_comment = new QLineEdit(layoutWidget);
-        lineEdit_comment->setObjectName(QString::fromUtf8("lineEdit_comment"));
-        lineEdit_comment->setStyleSheet(QString::fromUtf8("color: rgb(255, 255, 255);"));
-
-        verticalLayout->addWidget(lineEdit_comment);
-
-
-        horizontalLayout->addLayout(verticalLayout);
-
 
         retranslateUi(add_mark_2);
 
@@ -154,6 +172,7 @@ public:
         label_subject->setText(QCoreApplication::translate("add_mark_2", "Subject", nullptr));
         label_mark->setText(QCoreApplication::translate("add_mark_2", "Mark", nullptr));
         label_comments->setText(QCoreApplication::translate("add_mark_2", "Comments", nullptr));
+        lineEdit_comment->setPlaceholderText(QCoreApplication::translate("add_mark_2", "comments (optional)", nullptr));
         comboBox_subject->setItemText(0, QCoreApplication::translate("add_mark_2", "<none>", nullptr));
         comboBox_subject->setItemText(1, QCoreApplication::translate("add_mark_2", "Information Technologies", nullptr));
         comboBox_subject->setItemText(2, QCoreApplication::translate("add_mark_2", "Math", nullptr));
@@ -172,7 +191,6 @@ public:
         comboBox_mark->setItemText(10, QCoreApplication::translate("add_mark_2", "10", nullptr));
 
         comboBox_mark->setPlaceholderText(QCoreApplication::translate("add_mark_2", "Choose mark", nullptr));
-        lineEdit_comment->setPlaceholderText(QCoreApplication::translate("add_mark_2", "comments (optional)", nullptr));
     } // retranslateUi
 
 };

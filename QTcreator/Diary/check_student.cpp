@@ -56,7 +56,7 @@ void check_student::on_find_button_clicked()
     if (getFull_name_st() != ""){
         question_to_db = "select id from student where full_name_st = '" + getFull_name_st() + "'";
         query.exec(question_to_db);
-        if (!query.next()) {
+        if (!query.next()) {           
             QMessageBox::warning(this, "Student Full Name", "This student is not presented in DataBases");
         }else{
         close();

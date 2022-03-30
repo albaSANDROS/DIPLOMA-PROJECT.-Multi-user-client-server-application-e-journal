@@ -30,8 +30,10 @@ public:
         if (get_data->objectName().isEmpty())
             get_data->setObjectName(QString::fromUtf8("get_data"));
         get_data->resize(540, 428);
-        get_data->setStyleSheet(QString::fromUtf8("background-color: rgb(67, 136, 189);\n"
-"selection-color: rgb(22, 34, 49);"));
+        get_data->setStyleSheet(QString::fromUtf8("color: rgb(16, 149, 148);\n"
+"background-color: rgb(16, 149, 148);\n"
+"\n"
+""));
         label = new QLabel(get_data);
         label->setObjectName(QString::fromUtf8("label"));
         label->setGeometry(QRect(40, 20, 471, 41));
@@ -39,15 +41,21 @@ public:
         get_back_button = new QPushButton(get_data);
         get_back_button->setObjectName(QString::fromUtf8("get_back_button"));
         get_back_button->setGeometry(QRect(40, 340, 471, 61));
-        get_back_button->setStyleSheet(QString::fromUtf8("color: rgb(255, 255, 255);"));
+        get_back_button->setStyleSheet(QString::fromUtf8("background-color: rgb(29, 35, 35);\n"
+"background-color: rgb(9, 83, 82);\n"
+"color: rgb(255, 255, 255);"));
         classes_info_button = new QPushButton(get_data);
         classes_info_button->setObjectName(QString::fromUtf8("classes_info_button"));
         classes_info_button->setGeometry(QRect(290, 80, 221, 221));
-        classes_info_button->setStyleSheet(QString::fromUtf8("color: rgb(255, 255, 255);"));
+        classes_info_button->setStyleSheet(QString::fromUtf8("background-color: rgb(29, 35, 35);\n"
+"background-color: rgb(9, 83, 82);\n"
+"color: rgb(255, 255, 255);"));
         students_info_button = new QPushButton(get_data);
         students_info_button->setObjectName(QString::fromUtf8("students_info_button"));
         students_info_button->setGeometry(QRect(40, 80, 221, 221));
-        students_info_button->setStyleSheet(QString::fromUtf8("color: rgb(255, 255, 255);"));
+        students_info_button->setStyleSheet(QString::fromUtf8("background-color: rgb(29, 35, 35);\n"
+"background-color: rgb(9, 83, 82);\n"
+"color: rgb(255, 255, 255);"));
         QWidget::setTabOrder(students_info_button, classes_info_button);
         QWidget::setTabOrder(classes_info_button, get_back_button);
 

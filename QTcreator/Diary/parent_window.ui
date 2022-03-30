@@ -14,8 +14,10 @@
    <string>Dialog</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">background-color: rgb(67, 136, 189);
-selection-color: rgb(22, 34, 49);</string>
+   <string notr="true">
+color: rgb(255, 255, 255);
+background-color: rgb(16, 149, 148);
+</string>
   </property>
   <widget class="QPushButton" name="pushButton_info">
    <property name="geometry">
@@ -27,7 +29,9 @@ selection-color: rgb(22, 34, 49);</string>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">color: rgb(255, 255, 255);</string>
+    <string notr="true">background-color: rgb(29, 35, 35);
+background-color: rgb(9, 83, 82);
+color: rgb(255, 255, 255);</string>
    </property>
    <property name="text">
     <string>Contact informaiton</string>
@@ -43,7 +47,9 @@ selection-color: rgb(22, 34, 49);</string>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">color: rgb(255, 255, 255);</string>
+    <string notr="true">background-color: rgb(29, 35, 35);
+background-color: rgb(9, 83, 82);
+color: rgb(255, 255, 255);</string>
    </property>
    <property name="text">
     <string>Exit</string>
