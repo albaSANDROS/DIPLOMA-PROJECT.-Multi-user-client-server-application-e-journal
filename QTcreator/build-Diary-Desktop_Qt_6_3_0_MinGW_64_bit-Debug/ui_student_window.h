@@ -34,7 +34,8 @@ public:
         if (student_window->objectName().isEmpty())
             student_window->setObjectName(QString::fromUtf8("student_window"));
         student_window->resize(374, 296);
-        student_window->setStyleSheet(QString::fromUtf8("color: rgb(16, 149, 148);\n"
+        student_window->setStyleSheet(QString::fromUtf8("\n"
+"color: rgb(255, 255, 255);\n"
 "background-color: rgb(16, 149, 148);\n"
 ""));
         pushButton = new QPushButton(student_window);

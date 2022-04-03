@@ -31,7 +31,8 @@ public:
         if (diary_menu->objectName().isEmpty())
             diary_menu->setObjectName(QString::fromUtf8("diary_menu"));
         diary_menu->resize(545, 445);
-        diary_menu->setStyleSheet(QString::fromUtf8("color: rgb(16, 149, 148);\n"
+        diary_menu->setStyleSheet(QString::fromUtf8("\n"
+"color: rgb(255, 255, 255);\n"
 "background-color: rgb(16, 149, 148);\n"
 ""));
         label = new QLabel(diary_menu);
@@ -70,12 +71,12 @@ public:
 
     void retranslateUi(QDialog *diary_menu)
     {
-        diary_menu->setWindowTitle(QCoreApplication::translate("diary_menu", "Dialog", nullptr));
         label->setText(QCoreApplication::translate("diary_menu", "login", nullptr));
         start_lesson_button->setText(QCoreApplication::translate("diary_menu", "Add marks", nullptr));
         get_data_button->setText(QCoreApplication::translate("diary_menu", "Get data about student", nullptr));
         contact_info->setText(QCoreApplication::translate("diary_menu", "Support", nullptr));
         exit_button->setText(QCoreApplication::translate("diary_menu", "Exit", nullptr));
+        (void)diary_menu;
     } // retranslateUi
 
 };

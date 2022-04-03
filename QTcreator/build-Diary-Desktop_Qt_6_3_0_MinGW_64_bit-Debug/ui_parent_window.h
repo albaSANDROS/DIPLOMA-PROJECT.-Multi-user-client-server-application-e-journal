@@ -48,7 +48,8 @@ public:
         if (parent_window->objectName().isEmpty())
             parent_window->setObjectName(QString::fromUtf8("parent_window"));
         parent_window->resize(494, 573);
-        parent_window->setStyleSheet(QString::fromUtf8("color: rgb(16, 149, 148);\n"
+        parent_window->setStyleSheet(QString::fromUtf8("\n"
+"color: rgb(255, 255, 255);\n"
 "background-color: rgb(16, 149, 148);\n"
 ""));
         pushButton_info = new QPushButton(parent_window);

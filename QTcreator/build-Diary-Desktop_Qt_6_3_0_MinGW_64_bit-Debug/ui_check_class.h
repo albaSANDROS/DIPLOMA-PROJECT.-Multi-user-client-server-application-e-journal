@@ -41,7 +41,8 @@ public:
         if (check_class->objectName().isEmpty())
             check_class->setObjectName(QString::fromUtf8("check_class"));
         check_class->resize(482, 350);
-        check_class->setStyleSheet(QString::fromUtf8("color: rgb(16, 149, 148);\n"
+        check_class->setStyleSheet(QString::fromUtf8("\n"
+"color: rgb(255, 255, 255);\n"
 "background-color: rgb(16, 149, 148);\n"
 "\n"
 ""));

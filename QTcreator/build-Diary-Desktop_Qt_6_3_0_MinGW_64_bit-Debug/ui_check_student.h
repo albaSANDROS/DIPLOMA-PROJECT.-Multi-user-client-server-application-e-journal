@@ -36,7 +36,8 @@ public:
         if (check_student->objectName().isEmpty())
             check_student->setObjectName(QString::fromUtf8("check_student"));
         check_student->resize(428, 312);
-        check_student->setStyleSheet(QString::fromUtf8("color: rgb(16, 149, 148);\n"
+        check_student->setStyleSheet(QString::fromUtf8("\n"
+"color: rgb(255, 255, 255);\n"
 "background-color: rgb(16, 149, 148);\n"
 "\n"
 ""));
@@ -48,7 +49,7 @@ public:
 "color: rgb(255, 255, 255);"));
         cancel_button = new QPushButton(check_student);
         cancel_button->setObjectName(QString::fromUtf8("cancel_button"));
-        cancel_button->setGeometry(QRect(30, 243, 171, 41));
+        cancel_button->setGeometry(QRect(30, 243, 371, 41));
         cancel_button->setStyleSheet(QString::fromUtf8("background-color: rgb(29, 35, 35);\n"
 "background-color: rgb(9, 83, 82);\n"
 "color: rgb(255, 255, 255);"));

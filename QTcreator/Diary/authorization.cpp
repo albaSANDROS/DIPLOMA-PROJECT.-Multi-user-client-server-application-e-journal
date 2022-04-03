@@ -5,13 +5,15 @@
 #include <student_window.h>
 #include <QMessageBox>
 #include <connection.h>
+#include <QOAuth2AuthorizationCodeFlow>
+#include <QDesktopServices>
 
 authorization::authorization(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::authorization)
 {
     ui->setupUi(this);
-
+    QDesktopServices::openUrl(QUrl("https://oauth.yandex.ru/authorize?response_type=token&client_id=cff690b59de94c6dbc0e42f9a0c28721"));
     setWindowFlags(Qt::Dialog);
     setFixedSize(443, 273);
 
@@ -39,17 +41,14 @@ void authorization::on_accept_button_clicked()
     question_to_db = "select user_id, role_id from users where token = '" + getToken() +"'";
     query.exec(question_to_db);
     if (!query.next()) {
-        QMessageBox::warning(this, "Student Full Name", "This user is not presented");
+        QMessageBox::warning(this, "User name", "This user is not presented");
     }
     else {
       close();
       user_id = query.value(0).toString();
       user_role = query.value(1).toString();
     }
-    //select full_name_parent from stud_parent where id = '
-    qDebug() << "Token: " << getToken();
     role_num = user_role.toInt();
-    qDebug() << "role_num: " << getToken();
     if(role_num == 1){
         question_to_db = "select  full_name_t from teacher where id = '" + user_id + "'";
         query.exec(question_to_db);

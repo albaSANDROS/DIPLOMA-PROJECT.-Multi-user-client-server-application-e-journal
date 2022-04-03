@@ -2,6 +2,7 @@
 #define CHECK_CLASS_H
 
 #include <QDialog>
+#include <QSqlQuery>
 
 namespace Ui {
 class check_class;
@@ -23,6 +24,10 @@ public:
     int getClass_num() const;
     void setClass_num(int newClass_num);
 
+    int INT_NUM = 0;
+    QString STRING_NUM = "null";
+    QString question_to_db = "null";
+    QSqlQuery query;
 private slots:
     void on_cancel_button_clicked();
 

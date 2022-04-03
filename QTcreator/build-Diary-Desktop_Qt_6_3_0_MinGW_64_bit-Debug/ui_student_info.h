@@ -63,7 +63,8 @@ public:
         if (student_info->objectName().isEmpty())
             student_info->setObjectName(QString::fromUtf8("student_info"));
         student_info->resize(459, 834);
-        student_info->setStyleSheet(QString::fromUtf8("color: rgb(16, 149, 148);\n"
+        student_info->setStyleSheet(QString::fromUtf8("\n"
+"color: rgb(255, 255, 255);\n"
 "background-color: rgb(16, 149, 148);\n"
 ""));
         cancel_buttom = new QPushButton(student_info);

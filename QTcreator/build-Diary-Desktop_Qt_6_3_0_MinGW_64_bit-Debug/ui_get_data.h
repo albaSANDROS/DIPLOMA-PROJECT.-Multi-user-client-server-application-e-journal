@@ -30,7 +30,8 @@ public:
         if (get_data->objectName().isEmpty())
             get_data->setObjectName(QString::fromUtf8("get_data"));
         get_data->resize(540, 428);
-        get_data->setStyleSheet(QString::fromUtf8("color: rgb(16, 149, 148);\n"
+        get_data->setStyleSheet(QString::fromUtf8("\n"
+"color: rgb(255, 255, 255);\n"
 "background-color: rgb(16, 149, 148);\n"
 "\n"
 ""));

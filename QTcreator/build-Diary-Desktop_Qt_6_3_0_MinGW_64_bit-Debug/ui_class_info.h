@@ -28,7 +28,8 @@ public:
         if (class_info->objectName().isEmpty())
             class_info->setObjectName(QString::fromUtf8("class_info"));
         class_info->resize(426, 366);
-        class_info->setStyleSheet(QString::fromUtf8("color: rgb(16, 149, 148);\n"
+        class_info->setStyleSheet(QString::fromUtf8("\n"
+"color: rgb(255, 255, 255);\n"
 "background-color: rgb(16, 149, 148);\n"
 "\n"
 ""));

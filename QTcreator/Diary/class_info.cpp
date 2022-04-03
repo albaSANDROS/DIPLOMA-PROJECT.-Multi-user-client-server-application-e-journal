@@ -8,13 +8,19 @@ class_info::class_info(QWidget *parent, QString login, QString class_letter, int
     QDialog(parent),
     ui(new Ui::class_info)
 {
+
+    setClass_letter(class_letter);
+    setClass_num(class_num);
+    setLogin(login);
+
+
+
     ui->setupUi(this);
 
     setWindowFlags(Qt::Dialog);
     setFixedSize(426, 366);
 
-    setClass_letter(class_letter);
-    setClass_num(class_num);
+
 
     //configuring info message
     if (getClass_num() == 0 && getClass_letter() == ""){
@@ -22,6 +28,7 @@ class_info::class_info(QWidget *parent, QString login, QString class_letter, int
     }else{
         infoText = "All info about " + QString::number(getClass_num()) + " '" + getClass_letter() + "'" + "class";
     }
+
     ui->textEdit->append(infoText);
 
     //get info about all classes or not
@@ -30,9 +37,10 @@ class_info::class_info(QWidget *parent, QString login, QString class_letter, int
     }
     else{
 
-        QString numb = QString::number(getClass_num());
-        get_gr_id_request = "SELECT id from studying_group WHERE num = '" + numb + "' and profile = '" + getClass_letter() +"'";
+        //QString numb = QString::number(getClass_num());
+        get_gr_id_request = "SELECT id from studying_group WHERE num = '" + QString::number(getClass_num()) + "' and profile = '" + getClass_letter() +"'";
         query_getid.exec(get_gr_id_request);
+
         while (query_getid.next()) {
           gr_id = query_getid.value(0).toString();
         }
@@ -79,8 +87,10 @@ class_info::class_info(QWidget *parent, QString login, QString class_letter, int
 
          }
     ui->textEdit->append(infoText);
+
+    //setLogin(login);
     }
-    setLogin(login);
+
 }
 
 class_info::~class_info()

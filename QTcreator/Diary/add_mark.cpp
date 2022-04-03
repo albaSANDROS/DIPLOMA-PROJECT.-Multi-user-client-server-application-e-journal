@@ -58,11 +58,10 @@ void add_mark::on_next_pushButton_clicked()
     query.exec(question_to_db);
     if (!query.next()) {
 
-
-
         QMessageBox::warning(this, "Student Full Name", "This student is not presented in DataBases");
     }
     else{
+
         close();
         add_mark_2 mark2_window(this, getLogin(), getStudent_fullname());
         mark2_window.setModal(true);

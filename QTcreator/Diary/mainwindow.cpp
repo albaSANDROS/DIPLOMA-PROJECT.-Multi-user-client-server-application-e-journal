@@ -56,7 +56,7 @@ void MainWindow::on_authorize_button_clicked()
     QTimer::singleShot(1550, &m, SLOT(close()));
     m.exec();
 
-    //QDesktopServices::openUrl(QUrl("https://oauth.yandex.ru/authorize?response_type=token&client_id=cff690b59de94c6dbc0e42f9a0c28721"));
+
 
 
     if(!createConnection())

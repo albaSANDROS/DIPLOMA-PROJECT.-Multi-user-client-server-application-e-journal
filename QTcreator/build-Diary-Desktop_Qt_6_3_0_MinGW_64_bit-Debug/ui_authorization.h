@@ -30,8 +30,9 @@ public:
         if (authorization->objectName().isEmpty())
             authorization->setObjectName(QString::fromUtf8("authorization"));
         authorization->resize(443, 273);
-        authorization->setStyleSheet(QString::fromUtf8("color: rgb(16, 149, 148);\n"
-"background-color: rgb(16, 149, 148);\n"
+        authorization->setStyleSheet(QString::fromUtf8("background-color: rgb(16, 149, 148);\n"
+"\n"
+"color: rgb(255, 255, 255);\n"
 "\n"
 ""));
         accept_button = new QPushButton(authorization);

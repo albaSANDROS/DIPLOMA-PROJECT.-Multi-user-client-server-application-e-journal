@@ -3,6 +3,7 @@
 #include <get_data.h>
 #include <class_info.h>
 #include <QMessageBox>
+#include <QSqlQuery>
 
 check_class::check_class(QWidget *parent, QString login) :
     QDialog(parent),
@@ -64,26 +65,34 @@ void check_class::on_find_button_clicked()
 {
     setClass_letter(ui->class_letter_label->text().toUpper());
 
-    int INT_NUM ;
-    QString STRING_NUM = ui->class_num_label->text();
+
+    STRING_NUM = ui->class_num_label->text();
     INT_NUM = STRING_NUM.toInt();
     setClass_num(INT_NUM);
 
-    if (((getClass_letter() == "" && getClass_num() == 0) || (getClass_letter() != "" && getClass_num() > 0 && getClass_num() < 12)) ){
-        close();
-        class_info class_window(this, getLogin(), getClass_letter(), getClass_num());
-        class_window.setModal(true);
-        class_window.exec();
-    }
+    question_to_db = "select id from studying_group where num = '" + QString::number(getClass_num()) + "' and profile = '" + getClass_letter() +"'";
+    query.exec(question_to_db);
+    if (!query.next()){
 
-    else if(getClass_letter() == ""){
-        QMessageBox::warning(this, "Checking class info", "You need to input class letter");
-    }
-    else if(getClass_num() == 0){
-        QMessageBox::warning(this, "Checking class info", "You need to input class number");
-    }
-    else if (getClass_num() < 0 || getClass_num() > 11){
-        QMessageBox::warning(this, "Checking class info", "Check class number. It must be in range 0..11");
+        QMessageBox::warning(this, "Checking class info", "This class is not presented in DataBase");
+    }else{
+
+        if (((getClass_letter() == "" && getClass_num() == 0) || (getClass_letter() != "" && getClass_num() > 0 && getClass_num() < 12)) ){
+            close();
+            class_info class_window(this, getLogin(), getClass_letter(), getClass_num());
+            class_window.setModal(true);
+            class_window.exec();
+        }
+
+        else if(getClass_letter() == ""){
+            QMessageBox::warning(this, "Checking class info", "You need to input class letter");
+        }
+        else if(getClass_num() == 0){
+            QMessageBox::warning(this, "Checking class info", "You need to input class number");
+        }
+        else if (getClass_num() < 0 || getClass_num() > 11){
+            QMessageBox::warning(this, "Checking class info", "Check class number. It must be in range 0..11");
+        }
     }
 }
 
