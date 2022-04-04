@@ -8,20 +8,24 @@
 #include <QTimer>
 
 
-inline bool createConnection(){
+inline bool createConnection(QString role, QString password){
     QSqlDatabase db = QSqlDatabase::addDatabase("QPSQL");
+
     db.setDatabaseName("DiaryDB");
-    db.setUserName("postgres");
-    db.setPassword("1");
+    db.setUserName(role);
+    db.setPassword(password);
+    //db.setUserName("roleConfirm");
+    //db.setPassword("pgsecret1");
+
+    //db.setUserName("postgres");
+    //db.setPassword("1");
     if (!db.open()){
+
         QMessageBox::warning(0,"Ошибка БД", "Something with DB Wrong");
         return false;
     }
     else{
-        //QMessageBox m;
-        //m.setText("DataBase connected!");
-        //QTimer::singleShot(950, &m, SLOT(close()));
-        //m.exec();
+
         return true;
     }
 

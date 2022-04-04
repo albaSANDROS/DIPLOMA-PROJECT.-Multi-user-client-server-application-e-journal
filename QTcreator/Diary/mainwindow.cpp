@@ -59,7 +59,7 @@ void MainWindow::on_authorize_button_clicked()
 
 
 
-    if(!createConnection())
+    if(!createConnection("auth_user","pgsecret"))
     {
         exit(2);    //https://docs.microsoft.com/ru-ru/sql/relational-databases/errors-events/database-engine-events-and-errors?view=sql-server-ver15
     }

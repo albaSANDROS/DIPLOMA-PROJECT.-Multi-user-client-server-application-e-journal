@@ -13,7 +13,7 @@ authorization::authorization(QWidget *parent) :
     ui(new Ui::authorization)
 {
     ui->setupUi(this);
-    QDesktopServices::openUrl(QUrl("https://oauth.yandex.ru/authorize?response_type=token&client_id=cff690b59de94c6dbc0e42f9a0c28721"));
+    //QDesktopServices::openUrl(QUrl("https://oauth.yandex.ru/authorize?response_type=token&client_id=cff690b59de94c6dbc0e42f9a0c28721"));
     setWindowFlags(Qt::Dialog);
     setFixedSize(443, 273);
 
@@ -55,6 +55,12 @@ void authorization::on_accept_button_clicked()
         while (query.next()) {
           full_name_teacher = query.value(0).toString();
         }
+
+        if(!createConnection("teacher","teacherDBpassword"))
+        {
+            exit(2);    //https://docs.microsoft.com/ru-ru/sql/relational-databases/errors-events/database-engine-events-and-errors?view=sql-server-ver15
+        }
+
         diary_menu menu_window(this, full_name_teacher);
         menu_window.setModal(true);
         menu_window.exec();
