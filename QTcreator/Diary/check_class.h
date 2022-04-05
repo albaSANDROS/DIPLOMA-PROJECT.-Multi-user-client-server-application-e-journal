@@ -24,8 +24,7 @@ public:
     int getClass_num() const;
     void setClass_num(int newClass_num);
 
-    int INT_NUM = 0;
-    QString STRING_NUM = "null";
+
     QString question_to_db = "null";
     QSqlQuery query;
 private slots:

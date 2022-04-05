@@ -75,7 +75,8 @@ void add_mark_2::on_pushButton_cancel_clicked()
 
 void add_mark_2::on_pushButton_evaluate_clicked()
 {
-    //mark = ui->comboBox_mark ->currentText();
+    int lessonID_int;
+    int commentID_int;
     subject = ui->comboBox_subject ->currentText();
 
     QString mark2 = ui -> lineEdit_mark -> text();

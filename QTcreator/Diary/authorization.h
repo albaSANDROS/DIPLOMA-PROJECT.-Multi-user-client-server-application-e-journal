@@ -22,9 +22,7 @@ public:
     QString question_to_db;
     QString user_id;
     QString user_role;
-    QString full_name_teacher;
-    QString full_name_student;
-    QString full_name_parent;
+    QString full_name;
     int role_num;
 private slots:
     void on_accept_button_clicked();

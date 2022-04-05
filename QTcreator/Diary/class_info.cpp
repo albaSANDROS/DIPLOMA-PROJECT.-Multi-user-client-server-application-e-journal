@@ -66,8 +66,8 @@ class_info::class_info(QWidget *parent, QString login, QString class_letter, int
 
     //info about class numb
     if(getClass_num() == 0 && getClass_letter() == ""){
-        class_question = "select num, profile from studying_group where id = '" + studying_group_id + "'";
-        query_class_num.exec(class_question);
+        question_to_db_class = "select num, profile from studying_group where id = '" + studying_group_id + "'";
+        query_class_num.exec(question_to_db_class);
         while (query_class_num.next()) {
           gr_num = query_class_num.value(0).toString();
           gr_prof= query_class_num.value(1).toString();
@@ -127,7 +127,7 @@ void class_info::setClass_num(int newClass_num)
     class_num = newClass_num;
 }
 
-void class_info::on_cancel_buttom_clicked()
+void class_info::on_cancel_button_clicked()
 {
     close();
     check_class class_window(this, getLogin());

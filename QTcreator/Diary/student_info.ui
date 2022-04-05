@@ -19,7 +19,7 @@ color: rgb(255, 255, 255);
 background-color: rgb(16, 149, 148);
 </string>
   </property>
-  <widget class="QPushButton" name="cancel_buttom">
+  <widget class="QPushButton" name="cancel_button">
    <property name="geometry">
     <rect>
      <x>60</x>
@@ -289,7 +289,7 @@ color: rgb(255, 255, 255);</string>
   <tabstop>lineEdit_class_num</tabstop>
   <tabstop>textEdit_comments</tabstop>
   <tabstop>lineEdit_parents_fullname</tabstop>
-  <tabstop>cancel_buttom</tabstop>
+  <tabstop>cancel_button</tabstop>
   <tabstop>textEdit_marks</tabstop>
   <tabstop>lineEdit_parents_phonenum</tabstop>
  </tabstops>

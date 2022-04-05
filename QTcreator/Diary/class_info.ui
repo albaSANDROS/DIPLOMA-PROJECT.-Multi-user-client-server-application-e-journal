@@ -20,7 +20,7 @@ background-color: rgb(16, 149, 148);
 
 </string>
   </property>
-  <widget class="QPushButton" name="cancel_buttom">
+  <widget class="QPushButton" name="cancel_button">
    <property name="geometry">
     <rect>
      <x>130</x>

@@ -25,7 +25,7 @@ QT_BEGIN_NAMESPACE
 class Ui_student_info
 {
 public:
-    QPushButton *cancel_buttom;
+    QPushButton *cancel_button;
     QLabel *label_5;
     QWidget *layoutWidget;
     QVBoxLayout *verticalLayout_8;
@@ -67,10 +67,10 @@ public:
 "color: rgb(255, 255, 255);\n"
 "background-color: rgb(16, 149, 148);\n"
 ""));
-        cancel_buttom = new QPushButton(student_info);
-        cancel_buttom->setObjectName(QString::fromUtf8("cancel_buttom"));
-        cancel_buttom->setGeometry(QRect(60, 770, 351, 51));
-        cancel_buttom->setStyleSheet(QString::fromUtf8("background-color: rgb(29, 35, 35);\n"
+        cancel_button = new QPushButton(student_info);
+        cancel_button->setObjectName(QString::fromUtf8("cancel_button"));
+        cancel_button->setGeometry(QRect(60, 770, 351, 51));
+        cancel_button->setStyleSheet(QString::fromUtf8("background-color: rgb(29, 35, 35);\n"
 "background-color: rgb(9, 83, 82);\n"
 "color: rgb(255, 255, 255);"));
         label_5 = new QLabel(student_info);
@@ -237,8 +237,8 @@ public:
         QWidget::setTabOrder(lineEdit_dateOfBirth, lineEdit_class_num);
         QWidget::setTabOrder(lineEdit_class_num, textEdit_comments);
         QWidget::setTabOrder(textEdit_comments, lineEdit_parents_fullname);
-        QWidget::setTabOrder(lineEdit_parents_fullname, cancel_buttom);
-        QWidget::setTabOrder(cancel_buttom, textEdit_marks);
+        QWidget::setTabOrder(lineEdit_parents_fullname, cancel_button);
+        QWidget::setTabOrder(cancel_button, textEdit_marks);
         QWidget::setTabOrder(textEdit_marks, lineEdit_parents_phonenum);
 
         retranslateUi(student_info);
@@ -249,7 +249,7 @@ public:
     void retranslateUi(QDialog *student_info)
     {
         student_info->setWindowTitle(QCoreApplication::translate("student_info", "Dialog", nullptr));
-        cancel_buttom->setText(QCoreApplication::translate("student_info", "Cancel", nullptr));
+        cancel_button->setText(QCoreApplication::translate("student_info", "Cancel", nullptr));
         label_5->setText(QString());
         comments_label->setText(QCoreApplication::translate("student_info", "Comments", nullptr));
         parents_info_label->setText(QCoreApplication::translate("student_info", "Parents info", nullptr));

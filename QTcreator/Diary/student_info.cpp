@@ -17,7 +17,7 @@ student_info::student_info(QWidget *parent, QString login, QString full_name_st)
     query.exec(question_to_db);
     while (query.next()) {
       full_name = query.value(0).toString();
-      gender = query.value(1).toString();
+      //gender = query.value(1).toString();
       student_id = query.value(2).toString();
       studying_group_id = query.value(3).toString();
       birth_date =  query.value(4).toString();
@@ -107,7 +107,7 @@ void student_info::setFull_name_st(const QString &newFull_name_st)
     full_name_st = newFull_name_st;
 }
 
-void student_info::on_cancel_buttom_clicked()
+void student_info::on_cancel_button_clicked()
 {
     close();
     check_student student_window(this, getLogin());

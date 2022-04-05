@@ -27,10 +27,8 @@ public:
     QString sub_id;
     QString student_id;
     QString mark;
-    QString lessonID;
-    int lessonID_int;
+    QString lessonID;  
     QString commentID;
-    int commentID_int;
     QString lessonStatus = "yes";
     QString comment;
     QString teacher_sub_id = "none";

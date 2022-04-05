@@ -26,7 +26,7 @@ public:
     QString infoText = "null";
     QString question_to_db = "null";
     QString question_to_db_par = "null";
-    QString class_question = "null";
+    QString question_to_db_class = "null";
     QString get_gr_id_request = "null";
     QString gr_id = "null";
     QString full_name_parent = "null";
@@ -43,7 +43,7 @@ public:
     QSqlQuery query_class_num;
 
 private slots:
-    void on_cancel_buttom_clicked();
+    void on_cancel_button_clicked();
 
 private:
     Ui::class_info *ui;

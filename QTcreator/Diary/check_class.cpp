@@ -64,12 +64,21 @@ void check_class::on_cancel_button_clicked()
 void check_class::on_find_button_clicked()
 {
     setClass_letter(ui->class_letter_label->text().toUpper());
-
+    QString STRING_NUM = "null";
+    int INT_NUM = 0;
 
     STRING_NUM = ui->class_num_label->text();
     INT_NUM = STRING_NUM.toInt();
     setClass_num(INT_NUM);
 
+    if(getClass_letter() == "" && getClass_num() == 0){
+
+        close();
+        class_info class_window(this, getLogin(), getClass_letter(), getClass_num());
+        class_window.setModal(true);
+        class_window.exec();
+    }
+    else{
     question_to_db = "select id from studying_group where num = '" + QString::number(getClass_num()) + "' and profile = '" + getClass_letter() +"'";
     query.exec(question_to_db);
     if (!query.next()){
@@ -77,7 +86,7 @@ void check_class::on_find_button_clicked()
         QMessageBox::warning(this, "Checking class info", "This class is not presented in DataBase");
     }else{
 
-        if (((getClass_letter() == "" && getClass_num() == 0) || (getClass_letter() != "" && getClass_num() > 0 && getClass_num() < 12)) ){
+        if (( (getClass_letter() != "" && getClass_num() > 0 && getClass_num() < 12)) ){
             close();
             class_info class_window(this, getLogin(), getClass_letter(), getClass_num());
             class_window.setModal(true);
@@ -94,5 +103,6 @@ void check_class::on_find_button_clicked()
             QMessageBox::warning(this, "Checking class info", "Check class number. It must be in range 0..11");
         }
     }
+}
 }
 

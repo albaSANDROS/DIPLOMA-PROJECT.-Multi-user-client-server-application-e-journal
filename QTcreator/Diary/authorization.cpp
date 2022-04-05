@@ -53,7 +53,7 @@ void authorization::on_accept_button_clicked()
         question_to_db = "select  full_name_t from teacher where id = '" + user_id + "'";
         query.exec(question_to_db);
         while (query.next()) {
-          full_name_teacher = query.value(0).toString();
+          full_name = query.value(0).toString();
         }
 
         if(!createConnection("teacher","teacherDBpassword"))
@@ -61,7 +61,7 @@ void authorization::on_accept_button_clicked()
             exit(2);    //https://docs.microsoft.com/ru-ru/sql/relational-databases/errors-events/database-engine-events-and-errors?view=sql-server-ver15
         }
 
-        diary_menu menu_window(this, full_name_teacher);
+        diary_menu menu_window(this, full_name);
         menu_window.setModal(true);
         menu_window.exec();
     }
@@ -70,9 +70,9 @@ void authorization::on_accept_button_clicked()
         question_to_db = "select  full_name_parent from stud_parent where id = '" + user_id + "'";
         query.exec(question_to_db);
         while (query.next()) {
-          full_name_parent = query.value(0).toString();
+          full_name = query.value(0).toString();
         }
-        parent_window parent_window(this, full_name_parent);
+        parent_window parent_window(this, full_name);
         parent_window.setModal(true);
         parent_window.exec();
     }
@@ -81,9 +81,9 @@ void authorization::on_accept_button_clicked()
         question_to_db = "select  full_name_st from student where id = '" + user_id + "'";
         query.exec(question_to_db);
         while (query.next()) {
-          full_name_student = query.value(0).toString();
+          full_name = query.value(0).toString();
         }
-        student_window student_window(this, full_name_student);
+        student_window student_window(this, full_name);
         student_window.setModal(true);
         student_window.exec();
     }

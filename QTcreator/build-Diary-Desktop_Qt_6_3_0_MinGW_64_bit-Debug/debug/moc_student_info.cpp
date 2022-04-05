@@ -30,11 +30,11 @@ struct qt_meta_stringdata_student_info_t {
 static const qt_meta_stringdata_student_info_t qt_meta_stringdata_student_info = {
     {
 QT_MOC_LITERAL(0, 12), // "student_info"
-QT_MOC_LITERAL(13, 24), // "on_cancel_buttom_clicked"
+QT_MOC_LITERAL(13, 24), // "on_cancel_button_clicked"
 QT_MOC_LITERAL(38, 0) // ""
 
     },
-    "student_info\0on_cancel_buttom_clicked\0"
+    "student_info\0on_cancel_button_clicked\0"
     ""
 };
 #undef QT_MOC_LITERAL
@@ -67,7 +67,7 @@ void student_info::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id
         auto *_t = static_cast<student_info *>(_o);
         (void)_t;
         switch (_id) {
-        case 0: _t->on_cancel_buttom_clicked(); break;
+        case 0: _t->on_cancel_button_clicked(); break;
         default: ;
         }
     }

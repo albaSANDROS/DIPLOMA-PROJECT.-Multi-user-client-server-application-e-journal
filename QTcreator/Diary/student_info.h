@@ -22,7 +22,7 @@ public:
     const QString &getFull_name_st() const;
     void setFull_name_st(const QString &newFull_name_st);
     QString full_name = "null";
-    QString gender = "null";
+    //QString gender = "null";
     QString studying_group_id = "null";
     QString birth_date = "null";
     QString student_id = "null";
@@ -39,7 +39,7 @@ public:
     QSqlQuery query;
 
 private slots:
-    void on_cancel_buttom_clicked();
+    void on_cancel_button_clicked();
 
 private:
     Ui::student_info *ui;

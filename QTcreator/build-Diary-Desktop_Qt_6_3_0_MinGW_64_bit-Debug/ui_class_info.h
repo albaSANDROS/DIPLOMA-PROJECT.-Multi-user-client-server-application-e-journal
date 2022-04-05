@@ -20,7 +20,7 @@ QT_BEGIN_NAMESPACE
 class Ui_class_info
 {
 public:
-    QPushButton *cancel_buttom;
+    QPushButton *cancel_button;
     QTextEdit *textEdit;
 
     void setupUi(QDialog *class_info)
@@ -33,10 +33,10 @@ public:
 "background-color: rgb(16, 149, 148);\n"
 "\n"
 ""));
-        cancel_buttom = new QPushButton(class_info);
-        cancel_buttom->setObjectName(QString::fromUtf8("cancel_buttom"));
-        cancel_buttom->setGeometry(QRect(130, 310, 161, 31));
-        cancel_buttom->setStyleSheet(QString::fromUtf8("background-color: rgb(29, 35, 35);\n"
+        cancel_button = new QPushButton(class_info);
+        cancel_button->setObjectName(QString::fromUtf8("cancel_button"));
+        cancel_button->setGeometry(QRect(130, 310, 161, 31));
+        cancel_button->setStyleSheet(QString::fromUtf8("background-color: rgb(29, 35, 35);\n"
 "background-color: rgb(9, 83, 82);\n"
 "color: rgb(255, 255, 255);"));
         textEdit = new QTextEdit(class_info);
@@ -53,7 +53,7 @@ public:
     void retranslateUi(QDialog *class_info)
     {
         class_info->setWindowTitle(QCoreApplication::translate("class_info", "Dialog", nullptr));
-        cancel_buttom->setText(QCoreApplication::translate("class_info", "Cancel", nullptr));
+        cancel_button->setText(QCoreApplication::translate("class_info", "Cancel", nullptr));
     } // retranslateUi
 
 };
