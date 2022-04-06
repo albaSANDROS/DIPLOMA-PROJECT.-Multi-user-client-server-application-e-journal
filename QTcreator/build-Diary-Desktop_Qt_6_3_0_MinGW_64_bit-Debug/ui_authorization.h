@@ -29,7 +29,7 @@ public:
     {
         if (authorization->objectName().isEmpty())
             authorization->setObjectName(QString::fromUtf8("authorization"));
-        authorization->resize(443, 273);
+        authorization->resize(358, 258);
         authorization->setStyleSheet(QString::fromUtf8("background-color: rgb(16, 149, 148);\n"
 "\n"
 "color: rgb(255, 255, 255);\n"
@@ -37,18 +37,18 @@ public:
 ""));
         accept_button = new QPushButton(authorization);
         accept_button->setObjectName(QString::fromUtf8("accept_button"));
-        accept_button->setGeometry(QRect(30, 160, 381, 81));
+        accept_button->setGeometry(QRect(40, 140, 281, 81));
         accept_button->setStyleSheet(QString::fromUtf8("background-color: rgb(29, 35, 35);\n"
 "background-color: rgb(9, 83, 82);\n"
 "color: rgb(255, 255, 255);"));
         token_lineEdit = new QLineEdit(authorization);
         token_lineEdit->setObjectName(QString::fromUtf8("token_lineEdit"));
-        token_lineEdit->setGeometry(QRect(30, 90, 381, 31));
+        token_lineEdit->setGeometry(QRect(40, 70, 281, 31));
         token_lineEdit->setStyleSheet(QString::fromUtf8("color: rgb(255, 255, 255);"));
         token_lineEdit->setEchoMode(QLineEdit::Password);
         label = new QLabel(authorization);
         label->setObjectName(QString::fromUtf8("label"));
-        label->setGeometry(QRect(130, 30, 171, 28));
+        label->setGeometry(QRect(90, 20, 171, 28));
         label->setStyleSheet(QString::fromUtf8("color: rgb(255, 255, 255);"));
 
         retranslateUi(authorization);

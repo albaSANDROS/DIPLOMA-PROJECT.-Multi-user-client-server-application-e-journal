@@ -7,6 +7,7 @@
 #include <connection.h>
 #include <QOAuth2AuthorizationCodeFlow>
 #include <QDesktopServices>
+#include <QCryptographicHash>
 
 authorization::authorization(QWidget *parent) :
     QDialog(parent),
@@ -15,7 +16,7 @@ authorization::authorization(QWidget *parent) :
     ui->setupUi(this);
     //QDesktopServices::openUrl(QUrl("https://oauth.yandex.ru/authorize?response_type=token&client_id=cff690b59de94c6dbc0e42f9a0c28721"));
     setWindowFlags(Qt::Dialog);
-    setFixedSize(443, 273);
+    setFixedSize(358, 258);
 
 }
 
@@ -34,10 +35,27 @@ authorization::~authorization()
     delete ui;
 }
 
+const QByteArray &authorization::getToken_toUtf8() const
+{
+    return token_toUtf8;
+}
+
+void authorization::setToken_toUtf8(const QByteArray &newToken_toUtf8)
+{
+    token_toUtf8 = newToken_toUtf8;
+}
+
 void authorization::on_accept_button_clicked()
 {
 
+
+
     setToken(ui -> token_lineEdit -> text());
+
+    setToken_toUtf8(getToken().toUtf8());
+
+    setToken(QCryptographicHash::hash(getToken_toUtf8(), QCryptographicHash::Sha256).toHex());
+
     question_to_db = "select user_id, role_id from users where token = '" + getToken() +"'";
     query.exec(question_to_db);
     if (!query.next()) {
@@ -90,4 +108,6 @@ void authorization::on_accept_button_clicked()
 
 
 }
+
+
 

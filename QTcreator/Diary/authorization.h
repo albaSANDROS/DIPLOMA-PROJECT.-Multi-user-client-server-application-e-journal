@@ -24,12 +24,16 @@ public:
     QString user_role;
     QString full_name;
     int role_num;
+    const QByteArray &getToken_toUtf8() const;
+    void setToken_toUtf8(const QByteArray &newToken_toUtf8);
+
 private slots:
     void on_accept_button_clicked();
 
 private:
     Ui::authorization *ui;
     QString token;
+    QByteArray token_toUtf8;
 };
 
 #endif // AUTHORIZATION_H
