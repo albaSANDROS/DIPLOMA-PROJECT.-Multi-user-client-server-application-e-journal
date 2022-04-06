@@ -48,7 +48,7 @@ public:
         token_lineEdit->setEchoMode(QLineEdit::Password);
         label = new QLabel(authorization);
         label->setObjectName(QString::fromUtf8("label"));
-        label->setGeometry(QRect(90, 20, 171, 28));
+        label->setGeometry(QRect(100, 20, 171, 28));
         label->setStyleSheet(QString::fromUtf8("color: rgb(255, 255, 255);"));
 
         retranslateUi(authorization);
