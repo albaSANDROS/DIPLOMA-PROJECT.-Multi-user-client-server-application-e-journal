@@ -10,12 +10,6 @@ int main(int argc, char *argv[])
     MainWindow w;
 
     w.show();
-    //окно верификации. Туда вставить токен. И работать далее
-
-
-
-    //
-
 
     return a.exec();
 }

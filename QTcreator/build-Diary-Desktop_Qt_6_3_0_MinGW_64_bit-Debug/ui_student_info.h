@@ -53,8 +53,8 @@ public:
     QLineEdit *lineEdit_full_name;
     QLineEdit *lineEdit_dateOfBirth;
     QLineEdit *lineEdit_class_num;
-    QWidget *layoutWidget3;
-    QVBoxLayout *verticalLayout_7;
+    QTextEdit *textEdit_avg_marks;
+    QLabel *avg_label;
     QLabel *marks_label;
     QTextEdit *textEdit_marks;
 
@@ -62,14 +62,14 @@ public:
     {
         if (student_info->objectName().isEmpty())
             student_info->setObjectName(QString::fromUtf8("student_info"));
-        student_info->resize(459, 834);
+        student_info->resize(459, 784);
         student_info->setStyleSheet(QString::fromUtf8("\n"
 "color: rgb(255, 255, 255);\n"
 "background-color: rgb(16, 149, 148);\n"
 ""));
         cancel_button = new QPushButton(student_info);
         cancel_button->setObjectName(QString::fromUtf8("cancel_button"));
-        cancel_button->setGeometry(QRect(60, 770, 351, 51));
+        cancel_button->setGeometry(QRect(60, 690, 351, 51));
         cancel_button->setStyleSheet(QString::fromUtf8("background-color: rgb(29, 35, 35);\n"
 "background-color: rgb(9, 83, 82);\n"
 "color: rgb(255, 255, 255);"));
@@ -78,7 +78,7 @@ public:
         label_5->setGeometry(QRect(120, 160, 349, 16));
         layoutWidget = new QWidget(student_info);
         layoutWidget->setObjectName(QString::fromUtf8("layoutWidget"));
-        layoutWidget->setGeometry(QRect(60, 570, 351, 163));
+        layoutWidget->setGeometry(QRect(60, 490, 351, 163));
         verticalLayout_8 = new QVBoxLayout(layoutWidget);
         verticalLayout_8->setObjectName(QString::fromUtf8("verticalLayout_8"));
         verticalLayout_8->setContentsMargins(0, 0, 0, 0);
@@ -97,7 +97,7 @@ public:
 
         layoutWidget1 = new QWidget(student_info);
         layoutWidget1->setObjectName(QString::fromUtf8("layoutWidget1"));
-        layoutWidget1->setGeometry(QRect(60, 230, 351, 122));
+        layoutWidget1->setGeometry(QRect(60, 180, 351, 91));
         verticalLayout_5 = new QVBoxLayout(layoutWidget1);
         verticalLayout_5->setObjectName(QString::fromUtf8("verticalLayout_5"));
         verticalLayout_5->setContentsMargins(0, 0, 0, 0);
@@ -150,7 +150,7 @@ public:
 
         layoutWidget2 = new QWidget(student_info);
         layoutWidget2->setObjectName(QString::fromUtf8("layoutWidget2"));
-        layoutWidget2->setGeometry(QRect(60, 30, 351, 166));
+        layoutWidget2->setGeometry(QRect(60, 30, 351, 131));
         verticalLayout_6 = new QVBoxLayout(layoutWidget2);
         verticalLayout_6->setObjectName(QString::fromUtf8("verticalLayout_6"));
         verticalLayout_6->setContentsMargins(0, 0, 0, 0);
@@ -214,25 +214,24 @@ public:
 
         verticalLayout_6->addLayout(horizontalLayout);
 
-        layoutWidget3 = new QWidget(student_info);
-        layoutWidget3->setObjectName(QString::fromUtf8("layoutWidget3"));
-        layoutWidget3->setGeometry(QRect(60, 380, 351, 163));
-        verticalLayout_7 = new QVBoxLayout(layoutWidget3);
-        verticalLayout_7->setObjectName(QString::fromUtf8("verticalLayout_7"));
-        verticalLayout_7->setContentsMargins(0, 0, 0, 0);
-        marks_label = new QLabel(layoutWidget3);
+        textEdit_avg_marks = new QTextEdit(student_info);
+        textEdit_avg_marks->setObjectName(QString::fromUtf8("textEdit_avg_marks"));
+        textEdit_avg_marks->setGeometry(QRect(350, 320, 61, 148));
+        textEdit_avg_marks->setStyleSheet(QString::fromUtf8("color: rgb(255, 255, 255);"));
+        textEdit_avg_marks->setReadOnly(true);
+        avg_label = new QLabel(student_info);
+        avg_label->setObjectName(QString::fromUtf8("avg_label"));
+        avg_label->setGeometry(QRect(350, 300, 32, 16));
+        avg_label->setStyleSheet(QString::fromUtf8("color: rgb(255, 255, 255);"));
+        marks_label = new QLabel(student_info);
         marks_label->setObjectName(QString::fromUtf8("marks_label"));
+        marks_label->setGeometry(QRect(61, 301, 32, 16));
         marks_label->setStyleSheet(QString::fromUtf8("color: rgb(255, 255, 255);"));
-
-        verticalLayout_7->addWidget(marks_label);
-
-        textEdit_marks = new QTextEdit(layoutWidget3);
+        textEdit_marks = new QTextEdit(student_info);
         textEdit_marks->setObjectName(QString::fromUtf8("textEdit_marks"));
+        textEdit_marks->setGeometry(QRect(61, 320, 281, 148));
         textEdit_marks->setStyleSheet(QString::fromUtf8("color: rgb(255, 255, 255);"));
         textEdit_marks->setReadOnly(true);
-
-        verticalLayout_7->addWidget(textEdit_marks);
-
         QWidget::setTabOrder(lineEdit_full_name, lineEdit_dateOfBirth);
         QWidget::setTabOrder(lineEdit_dateOfBirth, lineEdit_class_num);
         QWidget::setTabOrder(lineEdit_class_num, textEdit_comments);
@@ -259,6 +258,7 @@ public:
         fullNameSt_label->setText(QCoreApplication::translate("student_info", "Student full name", nullptr));
         date_of_birth_label->setText(QCoreApplication::translate("student_info", "Date of birth", nullptr));
         class_label->setText(QCoreApplication::translate("student_info", "Class", nullptr));
+        avg_label->setText(QCoreApplication::translate("student_info", "Avg.", nullptr));
         marks_label->setText(QCoreApplication::translate("student_info", "Marks", nullptr));
     } // retranslateUi
 

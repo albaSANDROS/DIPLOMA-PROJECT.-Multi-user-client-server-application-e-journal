@@ -11,7 +11,6 @@
 
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
-#include <QtWidgets/QComboBox>
 #include <QtWidgets/QDialog>
 #include <QtWidgets/QHBoxLayout>
 #include <QtWidgets/QLabel>
@@ -40,8 +39,6 @@ public:
     QLineEdit *lineEdit_subjectName;
     QLineEdit *lineEdit_mark;
     QLineEdit *lineEdit_comment;
-    QComboBox *comboBox_subject;
-    QComboBox *comboBox_mark;
 
     void setupUi(QDialog *add_mark_2)
     {
@@ -54,13 +51,13 @@ public:
 "color: rgb(255, 255, 255);"));
         pushButton_evaluate = new QPushButton(add_mark_2);
         pushButton_evaluate->setObjectName(QString::fromUtf8("pushButton_evaluate"));
-        pushButton_evaluate->setGeometry(QRect(30, 320, 251, 101));
+        pushButton_evaluate->setGeometry(QRect(30, 320, 351, 101));
         pushButton_evaluate->setStyleSheet(QString::fromUtf8("background-color: rgb(29, 35, 35);\n"
 "background-color: rgb(9, 83, 82);\n"
 "color: rgb(255, 255, 255);"));
         pushButton_cancel = new QPushButton(add_mark_2);
         pushButton_cancel->setObjectName(QString::fromUtf8("pushButton_cancel"));
-        pushButton_cancel->setGeometry(QRect(440, 330, 181, 91));
+        pushButton_cancel->setGeometry(QRect(420, 320, 191, 101));
         pushButton_cancel->setStyleSheet(QString::fromUtf8("background-color: rgb(29, 35, 35);\n"
 "background-color: rgb(9, 83, 82);\n"
 "color: rgb(255, 255, 255);"));
@@ -134,28 +131,6 @@ public:
 
         horizontalLayout->addLayout(verticalLayout);
 
-        comboBox_subject = new QComboBox(add_mark_2);
-        comboBox_subject->addItem(QString());
-        comboBox_subject->addItem(QString());
-        comboBox_subject->addItem(QString());
-        comboBox_subject->setObjectName(QString::fromUtf8("comboBox_subject"));
-        comboBox_subject->setGeometry(QRect(330, 370, 51, 34));
-        comboBox_subject->setStyleSheet(QString::fromUtf8("color: rgb(255, 255, 255);"));
-        comboBox_mark = new QComboBox(add_mark_2);
-        comboBox_mark->addItem(QString());
-        comboBox_mark->addItem(QString());
-        comboBox_mark->addItem(QString());
-        comboBox_mark->addItem(QString());
-        comboBox_mark->addItem(QString());
-        comboBox_mark->addItem(QString());
-        comboBox_mark->addItem(QString());
-        comboBox_mark->addItem(QString());
-        comboBox_mark->addItem(QString());
-        comboBox_mark->addItem(QString());
-        comboBox_mark->addItem(QString());
-        comboBox_mark->setObjectName(QString::fromUtf8("comboBox_mark"));
-        comboBox_mark->setGeometry(QRect(320, 320, 71, 34));
-        comboBox_mark->setStyleSheet(QString::fromUtf8("color: rgb(255, 255, 255);"));
 
         retranslateUi(add_mark_2);
 
@@ -173,24 +148,6 @@ public:
         label_mark->setText(QCoreApplication::translate("add_mark_2", "Mark", nullptr));
         label_comments->setText(QCoreApplication::translate("add_mark_2", "Comments", nullptr));
         lineEdit_comment->setPlaceholderText(QCoreApplication::translate("add_mark_2", "comments (optional)", nullptr));
-        comboBox_subject->setItemText(0, QCoreApplication::translate("add_mark_2", "<none>", nullptr));
-        comboBox_subject->setItemText(1, QCoreApplication::translate("add_mark_2", "Information Technologies", nullptr));
-        comboBox_subject->setItemText(2, QCoreApplication::translate("add_mark_2", "Math", nullptr));
-
-        comboBox_subject->setPlaceholderText(QCoreApplication::translate("add_mark_2", "Choose subject", nullptr));
-        comboBox_mark->setItemText(0, QCoreApplication::translate("add_mark_2", "<none>", nullptr));
-        comboBox_mark->setItemText(1, QCoreApplication::translate("add_mark_2", "1", nullptr));
-        comboBox_mark->setItemText(2, QCoreApplication::translate("add_mark_2", "2", nullptr));
-        comboBox_mark->setItemText(3, QCoreApplication::translate("add_mark_2", "3", nullptr));
-        comboBox_mark->setItemText(4, QCoreApplication::translate("add_mark_2", "4", nullptr));
-        comboBox_mark->setItemText(5, QCoreApplication::translate("add_mark_2", "5", nullptr));
-        comboBox_mark->setItemText(6, QCoreApplication::translate("add_mark_2", "6", nullptr));
-        comboBox_mark->setItemText(7, QCoreApplication::translate("add_mark_2", "7", nullptr));
-        comboBox_mark->setItemText(8, QCoreApplication::translate("add_mark_2", "8", nullptr));
-        comboBox_mark->setItemText(9, QCoreApplication::translate("add_mark_2", "9", nullptr));
-        comboBox_mark->setItemText(10, QCoreApplication::translate("add_mark_2", "10", nullptr));
-
-        comboBox_mark->setPlaceholderText(QCoreApplication::translate("add_mark_2", "Choose mark", nullptr));
     } // retranslateUi
 
 };

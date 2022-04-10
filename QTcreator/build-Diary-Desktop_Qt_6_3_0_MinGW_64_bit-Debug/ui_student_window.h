@@ -15,8 +15,6 @@
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QTextEdit>
-#include <QtWidgets/QVBoxLayout>
-#include <QtWidgets/QWidget>
 
 QT_BEGIN_NAMESPACE
 
@@ -24,8 +22,8 @@ class Ui_student_window
 {
 public:
     QPushButton *pushButton;
-    QWidget *layoutWidget;
-    QVBoxLayout *verticalLayout;
+    QTextEdit *textEdit_avg_marks;
+    QLabel *label_marks_2;
     QLabel *label_marks;
     QTextEdit *textEdit_marks;
 
@@ -44,25 +42,24 @@ public:
         pushButton->setStyleSheet(QString::fromUtf8("background-color: rgb(29, 35, 35);\n"
 "background-color: rgb(9, 83, 82);\n"
 "color: rgb(255, 255, 255);"));
-        layoutWidget = new QWidget(student_window);
-        layoutWidget->setObjectName(QString::fromUtf8("layoutWidget"));
-        layoutWidget->setGeometry(QRect(10, 10, 351, 216));
-        verticalLayout = new QVBoxLayout(layoutWidget);
-        verticalLayout->setObjectName(QString::fromUtf8("verticalLayout"));
-        verticalLayout->setContentsMargins(0, 0, 0, 0);
-        label_marks = new QLabel(layoutWidget);
+        textEdit_avg_marks = new QTextEdit(student_window);
+        textEdit_avg_marks->setObjectName(QString::fromUtf8("textEdit_avg_marks"));
+        textEdit_avg_marks->setGeometry(QRect(310, 30, 41, 192));
+        textEdit_avg_marks->setStyleSheet(QString::fromUtf8("color: rgb(255, 255, 255);"));
+        textEdit_avg_marks->setReadOnly(true);
+        label_marks_2 = new QLabel(student_window);
+        label_marks_2->setObjectName(QString::fromUtf8("label_marks_2"));
+        label_marks_2->setGeometry(QRect(310, 10, 32, 16));
+        label_marks_2->setStyleSheet(QString::fromUtf8("color: rgb(255, 255, 255);"));
+        label_marks = new QLabel(student_window);
         label_marks->setObjectName(QString::fromUtf8("label_marks"));
+        label_marks->setGeometry(QRect(11, 11, 32, 16));
         label_marks->setStyleSheet(QString::fromUtf8("color: rgb(255, 255, 255);"));
-
-        verticalLayout->addWidget(label_marks);
-
-        textEdit_marks = new QTextEdit(layoutWidget);
+        textEdit_marks = new QTextEdit(student_window);
         textEdit_marks->setObjectName(QString::fromUtf8("textEdit_marks"));
+        textEdit_marks->setGeometry(QRect(11, 30, 291, 192));
         textEdit_marks->setStyleSheet(QString::fromUtf8("color: rgb(255, 255, 255);"));
         textEdit_marks->setReadOnly(true);
-
-        verticalLayout->addWidget(textEdit_marks);
-
 
         retranslateUi(student_window);
 
@@ -73,6 +70,7 @@ public:
     {
         student_window->setWindowTitle(QCoreApplication::translate("student_window", "Dialog", nullptr));
         pushButton->setText(QCoreApplication::translate("student_window", "Exit", nullptr));
+        label_marks_2->setText(QCoreApplication::translate("student_window", "Avg.", nullptr));
         label_marks->setText(QCoreApplication::translate("student_window", "Marks", nullptr));
     } // retranslateUi
 

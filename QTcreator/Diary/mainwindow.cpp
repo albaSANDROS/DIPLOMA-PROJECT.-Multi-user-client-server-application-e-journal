@@ -52,8 +52,10 @@ void MainWindow::on_authorize_button_clicked()
 {
     close();
     QMessageBox m;
-    m.setText("How to authorize!");
-    QTimer::singleShot(1550, &m, SLOT(close()));
+    m.setText("Now you will be redirected to YANDEX authorization form. You need to confirm yourself there. After successful connection "
+              "you will get validation code. Put it in the next window of application. This code not contain your personal data or other. "
+              "This is just your identification number in our application. Don`t send this code for another persons!");
+    QTimer::singleShot(18000, &m, SLOT(close()));
     m.exec();
 
 

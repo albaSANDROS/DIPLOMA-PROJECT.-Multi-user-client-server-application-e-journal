@@ -32,6 +32,21 @@ student_window::student_window(QWidget *parent, QString full_name_st) :
       ui->textEdit_marks->append(subject + ": " + marks);
     }
 
+    //avg marks
+    question_to_db = "select avg(mark), sub_name from subject "
+                     "join condition c on subject.id = c.subject_id "
+                     "join lesson_status ls on c.lesson_status_id = ls.id "
+                     "join mark_id mi on ls.id = mi.lesson_status_id "
+                     "join student s on mi.student_id = s.id "
+                     "where mi.student_id = '" + student_id + "' "
+                     "group by sub_name";
+
+    query.exec(question_to_db);
+    while(query.next()){
+      marks = query.value(0).toString();
+      ui->textEdit_avg_marks->append(marks);
+    }
+
 }
 
 student_window::~student_window()
