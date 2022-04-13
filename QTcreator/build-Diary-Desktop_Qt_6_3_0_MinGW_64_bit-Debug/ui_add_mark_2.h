@@ -12,12 +12,9 @@
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QDialog>
-#include <QtWidgets/QHBoxLayout>
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QLineEdit>
 #include <QtWidgets/QPushButton>
-#include <QtWidgets/QVBoxLayout>
-#include <QtWidgets/QWidget>
 
 QT_BEGIN_NAMESPACE
 
@@ -27,18 +24,14 @@ public:
     QPushButton *pushButton_evaluate;
     QPushButton *pushButton_cancel;
     QLabel *label;
-    QWidget *layoutWidget;
-    QHBoxLayout *horizontalLayout;
-    QVBoxLayout *verticalLayout_2;
+    QLabel *label_mark;
     QLabel *label_students_fullname;
     QLabel *label_subject;
-    QLabel *label_mark;
     QLabel *label_comments;
-    QVBoxLayout *verticalLayout;
     QLineEdit *lineEdit_full_name;
+    QLineEdit *lineEdit_comment;
     QLineEdit *lineEdit_subjectName;
     QLineEdit *lineEdit_mark;
-    QLineEdit *lineEdit_comment;
 
     void setupUi(QDialog *add_mark_2)
     {
@@ -65,72 +58,40 @@ public:
         label->setObjectName(QString::fromUtf8("label"));
         label->setGeometry(QRect(30, 10, 581, 31));
         label->setStyleSheet(QString::fromUtf8("color: rgb(255, 255, 255);"));
-        layoutWidget = new QWidget(add_mark_2);
-        layoutWidget->setObjectName(QString::fromUtf8("layoutWidget"));
-        layoutWidget->setGeometry(QRect(30, 50, 581, 251));
-        horizontalLayout = new QHBoxLayout(layoutWidget);
-        horizontalLayout->setObjectName(QString::fromUtf8("horizontalLayout"));
-        horizontalLayout->setContentsMargins(0, 0, 0, 0);
-        verticalLayout_2 = new QVBoxLayout();
-        verticalLayout_2->setObjectName(QString::fromUtf8("verticalLayout_2"));
-        label_students_fullname = new QLabel(layoutWidget);
-        label_students_fullname->setObjectName(QString::fromUtf8("label_students_fullname"));
-        label_students_fullname->setStyleSheet(QString::fromUtf8("color: rgb(255, 255, 255);"));
-
-        verticalLayout_2->addWidget(label_students_fullname);
-
-        label_subject = new QLabel(layoutWidget);
-        label_subject->setObjectName(QString::fromUtf8("label_subject"));
-        label_subject->setStyleSheet(QString::fromUtf8("color: rgb(255, 255, 255);"));
-
-        verticalLayout_2->addWidget(label_subject);
-
-        label_mark = new QLabel(layoutWidget);
+        label_mark = new QLabel(add_mark_2);
         label_mark->setObjectName(QString::fromUtf8("label_mark"));
+        label_mark->setGeometry(QRect(32, 160, 27, 16));
         label_mark->setStyleSheet(QString::fromUtf8("color: rgb(255, 255, 255);"));
-
-        verticalLayout_2->addWidget(label_mark);
-
-        label_comments = new QLabel(layoutWidget);
+        label_students_fullname = new QLabel(add_mark_2);
+        label_students_fullname->setObjectName(QString::fromUtf8("label_students_fullname"));
+        label_students_fullname->setGeometry(QRect(32, 80, 102, 16));
+        label_students_fullname->setStyleSheet(QString::fromUtf8("color: rgb(255, 255, 255);"));
+        label_subject = new QLabel(add_mark_2);
+        label_subject->setObjectName(QString::fromUtf8("label_subject"));
+        label_subject->setGeometry(QRect(32, 120, 39, 16));
+        label_subject->setStyleSheet(QString::fromUtf8("color: rgb(255, 255, 255);"));
+        label_comments = new QLabel(add_mark_2);
         label_comments->setObjectName(QString::fromUtf8("label_comments"));
+        label_comments->setGeometry(QRect(30, 220, 59, 16));
         label_comments->setStyleSheet(QString::fromUtf8("color: rgb(255, 255, 255);"));
-
-        verticalLayout_2->addWidget(label_comments);
-
-
-        horizontalLayout->addLayout(verticalLayout_2);
-
-        verticalLayout = new QVBoxLayout();
-        verticalLayout->setObjectName(QString::fromUtf8("verticalLayout"));
-        lineEdit_full_name = new QLineEdit(layoutWidget);
+        lineEdit_full_name = new QLineEdit(add_mark_2);
         lineEdit_full_name->setObjectName(QString::fromUtf8("lineEdit_full_name"));
+        lineEdit_full_name->setGeometry(QRect(142, 80, 461, 22));
         lineEdit_full_name->setStyleSheet(QString::fromUtf8("color: rgb(255, 255, 255);"));
         lineEdit_full_name->setReadOnly(true);
-
-        verticalLayout->addWidget(lineEdit_full_name);
-
-        lineEdit_subjectName = new QLineEdit(layoutWidget);
+        lineEdit_comment = new QLineEdit(add_mark_2);
+        lineEdit_comment->setObjectName(QString::fromUtf8("lineEdit_comment"));
+        lineEdit_comment->setGeometry(QRect(142, 201, 471, 61));
+        lineEdit_comment->setStyleSheet(QString::fromUtf8("color: rgb(255, 255, 255);"));
+        lineEdit_subjectName = new QLineEdit(add_mark_2);
         lineEdit_subjectName->setObjectName(QString::fromUtf8("lineEdit_subjectName"));
+        lineEdit_subjectName->setGeometry(QRect(142, 120, 461, 22));
         lineEdit_subjectName->setStyleSheet(QString::fromUtf8("color: rgb(255, 255, 255);"));
         lineEdit_subjectName->setReadOnly(true);
-
-        verticalLayout->addWidget(lineEdit_subjectName);
-
-        lineEdit_mark = new QLineEdit(layoutWidget);
+        lineEdit_mark = new QLineEdit(add_mark_2);
         lineEdit_mark->setObjectName(QString::fromUtf8("lineEdit_mark"));
+        lineEdit_mark->setGeometry(QRect(142, 160, 461, 22));
         lineEdit_mark->setStyleSheet(QString::fromUtf8("color: rgb(255, 255, 255);"));
-
-        verticalLayout->addWidget(lineEdit_mark);
-
-        lineEdit_comment = new QLineEdit(layoutWidget);
-        lineEdit_comment->setObjectName(QString::fromUtf8("lineEdit_comment"));
-        lineEdit_comment->setStyleSheet(QString::fromUtf8("color: rgb(255, 255, 255);"));
-
-        verticalLayout->addWidget(lineEdit_comment);
-
-
-        horizontalLayout->addLayout(verticalLayout);
-
 
         retranslateUi(add_mark_2);
 
@@ -143,9 +104,9 @@ public:
         pushButton_evaluate->setText(QCoreApplication::translate("add_mark_2", "Evaluate a student", nullptr));
         pushButton_cancel->setText(QCoreApplication::translate("add_mark_2", "Cancel", nullptr));
         label->setText(QCoreApplication::translate("add_mark_2", "login", nullptr));
+        label_mark->setText(QCoreApplication::translate("add_mark_2", "Mark", nullptr));
         label_students_fullname->setText(QCoreApplication::translate("add_mark_2", "Student`s full name", nullptr));
         label_subject->setText(QCoreApplication::translate("add_mark_2", "Subject", nullptr));
-        label_mark->setText(QCoreApplication::translate("add_mark_2", "Mark", nullptr));
         label_comments->setText(QCoreApplication::translate("add_mark_2", "Comments", nullptr));
         lineEdit_comment->setPlaceholderText(QCoreApplication::translate("add_mark_2", "comments (optional)", nullptr));
     } // retranslateUi

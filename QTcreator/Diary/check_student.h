@@ -18,9 +18,9 @@ public:
 
     const QString &getLogin() const;
     void setLogin(const QString &newLogin);
-
     const QString &getFull_name_st() const;
     void setFull_name_st(const QString &newFull_name_st);
+
     QString question_to_db = "null";
     QSqlQuery query;
 private slots:

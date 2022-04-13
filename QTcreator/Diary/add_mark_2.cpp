@@ -78,11 +78,12 @@ void add_mark_2::on_pushButton_evaluate_clicked()
     int lessonID_int;
     int commentID_int;
 
+    //mark2 and mark changed. maybe problems///
 
-    QString mark2 = ui -> lineEdit_mark -> text();
+    mark = ui -> lineEdit_mark -> text();
 
     int mark_toCheck = 0;
-    mark_toCheck = mark2.toInt();
+    mark_toCheck = mark.toInt();
     if (mark_toCheck > 10 || mark_toCheck < 0){
         QMessageBox::warning(this, "Mark error", "Mark ranges are: 1..10");
     }else{
@@ -119,7 +120,7 @@ void add_mark_2::on_pushButton_evaluate_clicked()
             lessonID_int= lessonID_int + 1;
             lessonID = QString::number(lessonID_int);
 
-            question_to_db = "INSERT INTO lesson_status VALUES ('" + mark2 + "', '" + lessonID + "', '" + lessonStatus + "')";
+            question_to_db = "INSERT INTO lesson_status VALUES ('" + mark + "', '" + lessonID + "', '" + lessonStatus + "')";
             query.exec(question_to_db);
             question_to_db = "INSERT INTO mark_id VALUES ('" + student_id + "', '" + lessonID + "')";
             query.exec(question_to_db);

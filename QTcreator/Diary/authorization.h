@@ -18,14 +18,14 @@ public:
 
     const QString &getToken() const;
     void setToken(const QString &newToken);
+    const QByteArray &getToken_toUtf8() const;
+    void setToken_toUtf8(const QByteArray &newToken_toUtf8);
     QSqlQuery query;
     QString question_to_db;
     QString user_id;
-    QString user_role;
     QString full_name;
     int role_num;
-    const QByteArray &getToken_toUtf8() const;
-    void setToken_toUtf8(const QByteArray &newToken_toUtf8);
+
 
 private slots:
     void on_accept_button_clicked();

@@ -18,11 +18,11 @@ public:
 
     const QString &getLogin() const;
     void setLogin(const QString &newLogin);
+    const QString &getStudent_name() const;
+    void setStudent_name(const QString &newStudent_name);
 
     QString question_to_db = "null";
     QSqlQuery query;
-    const QString &getStudent_name() const;
-    void setStudent_name(const QString &newStudent_name);
     QString subject;
     QString sub_id;
     QString student_id;
@@ -31,7 +31,7 @@ public:
     QString commentID;
     QString lessonStatus = "yes";
     QString comment;
-    QString teacher_sub_id = "none";
+    //QString teacher_sub_id = "none";
 private slots:
 
     void on_pushButton_cancel_clicked();

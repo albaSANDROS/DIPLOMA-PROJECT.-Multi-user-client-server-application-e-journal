@@ -23,7 +23,7 @@ public:
     QLabel *label;
     QPushButton *start_lesson_button;
     QPushButton *get_data_button;
-    QPushButton *contact_info;
+    QPushButton *contact_info_button;
     QPushButton *exit_button;
 
     void setupUi(QDialog *diary_menu)
@@ -51,10 +51,10 @@ public:
         get_data_button->setStyleSheet(QString::fromUtf8("background-color: rgb(29, 35, 35);\n"
 "background-color: rgb(9, 83, 82);\n"
 "color: rgb(255, 255, 255);"));
-        contact_info = new QPushButton(diary_menu);
-        contact_info->setObjectName(QString::fromUtf8("contact_info"));
-        contact_info->setGeometry(QRect(50, 370, 121, 51));
-        contact_info->setStyleSheet(QString::fromUtf8("background-color: rgb(29, 35, 35);\n"
+        contact_info_button = new QPushButton(diary_menu);
+        contact_info_button->setObjectName(QString::fromUtf8("contact_info_button"));
+        contact_info_button->setGeometry(QRect(50, 370, 121, 51));
+        contact_info_button->setStyleSheet(QString::fromUtf8("background-color: rgb(29, 35, 35);\n"
 "background-color: rgb(9, 83, 82);\n"
 "color: rgb(255, 255, 255);"));
         exit_button = new QPushButton(diary_menu);
@@ -74,7 +74,7 @@ public:
         label->setText(QCoreApplication::translate("diary_menu", "login", nullptr));
         start_lesson_button->setText(QCoreApplication::translate("diary_menu", "Add marks", nullptr));
         get_data_button->setText(QCoreApplication::translate("diary_menu", "Get data about student", nullptr));
-        contact_info->setText(QCoreApplication::translate("diary_menu", "Support", nullptr));
+        contact_info_button->setText(QCoreApplication::translate("diary_menu", "Support", nullptr));
         exit_button->setText(QCoreApplication::translate("diary_menu", "Exit", nullptr));
         (void)diary_menu;
     } // retranslateUi

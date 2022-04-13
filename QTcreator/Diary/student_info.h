@@ -21,13 +21,12 @@ public:
 
     const QString &getFull_name_st() const;
     void setFull_name_st(const QString &newFull_name_st);
+
     QString full_name = "null";
-    //QString gender = "null";
     QString studying_group_id = "null";
     QString birth_date = "null";
     QString student_id = "null";
     QString stud_parent_id = "null";
-    QString question_to_db = "null";
     QString gr_num = "null";
     QString gr_prof= "null";
     QString note_id = "null";
@@ -37,7 +36,7 @@ public:
     QString phone_numb_parent= "null";
     QSqlQuery query_getnotes_full;
     QSqlQuery query;
-
+    QString question_to_db = "null";
 private slots:
     void on_cancel_button_clicked();
 

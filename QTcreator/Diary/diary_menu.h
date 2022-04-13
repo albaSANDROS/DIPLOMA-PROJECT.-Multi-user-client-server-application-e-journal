@@ -13,7 +13,6 @@ class diary_menu : public QDialog
 
 public:
     MainWindow mw;
-    QString auth_login = mw.getAuth_login();
     explicit diary_menu(QWidget *parent = nullptr, QString auth_login = "null");
     ~diary_menu();
     const QString &getLogin() const;
@@ -24,7 +23,7 @@ private slots:
 
     void on_exit_button_clicked();
 
-    void on_contact_info_clicked();
+    void on_contact_info_button_clicked();
 
     void on_start_lesson_button_clicked();
 

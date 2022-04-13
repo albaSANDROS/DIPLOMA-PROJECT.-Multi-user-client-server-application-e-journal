@@ -27,7 +27,7 @@ diary_menu::diary_menu(QWidget *parent, QString auth_login) :
     setFixedSize(545, 445);
 
     setLogin(auth_login);
-    ui->label->setText("Welcome back, "+auth_login);
+    ui->label->setText("Welcome back, " + auth_login);
 }
 
 diary_menu::~diary_menu()
@@ -50,7 +50,7 @@ void diary_menu::on_exit_button_clicked()
 }
 
 
-void diary_menu::on_contact_info_clicked()
+void diary_menu::on_contact_info_button_clicked()
 {
     close();
     QMessageBox m;

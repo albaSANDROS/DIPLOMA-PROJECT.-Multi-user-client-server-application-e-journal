@@ -75,10 +75,9 @@ student_info::student_info(QWidget *parent, QString login, QString full_name_st)
     query.exec(question_to_db);    
     while (query.next()) {
       note_id = query.value(0).toString();
-      //select note from notes where id = '2'
-            QString notesQuestionFinal;
-            notesQuestionFinal = "select note from notes where id = '" + note_id + "'";
-            query_getnotes_full.exec(notesQuestionFinal);
+            QString notesQuestion;
+            notesQuestion = "select note from notes where id = '" + note_id + "'";
+            query_getnotes_full.exec(notesQuestion);
             QString note;
             while (query_getnotes_full.next()){
                 note = query_getnotes_full.value(0).toString();

@@ -48,8 +48,6 @@ void authorization::setToken_toUtf8(const QByteArray &newToken_toUtf8)
 void authorization::on_accept_button_clicked()
 {
 
-
-
     setToken(ui -> token_lineEdit -> text());
 
     setToken_toUtf8(getToken().toUtf8());
@@ -64,9 +62,8 @@ void authorization::on_accept_button_clicked()
     else {
       close();
       user_id = query.value(0).toString();
-      user_role = query.value(1).toString();
+      role_num = query.value(1).toInt();
     }
-    role_num = user_role.toInt();
     if(role_num == 1){
         question_to_db = "select  full_name_t from teacher where id = '" + user_id + "'";
         query.exec(question_to_db);
@@ -105,7 +102,6 @@ void authorization::on_accept_button_clicked()
         student_window.setModal(true);
         student_window.exec();
     }
-
 
 }
 

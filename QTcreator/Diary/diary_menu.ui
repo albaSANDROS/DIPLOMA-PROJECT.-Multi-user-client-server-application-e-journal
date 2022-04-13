@@ -68,7 +68,7 @@ color: rgb(255, 255, 255);</string>
     <string>Get data about student</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="contact_info">
+  <widget class="QPushButton" name="contact_info_button">
    <property name="geometry">
     <rect>
      <x>50</x>
