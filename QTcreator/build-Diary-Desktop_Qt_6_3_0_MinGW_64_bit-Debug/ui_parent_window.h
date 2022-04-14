@@ -17,7 +17,6 @@
 #include <QtWidgets/QLineEdit>
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QTextEdit>
-#include <QtWidgets/QVBoxLayout>
 #include <QtWidgets/QWidget>
 
 QT_BEGIN_NAMESPACE
@@ -29,114 +28,104 @@ public:
     QPushButton *pushButton_cancel;
     QTextEdit *textEdit_avg_marks;
     QLabel *label_marks_2;
-    QWidget *widget;
+    QWidget *layoutWidget;
     QHBoxLayout *horizontalLayout;
     QLabel *label_studname;
     QLineEdit *lineEdit_studname;
-    QWidget *widget1;
+    QWidget *layoutWidget1;
     QHBoxLayout *horizontalLayout_2;
     QLabel *label_studclass;
     QLineEdit *lineEdit_studclass;
-    QWidget *widget2;
-    QVBoxLayout *verticalLayout;
-    QLabel *label_comments;
-    QTextEdit *textEdit_comments;
     QLabel *label_marks;
     QTextEdit *textEdit_marks;
+    QTextEdit *textEdit_comments;
+    QLabel *label_comments;
 
     void setupUi(QDialog *parent_window)
     {
         if (parent_window->objectName().isEmpty())
             parent_window->setObjectName(QString::fromUtf8("parent_window"));
-        parent_window->resize(494, 573);
         parent_window->setStyleSheet(QString::fromUtf8("\n"
 "color: rgb(255, 255, 255);\n"
 "background-color: rgb(16, 149, 148);\n"
 ""));
         pushButton_info = new QPushButton(parent_window);
         pushButton_info->setObjectName(QString::fromUtf8("pushButton_info"));
-        pushButton_info->setGeometry(QRect(50, 490, 221, 61));
+        pushButton_info->setGeometry(QRect(20, 500, 271, 61));
         pushButton_info->setStyleSheet(QString::fromUtf8("background-color: rgb(29, 35, 35);\n"
 "background-color: rgb(9, 83, 82);\n"
 "color: rgb(255, 255, 255);"));
         pushButton_cancel = new QPushButton(parent_window);
         pushButton_cancel->setObjectName(QString::fromUtf8("pushButton_cancel"));
-        pushButton_cancel->setGeometry(QRect(310, 490, 121, 61));
+        pushButton_cancel->setGeometry(QRect(340, 500, 121, 61));
         pushButton_cancel->setStyleSheet(QString::fromUtf8("background-color: rgb(29, 35, 35);\n"
 "background-color: rgb(9, 83, 82);\n"
 "color: rgb(255, 255, 255);"));
         textEdit_avg_marks = new QTextEdit(parent_window);
         textEdit_avg_marks->setObjectName(QString::fromUtf8("textEdit_avg_marks"));
-        textEdit_avg_marks->setGeometry(QRect(400, 110, 41, 157));
+        textEdit_avg_marks->setGeometry(QRect(420, 310, 41, 151));
         textEdit_avg_marks->setStyleSheet(QString::fromUtf8("color: rgb(255, 255, 255);"));
         textEdit_avg_marks->setReadOnly(true);
         label_marks_2 = new QLabel(parent_window);
         label_marks_2->setObjectName(QString::fromUtf8("label_marks_2"));
-        label_marks_2->setGeometry(QRect(400, 90, 32, 16));
+        label_marks_2->setGeometry(QRect(410, 290, 32, 16));
         label_marks_2->setStyleSheet(QString::fromUtf8("color: rgb(255, 255, 255);"));
-        widget = new QWidget(parent_window);
-        widget->setObjectName(QString::fromUtf8("widget"));
-        horizontalLayout = new QHBoxLayout(widget);
+        layoutWidget = new QWidget(parent_window);
+        layoutWidget->setObjectName(QString::fromUtf8("layoutWidget"));
+        layoutWidget->setGeometry(QRect(10, 13, 451, 31));
+        horizontalLayout = new QHBoxLayout(layoutWidget);
         horizontalLayout->setObjectName(QString::fromUtf8("horizontalLayout"));
         horizontalLayout->setContentsMargins(0, 0, 0, 0);
-        label_studname = new QLabel(widget);
+        label_studname = new QLabel(layoutWidget);
         label_studname->setObjectName(QString::fromUtf8("label_studname"));
         label_studname->setStyleSheet(QString::fromUtf8("color: rgb(255, 255, 255);"));
 
         horizontalLayout->addWidget(label_studname);
 
-        lineEdit_studname = new QLineEdit(widget);
+        lineEdit_studname = new QLineEdit(layoutWidget);
         lineEdit_studname->setObjectName(QString::fromUtf8("lineEdit_studname"));
         lineEdit_studname->setStyleSheet(QString::fromUtf8("color: rgb(255, 255, 255);"));
         lineEdit_studname->setReadOnly(true);
 
         horizontalLayout->addWidget(lineEdit_studname);
 
-        widget1 = new QWidget(parent_window);
-        widget1->setObjectName(QString::fromUtf8("widget1"));
-        horizontalLayout_2 = new QHBoxLayout(widget1);
+        layoutWidget1 = new QWidget(parent_window);
+        layoutWidget1->setObjectName(QString::fromUtf8("layoutWidget1"));
+        layoutWidget1->setGeometry(QRect(10, 50, 451, 31));
+        horizontalLayout_2 = new QHBoxLayout(layoutWidget1);
         horizontalLayout_2->setObjectName(QString::fromUtf8("horizontalLayout_2"));
         horizontalLayout_2->setContentsMargins(0, 0, 0, 0);
-        label_studclass = new QLabel(widget1);
+        label_studclass = new QLabel(layoutWidget1);
         label_studclass->setObjectName(QString::fromUtf8("label_studclass"));
         label_studclass->setStyleSheet(QString::fromUtf8("color: rgb(255, 255, 255);"));
 
         horizontalLayout_2->addWidget(label_studclass);
 
-        lineEdit_studclass = new QLineEdit(widget1);
+        lineEdit_studclass = new QLineEdit(layoutWidget1);
         lineEdit_studclass->setObjectName(QString::fromUtf8("lineEdit_studclass"));
         lineEdit_studclass->setStyleSheet(QString::fromUtf8("color: rgb(255, 255, 255);"));
         lineEdit_studclass->setReadOnly(true);
 
         horizontalLayout_2->addWidget(lineEdit_studclass);
 
-        widget2 = new QWidget(parent_window);
-        widget2->setObjectName(QString::fromUtf8("widget2"));
-        verticalLayout = new QVBoxLayout(widget2);
-        verticalLayout->setObjectName(QString::fromUtf8("verticalLayout"));
-        verticalLayout->setContentsMargins(0, 0, 0, 0);
-        label_comments = new QLabel(widget2);
-        label_comments->setObjectName(QString::fromUtf8("label_comments"));
-        label_comments->setStyleSheet(QString::fromUtf8("color: rgb(255, 255, 255);"));
-
-        verticalLayout->addWidget(label_comments);
-
-        textEdit_comments = new QTextEdit(widget2);
-        textEdit_comments->setObjectName(QString::fromUtf8("textEdit_comments"));
-        textEdit_comments->setStyleSheet(QString::fromUtf8("color: rgb(255, 255, 255);"));
-        textEdit_comments->setReadOnly(true);
-
-        verticalLayout->addWidget(textEdit_comments);
-
         label_marks = new QLabel(parent_window);
         label_marks->setObjectName(QString::fromUtf8("label_marks"));
-        label_marks->setGeometry(QRect(53, 93, 32, 16));
+        label_marks->setGeometry(QRect(20, 290, 32, 16));
         label_marks->setStyleSheet(QString::fromUtf8("color: rgb(255, 255, 255);"));
         textEdit_marks = new QTextEdit(parent_window);
         textEdit_marks->setObjectName(QString::fromUtf8("textEdit_marks"));
-        textEdit_marks->setGeometry(QRect(53, 110, 341, 157));
+        textEdit_marks->setGeometry(QRect(20, 310, 381, 151));
         textEdit_marks->setStyleSheet(QString::fromUtf8("color: rgb(255, 255, 255);"));
         textEdit_marks->setReadOnly(true);
+        textEdit_comments = new QTextEdit(parent_window);
+        textEdit_comments->setObjectName(QString::fromUtf8("textEdit_comments"));
+        textEdit_comments->setGeometry(QRect(20, 120, 441, 161));
+        textEdit_comments->setStyleSheet(QString::fromUtf8("color: rgb(255, 255, 255);"));
+        textEdit_comments->setReadOnly(true);
+        label_comments = new QLabel(parent_window);
+        label_comments->setObjectName(QString::fromUtf8("label_comments"));
+        label_comments->setGeometry(QRect(10, 90, 71, 31));
+        label_comments->setStyleSheet(QString::fromUtf8("color: rgb(255, 255, 255);"));
 
         retranslateUi(parent_window);
 
@@ -151,8 +140,8 @@ public:
         label_marks_2->setText(QCoreApplication::translate("parent_window", "Avg.", nullptr));
         label_studname->setText(QCoreApplication::translate("parent_window", "Student name", nullptr));
         label_studclass->setText(QCoreApplication::translate("parent_window", "Student class  ", nullptr));
-        label_comments->setText(QCoreApplication::translate("parent_window", "Comments", nullptr));
         label_marks->setText(QCoreApplication::translate("parent_window", "Marks", nullptr));
+        label_comments->setText(QCoreApplication::translate("parent_window", "Comments", nullptr));
     } // retranslateUi
 
 };

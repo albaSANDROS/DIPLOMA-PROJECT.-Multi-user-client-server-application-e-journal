@@ -2,14 +2,6 @@
 <ui version="4.0">
  <class>parent_window</class>
  <widget class="QDialog" name="parent_window">
-  <property name="geometry">
-   <rect>
-    <x>0</x>
-    <y>0</y>
-    <width>494</width>
-    <height>573</height>
-   </rect>
-  </property>
   <property name="windowTitle">
    <string>Dialog</string>
   </property>
@@ -22,9 +14,9 @@ background-color: rgb(16, 149, 148);
   <widget class="QPushButton" name="pushButton_info">
    <property name="geometry">
     <rect>
-     <x>50</x>
-     <y>490</y>
-     <width>221</width>
+     <x>20</x>
+     <y>500</y>
+     <width>271</width>
      <height>61</height>
     </rect>
    </property>
@@ -40,8 +32,8 @@ color: rgb(255, 255, 255);</string>
   <widget class="QPushButton" name="pushButton_cancel">
    <property name="geometry">
     <rect>
-     <x>310</x>
-     <y>490</y>
+     <x>340</x>
+     <y>500</y>
      <width>121</width>
      <height>61</height>
     </rect>
@@ -58,10 +50,10 @@ color: rgb(255, 255, 255);</string>
   <widget class="QTextEdit" name="textEdit_avg_marks">
    <property name="geometry">
     <rect>
-     <x>400</x>
-     <y>110</y>
+     <x>420</x>
+     <y>310</y>
      <width>41</width>
-     <height>157</height>
+     <height>151</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -74,8 +66,8 @@ color: rgb(255, 255, 255);</string>
   <widget class="QLabel" name="label_marks_2">
    <property name="geometry">
     <rect>
-     <x>400</x>
-     <y>90</y>
+     <x>410</x>
+     <y>290</y>
      <width>32</width>
      <height>16</height>
     </rect>
@@ -87,7 +79,15 @@ color: rgb(255, 255, 255);</string>
     <string>Avg.</string>
    </property>
   </widget>
-  <widget class="QWidget" name="">
+  <widget class="QWidget" name="layoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>13</y>
+     <width>451</width>
+     <height>31</height>
+    </rect>
+   </property>
    <layout class="QHBoxLayout" name="horizontalLayout">
     <item>
      <widget class="QLabel" name="label_studname">
@@ -111,7 +111,15 @@ color: rgb(255, 255, 255);</string>
     </item>
    </layout>
   </widget>
-  <widget class="QWidget" name="">
+  <widget class="QWidget" name="layoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>50</y>
+     <width>451</width>
+     <height>31</height>
+    </rect>
+   </property>
    <layout class="QHBoxLayout" name="horizontalLayout_2">
     <item>
      <widget class="QLabel" name="label_studclass">
@@ -135,35 +143,11 @@ color: rgb(255, 255, 255);</string>
     </item>
    </layout>
   </widget>
-  <widget class="QWidget" name="">
-   <layout class="QVBoxLayout" name="verticalLayout">
-    <item>
-     <widget class="QLabel" name="label_comments">
-      <property name="styleSheet">
-       <string notr="true">color: rgb(255, 255, 255);</string>
-      </property>
-      <property name="text">
-       <string>Comments</string>
-      </property>
-     </widget>
-    </item>
-    <item>
-     <widget class="QTextEdit" name="textEdit_comments">
-      <property name="styleSheet">
-       <string notr="true">color: rgb(255, 255, 255);</string>
-      </property>
-      <property name="readOnly">
-       <bool>true</bool>
-      </property>
-     </widget>
-    </item>
-   </layout>
-  </widget>
   <widget class="QLabel" name="label_marks">
    <property name="geometry">
     <rect>
-     <x>53</x>
-     <y>93</y>
+     <x>20</x>
+     <y>290</y>
      <width>32</width>
      <height>16</height>
     </rect>
@@ -178,10 +162,10 @@ color: rgb(255, 255, 255);</string>
   <widget class="QTextEdit" name="textEdit_marks">
    <property name="geometry">
     <rect>
-     <x>53</x>
-     <y>110</y>
-     <width>341</width>
-     <height>157</height>
+     <x>20</x>
+     <y>310</y>
+     <width>381</width>
+     <height>151</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -189,6 +173,38 @@ color: rgb(255, 255, 255);</string>
    </property>
    <property name="readOnly">
     <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QTextEdit" name="textEdit_comments">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>120</y>
+     <width>441</width>
+     <height>161</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(255, 255, 255);</string>
+   </property>
+   <property name="readOnly">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_comments">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>90</y>
+     <width>71</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(255, 255, 255);</string>
+   </property>
+   <property name="text">
+    <string>Comments</string>
    </property>
   </widget>
  </widget>

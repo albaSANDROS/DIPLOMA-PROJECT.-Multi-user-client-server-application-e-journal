@@ -20,14 +20,18 @@ public:
     const QString &getFull_name_parent() const;
     void setFull_name_parent(const QString &newFull_name_parent);
 
-    QString question_to_db;
+    QSqlQuery query_getnotes_full;
     QSqlQuery query;
+    QString question_to_db;
     QString parent_id;
     QString full_name_st;
     QString studying_group_id;
     QString student_id;
     QString gr_num;
     QString gr_prof;
+    QString note_id = "null";
+    QString marks = "null";
+    QString subject = "null";
 private slots:
     void on_pushButton_cancel_clicked();
 
@@ -36,10 +40,7 @@ private slots:
 private:
     Ui::parent_window *ui;
     QString full_name_parent = "null";
-    QSqlQuery query_getnotes_full;
-    QString note_id = "null";
-    QString marks = "null";
-    QString subject = "null";
+
 };
 
 #endif // PARENT_WINDOW_H

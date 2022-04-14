@@ -24,9 +24,9 @@ public:
     int getClass_num() const;
     void setClass_num(int newClass_num);
 
-
     QString question_to_db = "null";
     QSqlQuery query;
+
 private slots:
     void on_cancel_button_clicked();
 
@@ -37,6 +37,7 @@ private:
     QString login = "login";
     QString class_letter = "none";
     int class_num = 0;
+
 };
 
 #endif // CHECK_CLASS_H
