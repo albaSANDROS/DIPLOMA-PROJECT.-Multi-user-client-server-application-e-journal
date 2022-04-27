@@ -19,7 +19,6 @@ add_mark_2::add_mark_2(QWidget *parent, QString login, QString student_name) :
         exit(2);
     }
 
-
     ui->label->setText("Welcome back, " + getLogin());
     setStudent_name(student_name);
     ui->lineEdit_full_name->setText(student_name);
@@ -88,9 +87,10 @@ void add_mark_2::on_pushButton_evaluate_clicked()
     mark = ui -> lineEdit_mark -> text();
 
     int mark_toCheck = 0;
-    mark_toCheck = mark.toInt();
-    if (mark_toCheck > 10 || mark_toCheck < 0){
-        QMessageBox::warning(this, "Mark error", "Mark ranges are: 1..10");
+    mark_toCheck = mark.toInt(0 ,10);
+
+    if (mark_toCheck > 10 || mark_toCheck <= 0){
+        QMessageBox::warning(this, "Mark error", "You can put only integer marks in range: 1..10");
     }else{
 
         QMessageBox::StandardButton reply;
@@ -105,7 +105,7 @@ void add_mark_2::on_pushButton_evaluate_clicked()
         student_id = query.value(0).toString();
 
         //did user can place marks for this subject
-        question_to_db = "select * from studying where subject_id = '" + sub_id + "' and student_id = '" + student_id + "';";
+        question_to_db = "select * from studying where subject_id = '" + sub_id + "' and student_id = '" + student_id + "'";
         query.exec(question_to_db);
         query.next();
         QString student_id_check = query.value(0).toString();

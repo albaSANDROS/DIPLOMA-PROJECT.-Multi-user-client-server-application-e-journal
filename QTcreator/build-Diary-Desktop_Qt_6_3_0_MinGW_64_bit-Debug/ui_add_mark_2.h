@@ -100,7 +100,7 @@ public:
 
     void retranslateUi(QDialog *add_mark_2)
     {
-        add_mark_2->setWindowTitle(QCoreApplication::translate("add_mark_2", "Dialog", nullptr));
+        add_mark_2->setWindowTitle(QCoreApplication::translate("add_mark_2", "Placing mark..", nullptr));
         pushButton_evaluate->setText(QCoreApplication::translate("add_mark_2", "Evaluate a student", nullptr));
         pushButton_cancel->setText(QCoreApplication::translate("add_mark_2", "Cancel", nullptr));
         label->setText(QCoreApplication::translate("add_mark_2", "login", nullptr));

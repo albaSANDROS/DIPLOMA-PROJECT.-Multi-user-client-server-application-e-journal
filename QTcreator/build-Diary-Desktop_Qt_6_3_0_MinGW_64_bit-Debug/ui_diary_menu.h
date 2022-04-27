@@ -71,12 +71,12 @@ public:
 
     void retranslateUi(QDialog *diary_menu)
     {
+        diary_menu->setWindowTitle(QCoreApplication::translate("diary_menu", "Diary menu", nullptr));
         label->setText(QCoreApplication::translate("diary_menu", "login", nullptr));
         start_lesson_button->setText(QCoreApplication::translate("diary_menu", "Add marks", nullptr));
         get_data_button->setText(QCoreApplication::translate("diary_menu", "Get data about student", nullptr));
         contact_info_button->setText(QCoreApplication::translate("diary_menu", "Support", nullptr));
         exit_button->setText(QCoreApplication::translate("diary_menu", "Exit", nullptr));
-        (void)diary_menu;
     } // retranslateUi
 
 };

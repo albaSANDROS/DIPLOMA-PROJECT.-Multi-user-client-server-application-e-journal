@@ -52,7 +52,7 @@ public:
 
     void retranslateUi(QDialog *class_info)
     {
-        class_info->setWindowTitle(QCoreApplication::translate("class_info", "Dialog", nullptr));
+        class_info->setWindowTitle(QCoreApplication::translate("class_info", "Current info about class", nullptr));
         cancel_button->setText(QCoreApplication::translate("class_info", "Cancel", nullptr));
     } // retranslateUi
 

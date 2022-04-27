@@ -2,8 +2,16 @@
 <ui version="4.0">
  <class>parent_window</class>
  <widget class="QDialog" name="parent_window">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>471</width>
+    <height>574</height>
+   </rect>
+  </property>
   <property name="windowTitle">
-   <string>Dialog</string>
+   <string>Current info about your children</string>
   </property>
   <property name="styleSheet">
    <string notr="true">

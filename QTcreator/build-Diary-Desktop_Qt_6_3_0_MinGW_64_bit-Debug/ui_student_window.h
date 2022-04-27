@@ -68,7 +68,7 @@ public:
 
     void retranslateUi(QDialog *student_window)
     {
-        student_window->setWindowTitle(QCoreApplication::translate("student_window", "Dialog", nullptr));
+        student_window->setWindowTitle(QCoreApplication::translate("student_window", "Your current marks", nullptr));
         pushButton->setText(QCoreApplication::translate("student_window", "Exit", nullptr));
         label_marks_2->setText(QCoreApplication::translate("student_window", "Avg.", nullptr));
         label_marks->setText(QCoreApplication::translate("student_window", "Marks", nullptr));

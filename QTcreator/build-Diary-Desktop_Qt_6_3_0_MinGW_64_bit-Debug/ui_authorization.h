@@ -58,7 +58,7 @@ public:
 
     void retranslateUi(QDialog *authorization)
     {
-        authorization->setWindowTitle(QCoreApplication::translate("authorization", "Dialog", nullptr));
+        authorization->setWindowTitle(QCoreApplication::translate("authorization", "Confirmation", nullptr));
         accept_button->setText(QCoreApplication::translate("authorization", "Accept", nullptr));
         token_lineEdit->setInputMask(QString());
         token_lineEdit->setText(QString());

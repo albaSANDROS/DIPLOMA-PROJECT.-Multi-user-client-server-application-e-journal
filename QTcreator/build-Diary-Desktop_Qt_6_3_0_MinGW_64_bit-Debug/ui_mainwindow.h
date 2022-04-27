@@ -52,7 +52,7 @@ public:
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName(QString::fromUtf8("menubar"));
-        menubar->setGeometry(QRect(0, 0, 778, 34));
+        menubar->setGeometry(QRect(0, 0, 778, 22));
         MainWindow->setMenuBar(menubar);
         statusbar = new QStatusBar(MainWindow);
         statusbar->setObjectName(QString::fromUtf8("statusbar"));
@@ -65,7 +65,7 @@ public:
 
     void retranslateUi(QMainWindow *MainWindow)
     {
-        MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "MainWindow", nullptr));
+        MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "Welcome", nullptr));
         groupBox->setTitle(QCoreApplication::translate("MainWindow", "Authorization", nullptr));
         authorize_button->setText(QCoreApplication::translate("MainWindow", "Authorize", nullptr));
     } // retranslateUi

@@ -67,7 +67,7 @@ public:
 
     void retranslateUi(QDialog *get_data)
     {
-        get_data->setWindowTitle(QCoreApplication::translate("get_data", "Dialog", nullptr));
+        get_data->setWindowTitle(QCoreApplication::translate("get_data", "Diary menu", nullptr));
         label->setText(QCoreApplication::translate("get_data", "login", nullptr));
         get_back_button->setText(QCoreApplication::translate("get_data", "Go to menu", nullptr));
         classes_info_button->setText(QCoreApplication::translate("get_data", "Data about class", nullptr));

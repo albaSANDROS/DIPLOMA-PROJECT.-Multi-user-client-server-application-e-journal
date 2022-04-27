@@ -7,7 +7,6 @@
 #include <QtSql/QSqlDatabase>
 #include <QTimer>
 
-
 inline bool createConnection(QString role, QString password){
 
     QSqlDatabase db = QSqlDatabase::addDatabase("QPSQL");
@@ -27,6 +26,7 @@ inline bool createConnection(QString role, QString password){
     }
 
 }
+
 
 inline bool checkConnection(){
 

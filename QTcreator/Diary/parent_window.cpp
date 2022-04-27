@@ -40,7 +40,7 @@ parent_window::parent_window(QWidget *parent, QString login) :
     }
 
     //getting mark
-    question_to_db = "select string_agg(mark::text, ',' order by mark::text asc) as mark , sub_name from subject "
+    question_to_db = "select string_agg(mark::text, ', ' order by c.lesson_status_id ) as mark , sub_name from subject "
                         "join condition c on subject.id = c.subject_id "
                         "join lesson_status ls on c.lesson_status_id = ls.id "
                         "join mark_id mi on ls.id = mi.lesson_status_id "
@@ -56,7 +56,7 @@ parent_window::parent_window(QWidget *parent, QString login) :
     }
 
     //avg marks
-    question_to_db = "select avg(mark), sub_name from subject "
+    question_to_db = "select round(avg(mark), 2), sub_name from subject "
                      "join condition c on subject.id = c.subject_id "
                      "join lesson_status ls on c.lesson_status_id = ls.id "
                      "join mark_id mi on ls.id = mi.lesson_status_id "

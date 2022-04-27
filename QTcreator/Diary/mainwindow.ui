@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>Welcome</string>
   </property>
   <property name="styleSheet">
    <string notr="true">color: rgb(16, 149, 148);
@@ -60,7 +60,7 @@ background-color: rgb(9, 83, 82);</string>
      <x>0</x>
      <y>0</y>
      <width>778</width>
-     <height>34</height>
+     <height>22</height>
     </rect>
    </property>
   </widget>

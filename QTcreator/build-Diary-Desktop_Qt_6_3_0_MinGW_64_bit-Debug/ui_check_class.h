@@ -115,7 +115,7 @@ public:
 
     void retranslateUi(QDialog *check_class)
     {
-        check_class->setWindowTitle(QCoreApplication::translate("check_class", "Dialog", nullptr));
+        check_class->setWindowTitle(QCoreApplication::translate("check_class", "Choose class", nullptr));
         find_button->setText(QCoreApplication::translate("check_class", "Find", nullptr));
         cancel_button->setText(QCoreApplication::translate("check_class", "Cancel", nullptr));
         label->setText(QCoreApplication::translate("check_class", "Please, input class info", nullptr));

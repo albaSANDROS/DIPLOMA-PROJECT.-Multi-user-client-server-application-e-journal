@@ -247,7 +247,7 @@ public:
 
     void retranslateUi(QDialog *student_info)
     {
-        student_info->setWindowTitle(QCoreApplication::translate("student_info", "Dialog", nullptr));
+        student_info->setWindowTitle(QCoreApplication::translate("student_info", "Info about student", nullptr));
         cancel_button->setText(QCoreApplication::translate("student_info", "Cancel", nullptr));
         label_5->setText(QString());
         comments_label->setText(QCoreApplication::translate("student_info", "Comments", nullptr));

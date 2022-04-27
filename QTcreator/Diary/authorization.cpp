@@ -57,7 +57,7 @@ void authorization::on_accept_button_clicked()
     question_to_db = "select user_id, role_id from users where token = '" + getToken() +"'";
     query.exec(question_to_db);
     if (!query.next()) {
-        QMessageBox::warning(this, "User name", "This user is not presented");
+        QMessageBox::warning(this, "Authorization", "This user is not presented in DataBase");
     }
     else {
       close();

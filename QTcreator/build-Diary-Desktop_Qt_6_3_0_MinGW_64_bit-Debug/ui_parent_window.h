@@ -45,6 +45,7 @@ public:
     {
         if (parent_window->objectName().isEmpty())
             parent_window->setObjectName(QString::fromUtf8("parent_window"));
+        parent_window->resize(471, 574);
         parent_window->setStyleSheet(QString::fromUtf8("\n"
 "color: rgb(255, 255, 255);\n"
 "background-color: rgb(16, 149, 148);\n"
@@ -134,7 +135,7 @@ public:
 
     void retranslateUi(QDialog *parent_window)
     {
-        parent_window->setWindowTitle(QCoreApplication::translate("parent_window", "Dialog", nullptr));
+        parent_window->setWindowTitle(QCoreApplication::translate("parent_window", "Current info about your children", nullptr));
         pushButton_info->setText(QCoreApplication::translate("parent_window", "Contact informaiton", nullptr));
         pushButton_cancel->setText(QCoreApplication::translate("parent_window", "Exit", nullptr));
         label_marks_2->setText(QCoreApplication::translate("parent_window", "Avg.", nullptr));
