@@ -3,6 +3,7 @@
 #include <diary_menu.h>
 #include <check_class.h>
 #include <check_student.h>
+#include "connection.h"
 
 get_data::get_data(QWidget *parent, QString login) :
     QDialog(parent),
@@ -13,6 +14,11 @@ get_data::get_data(QWidget *parent, QString login) :
 
     setWindowFlags(Qt::Dialog);
     setFixedSize(540, 428);
+
+    if(!checkConnection())
+    {
+        exit(2);
+    }
 
     ui->label->setText("Welcome back, "+login);
 }

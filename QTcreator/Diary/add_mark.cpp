@@ -3,6 +3,7 @@
 #include "diary_menu.h"
 #include "add_mark_2.h"
 #include "QMessageBox"
+#include "connection.h"
 
 add_mark::add_mark(QWidget *parent, QString login) :
     QDialog(parent),
@@ -13,6 +14,11 @@ add_mark::add_mark(QWidget *parent, QString login) :
 
     setWindowFlags(Qt::Dialog);
     setFixedSize(498, 332);
+
+    if(!checkConnection())
+    {
+        exit(2);
+    }
 
     ui->label->setText("Welcome back, "+getLogin());
 }
@@ -53,19 +59,19 @@ void add_mark::on_back_pushButton_clicked()
 
 void add_mark::on_next_pushButton_clicked()
 {
-    setStudent_fullname(ui->student_fullname->text());
-    question_to_db = "select id from student where full_name_st = '" + getStudent_fullname() + "'";
-    query.exec(question_to_db);
-    if (!query.next()) {
+setStudent_fullname(ui->student_fullname->text());
+question_to_db = "select id from student where full_name_st = '" + getStudent_fullname() + "'";
+query.exec(question_to_db);
+if (!query.next()) {
 
-        QMessageBox::warning(this, "Student Full Name", "This student is not presented in DataBases");
+    QMessageBox::warning(this, "Student Full Name", "This student is not presented in DataBases");
+}
+else{
+
+    close();
+    add_mark_2 mark2_window(this, getLogin(), getStudent_fullname());
+    mark2_window.setModal(true);
+    mark2_window.exec();
     }
-    else{
-
-        close();
-        add_mark_2 mark2_window(this, getLogin(), getStudent_fullname());
-        mark2_window.setModal(true);
-        mark2_window.exec();
-        }
 }
 

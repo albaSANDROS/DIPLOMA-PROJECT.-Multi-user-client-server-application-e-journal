@@ -3,7 +3,7 @@
 #include "add_mark.h"
 #include <QMessageBox>
 #include "diary_menu.h"
-
+#include "connection.h"
 add_mark_2::add_mark_2(QWidget *parent, QString login, QString student_name) :
     QDialog(parent),
     ui(new Ui::add_mark_2)
@@ -13,6 +13,12 @@ add_mark_2::add_mark_2(QWidget *parent, QString login, QString student_name) :
 
     setWindowFlags(Qt::Dialog);
     setFixedSize(663, 442);
+
+    if(!checkConnection())
+    {
+        exit(2);
+    }
+
 
     ui->label->setText("Welcome back, " + getLogin());
     setStudent_name(student_name);
@@ -33,7 +39,6 @@ add_mark_2::add_mark_2(QWidget *parent, QString login, QString student_name) :
     }else{
         subject = query.value(0).toString();
     }
-
 
     ui->lineEdit_subjectName->setText(subject);
 }

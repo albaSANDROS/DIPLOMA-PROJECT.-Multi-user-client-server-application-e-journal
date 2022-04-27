@@ -18,12 +18,14 @@ parent_window::parent_window(QWidget *parent, QString login) :
     question_to_db = "select id from stud_parent WHERE full_name_parent = '" + getFull_name_parent() + "'";
     query.exec(question_to_db);
     while (query.next()) {
+
       parent_id = query.value(0).toString();
     }
-    //asking for students data
+
     question_to_db = "select full_name_st, studying_group_id, id from student where stud_parent_id = '" + parent_id + "'";
     query.exec(question_to_db);
     while (query.next()) {
+
       full_name_st = query.value(0).toString();
       studying_group_id = query.value(1).toString();
       student_id = query.value(2).toString();
@@ -32,8 +34,9 @@ parent_window::parent_window(QWidget *parent, QString login) :
     question_to_db = "select num, profile from studying_group where id = '" + studying_group_id + "'";
     query.exec(question_to_db);
     while (query.next()) {
-      gr_num = query.value(0).toString();    //10
-      gr_prof= query.value(1).toString();    //A
+
+      gr_num = query.value(0).toString();
+      gr_prof= query.value(1).toString();
     }
 
     //getting mark
@@ -46,6 +49,7 @@ parent_window::parent_window(QWidget *parent, QString login) :
                         "group by sub_name ";
     query.exec(question_to_db);
     while (query.next()) {
+
       marks = query.value(0).toString();
       subject = query.value(1).toString();
       ui->textEdit_marks->append(subject + ": " + marks);
@@ -62,6 +66,7 @@ parent_window::parent_window(QWidget *parent, QString login) :
 
     query.exec(question_to_db);
     while(query.next()){
+
       marks = query.value(0).toString();
       ui->textEdit_avg_marks->append(marks);
     }

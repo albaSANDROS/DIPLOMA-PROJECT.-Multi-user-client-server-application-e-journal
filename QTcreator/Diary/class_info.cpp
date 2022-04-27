@@ -20,7 +20,10 @@ class_info::class_info(QWidget *parent, QString login, QString class_letter, int
     setWindowFlags(Qt::Dialog);
     setFixedSize(426, 366);
 
-
+    if(!checkConnection())
+    {
+        exit(2);
+    }
 
     //configuring info message
     if (getClass_num() == 0 && getClass_letter() == ""){

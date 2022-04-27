@@ -6,6 +6,7 @@
 #include <QMessageBox>
 #include <QTimer>
 #include "add_mark.h"
+#include "connection.h"
 
 const QString &diary_menu::getLogin() const
 {
@@ -27,6 +28,12 @@ diary_menu::diary_menu(QWidget *parent, QString auth_login) :
     setFixedSize(545, 445);
 
     setLogin(auth_login);
+
+    if(!checkConnection())
+    {
+        exit(2);
+    }
+
     ui->label->setText("Welcome back, " + auth_login);
 }
 

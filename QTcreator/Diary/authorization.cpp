@@ -64,6 +64,7 @@ void authorization::on_accept_button_clicked()
       user_id = query.value(0).toString();
       role_num = query.value(1).toInt();
     }
+
     if(role_num == 1){
         question_to_db = "select  full_name_t from teacher where id = '" + user_id + "'";
         query.exec(question_to_db);
@@ -73,7 +74,7 @@ void authorization::on_accept_button_clicked()
 
         if(!createConnection("teacher","teacherDBpassword"))
         {
-            exit(2);    //https://docs.microsoft.com/ru-ru/sql/relational-databases/errors-events/database-engine-events-and-errors?view=sql-server-ver15
+            exit(2);
         }
 
         diary_menu menu_window(this, full_name);

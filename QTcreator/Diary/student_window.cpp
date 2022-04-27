@@ -15,8 +15,10 @@ student_window::student_window(QWidget *parent, QString full_name_st) :
     question_to_db = "select id from student where full_name_st='" + getFull_name_st() + "'";
     query.exec(question_to_db);
     while (query.next()) {
+
       student_id = query.value(0).toString();
     }
+
     //getting marks
     question_to_db = "select string_agg(mark::text, ',' order by mark::text asc) as mark , sub_name from subject "
                         "join condition c on subject.id = c.subject_id "
@@ -25,9 +27,11 @@ student_window::student_window(QWidget *parent, QString full_name_st) :
                         "join student s on mi.student_id = s.id "
                         "where mi.student_id = '" + student_id + "' "
                         "group by sub_name ";
+
     query.exec(question_to_db);
     while (query.next()) {
-      marks = query.value(0).toString();
+
+        marks = query.value(0).toString();
       subject = query.value(1).toString();
       ui->textEdit_marks->append(subject + ": " + marks);
     }
@@ -43,6 +47,7 @@ student_window::student_window(QWidget *parent, QString full_name_st) :
 
     query.exec(question_to_db);
     while(query.next()){
+
       marks = query.value(0).toString();
       ui->textEdit_avg_marks->append(marks);
     }

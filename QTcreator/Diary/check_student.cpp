@@ -3,6 +3,8 @@
 #include <get_data.h>
 #include "student_info.h"
 #include <QMessageBox>
+#include "connection.h"
+
 check_student::check_student(QWidget *parent, QString login) :
     QDialog(parent),
     ui(new Ui::check_student)
@@ -12,6 +14,12 @@ check_student::check_student(QWidget *parent, QString login) :
 
     setWindowFlags(Qt::Dialog);
     setFixedSize(428, 312);
+
+    if(!checkConnection())
+    {
+        exit(2);
+    }
+
 
 }
 
