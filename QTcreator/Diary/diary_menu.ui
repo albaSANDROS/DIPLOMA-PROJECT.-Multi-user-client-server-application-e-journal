@@ -28,6 +28,14 @@ background-color: rgb(16, 149, 148);
      <height>31</height>
     </rect>
    </property>
+   <property name="font">
+    <font>
+     <family>Cambria</family>
+     <pointsize>13</pointsize>
+     <italic>true</italic>
+     <bold>true</bold>
+    </font>
+   </property>
    <property name="styleSheet">
     <string notr="true">color: rgb(255, 255, 255);</string>
    </property>
@@ -43,6 +51,17 @@ background-color: rgb(16, 149, 148);
      <width>441</width>
      <height>131</height>
     </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Cambria</family>
+     <pointsize>20</pointsize>
+     <italic>true</italic>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="cursor">
+    <cursorShape>OpenHandCursor</cursorShape>
    </property>
    <property name="styleSheet">
     <string notr="true">background-color: rgb(29, 35, 35);
@@ -62,6 +81,17 @@ color: rgb(255, 255, 255);</string>
      <height>131</height>
     </rect>
    </property>
+   <property name="font">
+    <font>
+     <family>Cambria</family>
+     <pointsize>20</pointsize>
+     <italic>true</italic>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="cursor">
+    <cursorShape>OpenHandCursor</cursorShape>
+   </property>
    <property name="styleSheet">
     <string notr="true">background-color: rgb(29, 35, 35);
 background-color: rgb(9, 83, 82);
@@ -80,6 +110,17 @@ color: rgb(255, 255, 255);</string>
      <height>51</height>
     </rect>
    </property>
+   <property name="font">
+    <font>
+     <family>Cambria</family>
+     <pointsize>15</pointsize>
+     <italic>true</italic>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="cursor">
+    <cursorShape>OpenHandCursor</cursorShape>
+   </property>
    <property name="styleSheet">
     <string notr="true">background-color: rgb(29, 35, 35);
 background-color: rgb(9, 83, 82);
@@ -97,6 +138,17 @@ color: rgb(255, 255, 255);</string>
      <width>121</width>
      <height>51</height>
     </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Cambria</family>
+     <pointsize>15</pointsize>
+     <italic>true</italic>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="cursor">
+    <cursorShape>OpenHandCursor</cursorShape>
    </property>
    <property name="styleSheet">
     <string notr="true">background-color: rgb(29, 35, 35);

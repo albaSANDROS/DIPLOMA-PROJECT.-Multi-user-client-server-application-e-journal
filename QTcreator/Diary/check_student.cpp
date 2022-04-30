@@ -52,7 +52,7 @@ void check_student::setFull_name_st(const QString &newFull_name_st)
 void check_student::on_cancel_button_clicked()
 {
     close();
-    get_data menu_window(this, getLogin());
+    get_data menu_window(nullptr, getLogin());
     menu_window.setModal(true);
     menu_window.exec();
 }
@@ -64,11 +64,12 @@ void check_student::on_find_button_clicked()
     if (getFull_name_st() != ""){
         question_to_db = "select id from student where full_name_st = '" + getFull_name_st() + "'";
         query.exec(question_to_db);
-        if (!query.next()) {           
+        if (!query.next()) {
+
             QMessageBox::warning(this, "Student Full Name", "This student is not presented in DataBases");
         }else{
         close();
-        student_info student_window(this, getLogin(), getFull_name_st());
+        student_info student_window(nullptr, getLogin(), getFull_name_st());
         student_window.setModal(true);
         student_window.exec();
         }

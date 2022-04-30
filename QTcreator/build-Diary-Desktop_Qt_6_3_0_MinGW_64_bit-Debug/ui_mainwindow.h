@@ -12,6 +12,7 @@
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QGroupBox>
+#include <QtWidgets/QLabel>
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QMenuBar>
 #include <QtWidgets/QPushButton>
@@ -26,6 +27,9 @@ public:
     QWidget *centralwidget;
     QGroupBox *groupBox;
     QPushButton *authorize_button;
+    QLabel *label;
+    QLabel *Created;
+    QLabel *version;
     QMenuBar *menubar;
     QStatusBar *statusbar;
 
@@ -33,7 +37,7 @@ public:
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName(QString::fromUtf8("MainWindow"));
-        MainWindow->resize(778, 422);
+        MainWindow->resize(778, 335);
         MainWindow->setStyleSheet(QString::fromUtf8("color: rgb(16, 149, 148);\n"
 "background-color: rgb(16, 149, 148);\n"
 "\n"
@@ -42,13 +46,49 @@ public:
         centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
         groupBox = new QGroupBox(centralwidget);
         groupBox->setObjectName(QString::fromUtf8("groupBox"));
-        groupBox->setGeometry(QRect(20, 10, 731, 331));
+        groupBox->setGeometry(QRect(20, 10, 731, 241));
+        QFont font;
+        font.setPointSize(8);
+        font.setBold(true);
+        font.setItalic(true);
+        groupBox->setFont(font);
         groupBox->setStyleSheet(QString::fromUtf8("color: rgb(255, 255, 255);"));
         authorize_button = new QPushButton(groupBox);
         authorize_button->setObjectName(QString::fromUtf8("authorize_button"));
-        authorize_button->setGeometry(QRect(20, 250, 681, 71));
+        authorize_button->setGeometry(QRect(20, 140, 681, 71));
+        QFont font1;
+        font1.setPointSize(16);
+        font1.setBold(true);
+        font1.setItalic(true);
+        authorize_button->setFont(font1);
+        authorize_button->setCursor(QCursor(Qt::PointingHandCursor));
+        authorize_button->setMouseTracking(false);
         authorize_button->setStyleSheet(QString::fromUtf8("background-color: rgb(29, 35, 35);\n"
 "background-color: rgb(9, 83, 82);"));
+        label = new QLabel(groupBox);
+        label->setObjectName(QString::fromUtf8("label"));
+        label->setGeometry(QRect(170, 30, 411, 71));
+        QFont font2;
+        font2.setPointSize(37);
+        font2.setBold(false);
+        font2.setItalic(false);
+        label->setFont(font2);
+        Created = new QLabel(centralwidget);
+        Created->setObjectName(QString::fromUtf8("Created"));
+        Created->setGeometry(QRect(20, 270, 221, 21));
+        QFont font3;
+        font3.setPointSize(11);
+        font3.setItalic(true);
+        Created->setFont(font3);
+        Created->setStyleSheet(QString::fromUtf8("color: rgb(255, 255, 255);"));
+        version = new QLabel(centralwidget);
+        version->setObjectName(QString::fromUtf8("version"));
+        version->setGeometry(QRect(670, 270, 91, 21));
+        QFont font4;
+        font4.setPointSize(9);
+        font4.setItalic(true);
+        version->setFont(font4);
+        version->setStyleSheet(QString::fromUtf8("color: rgb(255, 255, 255);"));
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName(QString::fromUtf8("menubar"));
@@ -68,6 +108,9 @@ public:
         MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "Welcome", nullptr));
         groupBox->setTitle(QCoreApplication::translate("MainWindow", "Authorization", nullptr));
         authorize_button->setText(QCoreApplication::translate("MainWindow", "Authorize", nullptr));
+        label->setText(QCoreApplication::translate("MainWindow", "Welcome to Diary", nullptr));
+        Created->setText(QCoreApplication::translate("MainWindow", "Created in Belarus, with love", nullptr));
+        version->setText(QCoreApplication::translate("MainWindow", "ver 1.0.1 (beta)", nullptr));
     } // retranslateUi
 
 };

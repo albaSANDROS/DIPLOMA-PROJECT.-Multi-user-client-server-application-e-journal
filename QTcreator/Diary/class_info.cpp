@@ -133,7 +133,7 @@ void class_info::setClass_num(int newClass_num)
 void class_info::on_cancel_button_clicked()
 {
     close();
-    check_class class_window(this, getLogin());
+    check_class class_window(nullptr, getLogin());
     class_window.setModal(true);
     class_window.exec();
 }

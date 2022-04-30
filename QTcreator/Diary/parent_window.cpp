@@ -123,7 +123,7 @@ void parent_window::on_pushButton_info_clicked()
     QTimer::singleShot(10000, &m, SLOT(close()));
     m.exec();
     close();
-    parent_window parent_window(this, getFull_name_parent());
+    parent_window parent_window(nullptr, getFull_name_parent());
     parent_window.setModal(true);
     parent_window.exec();
 }

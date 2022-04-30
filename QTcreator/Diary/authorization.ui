@@ -13,6 +13,10 @@
   <property name="windowTitle">
    <string>Confirmation</string>
   </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>../../Logo/logo(22x22).ico</normaloff>../../Logo/logo(22x22).ico</iconset>
+  </property>
   <property name="styleSheet">
    <string notr="true">background-color: rgb(16, 149, 148);
 
@@ -28,6 +32,17 @@ color: rgb(255, 255, 255);
      <width>281</width>
      <height>81</height>
     </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Cambria</family>
+     <pointsize>19</pointsize>
+     <italic>true</italic>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="cursor">
+    <cursorShape>OpenHandCursor</cursorShape>
    </property>
    <property name="styleSheet">
     <string notr="true">background-color: rgb(29, 35, 35);
@@ -47,6 +62,13 @@ color: rgb(255, 255, 255);</string>
      <height>31</height>
     </rect>
    </property>
+   <property name="font">
+    <font>
+     <family>Cambria</family>
+     <italic>true</italic>
+     <bold>true</bold>
+    </font>
+   </property>
    <property name="styleSheet">
     <string notr="true">color: rgb(255, 255, 255);</string>
    </property>
@@ -63,17 +85,25 @@ color: rgb(255, 255, 255);</string>
   <widget class="QLabel" name="label">
    <property name="geometry">
     <rect>
-     <x>100</x>
+     <x>50</x>
      <y>20</y>
-     <width>171</width>
+     <width>271</width>
      <height>28</height>
     </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Cambria</family>
+     <pointsize>13</pointsize>
+     <italic>true</italic>
+     <bold>true</bold>
+    </font>
    </property>
    <property name="styleSheet">
     <string notr="true">color: rgb(255, 255, 255);</string>
    </property>
    <property name="text">
-    <string>Put your validation code there</string>
+    <string>↓ Put your validation code there ↓</string>
    </property>
   </widget>
  </widget>

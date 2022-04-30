@@ -28,6 +28,17 @@ color: rgb(255, 255, 255);</string>
      <height>101</height>
     </rect>
    </property>
+   <property name="font">
+    <font>
+     <family>Cambria</family>
+     <pointsize>18</pointsize>
+     <italic>true</italic>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="cursor">
+    <cursorShape>OpenHandCursor</cursorShape>
+   </property>
    <property name="styleSheet">
     <string notr="true">background-color: rgb(29, 35, 35);
 background-color: rgb(9, 83, 82);
@@ -45,6 +56,17 @@ color: rgb(255, 255, 255);</string>
      <width>191</width>
      <height>101</height>
     </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Cambria</family>
+     <pointsize>16</pointsize>
+     <italic>true</italic>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="cursor">
+    <cursorShape>OpenHandCursor</cursorShape>
    </property>
    <property name="styleSheet">
     <string notr="true">background-color: rgb(29, 35, 35);
@@ -64,6 +86,14 @@ color: rgb(255, 255, 255);</string>
      <height>31</height>
     </rect>
    </property>
+   <property name="font">
+    <font>
+     <family>Cambria</family>
+     <pointsize>11</pointsize>
+     <italic>true</italic>
+     <bold>true</bold>
+    </font>
+   </property>
    <property name="styleSheet">
     <string notr="true">color: rgb(255, 255, 255);</string>
    </property>
@@ -76,9 +106,17 @@ color: rgb(255, 255, 255);</string>
     <rect>
      <x>32</x>
      <y>160</y>
-     <width>27</width>
+     <width>51</width>
      <height>16</height>
     </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Cambria</family>
+     <pointsize>13</pointsize>
+     <italic>true</italic>
+     <bold>true</bold>
+    </font>
    </property>
    <property name="styleSheet">
     <string notr="true">color: rgb(255, 255, 255);</string>
@@ -92,15 +130,23 @@ color: rgb(255, 255, 255);</string>
     <rect>
      <x>32</x>
      <y>80</y>
-     <width>102</width>
+     <width>131</width>
      <height>16</height>
     </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Cambria</family>
+     <pointsize>13</pointsize>
+     <italic>true</italic>
+     <bold>true</bold>
+    </font>
    </property>
    <property name="styleSheet">
     <string notr="true">color: rgb(255, 255, 255);</string>
    </property>
    <property name="text">
-    <string>Student`s full name</string>
+    <string>Full name</string>
    </property>
   </widget>
   <widget class="QLabel" name="label_subject">
@@ -108,9 +154,17 @@ color: rgb(255, 255, 255);</string>
     <rect>
      <x>32</x>
      <y>120</y>
-     <width>39</width>
+     <width>61</width>
      <height>16</height>
     </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Cambria</family>
+     <pointsize>13</pointsize>
+     <italic>true</italic>
+     <bold>true</bold>
+    </font>
    </property>
    <property name="styleSheet">
     <string notr="true">color: rgb(255, 255, 255);</string>
@@ -124,9 +178,17 @@ color: rgb(255, 255, 255);</string>
     <rect>
      <x>30</x>
      <y>220</y>
-     <width>59</width>
+     <width>81</width>
      <height>16</height>
     </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Cambria</family>
+     <pointsize>13</pointsize>
+     <italic>true</italic>
+     <bold>true</bold>
+    </font>
    </property>
    <property name="styleSheet">
     <string notr="true">color: rgb(255, 255, 255);</string>
@@ -138,11 +200,19 @@ color: rgb(255, 255, 255);</string>
   <widget class="QLineEdit" name="lineEdit_full_name">
    <property name="geometry">
     <rect>
-     <x>142</x>
+     <x>122</x>
      <y>80</y>
-     <width>461</width>
+     <width>491</width>
      <height>22</height>
     </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Cambria</family>
+     <pointsize>13</pointsize>
+     <italic>true</italic>
+     <bold>true</bold>
+    </font>
    </property>
    <property name="styleSheet">
     <string notr="true">color: rgb(255, 255, 255);</string>
@@ -154,11 +224,19 @@ color: rgb(255, 255, 255);</string>
   <widget class="QLineEdit" name="lineEdit_comment">
    <property name="geometry">
     <rect>
-     <x>142</x>
+     <x>122</x>
      <y>201</y>
-     <width>471</width>
+     <width>491</width>
      <height>61</height>
     </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Cambria</family>
+     <pointsize>13</pointsize>
+     <italic>true</italic>
+     <bold>true</bold>
+    </font>
    </property>
    <property name="styleSheet">
     <string notr="true">color: rgb(255, 255, 255);</string>
@@ -170,11 +248,19 @@ color: rgb(255, 255, 255);</string>
   <widget class="QLineEdit" name="lineEdit_subjectName">
    <property name="geometry">
     <rect>
-     <x>142</x>
+     <x>122</x>
      <y>120</y>
-     <width>461</width>
+     <width>491</width>
      <height>22</height>
     </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Cambria</family>
+     <pointsize>13</pointsize>
+     <italic>true</italic>
+     <bold>true</bold>
+    </font>
    </property>
    <property name="styleSheet">
     <string notr="true">color: rgb(255, 255, 255);</string>
@@ -186,17 +272,33 @@ color: rgb(255, 255, 255);</string>
   <widget class="QLineEdit" name="lineEdit_mark">
    <property name="geometry">
     <rect>
-     <x>142</x>
+     <x>122</x>
      <y>160</y>
-     <width>461</width>
+     <width>491</width>
      <height>22</height>
     </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Cambria</family>
+     <pointsize>13</pointsize>
+     <italic>true</italic>
+     <bold>true</bold>
+    </font>
    </property>
    <property name="styleSheet">
     <string notr="true">color: rgb(255, 255, 255);</string>
    </property>
   </widget>
  </widget>
+ <tabstops>
+  <tabstop>lineEdit_mark</tabstop>
+  <tabstop>lineEdit_comment</tabstop>
+  <tabstop>pushButton_evaluate</tabstop>
+  <tabstop>pushButton_cancel</tabstop>
+  <tabstop>lineEdit_subjectName</tabstop>
+  <tabstop>lineEdit_full_name</tabstop>
+ </tabstops>
  <resources/>
  <connections/>
 </ui>

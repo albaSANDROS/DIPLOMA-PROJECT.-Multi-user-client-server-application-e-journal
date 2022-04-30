@@ -27,6 +27,17 @@ color: rgb(255, 255, 255);</string>
      <height>81</height>
     </rect>
    </property>
+   <property name="font">
+    <font>
+     <family>Cambria</family>
+     <pointsize>17</pointsize>
+     <italic>true</italic>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="cursor">
+    <cursorShape>OpenHandCursor</cursorShape>
+   </property>
    <property name="styleSheet">
     <string notr="true">background-color: rgb(29, 35, 35);
 background-color: rgb(9, 83, 82);
@@ -45,6 +56,17 @@ color: rgb(255, 255, 255);</string>
      <height>51</height>
     </rect>
    </property>
+   <property name="font">
+    <font>
+     <family>Cambria</family>
+     <pointsize>17</pointsize>
+     <italic>true</italic>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="cursor">
+    <cursorShape>OpenHandCursor</cursorShape>
+   </property>
    <property name="styleSheet">
     <string notr="true">background-color: rgb(29, 35, 35);
 background-color: rgb(9, 83, 82);
@@ -57,11 +79,19 @@ color: rgb(255, 255, 255);</string>
   <widget class="QLabel" name="label_inp_name">
    <property name="geometry">
     <rect>
-     <x>140</x>
+     <x>120</x>
      <y>60</y>
      <width>311</width>
      <height>21</height>
     </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Cambria</family>
+     <pointsize>14</pointsize>
+     <italic>true</italic>
+     <bold>true</bold>
+    </font>
    </property>
    <property name="styleSheet">
     <string notr="true">color: rgb(255, 255, 255);</string>
@@ -78,6 +108,14 @@ color: rgb(255, 255, 255);</string>
      <width>431</width>
      <height>21</height>
     </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Cambria</family>
+     <pointsize>11</pointsize>
+     <italic>true</italic>
+     <bold>true</bold>
+    </font>
    </property>
    <property name="styleSheet">
     <string notr="true">color: rgb(255, 255, 255);</string>
@@ -98,6 +136,14 @@ color: rgb(255, 255, 255);</string>
    <layout class="QHBoxLayout" name="horizontalLayout">
     <item>
      <widget class="QLabel" name="label_fullName">
+      <property name="font">
+       <font>
+        <family>Cambria</family>
+        <pointsize>12</pointsize>
+        <italic>true</italic>
+        <bold>true</bold>
+       </font>
+      </property>
       <property name="styleSheet">
        <string notr="true">color: rgb(255, 255, 255);</string>
       </property>
@@ -108,6 +154,14 @@ color: rgb(255, 255, 255);</string>
     </item>
     <item>
      <widget class="QLineEdit" name="student_fullname">
+      <property name="font">
+       <font>
+        <family>Cambria</family>
+        <pointsize>12</pointsize>
+        <italic>true</italic>
+        <bold>true</bold>
+       </font>
+      </property>
       <property name="styleSheet">
        <string notr="true">border-color: rgb(90, 184, 255);
 color: rgb(255, 255, 255);

@@ -18,7 +18,7 @@ MainWindow::MainWindow(QWidget *parent)
     ui->setupUi(this);
 
     setWindowFlags(Qt::Dialog);
-    setFixedSize(778, 422);
+    setFixedSize(778, 312);
 
 }
 
@@ -44,7 +44,7 @@ void MainWindow::on_authorize_button_clicked()
         exit(2);    //https://docs.microsoft.com/ru-ru/sql/relational-databases/errors-events/database-engine-events-and-errors?view=sql-server-ver15
     }
 
-    authorization auth_window(this);
+    authorization auth_window(nullptr);
     auth_window.setModal(true);
     auth_window.exec();
 

@@ -14,6 +14,9 @@ authorization::authorization(QWidget *parent) :
     ui(new Ui::authorization)
 {
     ui->setupUi(this);
+
+    show();
+
     //QDesktopServices::openUrl(QUrl("https://oauth.yandex.ru/authorize?response_type=token&client_id=cff690b59de94c6dbc0e42f9a0c28721"));
     setWindowFlags(Qt::Dialog);
     setFixedSize(358, 258);
@@ -57,7 +60,8 @@ void authorization::on_accept_button_clicked()
     question_to_db = "select user_id, role_id from users where token = '" + getToken() +"'";
     query.exec(question_to_db);
     if (!query.next()) {
-        QMessageBox::warning(this, "Authorization", "This user is not presented in DataBase");
+        QMessageBox::warning(nullptr
+                             , "Authorization", "This user is not presented in DataBase");
     }
     else {
       close();
@@ -77,7 +81,7 @@ void authorization::on_accept_button_clicked()
             exit(2);
         }
 
-        diary_menu menu_window(this, full_name);
+        diary_menu menu_window(nullptr, full_name);
         menu_window.setModal(true);
         menu_window.exec();
     }
@@ -88,7 +92,7 @@ void authorization::on_accept_button_clicked()
         while (query.next()) {
           full_name = query.value(0).toString();
         }
-        parent_window parent_window(this, full_name);
+        parent_window parent_window(nullptr, full_name);
         parent_window.setModal(true);
         parent_window.exec();
     }
@@ -99,7 +103,7 @@ void authorization::on_accept_button_clicked()
         while (query.next()) {
           full_name = query.value(0).toString();
         }
-        student_window student_window(this, full_name);
+        student_window student_window(nullptr, full_name);
         student_window.setModal(true);
         student_window.exec();
     }

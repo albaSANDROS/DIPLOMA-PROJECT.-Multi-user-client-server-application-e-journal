@@ -198,7 +198,6 @@ Makefile: ../Diary/Diary.pro ../../../../QTcreator/6.3.0/mingw_64/mkspecs/win32-
 		../../../../QTcreator/6.3.0/mingw_64/mkspecs/features/resolve_config.prf \
 		../../../../QTcreator/6.3.0/mingw_64/mkspecs/features/exclusive_builds_post.prf \
 		../../../../QTcreator/6.3.0/mingw_64/mkspecs/features/default_post.prf \
-		../../../../QTcreator/6.3.0/mingw_64/mkspecs/features/win32/console.prf \
 		../../../../QTcreator/6.3.0/mingw_64/mkspecs/features/qml_debug.prf \
 		../../../../QTcreator/6.3.0/mingw_64/mkspecs/features/entrypoint.prf \
 		../../../../QTcreator/6.3.0/mingw_64/mkspecs/features/precompile_header.prf \
@@ -211,6 +210,7 @@ Makefile: ../Diary/Diary.pro ../../../../QTcreator/6.3.0/mingw_64/mkspecs/win32-
 		../../../../QTcreator/6.3.0/mingw_64/mkspecs/features/uic.prf \
 		../../../../QTcreator/6.3.0/mingw_64/mkspecs/features/qmake_use.prf \
 		../../../../QTcreator/6.3.0/mingw_64/mkspecs/features/file_copies.prf \
+		../../../../QTcreator/6.3.0/mingw_64/mkspecs/features/win32/windows.prf \
 		../../../../QTcreator/6.3.0/mingw_64/mkspecs/features/testcase_targets.prf \
 		../../../../QTcreator/6.3.0/mingw_64/mkspecs/features/exceptions.prf \
 		../../../../QTcreator/6.3.0/mingw_64/mkspecs/features/yacc.prf \
@@ -222,7 +222,9 @@ Makefile: ../Diary/Diary.pro ../../../../QTcreator/6.3.0/mingw_64/mkspecs/win32-
 		../../../../QTcreator/6.3.0/mingw_64/lib/Qt6NetworkAuth.prl \
 		../../../../QTcreator/6.3.0/mingw_64/lib/Qt6Network.prl \
 		../../../../QTcreator/6.3.0/mingw_64/lib/Qt6Core.prl \
-		../../../../QTcreator/6.3.0/mingw_64/mkspecs/features/build_pass.prf
+		../../../../QTcreator/6.3.0/mingw_64/lib/Qt6EntryPoint.prl \
+		../../../../QTcreator/6.3.0/mingw_64/mkspecs/features/build_pass.prf \
+		../Diary/resource.qrc
 	$(QMAKE) -o Makefile ..\Diary\Diary.pro -spec win32-g++ "CONFIG+=debug" "CONFIG+=qml_debug"
 ../../../../QTcreator/6.3.0/mingw_64/mkspecs/features/spec_pre.prf:
 ../../../../QTcreator/6.3.0/mingw_64/mkspecs/features/device_config.prf:
@@ -352,7 +354,6 @@ Makefile: ../Diary/Diary.pro ../../../../QTcreator/6.3.0/mingw_64/mkspecs/win32-
 ../../../../QTcreator/6.3.0/mingw_64/mkspecs/features/resolve_config.prf:
 ../../../../QTcreator/6.3.0/mingw_64/mkspecs/features/exclusive_builds_post.prf:
 ../../../../QTcreator/6.3.0/mingw_64/mkspecs/features/default_post.prf:
-../../../../QTcreator/6.3.0/mingw_64/mkspecs/features/win32/console.prf:
 ../../../../QTcreator/6.3.0/mingw_64/mkspecs/features/qml_debug.prf:
 ../../../../QTcreator/6.3.0/mingw_64/mkspecs/features/entrypoint.prf:
 ../../../../QTcreator/6.3.0/mingw_64/mkspecs/features/precompile_header.prf:
@@ -365,6 +366,7 @@ Makefile: ../Diary/Diary.pro ../../../../QTcreator/6.3.0/mingw_64/mkspecs/win32-
 ../../../../QTcreator/6.3.0/mingw_64/mkspecs/features/uic.prf:
 ../../../../QTcreator/6.3.0/mingw_64/mkspecs/features/qmake_use.prf:
 ../../../../QTcreator/6.3.0/mingw_64/mkspecs/features/file_copies.prf:
+../../../../QTcreator/6.3.0/mingw_64/mkspecs/features/win32/windows.prf:
 ../../../../QTcreator/6.3.0/mingw_64/mkspecs/features/testcase_targets.prf:
 ../../../../QTcreator/6.3.0/mingw_64/mkspecs/features/exceptions.prf:
 ../../../../QTcreator/6.3.0/mingw_64/mkspecs/features/yacc.prf:
@@ -376,7 +378,9 @@ Makefile: ../Diary/Diary.pro ../../../../QTcreator/6.3.0/mingw_64/mkspecs/win32-
 ../../../../QTcreator/6.3.0/mingw_64/lib/Qt6NetworkAuth.prl:
 ../../../../QTcreator/6.3.0/mingw_64/lib/Qt6Network.prl:
 ../../../../QTcreator/6.3.0/mingw_64/lib/Qt6Core.prl:
+../../../../QTcreator/6.3.0/mingw_64/lib/Qt6EntryPoint.prl:
 ../../../../QTcreator/6.3.0/mingw_64/mkspecs/features/build_pass.prf:
+../Diary/resource.qrc:
 qmake: FORCE
 	@$(QMAKE) -o Makefile ..\Diary\Diary.pro -spec win32-g++ "CONFIG+=debug" "CONFIG+=qml_debug"
 

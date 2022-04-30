@@ -159,12 +159,12 @@ void add_mark_2::on_pushButton_evaluate_clicked()
                                             QMessageBox::Yes|QMessageBox::No);
                 if (reply == QMessageBox::Yes) {
                     close();
-                    add_mark mark_window(this, getLogin());
+                    add_mark mark_window(nullptr, getLogin());
                     mark_window.setModal(true);
                     mark_window.exec();
                 } else {
                     close();
-                    diary_menu menu_window(this, getLogin());
+                    diary_menu menu_window(nullptr, getLogin());
                     menu_window.setModal(true);
                     menu_window.exec();
                 }

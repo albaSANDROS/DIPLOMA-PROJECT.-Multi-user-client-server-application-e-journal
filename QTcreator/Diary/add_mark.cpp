@@ -51,7 +51,7 @@ void add_mark::setStudent_fullname(const QString &newStudent_fullname)
 void add_mark::on_back_pushButton_clicked()
 {
     close();
-    diary_menu menu_window(this, getLogin());
+    diary_menu menu_window(nullptr, getLogin());
     menu_window.setModal(true);
     menu_window.exec();
 }
@@ -64,12 +64,12 @@ question_to_db = "select id from student where full_name_st = '" + getStudent_fu
 query.exec(question_to_db);
 if (!query.next()) {
 
-    QMessageBox::warning(this, "Student Full Name", "This student is not presented in DataBases");
+    QMessageBox::warning(nullptr, "Student Full Name", "This student is not presented in DataBases");
 }
 else{
 
     close();
-    add_mark_2 mark2_window(this, getLogin(), getStudent_fullname());
+    add_mark_2 mark2_window(nullptr, getLogin(), getStudent_fullname());
     mark2_window.setModal(true);
     mark2_window.exec();
     }

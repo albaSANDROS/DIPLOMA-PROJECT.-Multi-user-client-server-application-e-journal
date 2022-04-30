@@ -45,7 +45,7 @@ diary_menu::~diary_menu()
 void diary_menu::on_get_data_button_clicked()
 {
     close();
-    get_data data_window(this, getLogin());
+    get_data data_window(nullptr, getLogin());
     data_window.setModal(true);
     data_window.exec();
 }
@@ -66,7 +66,7 @@ void diary_menu::on_contact_info_button_clicked()
     QTimer::singleShot(10000, &m, SLOT(close()));
     m.exec();
     close();
-    diary_menu menu_window(this , getLogin());
+    diary_menu menu_window(nullptr , getLogin());
     menu_window.setModal(true);
     menu_window.exec();
 }
@@ -75,7 +75,7 @@ void diary_menu::on_contact_info_button_clicked()
 void diary_menu::on_start_lesson_button_clicked()
 {
     close();
-    add_mark mark_window(this, getLogin());
+    add_mark mark_window(nullptr, getLogin());
     mark_window.setModal(true);
     mark_window.exec();
 }
