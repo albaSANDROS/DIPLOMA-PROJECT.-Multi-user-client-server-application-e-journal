@@ -1,9 +1,10 @@
 #include "parent_window.h"
 #include "ui_parent_window.h"
-#include <QSqlQuery>
 #include "mainwindow.h"
+
 #include <QMessageBox>
 #include <QTimer>
+#include <QSqlQuery>
 
 parent_window::parent_window(QWidget *parent, QString login) :
     QDialog(parent),

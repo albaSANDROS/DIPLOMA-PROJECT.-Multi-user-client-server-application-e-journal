@@ -1,9 +1,9 @@
 #include "check_student.h"
 #include "ui_check_student.h"
-#include <get_data.h>
+#include "get_data.h"
 #include "student_info.h"
-#include <QMessageBox>
 #include "connection.h"
+#include <QMessageBox>
 
 check_student::check_student(QWidget *parent, QString login) :
     QDialog(parent),

@@ -2,11 +2,12 @@
 #include "ui_diary_menu.h"
 #include "mainwindow.h"
 #include <QDateTime>
-#include <get_data.h>
-#include <QMessageBox>
-#include <QTimer>
+#include "get_data.h"
 #include "add_mark.h"
 #include "connection.h"
+
+#include <QMessageBox>
+#include <QTimer>
 
 const QString &diary_menu::getLogin() const
 {

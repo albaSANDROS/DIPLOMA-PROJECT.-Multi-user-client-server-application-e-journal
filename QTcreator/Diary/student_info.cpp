@@ -2,7 +2,6 @@
 #include "ui_student_info.h"
 #include "check_student.h"
 
-
 student_info::student_info(QWidget *parent, QString login, QString full_name_st) :
     QDialog(parent),
     ui(new Ui::student_info)

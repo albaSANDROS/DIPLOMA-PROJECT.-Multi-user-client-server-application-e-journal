@@ -20,9 +20,9 @@ public:
     void setFull_name_st(const QString &newFull_name_st);
     QString marks = "null";
     QString subject = "null";
-    QSqlQuery query;
     QString question_to_db = "null";
     QString student_id = "null";
+    QSqlQuery query;
 
 private slots:
     void on_pushButton_clicked();

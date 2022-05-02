@@ -1,10 +1,10 @@
 #include "authorization.h"
 #include "ui_authorization.h"
-#include <diary_menu.h>
-#include <parent_window.h>
-#include <student_window.h>
+#include "diary_menu.h"
+#include "parent_window.h"
+#include "student_window.h"
+#include "connection.h"
 #include <QMessageBox>
-#include <connection.h>
 #include <QOAuth2AuthorizationCodeFlow>
 #include <QDesktopServices>
 #include <QCryptographicHash>
@@ -17,7 +17,7 @@ authorization::authorization(QWidget *parent) :
 
     show();
 
-    //QDesktopServices::openUrl(QUrl("https://oauth.yandex.ru/authorize?response_type=token&client_id=cff690b59de94c6dbc0e42f9a0c28721"));
+    QDesktopServices::openUrl(QUrl("https://oauth.yandex.ru/authorize?response_type=token&client_id=cff690b59de94c6dbc0e42f9a0c28721"));
     setWindowFlags(Qt::Dialog);
     setFixedSize(358, 258);
 
@@ -109,6 +109,3 @@ void authorization::on_accept_button_clicked()
     }
 
 }
-
-
-

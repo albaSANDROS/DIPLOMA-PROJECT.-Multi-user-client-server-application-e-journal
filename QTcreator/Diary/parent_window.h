@@ -22,16 +22,17 @@ public:
 
     QSqlQuery query_getnotes_full;
     QSqlQuery query;
-    QString question_to_db;
-    QString parent_id;
-    QString full_name_st;
-    QString studying_group_id;
-    QString student_id;
-    QString gr_num;
-    QString gr_prof;
+    QString question_to_db = "null";
+    QString parent_id = "null";
+    QString full_name_st = "null";
+    QString studying_group_id = "null";
+    QString student_id = "null";
+    QString gr_num = "null";
+    QString gr_prof = "null";
     QString note_id = "null";
     QString marks = "null";
     QString subject = "null";
+
 private slots:
     void on_pushButton_cancel_clicked();
 

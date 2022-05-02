@@ -21,10 +21,10 @@ public:
     const QByteArray &getToken_toUtf8() const;
     void setToken_toUtf8(const QByteArray &newToken_toUtf8);
     QSqlQuery query;
-    QString question_to_db;
-    QString user_id;
-    QString full_name;
-    int role_num;
+    QString question_to_db = "null";
+    QString user_id = "null";
+    QString full_name = "null";
+    int role_num = 0;
 
 
 private slots:

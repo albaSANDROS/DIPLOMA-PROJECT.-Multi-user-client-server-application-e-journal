@@ -1,15 +1,16 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
-#include <QMessageBox>
-#include <diary_menu.h>
-#include <QTimer>
+#include "diary_menu.h"
 #include "parent_window.h"
 #include "student_window.h"
+#include "connection.h"
+#include "authorization.h"
+
+#include <QMessageBox>
+#include <QTimer>
 #include <QOAuth2AuthorizationCodeFlow>
 #include <QDesktopServices>
 #include <QThread>
-#include <connection.h>
-#include <authorization.h>
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -41,7 +42,7 @@ void MainWindow::on_authorize_button_clicked()
 
     if(!createConnection("auth_user","pgsecret"))
     {
-        exit(2);    //https://docs.microsoft.com/ru-ru/sql/relational-databases/errors-events/database-engine-events-and-errors?view=sql-server-ver15
+        exit(2);
     }
 
     authorization auth_window(nullptr);

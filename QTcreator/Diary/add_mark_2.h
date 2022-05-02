@@ -23,14 +23,14 @@ public:
 
     QString question_to_db = "null";
     QSqlQuery query;
-    QString subject;
-    QString sub_id;
-    QString student_id;
-    QString mark;
-    QString lessonID;  
-    QString commentID;
+    QString subject = "null";
+    QString sub_id = "null";
+    QString student_id = "null";
+    QString mark = "null";
+    QString lessonID = "null";
+    QString commentID = "null";
     QString lessonStatus = "yes";
-    QString comment;
+    QString comment = "null";
 private slots:
 
     void on_pushButton_cancel_clicked();

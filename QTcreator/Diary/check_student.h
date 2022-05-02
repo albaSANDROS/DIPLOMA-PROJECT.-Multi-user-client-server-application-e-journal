@@ -23,6 +23,7 @@ public:
 
     QString question_to_db = "null";
     QSqlQuery query;
+
 private slots:
     void on_cancel_button_clicked();
 

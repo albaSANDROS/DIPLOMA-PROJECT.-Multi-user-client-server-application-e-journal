@@ -34,9 +34,10 @@ public:
     QString subject = "null";
     QString full_name_parent = "null";
     QString phone_numb_parent= "null";
+    QString question_to_db = "null";
     QSqlQuery query_getnotes_full;
     QSqlQuery query;
-    QString question_to_db = "null";
+
 private slots:
     void on_cancel_button_clicked();
 

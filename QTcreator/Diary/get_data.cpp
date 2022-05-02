@@ -1,8 +1,8 @@
 #include "get_data.h"
 #include "ui_get_data.h"
-#include <diary_menu.h>
-#include <check_class.h>
-#include <check_student.h>
+#include "diary_menu.h"
+#include "check_class.h"
+#include "check_student.h"
 #include "connection.h"
 
 get_data::get_data(QWidget *parent, QString login) :

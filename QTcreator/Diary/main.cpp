@@ -1,7 +1,7 @@
 #include "mainwindow.h"
-#include <QApplication>
 #include "connection.h"
 
+#include <QApplication>
 
 int main(int argc, char *argv[])
 {

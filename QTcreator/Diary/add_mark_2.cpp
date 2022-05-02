@@ -1,9 +1,11 @@
+#include "add_mark.h"
 #include "add_mark_2.h"
 #include "ui_add_mark_2.h"
-#include "add_mark.h"
-#include <QMessageBox>
 #include "diary_menu.h"
 #include "connection.h"
+
+#include <QMessageBox>
+
 add_mark_2::add_mark_2(QWidget *parent, QString login, QString student_name) :
     QDialog(parent),
     ui(new Ui::add_mark_2)

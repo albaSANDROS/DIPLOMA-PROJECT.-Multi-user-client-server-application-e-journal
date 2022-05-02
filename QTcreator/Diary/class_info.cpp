@@ -1,8 +1,7 @@
 #include "class_info.h"
 #include "ui_class_info.h"
-#include <check_class.h>
-#include <QSqlTableModel>
-#include <connection.h>
+#include "check_class.h"
+#include "connection.h"
 
 class_info::class_info(QWidget *parent, QString login, QString class_letter, int class_num) :
     QDialog(parent),
@@ -12,8 +11,6 @@ class_info::class_info(QWidget *parent, QString login, QString class_letter, int
     setClass_letter(class_letter);
     setClass_num(class_num);
     setLogin(login);
-
-
 
     ui->setupUi(this);
 

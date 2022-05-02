@@ -1,11 +1,11 @@
 #include "check_class.h"
 #include "ui_check_class.h"
-#include <get_data.h>
-#include <class_info.h>
+#include "get_data.h"
+#include "class_info.h"
+#include "connection.h"
 #include <QMessageBox>
 #include <QSqlQuery>
 #include <QProcess>
-#include "connection.h"
 
 check_class::check_class(QWidget *parent, QString login) :
     QDialog(parent),
