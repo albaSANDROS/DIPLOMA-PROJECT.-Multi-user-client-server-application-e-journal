@@ -60,8 +60,8 @@ void authorization::on_accept_button_clicked()
     question_to_db = "select user_id, role_id from users where token = '" + getToken() +"'";
     query.exec(question_to_db);
     if (!query.next()) {
-        QMessageBox::warning(nullptr
-                             , "Authorization", "This user is not presented in DataBase");
+        QMessageBox::warning(nullptr,
+                             "Authorization", "This user is not presented in DataBase");
     }
     else {
       close();
@@ -102,6 +102,7 @@ void authorization::on_accept_button_clicked()
         query.exec(question_to_db);
         while (query.next()) {
           full_name = query.value(0).toString();
+
         }
         student_window student_window(nullptr, full_name);
         student_window.setModal(true);

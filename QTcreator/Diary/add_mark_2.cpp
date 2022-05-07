@@ -78,7 +78,6 @@ void add_mark_2::on_pushButton_cancel_clicked()
     mark_window.exec();
 }
 
-
 void add_mark_2::on_pushButton_evaluate_clicked()
 {
     int lessonID_int;

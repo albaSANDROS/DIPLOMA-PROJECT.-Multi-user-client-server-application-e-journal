@@ -26,7 +26,6 @@ public:
     QString full_name = "null";
     int role_num = 0;
 
-
 private slots:
     void on_accept_button_clicked();
 

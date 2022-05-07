@@ -59,14 +59,14 @@ void add_mark::on_back_pushButton_clicked()
 
 void add_mark::on_next_pushButton_clicked()
 {
-setStudent_fullname(ui->student_fullname->text());
-question_to_db = "select id from student where full_name_st = '" + getStudent_fullname() + "'";
-query.exec(question_to_db);
-if (!query.next()) {
+    setStudent_fullname(ui->student_fullname->text());
+    question_to_db = "select id from student where full_name_st = '" + getStudent_fullname() + "'";
+    query.exec(question_to_db);
+    if (!query.next()) {
 
-    QMessageBox::warning(nullptr, "Student Full Name", "This student is not presented in DataBases");
-}
-else{
+        QMessageBox::warning(nullptr, "Student Full Name", "This student is not presented in DataBases");
+    }
+    else{
 
     close();
     add_mark_2 mark2_window(nullptr, getLogin(), getStudent_fullname());

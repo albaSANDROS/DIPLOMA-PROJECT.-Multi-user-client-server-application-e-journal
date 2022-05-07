@@ -21,6 +21,8 @@ public:
     const QString &getStudent_name() const;
     void setStudent_name(const QString &newStudent_name);
 
+    void getIdFromName();
+
     QString question_to_db = "null";
     QSqlQuery query;
     QString subject = "null";
